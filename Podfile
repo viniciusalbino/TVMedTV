@@ -10,6 +10,7 @@ pod 'SVProgressHUD'
 pod 'Fabric'
 pod 'Crashlytics'
 pod 'Alamofire'
+pod 'RealmSwift'
 
   target 'TVMedTests' do
     inherit! :search_paths

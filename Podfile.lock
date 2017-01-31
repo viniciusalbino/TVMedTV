@@ -3,20 +3,28 @@ PODS:
   - Crashlytics (3.8.3):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.11)
+  - Realm (2.1.1):
+    - Realm/Headers (= 2.1.1)
+  - Realm/Headers (2.1.1)
+  - RealmSwift (2.1.1):
+    - Realm (= 2.1.1)
   - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
   - Alamofire
   - Crashlytics
   - Fabric
+  - RealmSwift
   - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
   Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
+  Realm: a55959c0b171a5fe5267406d17f314fec3cefaae
+  RealmSwift: 749fd955bf8d6471c21d218b9389a47aaeccfe3f
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 7b59498d2627c9b1ae349e68a1463a525950ec4e
+PODFILE CHECKSUM: 64f838c5e83a63d72201f130a03e0596ba808822
 
 COCOAPODS: 1.1.1

@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		044CED7B88A0F9C6D2CFEF67 /* Pods_TVMedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FD404313DF79EB14965569 /* Pods_TVMedTests.framework */; };
 		16D107A7F19F9FAAD0C31635 /* Pods_TVMed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 684FE61E82A70E197AA0F9EB /* Pods_TVMed.framework */; };
+		2C0027D31E401F020020ABA0 /* ThirdPartyToolsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0027D21E401F020020ABA0 /* ThirdPartyToolsLoader.swift */; };
+		2C0027D51E401F1C0020ABA0 /* FabricTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0027D41E401F1C0020ABA0 /* FabricTool.swift */; };
 		2C4ABF1B1E3043F000FA73A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4ABF1A1E3043F000FA73A2 /* AppDelegate.swift */; };
-		2C4ABF1D1E3043F000FA73A2 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4ABF1C1E3043F000FA73A2 /* FirstViewController.swift */; };
-		2C4ABF1F1E3043F000FA73A2 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4ABF1E1E3043F000FA73A2 /* SecondViewController.swift */; };
 		2C4ABF221E3043F000FA73A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4ABF201E3043F000FA73A2 /* Main.storyboard */; };
 		2C4ABF241E3043F000FA73A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C4ABF231E3043F000FA73A2 /* Assets.xcassets */; };
 		2C4ABF2F1E3043F000FA73A2 /* TVMedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4ABF2E1E3043F000FA73A2 /* TVMedTests.swift */; };
+		2C4F5FE21E40222800754DBB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4F5FE11E40222800754DBB /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,16 +30,17 @@
 
 /* Begin PBXFileReference section */
 		0968D6E8E29EED2CB47A1D76 /* Pods-TVMedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVMedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVMedTests/Pods-TVMedTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2C0027D21E401F020020ABA0 /* ThirdPartyToolsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdPartyToolsLoader.swift; sourceTree = "<group>"; };
+		2C0027D41E401F1C0020ABA0 /* FabricTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FabricTool.swift; sourceTree = "<group>"; };
 		2C4ABF171E3043F000FA73A2 /* TVMed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVMed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4ABF1A1E3043F000FA73A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2C4ABF1C1E3043F000FA73A2 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		2C4ABF1E1E3043F000FA73A2 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		2C4ABF211E3043F000FA73A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C4ABF231E3043F000FA73A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C4ABF251E3043F000FA73A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C4ABF2A1E3043F000FA73A2 /* TVMedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVMedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4ABF2E1E3043F000FA73A2 /* TVMedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMedTests.swift; sourceTree = "<group>"; };
 		2C4ABF301E3043F000FA73A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C4F5FE11E40222800754DBB /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3F19C9CD962AF5EF92772D1C /* Pods-TVMedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVMedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TVMedTests/Pods-TVMedTests.release.xcconfig"; sourceTree = "<group>"; };
 		44929E1F0033078723D1C241 /* Pods-TVMed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVMed.release.xcconfig"; path = "Pods/Target Support Files/Pods-TVMed/Pods-TVMed.release.xcconfig"; sourceTree = "<group>"; };
 		684FE61E82A70E197AA0F9EB /* Pods_TVMed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVMed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +68,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C0027D11E401EB70020ABA0 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				2C0027D21E401F020020ABA0 /* ThirdPartyToolsLoader.swift */,
+				2C0027D41E401F1C0020ABA0 /* FabricTool.swift */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
 		2C4ABF0E1E3043F000FA73A2 = {
 			isa = PBXGroup;
 			children = (
@@ -89,12 +100,11 @@
 		2C4ABF191E3043F000FA73A2 /* TVMed */ = {
 			isa = PBXGroup;
 			children = (
+				2C4F5FE61E40248700754DBB /* SupportingFiles */,
+				2C4F5FDD1E4021EF00754DBB /* ViewControllers */,
+				2C0027D11E401EB70020ABA0 /* ThirdParty */,
+				2C6E13C61E3C260500ADA742 /* Storyboards */,
 				2C4ABF1A1E3043F000FA73A2 /* AppDelegate.swift */,
-				2C4ABF1C1E3043F000FA73A2 /* FirstViewController.swift */,
-				2C4ABF1E1E3043F000FA73A2 /* SecondViewController.swift */,
-				2C4ABF201E3043F000FA73A2 /* Main.storyboard */,
-				2C4ABF231E3043F000FA73A2 /* Assets.xcassets */,
-				2C4ABF251E3043F000FA73A2 /* Info.plist */,
 			);
 			path = TVMed;
 			sourceTree = "<group>";
@@ -106,6 +116,79 @@
 				2C4ABF301E3043F000FA73A2 /* Info.plist */,
 			);
 			path = TVMedTests;
+			sourceTree = "<group>";
+		};
+		2C4F5FDD1E4021EF00754DBB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2C4F5FE51E4022FF00754DBB /* Minha Lista */,
+				2C4F5FE41E4022E900754DBB /* Catalogo */,
+				2C4F5FE31E4022E200754DBB /* Lancamentos */,
+				2C4F5FE01E40220200754DBB /* Minha Conta */,
+				2C4F5FDF1E4021FC00754DBB /* Search */,
+				2C4F5FDE1E4021F800754DBB /* Home */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2C4F5FDE1E4021F800754DBB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		2C4F5FDF1E4021FC00754DBB /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2C4F5FE11E40222800754DBB /* SearchViewController.swift */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		2C4F5FE01E40220200754DBB /* Minha Conta */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Minha Conta";
+			sourceTree = "<group>";
+		};
+		2C4F5FE31E4022E200754DBB /* Lancamentos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Lancamentos;
+			sourceTree = "<group>";
+		};
+		2C4F5FE41E4022E900754DBB /* Catalogo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Catalogo;
+			sourceTree = "<group>";
+		};
+		2C4F5FE51E4022FF00754DBB /* Minha Lista */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Minha Lista";
+			sourceTree = "<group>";
+		};
+		2C4F5FE61E40248700754DBB /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2C4ABF231E3043F000FA73A2 /* Assets.xcassets */,
+				2C4ABF251E3043F000FA73A2 /* Info.plist */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		2C6E13C61E3C260500ADA742 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2C4ABF201E3043F000FA73A2 /* Main.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		2D5F0B9E25699A539989A390 /* Pods */ = {
@@ -141,6 +224,7 @@
 				2C4ABF151E3043F000FA73A2 /* Resources */,
 				FC62BB2CF653F1B38ECF61B9 /* [CP] Embed Pods Frameworks */,
 				23C6032A61A83931AEDB0BF0 /* [CP] Copy Pods Resources */,
+				2C0027D01E401E950020ABA0 /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -249,6 +333,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TVMed/Pods-TVMed-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		2C0027D01E401E950020ABA0 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Crashlytics;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 7974d9af7a4b25714395ebb857d4533f31d2e295 c0c63d540c4f021093a128d6e6e79264a5fffe9b8dd6ec2eb06b73c151836223";
+		};
 		44713E58DBE0C0689F6C0EE1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -331,9 +429,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C4ABF1F1E3043F000FA73A2 /* SecondViewController.swift in Sources */,
+				2C4F5FE21E40222800754DBB /* SearchViewController.swift in Sources */,
+				2C0027D51E401F1C0020ABA0 /* FabricTool.swift in Sources */,
+				2C0027D31E401F020020ABA0 /* ThirdPartyToolsLoader.swift in Sources */,
 				2C4ABF1B1E3043F000FA73A2 /* AppDelegate.swift in Sources */,
-				2C4ABF1D1E3043F000FA73A2 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +638,7 @@
 				2C4ABF351E3043F000FA73A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C4ABF361E3043F000FA73A2 /* Build configuration list for PBXNativeTarget "TVMedTests" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +647,7 @@
 				2C4ABF381E3043F000FA73A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
