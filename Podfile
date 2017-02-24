@@ -11,6 +11,8 @@ pod 'Fabric'
 pod 'Crashlytics'
 pod 'Alamofire'
 pod 'RealmSwift'
+pod 'ObjectMapper'
+pod 'Kingfisher'
 
   target 'TVMedTests' do
     inherit! :search_paths

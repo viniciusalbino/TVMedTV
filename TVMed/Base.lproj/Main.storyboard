@@ -19,47 +19,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="IYo-7B-gNM" kind="relationship" relationship="rootViewController" id="V8E-B2-rg4"/>
+                        <segue destination="tgt-Q7-ScP" kind="relationship" relationship="rootViewController" id="4QE-fb-JCj"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pEv-Q2-j10" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1864" y="-1461"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="e1G-Y0-DHs">
-            <objects>
-                <collectionViewController title="Home" id="IYo-7B-gNM" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="9pU-lR-Fma">
-                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0uP-R2-0Wt">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="pnL-3K-ymr">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="IYo-7B-gNM" id="HCI-1C-Zdl"/>
-                            <outlet property="delegate" destination="IYo-7B-gNM" id="LDe-uX-u8R"/>
-                        </connections>
-                    </collectionView>
-                    <tabBarItem key="tabBarItem" title="Home" id="gBh-iW-wiX"/>
-                    <navigationItem key="navigationItem" id="nkB-oV-xZb"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bcc-sc-Ha7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4094" y="-1461"/>
         </scene>
         <!--Search-->
         <scene sceneID="uxy-jt-gvI">
@@ -257,6 +222,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VgI-2C-Ymp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1890" y="3401"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="MRT-Zx-NTh">
+            <objects>
+                <collectionViewController id="tgt-Q7-ScP" customClass="HomeViewController" customModule="TVMed" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="PnG-w9-aI7">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="48" minimumInteritemSpacing="48" id="mGj-RY-63N">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="15" minY="15" maxX="15" maxY="15"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCatalogCollectionViewCell" id="pS0-rE-6ha" customClass="HomeCatalogCollectionViewCell" customModule="TVMed" customModuleProvider="target">
+                                <rect key="frame" x="15" y="15" width="540" height="381"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="540" height="381"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gvU-1p-RNK">
+                                            <rect key="frame" x="0.0" y="0.0" width="540" height="220"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="220" id="bxR-za-aEu"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="gvU-1p-RNK" firstAttribute="leading" secondItem="pS0-rE-6ha" secondAttribute="leading" id="KL1-vd-CVr"/>
+                                    <constraint firstAttribute="trailing" secondItem="gvU-1p-RNK" secondAttribute="trailing" id="PPl-P3-scH"/>
+                                    <constraint firstItem="gvU-1p-RNK" firstAttribute="top" secondItem="pS0-rE-6ha" secondAttribute="top" id="zBU-r9-Dkh"/>
+                                </constraints>
+                                <size key="customSize" width="540" height="381"/>
+                                <connections>
+                                    <outlet property="image" destination="gvU-1p-RNK" id="eRc-xx-oj1"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="tgt-Q7-ScP" id="b3N-p3-R5w"/>
+                            <outlet property="delegate" destination="tgt-Q7-ScP" id="mHn-4I-OPY"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="vwf-1P-bz5"/>
+                    <connections>
+                        <outlet property="collectionView" destination="PnG-w9-aI7" id="ke8-p5-BWw"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vx6-Sg-xpx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4001" y="-1461"/>
         </scene>
         <!--Search-->
         <scene sceneID="Ovo-A0-gQj">
