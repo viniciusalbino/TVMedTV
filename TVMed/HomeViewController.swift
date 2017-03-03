@@ -11,48 +11,36 @@ import  UIKit
 
 class HomeViewController: UICollectionViewController, HomeDelegate, UICollectionViewDelegateFlowLayout {
     
+    private static let minimumEdgePadding = CGFloat(90.0)
     lazy var viewModel: HomeViewModel = HomeViewModel(delegate:self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        LoadingOverlay().showOverlay(viewController: self)
-        self.registerCells()
+        
+        // Make sure their is sufficient padding above and below the content.
+        guard let collectionView = collectionView, let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
+        
+        collectionView.contentInset.top = HomeViewController.minimumEdgePadding - layout.sectionInset.top
+        collectionView.contentInset.bottom = HomeViewController.minimumEdgePadding - layout.sectionInset.bottom
+        
         DispatchQueue.main.async {
             self.viewModel.loadReleases()
             self.viewModel.loadCategories()
         }
-        
-        let flowLayout = UICollectionViewFlowLayout()
-        
-//        flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.width/2 - 10, height: 381)
-//        flowLayout.sectionInset = UIEdgeInsetsMake(0, 5, 0, 5)
-//        flowLayout.scrollDirection = UICollectionViewScrollDirection.horizontal
-//        flowLayout.minimumInteritemSpacing = 0.0
-//        self.collectionView?.collectionViewLayout = flowLayout
-        
-    }
-    
-    func registerCells() {
-        collectionView?.register(
-            UINib(nibName: "HomeCatalogCollectionViewCell", bundle: nil),
-            forCellWithReuseIdentifier: "HomeCatalogCollectionViewCell")
     }
     
     func didFinishedLoadingCategories(succes: Bool) {
-        
+        self.collectionView?.performBatchUpdates({
+            let indexSet = IndexSet(integer: HomeSections.categories.rawValue)
+            self.collectionView?.reloadSections(indexSet)
+        }, completion: nil)
     }
     
     func didFinishedLoadingReleases(success: Bool) {
-            self.collectionView?.performBatchUpdates({
-                let indexSet = IndexSet(integer: HomeSections.releases.rawValue)
-                self.collectionView?.reloadSections(indexSet)
-            }, completion: nil)
-    }
-    
-    private func createCatalogCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: HomeCatalogCollectionViewCell = HomeCatalogCollectionViewCell.createCell(collectionView: collectionView, indexPath: indexPath)
-        cell.fill(item: viewModel.getReleases().object(index: indexPath.row) ?? Release())
-        return cell
+        self.collectionView?.performBatchUpdates({
+            let indexSet = IndexSet(integer: HomeSections.releases.rawValue)
+            self.collectionView?.reloadSections(indexSet)
+        }, completion: nil)
     }
     
     func catalogCellDidSelectedCell(index: Int) {
@@ -62,11 +50,11 @@ class HomeViewController: UICollectionViewController, HomeDelegate, UICollection
     // MARK: - UICollectionViewDataSource
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return viewModel.numberOfSections()
+        return self.viewModel.numberOfSections()
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.viewModel.numberOfRowsInSection(section: section)
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -77,35 +65,61 @@ class HomeViewController: UICollectionViewController, HomeDelegate, UICollection
         UICollectionViewCell {
         switch HomeSections(rawValue: indexPath.section) {
         case .categories:
-            return UICollectionViewCell()
+            return collectionView.dequeueReusableCell(withReuseIdentifier: CategorieContainerCell.reuseIdentifier, for: indexPath)
         case .catalog:
             return UICollectionViewCell()
         case .releases:
-            return self.createCatalogCell(collectionView: collectionView, indexPath: indexPath)
+            return collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewContainerCell.reuseIdentifier, for: indexPath)
         }
     }
     
-    override func collectionView(_ collectionView: UICollectionView, didUpdateFocusIn context: UICollectionViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
-        
-        if let indexPath = context.previouslyFocusedIndexPath,
-            let cell = collectionView.cellForItem(at: indexPath),
-            let titleLabel = cell.viewWithTag(10) {
-            let descrLabel = cell.viewWithTag(11)
-            coordinator.addCoordinatedAnimations({
-                titleLabel.alpha = 0.4
-                descrLabel?.alpha = 0.4
-            }, completion: nil)
-        }
-        
-        if let indexPath = context.nextFocusedIndexPath,
-            let cell = collectionView.cellForItem(at: indexPath),
-            let titleLabel = cell.viewWithTag(10) {
-            let descrLabel = cell.viewWithTag(11)
-            coordinator.addCoordinatedAnimations({
-                titleLabel.alpha = 1.0
-                descrLabel?.alpha = 1.0
-            }, completion: nil)
+    // MARK: UICollectionViewDelegate
+    
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        switch HomeSections(rawValue: indexPath.section) {
+        case .categories:
+            if let cell = cell as? CategorieContainerCell {
+                cell.configure(with: viewModel.getCategories())
+            }
+        case .catalog:
+            break
+        case .releases:
+            if let cell = cell as? CollectionViewContainerCell {
+                cell.configure(with: viewModel.getReleases())
+            }
         }
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, canFocusItemAt indexPath: IndexPath) -> Bool {
+        /*
+         Return `false` because we don't want this `collectionView`'s cells to
+         become focused. Instead the `UICollectionView` contained in the cell
+         should become focused.
+         */
+        return false
+    }
+    
+//    override func collectionView(_ collectionView: UICollectionView, didUpdateFocusIn context: UICollectionViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+//        
+//        if let indexPath = context.previouslyFocusedIndexPath,
+//            let cell = collectionView.cellForItem(at: indexPath),
+//            let titleLabel = cell.viewWithTag(10) {
+//            let descrLabel = cell.viewWithTag(11)
+//            coordinator.addCoordinatedAnimations({
+//                titleLabel.alpha = 0.4
+//                descrLabel?.alpha = 0.4
+//            }, completion: nil)
+//        }
+//        
+//        if let indexPath = context.nextFocusedIndexPath,
+//            let cell = collectionView.cellForItem(at: indexPath),
+//            let titleLabel = cell.viewWithTag(10) {
+//            let descrLabel = cell.viewWithTag(11)
+//            coordinator.addCoordinatedAnimations({
+//                titleLabel.alpha = 1.0
+//                descrLabel?.alpha = 1.0
+//            }, completion: nil)
+//        }
+//    }
 }
 

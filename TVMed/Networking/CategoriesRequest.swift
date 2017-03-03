@@ -10,7 +10,8 @@ import Foundation
 
 class CategoriesRequest  {
     func request(callback: @escaping ([Categorie]?, ErrorTypeApp?) -> ()) {
-        BaseRequest().GET(url: "tabelas/especialidades/pt-BR", params: [:]) { result, error, response in
+        BaseRequest().GET(url: "tabelas/especialidades", params: [:]) { result, error, response in
+            
             guard error == nil else {
                 callback(nil, error)
                 return

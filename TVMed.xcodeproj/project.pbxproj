@@ -16,6 +16,10 @@
 		2C4ABF241E3043F000FA73A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C4ABF231E3043F000FA73A2 /* Assets.xcassets */; };
 		2C4ABF2F1E3043F000FA73A2 /* TVMedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4ABF2E1E3043F000FA73A2 /* TVMedTests.swift */; };
 		2C4F5FE21E40222800754DBB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4F5FE11E40222800754DBB /* SearchViewController.swift */; };
+		2C5A99481E67904C00F6E4E9 /* HomeCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5A99471E67904C00F6E4E9 /* HomeCategoryCell.xib */; };
+		2C5A994A1E6790B700F6E4E9 /* HomeCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5A99491E6790B700F6E4E9 /* HomeCategoryCell.swift */; };
+		2C5A994C1E690A7500F6E4E9 /* CollectionViewContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5A994B1E690A7500F6E4E9 /* CollectionViewContainerCell.swift */; };
+		2C5A994E1E6910AF00F6E4E9 /* CategorieContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5A994D1E6910AF00F6E4E9 /* CategorieContainerCell.swift */; };
 		2C5BE2591E5FA3350038AE0E /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5BE2581E5FA3350038AE0E /* UITableViewCell+Extensions.swift */; };
 		2C7C532C1E5F7F090026380C /* CategoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7C532B1E5F7F090026380C /* CategoriesRequest.swift */; };
 		2C7C532F1E5F7F5D0026380C /* Categorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7C532E1E5F7F5D0026380C /* Categorie.swift */; };
@@ -61,6 +65,10 @@
 		2C4ABF2E1E3043F000FA73A2 /* TVMedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMedTests.swift; sourceTree = "<group>"; };
 		2C4ABF301E3043F000FA73A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C4F5FE11E40222800754DBB /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		2C5A99471E67904C00F6E4E9 /* HomeCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCategoryCell.xib; sourceTree = "<group>"; };
+		2C5A99491E6790B700F6E4E9 /* HomeCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCategoryCell.swift; sourceTree = "<group>"; };
+		2C5A994B1E690A7500F6E4E9 /* CollectionViewContainerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewContainerCell.swift; sourceTree = "<group>"; };
+		2C5A994D1E6910AF00F6E4E9 /* CategorieContainerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorieContainerCell.swift; sourceTree = "<group>"; };
 		2C5BE2581E5FA3350038AE0E /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		2C7C532B1E5F7F090026380C /* CategoriesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesRequest.swift; sourceTree = "<group>"; };
 		2C7C532E1E5F7F5D0026380C /* Categorie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categorie.swift; sourceTree = "<group>"; };
@@ -231,6 +239,24 @@
 			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		2C5A994F1E69112100F6E4E9 /* Categorie */ = {
+			isa = PBXGroup;
+			children = (
+				2C5A99491E6790B700F6E4E9 /* HomeCategoryCell.swift */,
+				2C5A994D1E6910AF00F6E4E9 /* CategorieContainerCell.swift */,
+			);
+			name = Categorie;
+			sourceTree = "<group>";
+		};
+		2C5A99501E69112B00F6E4E9 /* Releases */ = {
+			isa = PBXGroup;
+			children = (
+				2CA9139E1E5F9D8F00E1411F /* HomeCatalogCollectionViewCell.swift */,
+				2C5A994B1E690A7500F6E4E9 /* CollectionViewContainerCell.swift */,
+			);
+			name = Releases;
+			sourceTree = "<group>";
+		};
 		2C6E13C61E3C260500ADA742 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				2C7C53361E5F8AF70026380C /* HomeCatalogCollectionViewCell.xib */,
+				2C5A99471E67904C00F6E4E9 /* HomeCategoryCell.xib */,
 			);
 			name = HomeComponents;
 			sourceTree = "<group>";
@@ -268,7 +295,8 @@
 		2CA913971E5F9A9000E1411F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				2CA9139E1E5F9D8F00E1411F /* HomeCatalogCollectionViewCell.swift */,
+				2C5A99501E69112B00F6E4E9 /* Releases */,
+				2C5A994F1E69112100F6E4E9 /* Categorie */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -443,6 +471,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C5A99481E67904C00F6E4E9 /* HomeCategoryCell.xib in Resources */,
 				2C4ABF241E3043F000FA73A2 /* Assets.xcassets in Resources */,
 				2C4ABF221E3043F000FA73A2 /* Main.storyboard in Resources */,
 				2C7C53371E5F8AF70026380C /* HomeCatalogCollectionViewCell.xib in Resources */,
@@ -578,6 +607,7 @@
 				2CF186D01E5D2822008029B3 /* Releases.swift in Sources */,
 				2C7C53311E5F7FEE0026380C /* HomeSections.swift in Sources */,
 				2C4F5FE21E40222800754DBB /* SearchViewController.swift in Sources */,
+				2C5A994A1E6790B700F6E4E9 /* HomeCategoryCell.swift in Sources */,
 				2CF186C41E5D2502008029B3 /* Dictionary+Extensions.swift in Sources */,
 				2CF186E11E5D3802008029B3 /* RequestParser.swift in Sources */,
 				2CF186E21E5D3802008029B3 /* RequestResponseParse.swift in Sources */,
@@ -586,9 +616,11 @@
 				2CF186CC1E5D26D3008029B3 /* NewReleasesRequest.swift in Sources */,
 				2CF186E61E5F7246008029B3 /* LoadingOverlay.swift in Sources */,
 				2CF186DA1E5D3802008029B3 /* BaseRequest.swift in Sources */,
+				2C5A994C1E690A7500F6E4E9 /* CollectionViewContainerCell.swift in Sources */,
 				2CF186C21E5D228F008029B3 /* String+Extensions.swift in Sources */,
 				2CA913A31E5FA07A00E1411F /* Array+Extensions.swift in Sources */,
 				2CF186DC1E5D3802008029B3 /* ErrorTypeApp.swift in Sources */,
+				2C5A994E1E6910AF00F6E4E9 /* CategorieContainerCell.swift in Sources */,
 				2CF186C61E5D25F1008029B3 /* HomeViewController.swift in Sources */,
 				2C0027D31E401F020020ABA0 /* ThirdPartyToolsLoader.swift in Sources */,
 				2C5BE2591E5FA3350038AE0E /* UITableViewCell+Extensions.swift in Sources */,
