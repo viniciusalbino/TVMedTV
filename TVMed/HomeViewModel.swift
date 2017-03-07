@@ -12,6 +12,7 @@ import Alamofire
 protocol HomeDelegate: class {
     func didFinishedLoadingCategories(succes: Bool)
     func didFinishedLoadingReleases(success: Bool)
+    func didFinishedLoadingEspec(succes: Bool)
 }
 
 class HomeViewModel: NSObject {
@@ -19,7 +20,8 @@ class HomeViewModel: NSObject {
     weak var delegate:HomeDelegate?
     private var releases = [Release]()
     private var categories = [Categorie]()
-    private var catalog = [String]()
+    private var especialities = [Especiality]()
+    
     init(delegate: HomeDelegate) {
         self.delegate = delegate
     }
@@ -48,16 +50,28 @@ class HomeViewModel: NSObject {
         }
     }
     
+    func loadEspecialities() {
+        let request = EspecialityRequest()
+        request.request { especialities, error in
+            guard error == nil, let especiality = especialities else {
+                self.delegate?.didFinishedLoadingEspec(succes: false)
+                return
+            }
+            self.especialities = especiality
+            self.delegate?.didFinishedLoadingEspec(succes: true)
+        }
+    }
+    
     func numberOfSections() -> Int {
-        return HomeSections.allValues.count - 1
+        return HomeSections.allValues.count
     }
     
     func numberOfRowsInSection(section: Int) -> Int {
         switch HomeSections(rawValue: section) {
         case .categories:
             return self.categories.count
-        case .catalog:
-            return self.catalog.count
+        case .especiality:
+            return self.especialities.count
         case .releases:
             return self.releases.count
         }
@@ -67,7 +81,7 @@ class HomeViewModel: NSObject {
         switch HomeSections(rawValue: section) {
         case .categories:
             return CGSize(width: 1920, height: 100)
-        case .catalog:
+        case .especiality:
             return CGSize(width: 1920, height: 381)
         case .releases:
             return CGSize(width: 1920, height: 381)
@@ -75,10 +89,14 @@ class HomeViewModel: NSObject {
     }
     
     func getReleases() -> [Release] {
-        return self.releases
+        return releases
     }
     
     func getCategories() -> [Categorie] {
-        return self.categories
+        return categories
+    }
+    
+    func getEspecialities() -> [Especiality] {
+        return especialities
     }
 }

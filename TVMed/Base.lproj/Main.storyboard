@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="tvOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -227,8 +228,8 @@
         <scene sceneID="MRT-Zx-NTh">
             <objects>
                 <collectionViewController id="tgt-Q7-ScP" customClass="HomeViewController" customModule="TVMed" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="PnG-w9-aI7">
-                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="PnG-w9-aI7">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.91372549020000005" green="0.88235294119999996" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="48" minimumInteritemSpacing="48" id="mGj-RY-63N">
@@ -238,8 +239,46 @@
                             <inset key="sectionInset" minX="15" minY="15" maxX="15" maxY="15"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategorieContainerCell" id="7M8-9x-psy" customClass="CategorieContainerCell" customModule="TVMed" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EspecCollectionViewContainerCell" id="CR7-9Y-ApL" customClass="EspecCollectionViewContainerCell" customModule="TVMed" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="15" width="1920" height="400"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="1920" height="400"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ir3-Pp-wVH">
+                                            <rect key="frame" x="8" y="8" width="1904" height="384"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2Cn-bw-Wvk">
+                                                <size key="itemSize" width="540" height="381"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="clZ-vr-Qfc">
+                                                    <rect key="frame" x="0.0" y="2" width="540" height="381"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="540" height="381"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                    </view>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="Ir3-Pp-wVH" firstAttribute="leading" secondItem="CR7-9Y-ApL" secondAttribute="leadingMargin" id="0QA-o5-v8Z"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Ir3-Pp-wVH" secondAttribute="trailing" id="Ggd-9v-X5c"/>
+                                    <constraint firstItem="Ir3-Pp-wVH" firstAttribute="top" secondItem="CR7-9Y-ApL" secondAttribute="topMargin" id="ihR-53-VnF"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="Ir3-Pp-wVH" secondAttribute="bottom" id="vYh-Or-PgE"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="collectionView" destination="Ir3-Pp-wVH" id="Ck4-qV-5NP"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategorieContainerCell" id="7M8-9x-psy" customClass="CategorieContainerCell" customModule="TVMed" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="463" width="1920" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="1920" height="400"/>
@@ -279,7 +318,7 @@
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewContainerCell" id="div-ck-sRA" customClass="CollectionViewContainerCell" customModule="TVMed" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="463" width="1920" height="400"/>
+                                <rect key="frame" x="0.0" y="911" width="1920" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="1920" height="400"/>
@@ -301,6 +340,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="540" height="360"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                     </view>
+                                                    <size key="customSize" width="540" height="360"/>
                                                 </collectionViewCell>
                                             </cells>
                                         </collectionView>
@@ -323,13 +363,15 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="vwf-1P-bz5"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1920" height="1500"/>
                     <connections>
                         <outlet property="collectionView" destination="PnG-w9-aI7" id="ke8-p5-BWw"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vx6-Sg-xpx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4001" y="-1461"/>
+            <point key="canvasLocation" x="4115" y="-1955"/>
         </scene>
         <!--Search-->
         <scene sceneID="Ovo-A0-gQj">

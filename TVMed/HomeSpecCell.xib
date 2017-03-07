@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeSpecCell" id="dHJ-eP-t5Q" customClass="HomeSpecCell" customModule="TVMed" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="548" height="381"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="548" height="381"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="evz-kb-CcZ">
+                        <rect key="frame" x="0.0" y="0.0" width="548" height="220"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="220" id="Fgu-Ev-28n"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="evz-kb-CcZ" secondAttribute="trailing" id="mg6-ib-1Lj"/>
+                <constraint firstItem="evz-kb-CcZ" firstAttribute="leading" secondItem="dHJ-eP-t5Q" secondAttribute="leading" id="nwv-sv-7lL"/>
+                <constraint firstItem="evz-kb-CcZ" firstAttribute="top" secondItem="dHJ-eP-t5Q" secondAttribute="top" id="vNT-Zs-lkY"/>
+            </constraints>
+            <size key="customSize" width="706" height="380"/>
+            <connections>
+                <outlet property="image" destination="evz-kb-CcZ" id="v1m-nN-ZyI"/>
+            </connections>
+            <point key="canvasLocation" x="16" y="7"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -12,7 +12,7 @@ import UIKit
 enum HomeSections: Int {
     case categories
     case releases
-    case catalog
+    case especiality
     
     init(rawValue: Int) {
         switch rawValue {
@@ -21,7 +21,7 @@ enum HomeSections: Int {
         case 1:
             self = .releases
         default:
-            self = .catalog
+            self = .especiality
         }
     }
     
@@ -34,5 +34,5 @@ enum HomeSections: Int {
         }
     }
     
-    static let allValues = [categories, releases, catalog]
+    static let allValues = [categories, releases, especiality]
 }

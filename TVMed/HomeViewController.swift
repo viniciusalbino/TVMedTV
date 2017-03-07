@@ -26,6 +26,7 @@ class HomeViewController: UICollectionViewController, HomeDelegate, UICollection
         DispatchQueue.main.async {
             self.viewModel.loadReleases()
             self.viewModel.loadCategories()
+            self.viewModel.loadEspecialities()
         }
     }
     
@@ -39,6 +40,13 @@ class HomeViewController: UICollectionViewController, HomeDelegate, UICollection
     func didFinishedLoadingReleases(success: Bool) {
         self.collectionView?.performBatchUpdates({
             let indexSet = IndexSet(integer: HomeSections.releases.rawValue)
+            self.collectionView?.reloadSections(indexSet)
+        }, completion: nil)
+    }
+    
+    func didFinishedLoadingEspec(succes: Bool) {
+        self.collectionView?.performBatchUpdates({ 
+            let indexSet = IndexSet(integer: HomeSections.especiality.rawValue)
             self.collectionView?.reloadSections(indexSet)
         }, completion: nil)
     }
@@ -66,8 +74,8 @@ class HomeViewController: UICollectionViewController, HomeDelegate, UICollection
         switch HomeSections(rawValue: indexPath.section) {
         case .categories:
             return collectionView.dequeueReusableCell(withReuseIdentifier: CategorieContainerCell.reuseIdentifier, for: indexPath)
-        case .catalog:
-            return UICollectionViewCell()
+        case .especiality:
+            return collectionView.dequeueReusableCell(withReuseIdentifier: EspecCollectionViewContainerCell.reuseIdentifier, for: indexPath)
         case .releases:
             return collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewContainerCell.reuseIdentifier, for: indexPath)
         }
@@ -81,8 +89,10 @@ class HomeViewController: UICollectionViewController, HomeDelegate, UICollection
             if let cell = cell as? CategorieContainerCell {
                 cell.configure(with: viewModel.getCategories())
             }
-        case .catalog:
-            break
+        case .especiality:
+            if let cell = cell as? EspecCollectionViewContainerCell {
+                cell.configure(with: viewModel.getEspecialities())
+            }
         case .releases:
             if let cell = cell as? CollectionViewContainerCell {
                 cell.configure(with: viewModel.getReleases())
