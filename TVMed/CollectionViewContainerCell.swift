@@ -9,19 +9,25 @@
 import Foundation
 import UIKit
 
+protocol SelectedReleaseProtocol: class {
+    func didSelectedRelease(index: Int)
+}
+
 class CollectionViewContainerCell: UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet var collectionView: UICollectionView!
     private var dataItems = [Release]()
     static let reuseIdentifier = "CollectionViewContainerCell"
+    weak var delegate:SelectedReleaseProtocol?
     
     override var preferredFocusedView: UIView? {
         return collectionView
     }
     
-    func configure(with dataItems: [Release]) {
+    func configure(with dataItems: [Release], delegate:SelectedReleaseProtocol) {
         self.dataItems = dataItems
         collectionView.reloadData()
+        self.delegate = delegate
     }
     
     override func awakeFromNib() {
@@ -39,6 +45,10 @@ class CollectionViewContainerCell: UICollectionViewCell, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataItems.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.delegate?.didSelectedRelease(index: indexPath.row)
     }
     
     // MARK: UICollectionViewDataSource

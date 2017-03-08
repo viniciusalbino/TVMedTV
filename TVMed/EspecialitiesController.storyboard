@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Especialities Controller-->
+        <scene sceneID="Aw2-7I-t64">
+            <objects>
+                <collectionViewController id="wEe-Mz-9b7" customClass="EspecialitiesController" customModule="TVMed" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="HY1-mC-W43">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8tA-PD-igx">
+                            <size key="itemSize" width="1920" height="400"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EspecCollectionViewContainerCell" id="hCs-NC-7Kd" customClass="EspecCollectionViewContainerCell" customModule="TVMed" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="400"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="1920" height="400"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lAF-io-hNd">
+                                            <rect key="frame" x="0.0" y="0.0" width="1920" height="400"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="0.0" id="sDJ-oH-TcT">
+                                                <size key="itemSize" width="50" height="50"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="50" minY="20" maxX="50" maxY="20"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="aND-h1-pIW">
+                                                    <rect key="frame" x="50" y="20" width="540" height="360"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                        <rect key="frame" x="0.0" y="0.0" width="540" height="360"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                    </view>
+                                                    <size key="customSize" width="540" height="360"/>
+                                                </collectionViewCell>
+                                            </cells>
+                                        </collectionView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="lAF-io-hNd" firstAttribute="top" secondItem="hCs-NC-7Kd" secondAttribute="top" id="QpH-AV-Mu5"/>
+                                    <constraint firstAttribute="bottom" secondItem="lAF-io-hNd" secondAttribute="bottom" id="j6v-fZ-fhl"/>
+                                    <constraint firstItem="lAF-io-hNd" firstAttribute="leading" secondItem="hCs-NC-7Kd" secondAttribute="leading" id="n3W-Nd-gF0"/>
+                                    <constraint firstAttribute="trailing" secondItem="lAF-io-hNd" secondAttribute="trailing" id="zBM-Xo-lvj"/>
+                                </constraints>
+                                <size key="customSize" width="1920" height="400"/>
+                                <connections>
+                                    <outlet property="collectionView" destination="lAF-io-hNd" id="ebr-Ut-7J9"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="wEe-Mz-9b7" id="2uN-st-sM7"/>
+                            <outlet property="delegate" destination="wEe-Mz-9b7" id="vKG-ZU-0wl"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Top-mb-mpB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1036" y="-295"/>
+        </scene>
+    </scenes>
+</document>

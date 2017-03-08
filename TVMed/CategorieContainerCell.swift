@@ -9,19 +9,25 @@
 import Foundation
 import UIKit
 
+protocol SelectedCategorieProtocol: class {
+    func didSelectedCategorie(index: Int)
+}
+
 class CategorieContainerCell: UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet var collectionView: UICollectionView!
     private var dataItems = [Categorie]()
     static let reuseIdentifier = "CategorieContainerCell"
+    weak var delegate:SelectedCategorieProtocol?
     
     override var preferredFocusedView: UIView? {
         return collectionView
     }
     
-    func configure(with dataItems: [Categorie]) {
+    func configure(with dataItems: [Categorie], delegate: SelectedCategorieProtocol) {
         self.dataItems = dataItems
         collectionView.reloadData()
+        self.delegate = delegate
     }
     
     override func awakeFromNib() {
@@ -39,6 +45,10 @@ class CategorieContainerCell: UICollectionViewCell, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataItems.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.delegate?.didSelectedCategorie(index: indexPath.row)
     }
     
     // MARK: UICollectionViewDataSource

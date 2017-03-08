@@ -9,19 +9,25 @@
 import Foundation
 import UIKit
 
+protocol SelectedEspecialityProtocol: class {
+    func didSelectedEspeciality(index: Int)
+}
+
 class EspecCollectionViewContainerCell: UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet var collectionView: UICollectionView!
     private var dataItems = [Especiality]()
     static let reuseIdentifier = "EspecCollectionViewContainerCell"
+    weak var delegate:SelectedEspecialityProtocol?
     
     override var preferredFocusedView: UIView? {
         return collectionView
     }
     
-    func configure(with dataItems: [Especiality]) {
+    func configure(with dataItems: [Especiality], delegate: SelectedEspecialityProtocol) {
         self.dataItems = dataItems
         collectionView.reloadData()
+        self.delegate = delegate
     }
     
     override func awakeFromNib() {
@@ -39,6 +45,10 @@ class EspecCollectionViewContainerCell: UICollectionViewCell, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataItems.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.delegate?.didSelectedEspeciality(index: indexPath.row)
     }
     
     // MARK: UICollectionViewDataSource

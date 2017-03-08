@@ -9,7 +9,7 @@
 import Foundation
 import  UIKit
 
-class HomeViewController: UICollectionViewController, HomeDelegate, UICollectionViewDelegateFlowLayout {
+class HomeViewController: UICollectionViewController, HomeDelegate, UICollectionViewDelegateFlowLayout, SelectedEspecialityProtocol, SelectedReleaseProtocol, SelectedCategorieProtocol {
     
     private static let minimumEdgePadding = CGFloat(90.0)
     lazy var viewModel: HomeViewModel = HomeViewModel(delegate:self)
@@ -87,15 +87,15 @@ class HomeViewController: UICollectionViewController, HomeDelegate, UICollection
         switch HomeSections(rawValue: indexPath.section) {
         case .categories:
             if let cell = cell as? CategorieContainerCell {
-                cell.configure(with: viewModel.getCategories())
+                cell.configure(with: viewModel.getCategories(), delegate: self)
             }
         case .especiality:
             if let cell = cell as? EspecCollectionViewContainerCell {
-                cell.configure(with: viewModel.getEspecialities())
+                cell.configure(with: viewModel.getEspecialities(), delegate: self)
             }
         case .releases:
             if let cell = cell as? CollectionViewContainerCell {
-                cell.configure(with: viewModel.getReleases())
+                cell.configure(with: viewModel.getReleases(), delegate: self)
             }
         }
     }
@@ -107,6 +107,18 @@ class HomeViewController: UICollectionViewController, HomeDelegate, UICollection
          should become focused.
          */
         return false
+    }
+    
+    func didSelectedRelease(index: Int) {
+        
+    }
+    
+    func didSelectedCategorie(index: Int) {
+        
+    }
+    
+    func didSelectedEspeciality(index: Int) {
+        
     }
     
 //    override func collectionView(_ collectionView: UICollectionView, didUpdateFocusIn context: UICollectionViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {

@@ -19,4 +19,20 @@ class NewReleasesRequest  {
             callback(result.object, result.error)
         }
     }
+    
+    func getMidiaPromotion(congressoId: String, callback: @escaping (MidiaPromotion?, ErrorTypeApp?) -> ()) {
+        let url = "/congresso/midiaspromocao/\(congressoId)/pt-br"
+        BaseRequest().GET(url: url, params: [:]) { result, error, response in
+            guard error == nil else {
+                callback(nil, error)
+                return
+            }
+            guard let resultOperation = result as? [JSONDictionary] else {
+                callback(nil, error)
+                return
+            }
+            let resultado = resultOperation.first <*> (MidiaPromotion.self, error)
+            callback(resultado.object, resultado.error)
+        }
+    }
 }
