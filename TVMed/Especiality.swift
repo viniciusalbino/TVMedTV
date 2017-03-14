@@ -37,7 +37,7 @@ struct Especiality: Mappable {
         sufixo    <- map["sufixo"]
         congressImage <- map["congressImage"]
         image        <- map["image"]
-        descricao          <- map["congressoNome"]
+        descricao          <- map["descricao"]
         congressoNome  <- map["congressoNome"]
         data_evento    <- map["data_evento"]
         tipoMidia <- map["tipoMidia"]

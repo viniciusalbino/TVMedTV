@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="YyH-vp-bPo">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
     <dependencies>
+        <deployment identifier="tvOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,26 +32,26 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vx6-Sg-xpx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <collectionViewController id="tgt-Q7-ScP" customClass="HomeViewController" customModule="TVMed" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="PnG-w9-aI7">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="PnG-w9-aI7">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.91372549020000005" green="0.88235294119999996" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="48" minimumInteritemSpacing="48" id="mGj-RY-63N">
-                            <size key="itemSize" width="1920" height="400"/>
+                            <size key="itemSize" width="1820" height="400"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="15" minY="15" maxX="15" maxY="15"/>
+                            <inset key="sectionInset" minX="50" minY="15" maxX="50" maxY="15"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EspecCollectionViewContainerCell" id="CR7-9Y-ApL" customClass="EspecCollectionViewContainerCell" customModule="TVMed" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="15" width="1920" height="400"/>
+                                <rect key="frame" x="50" y="15" width="1820" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="1920" height="400"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1820" height="400"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ir3-Pp-wVH">
-                                            <rect key="frame" x="8" y="8" width="1904" height="384"/>
+                                            <rect key="frame" x="8" y="8" width="1839" height="384"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2Cn-bw-Wvk">
                                                 <size key="itemSize" width="540" height="381"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -78,14 +82,14 @@
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategorieContainerCell" id="7M8-9x-psy" customClass="CategorieContainerCell" customModule="TVMed" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="463" width="1920" height="400"/>
+                                <rect key="frame" x="50" y="463" width="1820" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="1920" height="400"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1820" height="400"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mQ2-pz-5hz">
-                                            <rect key="frame" x="0.0" y="0.0" width="1920" height="400"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1855" height="400"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="50" minimumInteritemSpacing="0.0" id="UHf-Dr-23D">
                                                 <size key="itemSize" width="400" height="100"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -112,20 +116,21 @@
                                     <constraint firstAttribute="trailing" secondItem="mQ2-pz-5hz" secondAttribute="trailing" id="lpl-zb-EXp"/>
                                     <constraint firstItem="mQ2-pz-5hz" firstAttribute="leading" secondItem="7M8-9x-psy" secondAttribute="leading" id="rLR-XR-bk9"/>
                                 </constraints>
-                                <size key="customSize" width="1920" height="400"/>
+                                <size key="customSize" width="1820" height="400"/>
                                 <connections>
                                     <outlet property="collectionView" destination="mQ2-pz-5hz" id="4u3-lE-6Sz"/>
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewContainerCell" id="div-ck-sRA" customClass="CollectionViewContainerCell" customModule="TVMed" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="911" width="1920" height="400"/>
+                                <rect key="frame" x="50" y="911" width="1820" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="1920" height="400"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1820" height="400"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WL6-Do-3Tn">
-                                            <rect key="frame" x="0.0" y="0.0" width="1920" height="400"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1855" height="400"/>
+                                            <inset key="scrollIndicatorInsets" minX="50" minY="0.0" maxX="50" maxY="0.0"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="50" minimumInteritemSpacing="0.0" id="mBV-5k-rpX">
                                                 <size key="itemSize" width="540" height="360"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -167,10 +172,19 @@
                     <size key="freeformSize" width="1920" height="1500"/>
                     <connections>
                         <outlet property="collectionView" destination="PnG-w9-aI7" id="ke8-p5-BWw"/>
+                        <segue destination="Rmi-zY-8CO" kind="show" identifier="EspecialitiesSegue" id="5Bd-5z-6eb"/>
                     </connections>
                 </collectionViewController>
             </objects>
             <point key="canvasLocation" x="4115" y="-1955"/>
+        </scene>
+        <!--EspecialitiesController-->
+        <scene sceneID="kWW-so-0Ap">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EspecialitiesController" referencedIdentifier="EspecialitiesController" id="Rmi-zY-8CO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DdE-MR-np5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6248" y="-1164"/>
         </scene>
     </scenes>
 </document>

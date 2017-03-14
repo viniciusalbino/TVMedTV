@@ -114,11 +114,23 @@ class HomeViewController: UICollectionViewController, HomeDelegate, UICollection
     }
     
     func didSelectedCategorie(index: Int) {
-        
+        let categorie = self.viewModel.getCategories().object(index: index)
+        self.performSegue(withIdentifier: "EspecialitiesSegue", sender: categorie)
     }
     
     func didSelectedEspeciality(index: Int) {
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier! {
+        case "EspecialitiesSegue":
+            if let controller = segue.destination as? EspecialitiesController, let categorie = sender as? Categorie {
+                controller.getEspecialities(id: categorie.codigo)
+            }
+        default:
+            break
+        }
     }
     
 //    override func collectionView(_ collectionView: UICollectionView, didUpdateFocusIn context: UICollectionViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {

@@ -12,6 +12,9 @@ import UIKit
 class HomeSpecCell: UICollectionViewCell {
     
     @IBOutlet weak var image:UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel:UILabel!
+    @IBOutlet weak var codeLabel:UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,8 +27,11 @@ class HomeSpecCell: UICollectionViewCell {
     
     func fill(item: Especiality) {
         if let url = URL(string: "https://tvmed.blob.core.windows.net/public/webplayer.tvmed.com.br/content/images/congresso/" + item.congressImage) {
-            self.image.kf.setImage(with:url)
+            self.image.kf.setImage(with: url, placeholder: UIImage(named:"defaultImage"), options: nil, progressBlock: nil, completionHandler: nil)
         }
+        self.titleLabel.text = item.descricao
+        self.subtitleLabel.text = "\(item.prefixo) \(item.sufixo)"
+        self.codeLabel.text = "\(item.codigo)"
     }
     
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
