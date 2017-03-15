@@ -17,7 +17,7 @@ class HomeCatalogCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel:UILabel!
     @IBOutlet weak var descrLabel:UILabel!
     
-    override func awakeFromNib() {
+    override func awakeFromNib( ) {
         super.awakeFromNib()
         image.clipsToBounds = false
         

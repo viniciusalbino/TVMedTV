@@ -34,5 +34,16 @@ enum HomeSections: Int {
         }
     }
     
+    var title: String {
+        switch self {
+        case .categories:
+            return "Categorias"
+        case .releases:
+            return "Lançamentos"
+        default:
+            return "Catálogo"
+        }
+    }
+    
     static let allValues = [categories, releases, especiality]
 }

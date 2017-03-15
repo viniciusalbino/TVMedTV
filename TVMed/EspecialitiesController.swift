@@ -42,6 +42,17 @@ class EspecialitiesController: UICollectionViewController, SelectedEspecialityPr
     
     // MARK: - UICollectionViewDataSource
     
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionElementKindSectionHeader:
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HeaderCell", for: indexPath) as! HeaderCell
+            headerView.fill(title: "Congressos")
+            return headerView
+        default:
+            assert(false, "Unexpected element kind")
+        }
+    }
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }

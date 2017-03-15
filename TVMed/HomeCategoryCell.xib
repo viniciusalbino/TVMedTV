@@ -20,13 +20,12 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ru9-sw-le3">
                         <rect key="frame" x="15" y="15" width="370" height="70"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
-                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="ru9-sw-le3" firstAttribute="top" secondItem="WdR-FK-HOb" secondAttribute="top" constant="15" id="Pco-54-cYz"/>
                 <constraint firstItem="ru9-sw-le3" firstAttribute="leading" secondItem="WdR-FK-HOb" secondAttribute="leading" constant="15" id="ec4-8N-Ojv"/>

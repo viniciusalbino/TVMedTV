@@ -81,6 +81,17 @@ class HomeViewController: UICollectionViewController, HomeDelegate, UICollection
         }
     }
     
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionElementKindSectionHeader:
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HeaderCell", for: indexPath) as! HeaderCell
+            headerView.fill(title: viewModel.titleForHeaderInSection(section: indexPath.section))
+            return headerView
+        default:
+            assert(false, "Unexpected element kind")
+        }
+    }
+    
     // MARK: UICollectionViewDelegate
     
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

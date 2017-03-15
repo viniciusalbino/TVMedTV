@@ -66,6 +66,10 @@ class HomeViewModel: NSObject {
         return HomeSections.allValues.count
     }
     
+    func titleForHeaderInSection(section: Int) -> String {
+        return HomeSections(rawValue: section).title
+    }
+    
     func numberOfRowsInSection(section: Int) -> Int {
         switch HomeSections(rawValue: section) {
         case .categories:
