@@ -11,6 +11,9 @@
 		16D107A7F19F9FAAD0C31635 /* Pods_TVMed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 684FE61E82A70E197AA0F9EB /* Pods_TVMed.framework */; };
 		2C0027D31E401F020020ABA0 /* ThirdPartyToolsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0027D21E401F020020ABA0 /* ThirdPartyToolsLoader.swift */; };
 		2C0027D51E401F1C0020ABA0 /* FabricTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0027D41E401F1C0020ABA0 /* FabricTool.swift */; };
+		2C1B4A501E7B7DD600DED396 /* CongressoDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C1B4A4F1E7B7DD600DED396 /* CongressoDetail.storyboard */; };
+		2C1B4A531E7B830200DED396 /* CongressDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B4A521E7B830200DED396 /* CongressDetailController.swift */; };
+		2C1B4A551E7B83F900DED396 /* CongressDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B4A541E7B83F900DED396 /* CongressDetailViewModel.swift */; };
 		2C4ABF1B1E3043F000FA73A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4ABF1A1E3043F000FA73A2 /* AppDelegate.swift */; };
 		2C4ABF221E3043F000FA73A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4ABF201E3043F000FA73A2 /* Main.storyboard */; };
 		2C4ABF241E3043F000FA73A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C4ABF231E3043F000FA73A2 /* Assets.xcassets */; };
@@ -67,6 +70,9 @@
 		0968D6E8E29EED2CB47A1D76 /* Pods-TVMedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVMedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVMedTests/Pods-TVMedTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2C0027D21E401F020020ABA0 /* ThirdPartyToolsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdPartyToolsLoader.swift; sourceTree = "<group>"; };
 		2C0027D41E401F1C0020ABA0 /* FabricTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FabricTool.swift; sourceTree = "<group>"; };
+		2C1B4A4F1E7B7DD600DED396 /* CongressoDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CongressoDetail.storyboard; sourceTree = "<group>"; };
+		2C1B4A521E7B830200DED396 /* CongressDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongressDetailController.swift; sourceTree = "<group>"; };
+		2C1B4A541E7B83F900DED396 /* CongressDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongressDetailViewModel.swift; sourceTree = "<group>"; };
 		2C4ABF171E3043F000FA73A2 /* TVMed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVMed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4ABF1A1E3043F000FA73A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C4ABF211E3043F000FA73A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -147,6 +153,15 @@
 			name = ThirdParty;
 			sourceTree = "<group>";
 		};
+		2C1B4A511E7B82F200DED396 /* CongressDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2C1B4A521E7B830200DED396 /* CongressDetailController.swift */,
+				2C1B4A541E7B83F900DED396 /* CongressDetailViewModel.swift */,
+			);
+			name = CongressDetail;
+			sourceTree = "<group>";
+		};
 		2C4ABF0E1E3043F000FA73A2 = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +210,7 @@
 		2C4F5FDD1E4021EF00754DBB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2C1B4A511E7B82F200DED396 /* CongressDetail */,
 				2C9D0A561E6FA8FB0095A1FB /* EspecialitiesController */,
 				2C4F5FE51E4022FF00754DBB /* Minha Lista */,
 				2C4F5FE41E4022E900754DBB /* Catalogo */,
@@ -287,6 +303,7 @@
 				2C4ABF201E3043F000FA73A2 /* Main.storyboard */,
 				2C9D0A531E6FA8170095A1FB /* Home.storyboard */,
 				2C9D0A4C1E6FA6370095A1FB /* EspecialitiesController.storyboard */,
+				2C1B4A4F1E7B7DD600DED396 /* CongressoDetail.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -543,6 +560,7 @@
 				2C9D0A4D1E6FA6370095A1FB /* EspecialitiesController.storyboard in Resources */,
 				2C7C53371E5F8AF70026380C /* HomeCatalogCollectionViewCell.xib in Resources */,
 				2C9D0A481E6E5A810095A1FB /* HomeSpecCell.xib in Resources */,
+				2C1B4A501E7B7DD600DED396 /* CongressoDetail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,6 +688,7 @@
 				2C9D0A581E6FA9140095A1FB /* EspecialitiesController.swift in Sources */,
 				2CA9139D1E5F9B3B00E1411F /* UIView+Extensions.swift in Sources */,
 				2CA9139F1E5F9D8F00E1411F /* HomeCatalogCollectionViewCell.swift in Sources */,
+				2C1B4A551E7B83F900DED396 /* CongressDetailViewModel.swift in Sources */,
 				2CF186C81E5D25F9008029B3 /* HomeViewModel.swift in Sources */,
 				2C7C532C1E5F7F090026380C /* CategoriesRequest.swift in Sources */,
 				2C7C532F1E5F7F5D0026380C /* Categorie.swift in Sources */,
@@ -686,6 +705,7 @@
 				2CF186E21E5D3802008029B3 /* RequestResponseParse.swift in Sources */,
 				2C9D0A461E6E5A6C0095A1FB /* HomeSpecCell.swift in Sources */,
 				2C0027D51E401F1C0020ABA0 /* FabricTool.swift in Sources */,
+				2C1B4A531E7B830200DED396 /* CongressDetailController.swift in Sources */,
 				2CA913A11E5F9E3700E1411F /* UICollectionViewCell+Extensions.swift in Sources */,
 				2CF186CC1E5D26D3008029B3 /* NewReleasesRequest.swift in Sources */,
 				2CF186E61E5F7246008029B3 /* LoadingOverlay.swift in Sources */,

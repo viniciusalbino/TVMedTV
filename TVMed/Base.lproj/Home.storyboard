@@ -32,7 +32,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vx6-Sg-xpx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <collectionViewController id="tgt-Q7-ScP" customClass="HomeViewController" customModule="TVMed" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="PnG-w9-aI7">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="PnG-w9-aI7">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.054901960784313725" green="0.3411764705882353" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
@@ -194,6 +194,7 @@
                     <connections>
                         <outlet property="collectionView" destination="PnG-w9-aI7" id="ke8-p5-BWw"/>
                         <segue destination="Rmi-zY-8CO" kind="show" identifier="EspecialitiesSegue" id="5Bd-5z-6eb"/>
+                        <segue destination="fX0-eh-4BK" kind="show" identifier="CongressoDetail" id="0kC-w5-TQW"/>
                     </connections>
                 </collectionViewController>
             </objects>
@@ -206,6 +207,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DdE-MR-np5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6248" y="-1164"/>
+        </scene>
+        <!--CongressoDetail-->
+        <scene sceneID="8eS-wj-vCS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CongressoDetail" referencedIdentifier="CongressoDetail" id="fX0-eh-4BK" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IZ9-ot-xdq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5916" y="-861"/>
         </scene>
     </scenes>
 </document>

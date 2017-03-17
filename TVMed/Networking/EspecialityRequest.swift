@@ -32,4 +32,16 @@ class EspecialityRequest  {
             callback(result.object, result.error)
         }
     }
+    
+    func getMidiaCongress(congressID: String, callback: @escaping ([MidiaPromotion]?, ErrorTypeApp?) ->()) {
+        let url = "/congresso/midiascongresso/\(congressID)/"
+        BaseRequest().GET(url: url, params: [:]) { result, error, response in
+            guard error == nil else {
+                callback(nil, error)
+                return
+            }
+            let result = result as? [JSONDictionary] <*> (MidiaPromotion.self, error)
+            callback(result.object, result.error)
+        }
+    }
 }

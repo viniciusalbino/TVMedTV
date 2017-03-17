@@ -131,7 +131,8 @@ class HomeViewController: UICollectionViewController, HomeDelegate, UICollection
     }
     
     func didSelectedEspeciality(index: Int) {
-        
+        let congress = self.viewModel.getEspecialities().object(index: index)
+        self.performSegue(withIdentifier: "CongressoDetail", sender: congress)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -139,6 +140,10 @@ class HomeViewController: UICollectionViewController, HomeDelegate, UICollection
         case "EspecialitiesSegue":
             if let controller = segue.destination as? EspecialitiesController, let categorie = sender as? Categorie {
                 controller.getEspecialities(id: categorie.codigo)
+            }
+        case "CongressoDetail":
+            if let controller = segue.destination as? CongressDetailController, let congress = sender as? Especiality {
+                controller.loadCongress(congressID: "\(congress.codigo)")
             }
         default:
             break

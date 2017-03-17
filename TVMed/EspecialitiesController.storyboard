@@ -32,7 +32,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lAF-io-hNd">
-                                            <rect key="frame" x="0.0" y="0.0" width="1870" height="400"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1820" height="400"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="0.0" id="sDJ-oH-TcT">
                                                 <size key="itemSize" width="540" height="360"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -91,10 +91,21 @@
                             <outlet property="delegate" destination="wEe-Mz-9b7" id="vKG-ZU-0wl"/>
                         </connections>
                     </collectionView>
+                    <connections>
+                        <segue destination="req-Aq-mdB" kind="show" identifier="congressDetailPush" id="AJ0-q3-7OG"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Top-mb-mpB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1036" y="-295"/>
+        </scene>
+        <!--CongressoDetail-->
+        <scene sceneID="3Zz-EZ-xPw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CongressoDetail" referencedIdentifier="CongressoDetail" id="req-Aq-mdB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZME-vz-CoE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="-491"/>
         </scene>
     </scenes>
 </document>
