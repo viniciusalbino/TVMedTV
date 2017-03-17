@@ -90,6 +90,7 @@ class HomeViewController: UICollectionViewController, HomeDelegate, UICollection
         default:
             assert(false, "Unexpected element kind")
         }
+        return UICollectionReusableView()
     }
     
     // MARK: UICollectionViewDelegate

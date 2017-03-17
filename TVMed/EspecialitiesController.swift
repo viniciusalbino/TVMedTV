@@ -51,6 +51,7 @@ class EspecialitiesController: UICollectionViewController, SelectedEspecialityPr
         default:
             assert(false, "Unexpected element kind")
         }
+        return UICollectionReusableView()
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {

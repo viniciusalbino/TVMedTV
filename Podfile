@@ -6,7 +6,6 @@ target 'TVMed' do
   use_frameworks!
 
   # Pods for TVMed
-pod 'SVProgressHUD'
 pod 'Fabric'
 pod 'Crashlytics'
 pod 'Alamofire'

@@ -862,8 +862,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.TV.TVMed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1932df7c-7dba-47de-a897-b2490ba541b5";
-				PROVISIONING_PROFILE_SPECIFIER = "TVMedTV Distribuition";
+				PROVISIONING_PROFILE = "7a4bb0cc-4014-411c-b5ce-3104a9ab82aa";
+				PROVISIONING_PROFILE_SPECIFIER = "TVmed ADHOC";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
