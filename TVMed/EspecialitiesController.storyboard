@@ -92,7 +92,7 @@
                         </connections>
                     </collectionView>
                     <connections>
-                        <segue destination="req-Aq-mdB" kind="show" identifier="congressDetailPush" id="AJ0-q3-7OG"/>
+                        <segue destination="req-Aq-mdB" kind="show" identifier="CongressoDetail" id="AJ0-q3-7OG"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Top-mb-mpB" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -14,6 +14,10 @@
 		2C1B4A501E7B7DD600DED396 /* CongressoDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C1B4A4F1E7B7DD600DED396 /* CongressoDetail.storyboard */; };
 		2C1B4A531E7B830200DED396 /* CongressDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B4A521E7B830200DED396 /* CongressDetailController.swift */; };
 		2C1B4A551E7B83F900DED396 /* CongressDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B4A541E7B83F900DED396 /* CongressDetailViewModel.swift */; };
+		2C1B4A571E7F5AD900DED396 /* CongressDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B4A561E7F5AD900DED396 /* CongressDetailCell.swift */; };
+		2C1B4A591E7F66DB00DED396 /* Float+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B4A581E7F66DB00DED396 /* Float+Extension.swift */; };
+		2C1B4A5B1E7F71EE00DED396 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B4A5A1E7F71EE00DED396 /* UIViewController+Extensions.swift */; };
+		2C1B4A5D1E7F742D00DED396 /* FocusedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B4A5C1E7F742D00DED396 /* FocusedTextView.swift */; };
 		2C4ABF1B1E3043F000FA73A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4ABF1A1E3043F000FA73A2 /* AppDelegate.swift */; };
 		2C4ABF221E3043F000FA73A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4ABF201E3043F000FA73A2 /* Main.storyboard */; };
 		2C4ABF241E3043F000FA73A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C4ABF231E3043F000FA73A2 /* Assets.xcassets */; };
@@ -73,6 +77,10 @@
 		2C1B4A4F1E7B7DD600DED396 /* CongressoDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CongressoDetail.storyboard; sourceTree = "<group>"; };
 		2C1B4A521E7B830200DED396 /* CongressDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongressDetailController.swift; sourceTree = "<group>"; };
 		2C1B4A541E7B83F900DED396 /* CongressDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongressDetailViewModel.swift; sourceTree = "<group>"; };
+		2C1B4A561E7F5AD900DED396 /* CongressDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongressDetailCell.swift; sourceTree = "<group>"; };
+		2C1B4A581E7F66DB00DED396 /* Float+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Float+Extension.swift"; sourceTree = "<group>"; };
+		2C1B4A5A1E7F71EE00DED396 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		2C1B4A5C1E7F742D00DED396 /* FocusedTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusedTextView.swift; sourceTree = "<group>"; };
 		2C4ABF171E3043F000FA73A2 /* TVMed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVMed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4ABF1A1E3043F000FA73A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C4ABF211E3043F000FA73A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -158,6 +166,7 @@
 			children = (
 				2C1B4A521E7B830200DED396 /* CongressDetailController.swift */,
 				2C1B4A541E7B83F900DED396 /* CongressDetailViewModel.swift */,
+				2C1B4A561E7F5AD900DED396 /* CongressDetailCell.swift */,
 			);
 			name = CongressDetail;
 			sourceTree = "<group>";
@@ -389,6 +398,8 @@
 				2CA913A01E5F9E3700E1411F /* UICollectionViewCell+Extensions.swift */,
 				2CA913A21E5FA07A00E1411F /* Array+Extensions.swift */,
 				2C5BE2581E5FA3350038AE0E /* UITableViewCell+Extensions.swift */,
+				2C1B4A581E7F66DB00DED396 /* Float+Extension.swift */,
+				2C1B4A5A1E7F71EE00DED396 /* UIViewController+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -437,6 +448,7 @@
 			isa = PBXGroup;
 			children = (
 				2CF186E51E5F7246008029B3 /* LoadingOverlay.swift */,
+				2C1B4A5C1E7F742D00DED396 /* FocusedTextView.swift */,
 			);
 			name = GeneralViews;
 			sourceTree = "<group>";
@@ -686,6 +698,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C9D0A581E6FA9140095A1FB /* EspecialitiesController.swift in Sources */,
+				2C1B4A5D1E7F742D00DED396 /* FocusedTextView.swift in Sources */,
+				2C1B4A571E7F5AD900DED396 /* CongressDetailCell.swift in Sources */,
 				2CA9139D1E5F9B3B00E1411F /* UIView+Extensions.swift in Sources */,
 				2CA9139F1E5F9D8F00E1411F /* HomeCatalogCollectionViewCell.swift in Sources */,
 				2C1B4A551E7B83F900DED396 /* CongressDetailViewModel.swift in Sources */,
@@ -710,7 +724,9 @@
 				2CF186CC1E5D26D3008029B3 /* NewReleasesRequest.swift in Sources */,
 				2CF186E61E5F7246008029B3 /* LoadingOverlay.swift in Sources */,
 				2CF186DA1E5D3802008029B3 /* BaseRequest.swift in Sources */,
+				2C1B4A591E7F66DB00DED396 /* Float+Extension.swift in Sources */,
 				2C9D0A4B1E6FA0C40095A1FB /* MidiaPromotion.swift in Sources */,
+				2C1B4A5B1E7F71EE00DED396 /* UIViewController+Extensions.swift in Sources */,
 				2C5A994C1E690A7500F6E4E9 /* CollectionViewContainerCell.swift in Sources */,
 				2CF186C21E5D228F008029B3 /* String+Extensions.swift in Sources */,
 				2CA913A31E5FA07A00E1411F /* Array+Extensions.swift in Sources */,

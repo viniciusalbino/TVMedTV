@@ -39,10 +39,10 @@ struct MidiaPromotion: Mappable {
     var congresso = 0
     var midia = 0
     var espec = ""
-    var precoTipoMidia0 = 0
-    var precoTipoMidia1 = 0
-    var precoTipoMidia2 = 0
-    var precoTipoMidia3 = 0
+    var precoTipoMidia0: Float = 0.0
+    var precoTipoMidia1: Float = 0.0
+    var precoTipoMidia2: Float = 0.0
+    var precoTipoMidia3: Float = 0.0
     var percentualDesconto = 0
     var nomeCongresso = ""
     var sinopse = ""
@@ -94,5 +94,34 @@ struct MidiaPromotion: Mappable {
         congaovivo  <- map["congaovivo"]
         comSlide    <- map["comSlide"]
         ultimoEvento <- map["ultimoEvento"]
+    }
+    
+    func formattedSubtitle() -> String {
+        return "Categoria : \(espec)"
+    }
+    
+    func formattedDescription() -> String {
+        return sinopse.replacingOccurrences(of: "\\n", with: "\n")
+    }
+    
+    func hasDiscount() -> Bool {
+        return percentualDesconto > 0
+    }
+    
+    func discountPercentage() -> String {
+        let prices = [precoTipoMidia0, precoTipoMidia1, precoTipoMidia2, precoTipoMidia3]
+        if let price = prices.object(index: tipoMidia) {
+            let discount = price / Float(percentualDesconto)
+            return (price - discount).currencyValue
+        }
+        return ""
+    }
+    
+    func getMidiaPrice() -> String {
+        let prices = [precoTipoMidia0, precoTipoMidia1, precoTipoMidia2, precoTipoMidia3]
+        if let price = prices.object(index: tipoMidia) {
+            return price.currencyValue
+        }
+        return "R$ 0,00"
     }
 }

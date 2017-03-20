@@ -122,7 +122,8 @@ class HomeViewController: UICollectionViewController, HomeDelegate, UICollection
     }
     
     func didSelectedRelease(index: Int) {
-        
+        let release = viewModel.getReleases().object(index: index)
+        self.performSegue(withIdentifier: "CongressoDetail", sender: release)
     }
     
     func didSelectedCategorie(index: Int) {
@@ -142,8 +143,12 @@ class HomeViewController: UICollectionViewController, HomeDelegate, UICollection
                 controller.getEspecialities(id: categorie.codigo)
             }
         case "CongressoDetail":
-            if let controller = segue.destination as? CongressDetailController, let congress = sender as? Especiality {
-                controller.loadCongress(congressID: "\(congress.codigo)")
+            if let controller = segue.destination as? CongressDetailController {
+                if let congress = sender as? Especiality {
+                    controller.loadContent(contentType: (type: .congress, id: "\(congress.codigo)"))
+                } else if let midia =  sender as? Release {
+                    controller.loadContent(contentType: (type: .midiaPromotion, id: midia.uniqueID))
+                }
             }
         default:
             break

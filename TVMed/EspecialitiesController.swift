@@ -37,7 +37,19 @@ class EspecialitiesController: UICollectionViewController, SelectedEspecialityPr
     }
     
     func didSelectedEspeciality(index: Int) {
-        
+        let congress = self.viewModel.getEspecialities().object(index: index)
+        self.performSegue(withIdentifier: "CongressoDetail", sender: congress)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier! {
+        case "CongressoDetail":
+            if let controller = segue.destination as? CongressDetailController, let congress = sender as? Especiality {
+                controller.loadContent(contentType: (type: .congress, id: "\(congress.codigo)"))
+            }
+        default:
+            break
+        }
     }
     
     // MARK: - UICollectionViewDataSource
