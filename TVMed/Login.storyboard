@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="mAq-EF-K5j">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="VXu-KO-zZt" customClass="LoginViewController" customModule="TVMed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QGZ-8O-WZA"/>
+                        <viewControllerLayoutGuide type="bottom" id="TrG-lU-RQi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rfG-iS-ksZ">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Endereço de email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CEC-Lz-9GW">
+                                <rect key="frame" x="760" y="300" width="400" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="tNb-Rt-km0"/>
+                                    <constraint firstAttribute="height" constant="60" id="thQ-X8-fgx"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nat-TQ-pXo">
+                                <rect key="frame" x="760" y="380" width="400" height="60"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Qj-HT-ZC8">
+                                <rect key="frame" x="810" y="460" width="300" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Njh-E7-W43"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Entrar"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.054901960780000002" green="0.3411764706" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Nat-TQ-pXo" firstAttribute="width" secondItem="CEC-Lz-9GW" secondAttribute="width" id="3m2-4Z-fEb"/>
+                            <constraint firstItem="Nat-TQ-pXo" firstAttribute="centerX" secondItem="rfG-iS-ksZ" secondAttribute="centerX" id="DeY-er-eSP"/>
+                            <constraint firstItem="CEC-Lz-9GW" firstAttribute="top" secondItem="QGZ-8O-WZA" secondAttribute="bottom" constant="300" id="J7v-Ac-Esu"/>
+                            <constraint firstItem="CEC-Lz-9GW" firstAttribute="centerX" secondItem="rfG-iS-ksZ" secondAttribute="centerX" id="ZUj-PM-HDD"/>
+                            <constraint firstItem="Nat-TQ-pXo" firstAttribute="height" secondItem="CEC-Lz-9GW" secondAttribute="height" id="gCg-AF-aDE"/>
+                            <constraint firstItem="8Qj-HT-ZC8" firstAttribute="height" secondItem="Nat-TQ-pXo" secondAttribute="height" id="gVZ-ff-S5r"/>
+                            <constraint firstItem="8Qj-HT-ZC8" firstAttribute="centerX" secondItem="rfG-iS-ksZ" secondAttribute="centerX" id="ikv-cs-4KK"/>
+                            <constraint firstItem="8Qj-HT-ZC8" firstAttribute="top" secondItem="Nat-TQ-pXo" secondAttribute="bottom" constant="20" id="q6d-Yu-QnF"/>
+                            <constraint firstItem="Nat-TQ-pXo" firstAttribute="top" secondItem="CEC-Lz-9GW" secondAttribute="bottom" constant="20" id="vdK-SA-iHx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="CEC-Lz-9GW" id="I3B-KN-6hw"/>
+                        <outlet property="loginButton" destination="8Qj-HT-ZC8" id="pyE-9x-x8L"/>
+                        <outlet property="passwordTextField" destination="Nat-TQ-pXo" id="8Cc-aI-WDB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2tb-se-cBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="126" y="97"/>
+        </scene>
+    </scenes>
+</document>

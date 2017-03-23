@@ -10,7 +10,8 @@ import Foundation
 import ObjectMapper
 import Alamofire
 
-public typealias JSONDictionary = [String:AnyObject]
+public typealias JSONDictionary = [String: Any]
+
 typealias DefaultCallBackClosure = (AnyObject?, ErrorTypeApp?, URLResponse?) -> ()
 
 protocol DefaultRequest {
@@ -62,7 +63,7 @@ class BaseRequest: NSObject {
         }
     }
     
-    func POST(url: String, params: [String: AnyObject]?, callback: @escaping DefaultCallBackClosure) {
+    func POST(url: String, params: [String: Any]?, callback: @escaping DefaultCallBackClosure) {
         let finalURL = "\(domain)\(url)"
         Alamofire.request(finalURL, method: .post, parameters: params, encoding: URLEncoding.httpBody, headers: TVMedBaseRequestHeaders().headers()).responseJSON { response in
             guard let _ = response.result.value else {

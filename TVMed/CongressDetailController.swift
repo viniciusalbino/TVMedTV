@@ -28,17 +28,12 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UITabl
     @IBOutlet weak var congressImage: UIImageView!
     private var contentType: LoadContentType?
     
-    private var focusGuide = UIFocusGuide()
-    
     lazy var viewModel: CongressDetailViewModel = CongressDetailViewModel(delegate: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
-        self.view.addLayoutGuide(self.focusGuide)
-        
     }
     
     func loadContent(contentType: LoadContentType) {
@@ -115,5 +110,20 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UITabl
                 self.fillScreen()
             }
         }
+    }
+    
+    @IBAction func makePurchase() {
+        let tokenPersister = TokenPersister()
+        tokenPersister.query { token in
+            if let userToken = token {
+                
+            } else {
+                self.presentLogin()
+            }
+        }
+    }
+    
+    func presentLogin() {
+        self.performSegue(withIdentifier: "presentLogin", sender: nil)
     }
 }

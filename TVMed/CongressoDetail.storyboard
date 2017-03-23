@@ -147,11 +147,20 @@
                         <outlet property="finalPrice" destination="Lj2-bi-R8F" id="Idx-TK-kf6"/>
                         <outlet property="tableView" destination="80X-mE-6dB" id="c1p-ug-XmA"/>
                         <outlet property="titleLabel" destination="Fd5-QQ-eAu" id="yn8-KY-FmX"/>
+                        <segue destination="O5A-kr-jzj" kind="presentation" identifier="presentLogin" id="sUW-Kj-JCR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gl-Y8-RsW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1660" y="-197"/>
+        </scene>
+        <!--LoginViewController-->
+        <scene sceneID="yWA-8U-hIo">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Login" storyboardName="Login" referencedIdentifier="LoginViewController" id="O5A-kr-jzj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uQW-mC-VFq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1660" y="543"/>
         </scene>
     </scenes>
 </document>
