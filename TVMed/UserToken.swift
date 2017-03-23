@@ -15,7 +15,6 @@ class UserToken: Object, Mappable {
     dynamic var email = ""
     dynamic var expiresUTC = Date()
     dynamic var token = ""
-    dynamic var roles = [String]()
     
     
     required convenience init?(map: Map) {
@@ -26,6 +25,5 @@ class UserToken: Object, Mappable {
         email <- map["email"]
         expiresUTC <- map["expiresUtc"]
         token <- map["token"]
-        roles <- map["roles"]
     }
 }

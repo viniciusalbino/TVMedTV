@@ -106,6 +106,9 @@
                                 </constraints>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Comprar"/>
+                                <connections>
+                                    <action selector="makePurchase" destination="7uF-Rc-Om3" eventType="primaryActionTriggered" id="Cbj-lo-WAc"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K82-2X-DgS" customClass="FocusedTextView" customModule="TVMed" customModuleProvider="target">
                                 <rect key="frame" x="582" y="408" width="576" height="622"/>
