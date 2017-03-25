@@ -25,7 +25,8 @@ protocol BaseRequestHeaders {
 class TVMedBaseRequestHeaders: BaseRequestHeaders {
     func headers() -> [String: String] {
         return [
-            "Accept": "application/json"
+            "Accept": "application/json",
+            "Content-Type" : "application/json"
         ]
     }
 }
@@ -65,12 +66,12 @@ class BaseRequest: NSObject {
     
     func POST(url: String, params: [String: Any]?, callback: @escaping DefaultCallBackClosure) {
         let finalURL = "\(domain)\(url)"
-        Alamofire.request(finalURL, method: .post, parameters: params, encoding: URLEncoding.httpBody, headers: TVMedBaseRequestHeaders().headers()).responseJSON { response in
+        Alamofire.request(finalURL, method: .post, parameters: params, encoding: JSONEncoding.default, headers: TVMedBaseRequestHeaders().headers()).responseJSON { response in
             guard let _ = response.result.value else {
                 callback(nil, .apiError, response.response)
                 return
             }
-            
+            print(response.result.value)
             if let result = response.result.value {
                 callback(result as AnyObject?, nil, response.response)
             }

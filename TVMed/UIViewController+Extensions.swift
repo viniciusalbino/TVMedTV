@@ -13,9 +13,7 @@ extension UIViewController {
     
     func presentAlertWithTitle(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let OKAction = UIAlertAction(title: "OK", style: .default) { _ in
-            print("Youve pressed OK Button")
-        }
+        let OKAction = UIAlertAction(title: "OK", style: .default) { _ in }
         alertController.addAction(OKAction)
         present(alertController, animated: true, completion: nil)
     }

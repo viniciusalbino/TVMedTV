@@ -6,5 +6,9 @@
 	<array>
 		<string>group.tvMedTV</string>
 	</array>
+	<key>keychain-access-groups</key>
+	<array>
+		<string>$(AppIdentifierPrefix)com.br.TV.TVMed</string>
+	</array>
 </dict>
 </plist>

@@ -13,7 +13,7 @@ class LoginRequest {
     private let persister = TokenPersister()
     
     func request(loginDTO: LoginDTO, callback: @escaping (UserToken?, ErrorTypeApp?) -> ()) {
-        BaseRequest().POST(url: "/login", params: loginDTO.parameters()) { result, error, response in
+        BaseRequest().POST(url: "login", params: loginDTO.parameters()) { result, error, response in
             
             guard error == nil else {
                 callback(nil, error)
@@ -22,6 +22,10 @@ class LoginRequest {
             let result = result <*> (UserToken.self, error)
             if let token = result.object {
                 self.persister.saveToken(token: token, callback: { success in
+                    guard success else  {
+                        callback(nil, ErrorTypeApp.forced)
+                        return
+                    }
                     callback(token, nil)
                 })
             } else  {

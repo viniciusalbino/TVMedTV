@@ -38,21 +38,9 @@ class LoginViewModel: ValidatesPassword, ValidatesEmail {
                 }
                 return
             }
-            self.saveToken(token: userToken)
-        }
-    }
-    
-    private func saveToken(token: UserToken) {
-        self.persister.saveToken(token: token, callback: { success in
-            guard success else {
-                DispatchQueue.main.async {
-                    self.delegate?.contentDidFinishedLoading(success: false)
-                }
-                return
-            }
             DispatchQueue.main.async {
                 self.delegate?.contentDidFinishedLoading(success: true)
             }
-        })
+        }
     }
 }

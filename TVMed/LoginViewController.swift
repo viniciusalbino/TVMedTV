@@ -23,6 +23,7 @@ class LoginViewController: UIViewController, LoginDelegate {
             presentLoginIvalidAlert()
             return
         }
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancelLogin() {
