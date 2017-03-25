@@ -10,6 +10,16 @@ import Foundation
 import SVProgressHUD
 
 extension UIViewController {
+    
+    func presentAlertWithTitle(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default) { _ in
+            print("Youve pressed OK Button")
+        }
+        alertController.addAction(OKAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
     func startLoading() {
         SVProgressHUD.setDefaultStyle(.light)
         SVProgressHUD.show()

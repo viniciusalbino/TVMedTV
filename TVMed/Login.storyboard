@@ -42,9 +42,20 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="Njh-E7-W43"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Entrar"/>
+                                <connections>
+                                    <action selector="makeLogin" destination="VXu-KO-zZt" eventType="primaryActionTriggered" id="jeB-Uk-JUe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5HM-4g-FlE">
+                                <rect key="frame" x="810" y="540" width="300" height="60"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Cancelar"/>
+                                <connections>
+                                    <action selector="cancelLogin" destination="VXu-KO-zZt" eventType="primaryActionTriggered" id="cLl-Y6-0yW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.054901960780000002" green="0.3411764706" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -52,12 +63,16 @@
                             <constraint firstItem="Nat-TQ-pXo" firstAttribute="width" secondItem="CEC-Lz-9GW" secondAttribute="width" id="3m2-4Z-fEb"/>
                             <constraint firstItem="Nat-TQ-pXo" firstAttribute="centerX" secondItem="rfG-iS-ksZ" secondAttribute="centerX" id="DeY-er-eSP"/>
                             <constraint firstItem="CEC-Lz-9GW" firstAttribute="top" secondItem="QGZ-8O-WZA" secondAttribute="bottom" constant="300" id="J7v-Ac-Esu"/>
+                            <constraint firstItem="5HM-4g-FlE" firstAttribute="height" secondItem="8Qj-HT-ZC8" secondAttribute="height" id="LPY-H7-hR9"/>
                             <constraint firstItem="CEC-Lz-9GW" firstAttribute="centerX" secondItem="rfG-iS-ksZ" secondAttribute="centerX" id="ZUj-PM-HDD"/>
                             <constraint firstItem="Nat-TQ-pXo" firstAttribute="height" secondItem="CEC-Lz-9GW" secondAttribute="height" id="gCg-AF-aDE"/>
+                            <constraint firstItem="5HM-4g-FlE" firstAttribute="width" secondItem="8Qj-HT-ZC8" secondAttribute="width" id="gR4-gq-KMW"/>
                             <constraint firstItem="8Qj-HT-ZC8" firstAttribute="height" secondItem="Nat-TQ-pXo" secondAttribute="height" id="gVZ-ff-S5r"/>
                             <constraint firstItem="8Qj-HT-ZC8" firstAttribute="centerX" secondItem="rfG-iS-ksZ" secondAttribute="centerX" id="ikv-cs-4KK"/>
                             <constraint firstItem="8Qj-HT-ZC8" firstAttribute="top" secondItem="Nat-TQ-pXo" secondAttribute="bottom" constant="20" id="q6d-Yu-QnF"/>
+                            <constraint firstItem="5HM-4g-FlE" firstAttribute="centerX" secondItem="rfG-iS-ksZ" secondAttribute="centerX" id="udK-ib-gt8"/>
                             <constraint firstItem="Nat-TQ-pXo" firstAttribute="top" secondItem="CEC-Lz-9GW" secondAttribute="bottom" constant="20" id="vdK-SA-iHx"/>
+                            <constraint firstItem="5HM-4g-FlE" firstAttribute="top" secondItem="8Qj-HT-ZC8" secondAttribute="bottom" constant="20" id="w7b-gh-fBW"/>
                         </constraints>
                     </view>
                     <connections>

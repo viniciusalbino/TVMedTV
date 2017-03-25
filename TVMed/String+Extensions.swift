@@ -38,4 +38,8 @@ extension String {
             return URL(string: domain)!
         }
     }
+    
+    func length() -> Int {
+        return Array(self.characters).count
+    }
 }
