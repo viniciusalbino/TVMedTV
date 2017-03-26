@@ -10,7 +10,7 @@ import Foundation
 
 class NewReleasesRequest  {
     func request(callback: @escaping ([Release]?, ErrorTypeApp?) -> ()) {
-        BaseRequest().GET(url: "congresso/lancamentos/pt-BR", params: [:]) { result, error, response in
+        HeaderBuilder().GET(url: "congresso/lancamentos/pt-BR", params: [:]) { result, error, response in
             guard error == nil else {
                 callback(nil, error)
                 return
@@ -22,7 +22,7 @@ class NewReleasesRequest  {
     
     func getMidiaPromotion(congressoId: String, callback: @escaping ([MidiaPromotion]?, ErrorTypeApp?) -> ()) {
         let url = "/congresso/midiaspromocao/\(congressoId)/pt-br"
-        BaseRequest().GET(url: url, params: [:]) { result, error, response in
+        HeaderBuilder().GET(url: url, params: [:]) { result, error, response in
             guard error == nil else {
                 callback(nil, error)
                 return

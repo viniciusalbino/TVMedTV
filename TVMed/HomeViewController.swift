@@ -28,6 +28,23 @@ class HomeViewController: UICollectionViewController, HomeDelegate, UICollection
             self.viewModel.loadCategories()
             self.viewModel.loadEspecialities()
         }
+        validatesToken()
+    }
+    
+    func validatesToken() {
+        let tokenPersister = TokenPersister()
+        tokenPersister.query { token in
+            guard let _ = token else {
+                return
+            }
+            
+            self.viewModel.checkValiToken { success in
+                guard success else {
+                    return
+                }
+                self.performSegue(withIdentifier: "presentLogin", sender: nil)
+            }
+        }
     }
     
     func didFinishedLoadingCategories(succes: Bool) {

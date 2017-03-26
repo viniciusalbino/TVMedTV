@@ -7,14 +7,14 @@
 //
 
 import Foundation
+import Alamofire
 
 class LoginRequest {
     
     private let persister = TokenPersister()
     
     func request(loginDTO: LoginDTO, callback: @escaping (UserToken?, ErrorTypeApp?) -> ()) {
-        BaseRequest().POST(url: "login", params: loginDTO.parameters()) { result, error, response in
-            
+        BaseRequest().POST(url: "login", params: loginDTO.parameters(), headers: TVMedBaseRequestHeaders().headers()) { result, error, response in
             guard error == nil else {
                 callback(nil, error)
                 return
@@ -30,6 +30,24 @@ class LoginRequest {
                 })
             } else  {
                 callback(nil, result.error)
+            }
+        }
+    }
+    
+    func validateToken(callback: @escaping (Bool) -> ()) {
+        let finalURL = "\(domain)login/validation"        
+        HeaderBuilder().buildHeader { defaultHeaders in
+            Alamofire.request(finalURL, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: defaultHeaders).responseJSON { response in
+                if let response = response.response {
+                    if response.statusCode == 200 {
+                        callback(true)
+                    } else {
+                        callback(false)
+                    }
+                    
+                } else {
+                    callback(false)
+                }
             }
         }
     }

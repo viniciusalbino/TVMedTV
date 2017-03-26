@@ -195,10 +195,19 @@
                         <outlet property="collectionView" destination="PnG-w9-aI7" id="ke8-p5-BWw"/>
                         <segue destination="Rmi-zY-8CO" kind="show" identifier="EspecialitiesSegue" id="5Bd-5z-6eb"/>
                         <segue destination="fX0-eh-4BK" kind="show" identifier="CongressoDetail" id="0kC-w5-TQW"/>
+                        <segue destination="7In-q5-3jO" kind="presentation" identifier="presentLogin" id="L1D-EO-fmp"/>
                     </connections>
                 </collectionViewController>
             </objects>
             <point key="canvasLocation" x="4115" y="-1955"/>
+        </scene>
+        <!--LoginViewController-->
+        <scene sceneID="8Zk-2V-4Mq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="LoginViewController" id="7In-q5-3jO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ys-ZD-nba" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6033" y="-2186"/>
         </scene>
         <!--EspecialitiesController-->
         <scene sceneID="kWW-so-0Ap">

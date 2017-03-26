@@ -50,9 +50,9 @@ func defaultDomain() -> String {
 
 class BaseRequest: NSObject {
     
-    func GET(url: String, params: [String: AnyObject]?, callback: @escaping DefaultCallBackClosure) {
+    func GET(url: String, params: [String: AnyObject]?, headers: [String: String], callback: @escaping DefaultCallBackClosure) {
         let finalURL = "\(domain)\(url)"
-        Alamofire.request(finalURL, method: .get, parameters: params, encoding: URLEncoding.httpBody, headers: TVMedBaseRequestHeaders().headers()).responseJSON { response in
+        Alamofire.request(finalURL, method: .get, parameters: params, encoding: URLEncoding.httpBody, headers: headers).responseJSON { response in
             guard let _ = response.result.value else {
                 callback(nil, .apiError, response.response)
                 return
@@ -64,14 +64,13 @@ class BaseRequest: NSObject {
         }
     }
     
-    func POST(url: String, params: [String: Any]?, callback: @escaping DefaultCallBackClosure) {
+    func POST(url: String, params: [String: Any]?, headers: [String: String], callback: @escaping DefaultCallBackClosure) {
         let finalURL = "\(domain)\(url)"
-        Alamofire.request(finalURL, method: .post, parameters: params, encoding: JSONEncoding.default, headers: TVMedBaseRequestHeaders().headers()).responseJSON { response in
+        Alamofire.request(finalURL, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
             guard let _ = response.result.value else {
                 callback(nil, .apiError, response.response)
                 return
             }
-            print(response.result.value)
             if let result = response.result.value {
                 callback(result as AnyObject?, nil, response.response)
             }

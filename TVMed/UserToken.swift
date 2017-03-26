@@ -26,4 +26,8 @@ class UserToken: Object, Mappable {
         expiresUTC <- map["expiresUtc"]
         token <- map["token"]
     }
+    
+    func tokenApiFormat() -> String {
+        return "Bearer \(token)"
+    }
 }

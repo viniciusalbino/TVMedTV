@@ -103,4 +103,11 @@ class HomeViewModel: NSObject {
     func getEspecialities() -> [Especiality] {
         return especialities
     }
+    
+    func checkValiToken(callback: @escaping (Bool) -> () ) {
+        let request = LoginRequest()
+        request.validateToken { succes in
+            callback(succes)
+        }
+    }
 }

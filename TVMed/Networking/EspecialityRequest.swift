@@ -10,7 +10,7 @@ import Foundation
 class EspecialityRequest  {
     
     func request(callback: @escaping ([Especiality]?, ErrorTypeApp?) -> ()) {
-        BaseRequest().GET(url: "/congresso/especialidade/todas/pt-br", params: [:]) { result, error, response in
+        HeaderBuilder().GET(url: "/congresso/especialidade/todas/pt-br", params: [:]) { result, error, response in
             
             guard error == nil else {
                 callback(nil, error)
@@ -23,7 +23,7 @@ class EspecialityRequest  {
     
     func filterEspeciality(especialidade: String, callback: @escaping ([Especiality]?, ErrorTypeApp?) -> ()) {
         let url = "/congresso/especialidade/\(especialidade)/pt-br"
-        BaseRequest().GET(url: url, params: [:]) { result, error, response in
+        HeaderBuilder().GET(url: url, params: [:]) { result, error, response in
             guard error == nil else {
                 callback(nil, error)
                 return
@@ -35,7 +35,7 @@ class EspecialityRequest  {
     
     func getMidiaCongress(congressID: String, callback: @escaping ([MidiaPromotion]?, ErrorTypeApp?) ->()) {
         let url = "/congresso/midiascongresso/\(congressID)/"
-        BaseRequest().GET(url: url, params: [:]) { result, error, response in
+        HeaderBuilder().GET(url: url, params: [:]) { result, error, response in
             guard error == nil else {
                 callback(nil, error)
                 return

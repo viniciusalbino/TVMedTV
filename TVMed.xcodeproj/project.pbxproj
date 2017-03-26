@@ -11,6 +11,7 @@
 		16D107A7F19F9FAAD0C31635 /* Pods_TVMed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 684FE61E82A70E197AA0F9EB /* Pods_TVMed.framework */; };
 		2C0027D31E401F020020ABA0 /* ThirdPartyToolsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0027D21E401F020020ABA0 /* ThirdPartyToolsLoader.swift */; };
 		2C0027D51E401F1C0020ABA0 /* FabricTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0027D41E401F1C0020ABA0 /* FabricTool.swift */; };
+		2C047DBE1E88321400CA39A5 /* HeaderBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C047DBD1E88321400CA39A5 /* HeaderBuilder.swift */; };
 		2C1B4A501E7B7DD600DED396 /* CongressoDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C1B4A4F1E7B7DD600DED396 /* CongressoDetail.storyboard */; };
 		2C1B4A531E7B830200DED396 /* CongressDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B4A521E7B830200DED396 /* CongressDetailController.swift */; };
 		2C1B4A551E7B83F900DED396 /* CongressDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B4A541E7B83F900DED396 /* CongressDetailViewModel.swift */; };
@@ -22,7 +23,6 @@
 		2C1B4A621E83606F00DED396 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B4A611E83606F00DED396 /* LoginRequest.swift */; };
 		2C1B4A641E8360A000DED396 /* UserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B4A631E8360A000DED396 /* UserToken.swift */; };
 		2C1B4A671E8363A800DED396 /* RealmEncrypted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B4A661E8363A800DED396 /* RealmEncrypted.swift */; };
-		2C1B4A691E8363F700DED396 /* RealmToGroupsMigrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B4A681E8363F700DED396 /* RealmToGroupsMigrator.swift */; };
 		2C1B4A6C1E83659C00DED396 /* KeychainAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B4A6B1E83659C00DED396 /* KeychainAccess.swift */; };
 		2C1B4A6E1E83666E00DED396 /* RealmPersister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B4A6D1E83666E00DED396 /* RealmPersister.swift */; };
 		2C1B4A701E83674900DED396 /* TokenPersister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B4A6F1E83674900DED396 /* TokenPersister.swift */; };
@@ -87,6 +87,7 @@
 		0968D6E8E29EED2CB47A1D76 /* Pods-TVMedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVMedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVMedTests/Pods-TVMedTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2C0027D21E401F020020ABA0 /* ThirdPartyToolsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdPartyToolsLoader.swift; sourceTree = "<group>"; };
 		2C0027D41E401F1C0020ABA0 /* FabricTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FabricTool.swift; sourceTree = "<group>"; };
+		2C047DBD1E88321400CA39A5 /* HeaderBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderBuilder.swift; sourceTree = "<group>"; };
 		2C1B4A4F1E7B7DD600DED396 /* CongressoDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CongressoDetail.storyboard; sourceTree = "<group>"; };
 		2C1B4A521E7B830200DED396 /* CongressDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongressDetailController.swift; sourceTree = "<group>"; };
 		2C1B4A541E7B83F900DED396 /* CongressDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongressDetailViewModel.swift; sourceTree = "<group>"; };
@@ -98,7 +99,6 @@
 		2C1B4A611E83606F00DED396 /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		2C1B4A631E8360A000DED396 /* UserToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserToken.swift; sourceTree = "<group>"; };
 		2C1B4A661E8363A800DED396 /* RealmEncrypted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmEncrypted.swift; sourceTree = "<group>"; };
-		2C1B4A681E8363F700DED396 /* RealmToGroupsMigrator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmToGroupsMigrator.swift; sourceTree = "<group>"; };
 		2C1B4A6A1E83640500DED396 /* TVMed.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TVMed.entitlements; sourceTree = "<group>"; };
 		2C1B4A6B1E83659C00DED396 /* KeychainAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainAccess.swift; sourceTree = "<group>"; };
 		2C1B4A6D1E83666E00DED396 /* RealmPersister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmPersister.swift; sourceTree = "<group>"; };
@@ -213,7 +213,6 @@
 			children = (
 				2C1B4A6D1E83666E00DED396 /* RealmPersister.swift */,
 				2C1B4A6B1E83659C00DED396 /* KeychainAccess.swift */,
-				2C1B4A681E8363F700DED396 /* RealmToGroupsMigrator.swift */,
 				2C1B4A661E8363A800DED396 /* RealmEncrypted.swift */,
 			);
 			name = Realm;
@@ -505,6 +504,7 @@
 				2CF186D31E5D3802008029B3 /* ErrorTypeApp.swift */,
 				2CF186D81E5D3802008029B3 /* RequestParser.swift */,
 				2CF186D91E5D3802008029B3 /* RequestResponseParse.swift */,
+				2C047DBD1E88321400CA39A5 /* HeaderBuilder.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -781,6 +781,7 @@
 				2C1B4A671E8363A800DED396 /* RealmEncrypted.swift in Sources */,
 				2CF186C81E5D25F9008029B3 /* HomeViewModel.swift in Sources */,
 				2C7C532C1E5F7F090026380C /* CategoriesRequest.swift in Sources */,
+				2C047DBE1E88321400CA39A5 /* HeaderBuilder.swift in Sources */,
 				2C7C532F1E5F7F5D0026380C /* Categorie.swift in Sources */,
 				2CF186D01E5D2822008029B3 /* Releases.swift in Sources */,
 				2C7C53311E5F7FEE0026380C /* HomeSections.swift in Sources */,
@@ -788,7 +789,6 @@
 				2C1B4A751E836F4200DED396 /* LoginViewController.swift in Sources */,
 				2C5A994A1E6790B700F6E4E9 /* HomeCategoryCell.swift in Sources */,
 				2CF186C41E5D2502008029B3 /* Dictionary+Extensions.swift in Sources */,
-				2C1B4A691E8363F700DED396 /* RealmToGroupsMigrator.swift in Sources */,
 				2C9D0A3F1E6E56E40095A1FB /* Especiality.swift in Sources */,
 				2C9D0A5A1E70F87C0095A1FB /* EspecialitiesViewModel.swift in Sources */,
 				2CF186E11E5D3802008029B3 /* RequestParser.swift in Sources */,
