@@ -34,12 +34,12 @@ class HomeViewController: UICollectionViewController, HomeDelegate, UICollection
     func validatesToken() {
         let tokenPersister = TokenPersister()
         tokenPersister.query { token in
-            guard let _ = token else {
+            guard let userToken = token, !userToken.token.isEmpty else {
                 return
             }
             
             self.viewModel.checkValiToken { success in
-                guard success else {
+                guard !success else {
                     return
                 }
                 self.performSegue(withIdentifier: "presentLogin", sender: nil)

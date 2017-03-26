@@ -44,7 +44,6 @@ class LoginRequest {
                     } else {
                         callback(false)
                     }
-                    
                 } else {
                     callback(false)
                 }
