@@ -1,55 +1,58 @@
 //
-//  EspecialitiesController.swift
+//  MeusProdutos.swift
 //  TVMed
 //
-//  Created by Vinicius Albino on 07/03/17.
+//  Created by Vinicius Albino on 26/03/17.
 //  Copyright © 2017 tvMed. All rights reserved.
 //
 
 import Foundation
 import UIKit
-
-class EspecialitiesController: UICollectionViewController, SelectedEspecialityProtocol, EspecialitiesDelegate {
+class MeusProdutosViewController: UICollectionViewController, MeusProdutosDelegate {
     
     private static let minimumEdgePadding = CGFloat(90.0)
-    lazy var viewModel: EspecialitiesViewModel = EspecialitiesViewModel(delegate:self)
+    lazy private var viewModel: MeusProdutosViewModel = MeusProdutosViewModel(delegate: self)
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        DispatchQueue.main.async {
+            self.loadContent()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Make sure their is sufficient padding above and below the content.
         guard let collectionView = collectionView, let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
         
-        collectionView.contentInset.top = EspecialitiesController.minimumEdgePadding - layout.sectionInset.top
-        collectionView.contentInset.bottom = EspecialitiesController.minimumEdgePadding - layout.sectionInset.bottom
+        collectionView.contentInset.top = MeusProdutosViewController.minimumEdgePadding - layout.sectionInset.top
+        collectionView.contentInset.bottom = MeusProdutosViewController.minimumEdgePadding - layout.sectionInset.bottom
     }
     
-    func getEspecialities(id: String) {
-        DispatchQueue.main.async {
-            self.viewModel.loadEspecialities(id: id)
+    func loadContent() {
+        let tokenPersister = TokenPersister()
+        tokenPersister.query { token in
+            guard let userToken = token, !userToken.token.isEmpty else {
+                return
+            }
+            
+            self.viewModel.checkValiToken { success in
+                guard !success else {
+                    self.startLoading()
+                    self.viewModel.loadMeusProdutos()
+                    return
+                }
+                self.performSegue(withIdentifier: "presentLogin", sender: nil)
+            }
         }
     }
     
-    func didFinishedLoading(succes: Bool) {
+    func contentDidFinishedLoading(success: Bool) {
+        stopLoading()
         self.collectionView?.performBatchUpdates({
             let indexSet = IndexSet(integer: 0)
             self.collectionView?.reloadSections(indexSet)
         }, completion: nil)
-    }
-    
-    func didSelectedEspeciality(index: Int) {
-        let congress = self.viewModel.getEspecialities().object(index: index)
-        self.performSegue(withIdentifier: "CongressoDetail", sender: congress)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier! {
-        case "CongressoDetail":
-            if let controller = segue.destination as? CongressDetailController, let congress = sender as? Especiality {
-                controller.loadContent(contentType: (type: .congress, id: "\(congress.codigo)"))
-            }
-        default:
-            break
-        }
     }
     
     // MARK: - UICollectionViewDataSource
@@ -58,7 +61,7 @@ class EspecialitiesController: UICollectionViewController, SelectedEspecialityPr
         switch kind {
         case UICollectionElementKindSectionHeader:
             let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HeaderCell", for: indexPath) as! HeaderCell
-            headerView.fill(title: "Catálogo")
+            headerView.fill(title: "Meus Produtos")
             return headerView
         default:
             assert(false, "Unexpected element kind")
@@ -83,8 +86,8 @@ class EspecialitiesController: UICollectionViewController, SelectedEspecialityPr
     }
     
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if let cell = cell as? EspecCollectionViewContainerCell {
-            cell.configure(with: viewModel.getEspecialities(), delegate: self)
-        }
+//        if let cell = cell as? EspecCollectionViewContainerCell {
+//            cell.configure(with: viewModel.getMidias(), delegate: self)
+//        }
     }
 }
