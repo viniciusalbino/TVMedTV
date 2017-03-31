@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OrderCell" id="Ixw-gj-Lci" customClass="OrderCell" customModule="TVMed" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="548" height="381"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="548" height="381"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FnW-dU-89h">
+                        <rect key="frame" x="0.0" y="0.0" width="548" height="220"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="220" id="KqT-QC-AzI"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Erb-Co-vXk">
+                        <rect key="frame" x="15" y="235" width="518" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="v3R-ZP-aqm"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teE-3E-gPf">
+                        <rect key="frame" x="15" y="310" width="518" height="56"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9958" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hE9-iE-XAU">
+                        <rect key="frame" x="0.0" y="170" width="50" height="30"/>
+                        <color key="backgroundColor" red="0.074509803920000006" green="0.41176470590000003" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="5eA-Lm-A8p"/>
+                            <constraint firstAttribute="height" constant="30" id="jRJ-O8-zy3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" red="0.81568627449999997" green="0.7843137255" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="teE-3E-gPf" firstAttribute="top" secondItem="Erb-Co-vXk" secondAttribute="bottom" constant="15" id="B2W-aU-AkV"/>
+                <constraint firstItem="FnW-dU-89h" firstAttribute="leading" secondItem="Ixw-gj-Lci" secondAttribute="leading" id="D5q-eS-sRg"/>
+                <constraint firstItem="hE9-iE-XAU" firstAttribute="leading" secondItem="Ixw-gj-Lci" secondAttribute="leading" id="EW4-SQ-9ZF"/>
+                <constraint firstItem="Erb-Co-vXk" firstAttribute="leading" secondItem="Ixw-gj-Lci" secondAttribute="leading" constant="15" id="Fdv-zX-KFo"/>
+                <constraint firstItem="hE9-iE-XAU" firstAttribute="top" secondItem="Ixw-gj-Lci" secondAttribute="top" constant="170" id="Ka7-gt-ozZ"/>
+                <constraint firstAttribute="trailing" secondItem="Erb-Co-vXk" secondAttribute="trailing" constant="15" id="MNN-qp-Yvq"/>
+                <constraint firstAttribute="trailing" secondItem="FnW-dU-89h" secondAttribute="trailing" id="OvV-Lv-sAR"/>
+                <constraint firstAttribute="trailing" secondItem="teE-3E-gPf" secondAttribute="trailing" constant="15" id="TgR-QO-9PI"/>
+                <constraint firstItem="Erb-Co-vXk" firstAttribute="top" secondItem="FnW-dU-89h" secondAttribute="bottom" constant="15" id="cnN-jf-lMY"/>
+                <constraint firstAttribute="bottom" secondItem="teE-3E-gPf" secondAttribute="bottom" constant="15" id="e7h-d1-uZb"/>
+                <constraint firstItem="teE-3E-gPf" firstAttribute="leading" secondItem="Ixw-gj-Lci" secondAttribute="leading" constant="15" id="lxP-IP-mSZ"/>
+                <constraint firstItem="FnW-dU-89h" firstAttribute="top" secondItem="Ixw-gj-Lci" secondAttribute="top" id="usV-pA-QKh"/>
+            </constraints>
+            <connections>
+                <outlet property="descrLabel" destination="teE-3E-gPf" id="JkK-9T-dLV"/>
+                <outlet property="image" destination="FnW-dU-89h" id="TFp-MS-fuu"/>
+                <outlet property="serialNumberLabel" destination="hE9-iE-XAU" id="bLs-P0-op9"/>
+                <outlet property="titleLabel" destination="Erb-Co-vXk" id="Enr-36-BQU"/>
+            </connections>
+            <point key="canvasLocation" x="-72" y="4"/>
+        </collectionViewCell>
+    </objects>
+</document>

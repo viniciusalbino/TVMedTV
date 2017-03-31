@@ -28,12 +28,25 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UITabl
     @IBOutlet weak var congressImage: UIImageView!
     private var contentType: LoadContentType?
     
+    var currentMidia:MidiaPromotion?
+    
     lazy var viewModel: CongressDetailViewModel = CongressDetailViewModel(delegate: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let midia = self.currentMidia {
+            viewModel.setMidia(midia: midia)
+        }
+    }
+    
+    func setMidia(midia: MidiaPromotion) {
+        self.currentMidia = midia
     }
     
     func loadContent(contentType: LoadContentType) {

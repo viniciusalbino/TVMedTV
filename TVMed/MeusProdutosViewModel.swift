@@ -45,7 +45,7 @@ class MeusProdutosViewModel {
         return self.midias.count
     }
     
-    func getMidias(index: Int) -> [MidiaPromotion] {
+    func getMidias() -> [MidiaPromotion] {
         return self.midias
     }
 }

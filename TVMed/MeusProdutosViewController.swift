@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-class MeusProdutosViewController: UICollectionViewController, MeusProdutosDelegate {
+class MeusProdutosViewController: UICollectionViewController, MeusProdutosDelegate, SelectedOrderProtocol {
     
     private static let minimumEdgePadding = CGFloat(90.0)
     lazy private var viewModel: MeusProdutosViewModel = MeusProdutosViewModel(delegate: self)
@@ -55,6 +55,24 @@ class MeusProdutosViewController: UICollectionViewController, MeusProdutosDelega
         }, completion: nil)
     }
     
+    func didSelectedOrder(index: Int) {
+        let congress = self.viewModel.getMidias().object(index: index)
+        self.performSegue(withIdentifier: "CongressoDetail", sender: congress)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier! {
+        case "CongressoDetail":
+            if let controller = segue.destination as? CongressDetailController {
+                if let midia =  sender as? MidiaPromotion {
+                    controller.setMidia(midia: midia)
+                }
+            }
+        default:
+            break
+        }
+    }
+    
     // MARK: - UICollectionViewDataSource
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -74,7 +92,7 @@ class MeusProdutosViewController: UICollectionViewController, MeusProdutosDelega
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.numberOfItensInSection()
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -82,12 +100,12 @@ class MeusProdutosViewController: UICollectionViewController, MeusProdutosDelega
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return collectionView.dequeueReusableCell(withReuseIdentifier: EspecCollectionViewContainerCell.reuseIdentifier, for: indexPath)
+        return collectionView.dequeueReusableCell(withReuseIdentifier: OrdersContainerCell.reuseIdentifier, for: indexPath)
     }
     
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-//        if let cell = cell as? EspecCollectionViewContainerCell {
-//            cell.configure(with: viewModel.getMidias(), delegate: self)
-//        }
+        if let cell = cell as? OrdersContainerCell {
+            cell.configure(with: viewModel.getMidias(), delegate: self)
+        }
     }
 }

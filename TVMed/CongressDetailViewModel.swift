@@ -67,4 +67,10 @@ class CongressDetailViewModel {
         self.selectedMidiaIndex = index
         self.currentMidia = midiaForRow(row: index)
     }
+    
+    func setMidia(midia: MidiaPromotion) {
+        self.currentMidia = midia
+        self.midias = [midia]
+        self.delegate?.contentDidFinishedLoading(succes: true)
+    }
 }
