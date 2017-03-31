@@ -27,6 +27,7 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UITabl
     @IBOutlet weak var decriptionTextView: FocusedTextView!
     @IBOutlet weak var congressImage: UIImageView!
     private var contentType: LoadContentType?
+    private var userRequest = UserRequests()
     
     var currentMidia:MidiaPromotion?
     
@@ -129,10 +130,24 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UITabl
     @IBAction func makePurchase() {
         let tokenPersister = TokenPersister()
         tokenPersister.query { token in
-            if let userToken = token {
-                
+            if let _ = token {
+                self.validateUserData()
             } else {
                 self.presentLogin()
+            }
+        }
+    }
+    
+    func validateUserData() {
+        self.userRequest.requestUserData { user, error in
+            guard error == nil, let userData = user else {
+                self.presentAlertWithTitle(title: "Erro", message: "Ocorreu um erro ao efetuar sua compra.")
+                return
+            }
+            if userData.isEligibleToBuy() {
+                
+            } else {
+                //present user form
             }
         }
     }
