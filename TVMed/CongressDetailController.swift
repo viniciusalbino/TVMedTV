@@ -145,9 +145,10 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UITabl
                 return
             }
             if userData.isEligibleToBuy() {
-                
+                //buy
             } else {
                 //present user form
+                self.presentAlertWithTitle(title: "Erro", message: "Cadastro incompleto. Por favor, valide seu cadastro no navegador web")
             }
         }
     }

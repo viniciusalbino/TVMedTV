@@ -75,9 +75,16 @@ struct User: Mappable {
     }
     
     func isEligibleToBuy() -> Bool {
-        guard !nome.isEmpty, !cnpj.isEmpty, !cpf.isEmpty, !endereco.isEmpty, !enderecoNumero.isEmpty, !cidade.isEmpty, !estado.isEmpty, !cep.isEmpty, !pais.isEmpty,
-            !email.isEmpty, !foneDdd.isEmpty, !foneNumero.isEmpty else {
+        guard !nome.isEmpty, !endereco.isEmpty, !enderecoNumero.isEmpty, !cidade.isEmpty, !estado.isEmpty, !cep.isEmpty, !pais.isEmpty,
+            !email.isEmpty, !foneDdd.isEmpty, !foneNumero.isEmpty, checkValidDocument() else {
                 return false
+        }
+        return true
+    }
+    
+    func checkValidDocument() -> Bool {
+        guard !cnpj.isEmpty || !cpf.isEmpty else {
+            return false
         }
         return true
     }

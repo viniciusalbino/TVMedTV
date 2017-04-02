@@ -69,6 +69,9 @@
 		2CBDC06C1E870D5700D49955 /* ValidatesEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBDC06B1E870D5700D49955 /* ValidatesEmail.swift */; };
 		2CDC58A31E8E0275003C28EC /* UserRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDC58A21E8E0275003C28EC /* UserRequests.swift */; };
 		2CDC58A51E8E029F003C28EC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDC58A41E8E029F003C28EC /* User.swift */; };
+		2CDC58A81E916BCE003C28EC /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CDC58A61E916BCE003C28EC /* Search.storyboard */; };
+		2CDC58AB1E91711D003C28EC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDC58AA1E91711D003C28EC /* TabBarController.swift */; };
+		2CDC58AD1E917A7E003C28EC /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDC58AC1E917A7E003C28EC /* SearchViewModel.swift */; };
 		2CF186C21E5D228F008029B3 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF186C11E5D228F008029B3 /* String+Extensions.swift */; };
 		2CF186C41E5D2502008029B3 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF186C31E5D2502008029B3 /* Dictionary+Extensions.swift */; };
 		2CF186C61E5D25F1008029B3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF186C51E5D25F1008029B3 /* HomeViewController.swift */; };
@@ -159,6 +162,9 @@
 		2CBDC06B1E870D5700D49955 /* ValidatesEmail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatesEmail.swift; sourceTree = "<group>"; };
 		2CDC58A21E8E0275003C28EC /* UserRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRequests.swift; sourceTree = "<group>"; };
 		2CDC58A41E8E029F003C28EC /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2CDC58A71E916BCE003C28EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Search.storyboard; sourceTree = "<group>"; };
+		2CDC58AA1E91711D003C28EC /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		2CDC58AC1E917A7E003C28EC /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		2CF186C11E5D228F008029B3 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		2CF186C31E5D2502008029B3 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
 		2CF186C51E5D25F1008029B3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -296,6 +302,7 @@
 		2C4F5FDD1E4021EF00754DBB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2CDC58A91E9170E2003C28EC /* TabBar */,
 				2C1B4A731E836F3300DED396 /* Login */,
 				2C1B4A511E7B82F200DED396 /* CongressDetail */,
 				2C9D0A561E6FA8FB0095A1FB /* EspecialitiesController */,
@@ -322,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				2C4F5FE11E40222800754DBB /* SearchViewController.swift */,
+				2CDC58AC1E917A7E003C28EC /* SearchViewModel.swift */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -376,6 +384,7 @@
 			children = (
 				2C7C53321E5F89680026380C /* HomeComponents */,
 				2C4ABF201E3043F000FA73A2 /* Main.storyboard */,
+				2CDC58A61E916BCE003C28EC /* Search.storyboard */,
 				2C01A1331E8A113000C8A342 /* Orders.storyboard */,
 				2C9D0A531E6FA8170095A1FB /* Home.storyboard */,
 				2C9D0A4C1E6FA6370095A1FB /* EspecialitiesController.storyboard */,
@@ -456,6 +465,14 @@
 				2C9D0A601E78DF660095A1FB /* HeaderCell.swift */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		2CDC58A91E9170E2003C28EC /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				2CDC58AA1E91711D003C28EC /* TabBarController.swift */,
+			);
+			name = TabBar;
 			sourceTree = "<group>";
 		};
 		2CF186C01E5D2282008029B3 /* Extensions */ = {
@@ -659,6 +676,7 @@
 				2C9D0A481E6E5A810095A1FB /* HomeSpecCell.xib in Resources */,
 				2C1B4A501E7B7DD600DED396 /* CongressoDetail.storyboard in Resources */,
 				2C1B4A721E836E0E00DED396 /* Login.storyboard in Resources */,
+				2CDC58A81E916BCE003C28EC /* Search.storyboard in Resources */,
 				2C01A1391E8C902700C8A342 /* OrderCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -801,6 +819,7 @@
 				2C7C53311E5F7FEE0026380C /* HomeSections.swift in Sources */,
 				2C4F5FE21E40222800754DBB /* SearchViewController.swift in Sources */,
 				2C1B4A751E836F4200DED396 /* LoginViewController.swift in Sources */,
+				2CDC58AD1E917A7E003C28EC /* SearchViewModel.swift in Sources */,
 				2C5A994A1E6790B700F6E4E9 /* HomeCategoryCell.swift in Sources */,
 				2CF186C41E5D2502008029B3 /* Dictionary+Extensions.swift in Sources */,
 				2C9D0A3F1E6E56E40095A1FB /* Especiality.swift in Sources */,
@@ -817,6 +836,7 @@
 				2CBDC06C1E870D5700D49955 /* ValidatesEmail.swift in Sources */,
 				2C1B4A6E1E83666E00DED396 /* RealmPersister.swift in Sources */,
 				2CF186CC1E5D26D3008029B3 /* NewReleasesRequest.swift in Sources */,
+				2CDC58AB1E91711D003C28EC /* TabBarController.swift in Sources */,
 				2CBDC06A1E870D4200D49955 /* ValidatesPassword.swift in Sources */,
 				2CF186E61E5F7246008029B3 /* LoadingOverlay.swift in Sources */,
 				2CF186DA1E5D3802008029B3 /* BaseRequest.swift in Sources */,
@@ -887,6 +907,14 @@
 				2C9D0A541E6FA8170095A1FB /* Base */,
 			);
 			name = Home.storyboard;
+			sourceTree = "<group>";
+		};
+		2CDC58A61E916BCE003C28EC /* Search.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CDC58A71E916BCE003C28EC /* Base */,
+			);
+			name = Search.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
