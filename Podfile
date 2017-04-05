@@ -12,6 +12,7 @@ pod 'Alamofire'
 pod 'RealmSwift'
 pod 'ObjectMapper'
 pod 'Kingfisher'
+pod 'SVProgressHUD'
 
   target 'TVMedTests' do
     inherit! :search_paths

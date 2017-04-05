@@ -146,6 +146,12 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UITabl
             }
             if userData.isEligibleToBuy() {
                 //buy
+                let alertDTO = SystemAlertDTO(title: "Aviso", message: "Deseja comprar ", buttonActions: [(title: "Comprar", style: .default), (title: "Cancelar", style: .cancel)])
+                self.showDefaultSystemAlert(systemAlertDTO: alertDTO, completeBlock: { action in
+                    if action.title == "Comprar" {
+                        
+                    }
+                })
             } else {
                 //present user form
                 self.presentAlertWithTitle(title: "Erro", message: "Cadastro incompleto. Por favor, valide seu cadastro no navegador web")

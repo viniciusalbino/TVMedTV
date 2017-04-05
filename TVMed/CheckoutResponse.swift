@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ObjectMapper
 
 struct CheckoutResponse: Mappable {
     
@@ -20,7 +21,7 @@ struct CheckoutResponse: Mappable {
         
     }
     
-    func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         email <- map["email"]
     }
 }

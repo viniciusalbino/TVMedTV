@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		044CED7B88A0F9C6D2CFEF67 /* Pods_TVMedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FD404313DF79EB14965569 /* Pods_TVMedTests.framework */; };
 		16D107A7F19F9FAAD0C31635 /* Pods_TVMed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 684FE61E82A70E197AA0F9EB /* Pods_TVMed.framework */; };
+		2B6723061E94936700F5EABF /* UIalertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6723051E94936700F5EABF /* UIalertController+Extensions.swift */; };
 		2C0027D31E401F020020ABA0 /* ThirdPartyToolsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0027D21E401F020020ABA0 /* ThirdPartyToolsLoader.swift */; };
 		2C0027D51E401F1C0020ABA0 /* FabricTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0027D41E401F1C0020ABA0 /* FabricTool.swift */; };
 		2C01A1351E8A113000C8A342 /* Orders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C01A1331E8A113000C8A342 /* Orders.storyboard */; };
@@ -103,6 +104,7 @@
 
 /* Begin PBXFileReference section */
 		0968D6E8E29EED2CB47A1D76 /* Pods-TVMedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVMedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVMedTests/Pods-TVMedTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2B6723051E94936700F5EABF /* UIalertController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIalertController+Extensions.swift"; sourceTree = "<group>"; };
 		2C0027D21E401F020020ABA0 /* ThirdPartyToolsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdPartyToolsLoader.swift; sourceTree = "<group>"; };
 		2C0027D41E401F1C0020ABA0 /* FabricTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FabricTool.swift; sourceTree = "<group>"; };
 		2C01A1341E8A113000C8A342 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Orders.storyboard; sourceTree = "<group>"; };
@@ -191,7 +193,9 @@
 		3F19C9CD962AF5EF92772D1C /* Pods-TVMedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVMedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TVMedTests/Pods-TVMedTests.release.xcconfig"; sourceTree = "<group>"; };
 		44929E1F0033078723D1C241 /* Pods-TVMed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVMed.release.xcconfig"; path = "Pods/Target Support Files/Pods-TVMed/Pods-TVMed.release.xcconfig"; sourceTree = "<group>"; };
 		684FE61E82A70E197AA0F9EB /* Pods_TVMed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVMed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		851C3FF524756B318F702414 /* Pods-TVMedTests.ad-hoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVMedTests.ad-hoc.xcconfig"; path = "Pods/Target Support Files/Pods-TVMedTests/Pods-TVMedTests.ad-hoc.xcconfig"; sourceTree = "<group>"; };
 		B0FD404313DF79EB14965569 /* Pods_TVMedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVMedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E44AEDD0C9C624D4E68DBB46 /* Pods-TVMed.ad-hoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVMed.ad-hoc.xcconfig"; path = "Pods/Target Support Files/Pods-TVMed/Pods-TVMed.ad-hoc.xcconfig"; sourceTree = "<group>"; };
 		E9C12A4E6C3D8976638DEA6B /* Pods-TVMed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVMed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVMed/Pods-TVMed.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -512,6 +516,7 @@
 				2C1B4A5A1E7F71EE00DED396 /* UIViewController+Extensions.swift */,
 				2CBDC0691E870D4200D49955 /* ValidatesPassword.swift */,
 				2CBDC06B1E870D5700D49955 /* ValidatesEmail.swift */,
+				2B6723051E94936700F5EABF /* UIalertController+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -579,6 +584,8 @@
 				44929E1F0033078723D1C241 /* Pods-TVMed.release.xcconfig */,
 				0968D6E8E29EED2CB47A1D76 /* Pods-TVMedTests.debug.xcconfig */,
 				3F19C9CD962AF5EF92772D1C /* Pods-TVMedTests.release.xcconfig */,
+				E44AEDD0C9C624D4E68DBB46 /* Pods-TVMed.ad-hoc.xcconfig */,
+				851C3FF524756B318F702414 /* Pods-TVMedTests.ad-hoc.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -882,6 +889,7 @@
 				2C5A994C1E690A7500F6E4E9 /* CollectionViewContainerCell.swift in Sources */,
 				2CDC58BA1E933E86003C28EC /* CheckoutResponse.swift in Sources */,
 				2CF186C21E5D228F008029B3 /* String+Extensions.swift in Sources */,
+				2B6723061E94936700F5EABF /* UIalertController+Extensions.swift in Sources */,
 				2C1B4A621E83606F00DED396 /* LoginRequest.swift in Sources */,
 				2C01A13B1E8C904000C8A342 /* OrderCell.swift in Sources */,
 				2CA913A31E5FA07A00E1411F /* Array+Extensions.swift in Sources */,
@@ -1055,7 +1063,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.TV.TVMed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1ab8f490-c7ed-4e60-a437-ffad2be10359";
+				PROVISIONING_PROFILE = "9b658213-e4f7-47d9-85dc-f9b655dc3f41";
 				PROVISIONING_PROFILE_SPECIFIER = "TVmed Development";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1074,7 +1082,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.TV.TVMed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7a4bb0cc-4014-411c-b5ce-3104a9ab82aa";
+				PROVISIONING_PROFILE = "4e0cff4a-4f8e-49fb-a8df-45ca4f7e81ac";
 				PROVISIONING_PROFILE_SPECIFIER = "TVmed ADHOC";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1156,7 +1164,7 @@
 		};
 		2C9D0A5C1E7794120095A1FB /* AD-HOC */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44929E1F0033078723D1C241 /* Pods-TVMed.release.xcconfig */;
+			baseConfigurationReference = E44AEDD0C9C624D4E68DBB46 /* Pods-TVMed.ad-hoc.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1167,15 +1175,15 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.TV.TVMed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7a4bb0cc-4014-411c-b5ce-3104a9ab82aa";
-				PROVISIONING_PROFILE_SPECIFIER = "TVmed ADHOC";
+				PROVISIONING_PROFILE = "d4c4a16e-9bcd-487c-8da8-6cfdd68deec3";
+				PROVISIONING_PROFILE_SPECIFIER = "TVMedTV Distribuition";
 				SWIFT_VERSION = 3.0;
 			};
 			name = "AD-HOC";
 		};
 		2C9D0A5D1E7794120095A1FB /* AD-HOC */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F19C9CD962AF5EF92772D1C /* Pods-TVMedTests.release.xcconfig */;
+			baseConfigurationReference = 851C3FF524756B318F702414 /* Pods-TVMedTests.ad-hoc.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

@@ -26,7 +26,7 @@ class Cart: Object {
     dynamic var formaPagamento = ""
     dynamic var tipoPagto = ""
     
-    func parameters() -> JSONDictionary {
+    func parameters() -> [String: AnyObject] {
         var parameters: JSONDictionary = [
             "carrinhoPrecoTotal" : carrinhoPrecoTotal,
             "valorFrete" : valorFrete,
@@ -47,7 +47,7 @@ class Cart: Object {
         let params = itemsCarrinho.forEach{$0.parameter()}
         _ = parameters.addDictionary(dictionaryToAppend: ["itensCarrinho" : params])
         
-        return parameters
+        return parameters as [String : AnyObject]
     }
     
     func orderTotalPrice() -> Int {
