@@ -28,4 +28,14 @@ extension Dictionary {
         
         return parameterArray.joined(separator: "&")
     }
+    
+    mutating func addDictionary(dictionaryToAppend: Dictionary) -> Dictionary {
+        if dictionaryToAppend.keys.count == 0 {
+            return self
+        }
+        for (k, v) in dictionaryToAppend {
+            self.updateValue(v, forKey: k)
+        }
+        return self
+    }
 }

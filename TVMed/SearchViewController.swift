@@ -32,7 +32,7 @@ class SearchViewController: UICollectionViewController, UISearchResultsUpdating,
         }
         
         searchController.searchBar.subviews.forEach {($0 as? UIActivityIndicatorView)?.removeFromSuperview()}
-        spinner.frame = CGRect(x: searchController.searchBar.frame.size.width - 60, y: 10, width: 40, height: 40)
+        spinner.frame = CGRect(x: searchController.searchBar.frame.size.width - 70, y: 7, width: 40, height: 40)
         spinner.hidesWhenStopped = true
         searchController.searchBar.addSubview(spinner)
         spinner.startAnimating()
