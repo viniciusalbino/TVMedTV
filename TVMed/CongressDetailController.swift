@@ -146,7 +146,11 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UITabl
             }
             if userData.isEligibleToBuy() {
                 //buy
-                let alertDTO = SystemAlertDTO(title: "Aviso", message: "Deseja comprar", buttonActions: [(title: "Comprar", style: .default), (title: "Cancelar", style: .cancel)])
+                guard self.viewModel.selectedMidia() else {
+                    self.showDefaultSystemAlertWithDefaultLayout(message: "Escolha a Midia a ser comprada", completeBlock: nil)
+                    return
+                }
+                let alertDTO = SystemAlertDTO(title: "Aviso", message: "Deseja comprar : \(self.viewModel.getCurrentMidia().nomeCongresso)", buttonActions: [(title: "Comprar", style: .default), (title: "Cancelar", style: .cancel)])
                 self.showDefaultSystemAlert(systemAlertDTO: alertDTO, completeBlock: { action in
                     if action.title == "Comprar" {
                         self.startLoading()

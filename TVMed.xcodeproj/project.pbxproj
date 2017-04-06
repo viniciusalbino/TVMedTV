@@ -10,6 +10,9 @@
 		044CED7B88A0F9C6D2CFEF67 /* Pods_TVMedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FD404313DF79EB14965569 /* Pods_TVMedTests.framework */; };
 		16D107A7F19F9FAAD0C31635 /* Pods_TVMed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 684FE61E82A70E197AA0F9EB /* Pods_TVMed.framework */; };
 		2B6723061E94936700F5EABF /* UIalertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6723051E94936700F5EABF /* UIalertController+Extensions.swift */; };
+		2B6723091E95D47200F5EABF /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6723081E95D47200F5EABF /* CartViewController.swift */; };
+		2B67230B1E95D48800F5EABF /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B67230A1E95D48800F5EABF /* CartViewModel.swift */; };
+		2B67230E1E95D5CB00F5EABF /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B67230C1E95D5CB00F5EABF /* Cart.storyboard */; };
 		2C0027D31E401F020020ABA0 /* ThirdPartyToolsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0027D21E401F020020ABA0 /* ThirdPartyToolsLoader.swift */; };
 		2C0027D51E401F1C0020ABA0 /* FabricTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0027D41E401F1C0020ABA0 /* FabricTool.swift */; };
 		2C01A1351E8A113000C8A342 /* Orders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C01A1331E8A113000C8A342 /* Orders.storyboard */; };
@@ -105,6 +108,9 @@
 /* Begin PBXFileReference section */
 		0968D6E8E29EED2CB47A1D76 /* Pods-TVMedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVMedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVMedTests/Pods-TVMedTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2B6723051E94936700F5EABF /* UIalertController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIalertController+Extensions.swift"; sourceTree = "<group>"; };
+		2B6723081E95D47200F5EABF /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		2B67230A1E95D48800F5EABF /* CartViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		2B67230D1E95D5CB00F5EABF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Cart.storyboard; sourceTree = "<group>"; };
 		2C0027D21E401F020020ABA0 /* ThirdPartyToolsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdPartyToolsLoader.swift; sourceTree = "<group>"; };
 		2C0027D41E401F1C0020ABA0 /* FabricTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FabricTool.swift; sourceTree = "<group>"; };
 		2C01A1341E8A113000C8A342 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Orders.storyboard; sourceTree = "<group>"; };
@@ -222,6 +228,8 @@
 		2B6723071E95CF2E00F5EABF /* Carrinho */ = {
 			isa = PBXGroup;
 			children = (
+				2B6723081E95D47200F5EABF /* CartViewController.swift */,
+				2B67230A1E95D48800F5EABF /* CartViewModel.swift */,
 			);
 			name = Carrinho;
 			sourceTree = "<group>";
@@ -408,6 +416,7 @@
 			children = (
 				2C7C53321E5F89680026380C /* HomeComponents */,
 				2C4ABF201E3043F000FA73A2 /* Main.storyboard */,
+				2B67230C1E95D5CB00F5EABF /* Cart.storyboard */,
 				2CDC58A61E916BCE003C28EC /* Search.storyboard */,
 				2C01A1331E8A113000C8A342 /* Orders.storyboard */,
 				2C9D0A531E6FA8170095A1FB /* Home.storyboard */,
@@ -709,6 +718,7 @@
 			files = (
 				2C9D0A551E6FA8170095A1FB /* Home.storyboard in Resources */,
 				2C5A99481E67904C00F6E4E9 /* HomeCategoryCell.xib in Resources */,
+				2B67230E1E95D5CB00F5EABF /* Cart.storyboard in Resources */,
 				2C4ABF241E3043F000FA73A2 /* Assets.xcassets in Resources */,
 				2C4ABF221E3043F000FA73A2 /* Main.storyboard in Resources */,
 				2C01A1351E8A113000C8A342 /* Orders.storyboard in Resources */,
@@ -859,6 +869,7 @@
 				2C7C532F1E5F7F5D0026380C /* Categorie.swift in Sources */,
 				2CDC58B21E9334F8003C28EC /* CartItem.swift in Sources */,
 				2CF186D01E5D2822008029B3 /* Releases.swift in Sources */,
+				2B67230B1E95D48800F5EABF /* CartViewModel.swift in Sources */,
 				2C7C53311E5F7FEE0026380C /* HomeSections.swift in Sources */,
 				2C4F5FE21E40222800754DBB /* SearchViewController.swift in Sources */,
 				2C1B4A751E836F4200DED396 /* LoginViewController.swift in Sources */,
@@ -880,6 +891,7 @@
 				2CBDC06C1E870D5700D49955 /* ValidatesEmail.swift in Sources */,
 				2C1B4A6E1E83666E00DED396 /* RealmPersister.swift in Sources */,
 				2CDC58B01E9334C3003C28EC /* Cart.swift in Sources */,
+				2B6723091E95D47200F5EABF /* CartViewController.swift in Sources */,
 				2CF186CC1E5D26D3008029B3 /* NewReleasesRequest.swift in Sources */,
 				2CDC58AB1E91711D003C28EC /* TabBarController.swift in Sources */,
 				2CBDC06A1E870D4200D49955 /* ValidatesPassword.swift in Sources */,
@@ -933,6 +945,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2B67230C1E95D5CB00F5EABF /* Cart.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B67230D1E95D5CB00F5EABF /* Base */,
+			);
+			name = Cart.storyboard;
+			sourceTree = "<group>";
+		};
 		2C01A1331E8A113000C8A342 /* Orders.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

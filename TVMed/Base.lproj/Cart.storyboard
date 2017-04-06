@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OYN-Uf-HON">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Carrinho-->
+        <scene sceneID="2CS-iD-fhn">
+            <objects>
+                <navigationController id="OYN-Uf-HON" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Carrinho" id="WYB-8n-Hb5"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xK7-nA-uuV">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zmX-jY-FUI" kind="relationship" relationship="rootViewController" id="14z-Lp-Nw6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OPc-e0-OoE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1342" y="672"/>
+        </scene>
+        <!--Cart View Controller-->
+        <scene sceneID="RAG-Cd-nSD">
+            <objects>
+                <viewController id="zmX-jY-FUI" customClass="CartViewController" customModule="TVMed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o8H-Sy-6Da"/>
+                        <viewControllerLayoutGuide type="bottom" id="hE2-5a-48E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0v4-NW-uOS">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bvG-lp-6cu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kMn-cK-ruA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3540" y="674"/>
+        </scene>
+    </scenes>
+</document>

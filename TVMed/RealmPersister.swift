@@ -11,7 +11,7 @@ import RealmSwift
 
 class RealmPersister: Object {
     
-    let serialQueue = DispatchQueue(label: "br.com.tvMedTV")
+    private static let serialQueue = DispatchQueue(label: "br.com.tvMedTV")
     
     //mark: Saving Methods
     func saveUnique<T: Object>(object: T, completion: @escaping (_ success: Bool) -> Void) {
@@ -27,7 +27,7 @@ class RealmPersister: Object {
     }
     
     func saveObjects<T: Object>(objects: [T]?, completion: @escaping (_ success: Bool) -> Void) {
-            serialQueue.async {
+            RealmPersister.serialQueue.async {
             if T.primaryKey() == nil {
                 self.saveNonUniqueObjects(objects: objects) { success in
                     completion(success)
@@ -76,7 +76,7 @@ class RealmPersister: Object {
     
     //mark: Deleting Methods
     func deleteObjects(objects: [Object]?, completion: @escaping (_ success: Bool) -> Void) {
-        serialQueue.async {
+        RealmPersister.serialQueue.async {
             self.delete(objects: objects) { sucess in
                 completion(sucess)
             }
@@ -84,7 +84,7 @@ class RealmPersister: Object {
     }
     
     func deleteAllObjects<T: Object>(ofType type: T.Type, completion: @escaping (_ success: Bool) -> Void) {
-        serialQueue.async {
+        RealmPersister.serialQueue.async {
             do {
                 let realm = try RealmEncrypted.realm()
                 self.delete(objects: Array(realm.objects(T.self))) { success in
@@ -116,7 +116,7 @@ class RealmPersister: Object {
     
     //mark: Querying Methods
     func query<T: Object>(type: T.Type, completion: @escaping (_ success: Bool, _ objects: [T]?) -> Void) {
-        serialQueue.async {
+        RealmPersister.serialQueue.async {
             do {
                 let realm = try RealmEncrypted.realm()
                 let objects = Array(realm.objects(T.self))
@@ -129,7 +129,7 @@ class RealmPersister: Object {
     }
     
     func queryUnique<T: Object>(type: T.Type, completion: @escaping (_ success: Bool, _ object: T?) -> Void) {
-        serialQueue.async {
+        RealmPersister.serialQueue.async {
             do {
                 let realm = try RealmEncrypted.realm()
                 let object = realm.objects(T.self).first
@@ -143,7 +143,7 @@ class RealmPersister: Object {
     }
     
     func wipeAllPerstience(completion: @escaping (_ success: Bool) -> Void) {
-        serialQueue.async {
+        RealmPersister.serialQueue.async {
             do {
                 let realm = try RealmEncrypted.realm()
                 try realm.write {

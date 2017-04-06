@@ -46,6 +46,7 @@ class CongressDetailViewModel {
                 return
             }
             self.midias = midias
+            self.currentMidia = midias.first ?? MidiaPromotion()
             self.delegate?.contentDidFinishedLoading(succes: true)
         }
     }
@@ -76,16 +77,47 @@ class CongressDetailViewModel {
         self.delegate?.contentDidFinishedLoading(succes: true)
     }
     
+    func selectedMidia() -> Bool {
+        guard let _ = currentMidia else {
+            return false
+        }
+        return true
+    }
+    
     func addToCart() {
         cartPersister.query { cart in
             if let currentCart = cart {
-                currentCart.itemsCarrinho.append(self.mountCartItem())
-                self.cartPersister.saveCart(cart: currentCart, callback: { success in
-                    self.delegate?.addedToCart(success: success)
-                })
+                self.updateCart(cart: currentCart)
             } else {
                 self.mountNewCart()
             }
+        }
+    }
+    
+    func updateCart(cart: Cart) {
+        var updatedCart = cart
+        do {
+            let realm = try RealmEncrypted.realm()
+            try realm.write {
+                updatedCart.carrinhoPrecoTotal = cart.carrinhoPrecoTotal
+                updatedCart.valorFrete = cart.valorFrete
+                updatedCart.descontoTotal = cart.descontoTotal
+                updatedCart.partnerId = cart.partnerId
+                updatedCart.percentualDesconto = cart.percentualDesconto
+                updatedCart.especDesconto = cart.especDesconto
+                updatedCart.creditCard = cart.creditCard
+                updatedCart.formaPagamento = cart.formaPagamento
+                updatedCart.formasPagamentoResposta = cart.formasPagamentoResposta
+                updatedCart.formasPagamentoDisplay = cart.formasPagamentoDisplay
+                updatedCart.observacoes = cart.observacoes
+                updatedCart.tipoPagto = cart.tipoPagto
+                updatedCart.itemsCarrinho = cart.itemsCarrinho
+                updatedCart.itemsCarrinho.append(self.mountCartItem())
+                realm.add(updatedCart)
+                self.delegate?.addedToCart(success: true)
+            }
+        } catch {
+            self.delegate?.addedToCart(success: false)
         }
     }
     
@@ -107,6 +139,7 @@ class CongressDetailViewModel {
             cartItem.preco = midia.getMidiaIntegerPrice()
             cartItem.urlImagem = midia.imagemHtml
         }
+        
         return cartItem
     }
 }
