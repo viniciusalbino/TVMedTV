@@ -16,6 +16,7 @@ class CartViewModel {
     
     weak var delegate: CartDelegate?
     private var cartPersister = CartPersister()
+    private var cartItems = [CartItem]()
     
     init(delegate: CartDelegate) {
         self.delegate = delegate
@@ -30,5 +31,17 @@ class CartViewModel {
                 self.delegate?.contentDidFinishedLoading(success: false)
             }
         }
+    }
+    
+    func numberOfItensInSection(section: Int) -> Int {
+        if section == 0 {
+            return self.cartItems.count
+        } else {
+            return 1
+        }
+    }
+    
+    func cartCellForRow(row: Int) -> CartItem {
+        return self.cartItems.object(index: row) ?? CartItem()
     }
 }

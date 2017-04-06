@@ -19,30 +19,81 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="zmX-jY-FUI" kind="relationship" relationship="rootViewController" id="14z-Lp-Nw6"/>
+                        <segue destination="3ss-ic-U3Z" kind="relationship" relationship="rootViewController" id="bSq-lf-phm"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OPc-e0-OoE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1342" y="672"/>
+            <point key="canvasLocation" x="1479" y="614"/>
         </scene>
         <!--Cart View Controller-->
-        <scene sceneID="RAG-Cd-nSD">
+        <scene sceneID="0Rc-V2-llO">
             <objects>
-                <viewController id="zmX-jY-FUI" customClass="CartViewController" customModule="TVMed" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="o8H-Sy-6Da"/>
-                        <viewControllerLayoutGuide type="bottom" id="hE2-5a-48E"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0v4-NW-uOS">
+                <tableViewController id="3ss-ic-U3Z" customClass="CartViewController" customModule="TVMed" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="66" sectionHeaderHeight="7" sectionFooterHeight="7" id="YWd-2q-DGe">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="bvG-lp-6cu"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kMn-cK-ruA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CartCell" rowHeight="200" id="faa-PI-u75" customClass="CartCell" customModule="TVMed" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="80" width="1920" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="faa-PI-u75" id="v8S-Ou-buA">
+                                    <rect key="frame" x="0.0" y="0.0" width="1904" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wae-7k-BsK">
+                                            <rect key="frame" x="15" y="15" width="240" height="170"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="240" id="XIb-Wl-PQa"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congresso 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgQ-0H-oph">
+                                            <rect key="frame" x="275" y="15" width="212" height="46"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="46" id="Wev-1S-82F"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 100,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTH-li-dCd">
+                                            <rect key="frame" x="275" y="81" width="175" height="46"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="46" id="n23-YF-hY0"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Wae-7k-BsK" secondAttribute="bottom" constant="15" id="D57-VX-tdY"/>
+                                        <constraint firstItem="eTH-li-dCd" firstAttribute="top" secondItem="QgQ-0H-oph" secondAttribute="bottom" constant="20" id="Ndm-tE-XPF"/>
+                                        <constraint firstItem="QgQ-0H-oph" firstAttribute="leading" secondItem="Wae-7k-BsK" secondAttribute="trailing" constant="20" id="Nei-S9-Ook"/>
+                                        <constraint firstItem="QgQ-0H-oph" firstAttribute="top" secondItem="v8S-Ou-buA" secondAttribute="top" constant="15" id="OXn-G2-YSH"/>
+                                        <constraint firstItem="Wae-7k-BsK" firstAttribute="leading" secondItem="v8S-Ou-buA" secondAttribute="leading" constant="15" id="RvZ-y7-12l"/>
+                                        <constraint firstItem="Wae-7k-BsK" firstAttribute="top" secondItem="v8S-Ou-buA" secondAttribute="top" constant="15" id="Usz-lQ-sb9"/>
+                                        <constraint firstItem="eTH-li-dCd" firstAttribute="leading" secondItem="Wae-7k-BsK" secondAttribute="trailing" constant="20" id="e5Y-2F-06w"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="congressImage" destination="Wae-7k-BsK" id="7hJ-NB-nff"/>
+                                    <outlet property="priceLabel" destination="eTH-li-dCd" id="6wt-W1-tRU"/>
+                                    <outlet property="titleLabel" destination="QgQ-0H-oph" id="F4n-IG-spp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3ss-ic-U3Z" id="XuC-9q-1O4"/>
+                            <outlet property="delegate" destination="3ss-ic-U3Z" id="x9A-zj-ltL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="njQ-5X-paE"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hzK-xt-1ic" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3540" y="674"/>
+            <point key="canvasLocation" x="3530" y="614"/>
         </scene>
     </scenes>
 </document>
