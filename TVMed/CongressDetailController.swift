@@ -146,16 +146,26 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UITabl
             }
             if userData.isEligibleToBuy() {
                 //buy
-                let alertDTO = SystemAlertDTO(title: "Aviso", message: "Deseja comprar ", buttonActions: [(title: "Comprar", style: .default), (title: "Cancelar", style: .cancel)])
+                let alertDTO = SystemAlertDTO(title: "Aviso", message: "Deseja comprar", buttonActions: [(title: "Comprar", style: .default), (title: "Cancelar", style: .cancel)])
                 self.showDefaultSystemAlert(systemAlertDTO: alertDTO, completeBlock: { action in
                     if action.title == "Comprar" {
-                        
+                        self.startLoading()
+                        self.viewModel.addToCart()
                     }
                 })
             } else {
                 //present user form
                 self.presentAlertWithTitle(title: "Erro", message: "Cadastro incompleto. Por favor, valide seu cadastro no navegador web")
             }
+        }
+    }
+    
+    func addedToCart(success: Bool) {
+        stopLoading()
+        if success {
+            self.showDefaultSystemAlertWithDefaultLayout(message: "Adicionado ao Carrinho com sucesso!", completeBlock: nil)
+        } else {
+            self.showDefaultSystemAlertWithDefaultLayout(message: "Ocorreu um erro ao adicionar seu item ao carrinho. Por favor tente novamente.", completeBlock: nil)
         }
     }
     

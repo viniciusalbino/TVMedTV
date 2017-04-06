@@ -124,4 +124,12 @@ struct MidiaPromotion: Mappable {
         }
         return "R$ 0,00"
     }
+    
+    func getMidiaIntegerPrice() -> Int {
+        let prices = [precoTipoMidia0, precoTipoMidia1, precoTipoMidia2, precoTipoMidia3]
+        if let price = prices.object(index: tipoMidia) {
+            return Int(price)
+        }
+        return Int(prices.first ?? 0)
+    }
 }

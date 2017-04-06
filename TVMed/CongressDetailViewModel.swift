@@ -10,6 +10,7 @@ import Foundation
 
 protocol CongressDetailDelegate: class {
     func contentDidFinishedLoading(succes: Bool)
+    func addedToCart(success: Bool)
 }
 
 class CongressDetailViewModel {
@@ -18,6 +19,7 @@ class CongressDetailViewModel {
     private var midias = [MidiaPromotion]()
     private var currentMidia: MidiaPromotion?
     private var selectedMidiaIndex = 0
+    private var cartPersister = CartPersister()
     
     init(delegate: CongressDetailDelegate) {
         self.delegate = delegate
@@ -72,5 +74,39 @@ class CongressDetailViewModel {
         self.currentMidia = midia
         self.midias = [midia]
         self.delegate?.contentDidFinishedLoading(succes: true)
+    }
+    
+    func addToCart() {
+        cartPersister.query { cart in
+            if let currentCart = cart {
+                currentCart.itemsCarrinho.append(self.mountCartItem())
+                self.cartPersister.saveCart(cart: currentCart, callback: { success in
+                    self.delegate?.addedToCart(success: success)
+                })
+            } else {
+                self.mountNewCart()
+            }
+        }
+    }
+    
+    func mountNewCart() {
+        let cart = Cart()
+        cart.itemsCarrinho.append(mountCartItem())
+        cartPersister.saveCart(cart: cart) { success in
+            self.delegate?.addedToCart(success: success)
+        }
+    }
+    
+    func mountCartItem() -> CartItem {
+        let cartItem = CartItem()
+        if let midia = currentMidia {
+            cartItem.congresso = midia.congresso
+            cartItem.espec = midia.espec
+            cartItem.linhaTitulo = midia.nomeCongresso
+            cartItem.midia = midia.midia
+            cartItem.preco = midia.getMidiaIntegerPrice()
+            cartItem.urlImagem = midia.imagemHtml
+        }
+        return cartItem
     }
 }
