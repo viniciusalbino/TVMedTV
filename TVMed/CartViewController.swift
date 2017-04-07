@@ -27,11 +27,11 @@ class CartViewController: UITableViewController, CartDelegate {
     
     func contentDidFinishedLoading(success: Bool) {
         stopLoading()
-        if success {
-            self.tableView.reloadData()
-        } else {
-            
-        }
+        self.tableView.reloadData()
+    }
+    
+    func finishedPurchasingProducts(success: Bool) {
+        stopLoading()
     }
     
     func finishedLoadingShipping() {
@@ -94,6 +94,30 @@ class CartViewController: UITableViewController, CartDelegate {
                 cell.fill(dto: viewModel.getResume())
             }
         default:
+            break
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 1:
+            let alertDTO = SystemAlertDTO(title: "Aviso", message: "Deseja limpar todos os itens do carrinho?", buttonActions: [(title: "Limpar", style: .default), (title: "Cancelar", style: .cancel)])
+            self.showDefaultSystemAlert(systemAlertDTO: alertDTO, completeBlock: { action in
+                if action.title == "Limpar" {
+                    self.startLoading()
+                    self.viewModel.cleanCart()
+                }
+            })
+        case 3:
+            let alertDTO = SystemAlertDTO(title: "Aviso", message: "Deseja finalizar a compra?", buttonActions: [(title: "Continuar", style: .default), (title: "Cancelar", style: .cancel)])
+            self.showDefaultSystemAlert(systemAlertDTO: alertDTO, completeBlock: { action in
+                if action.title == "Continuar" {
+                    self.startLoading()
+                    self.viewModel.makePurchase()
+                }
+            })
+        default:
+            self.tableView.deselectRow(at: indexPath, animated: true)
             break
         }
     }

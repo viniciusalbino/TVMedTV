@@ -26,6 +26,8 @@ class CheckoutRequest {
     }
     
     func makePayment(cart: Cart, callback: @escaping (CheckoutResponse?, ErrorTypeApp?) -> ()) {
+        print(cart.parameters())
+        
         HeaderBuilder().GET(url: "pedido/fecharpedido", params: cart.parameters()) { result, error, response in
             guard error == nil else {
                 callback(nil, error)
