@@ -17,5 +17,6 @@ class CartCell: UITableViewCell {
     
     func fill(cartItem: CartItem) {
         self.titleLabel.text = cartItem.linhaTitulo
+        print(cartItem.linhaTitulo)
     }
 }

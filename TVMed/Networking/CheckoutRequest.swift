@@ -10,14 +10,14 @@ import Foundation
 
 class CheckoutRequest {
     
-    func calculateShipping(state: String, quantity: Int,  callback: @escaping (Int, ErrorTypeApp?) -> ()) {
+    func calculateShipping(state: String, quantity: Int,  callback: @escaping (Float, ErrorTypeApp?) -> ()) {
         let finalUrl = "pedido/valorfrete/\(state)/\(quantity)"
         HeaderBuilder().GET(url: finalUrl, params: [:]) { result, error, response in
             guard error == nil else {
                 callback(0, error)
                 return
             }
-            if let frete = result?["valorFrete"] as? Int {
+            if let frete = result?["valorFrete"] as? Float {
                 callback(frete, nil)
             } else {
                 callback(0, ErrorTypeApp.apiError)

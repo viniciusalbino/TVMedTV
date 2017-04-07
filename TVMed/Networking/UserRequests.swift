@@ -15,6 +15,7 @@ class UserRequests  {
                 callback(nil, error)
                 return
             }
+            
             let result = result <*> (User.self, error)
             callback(result.object, result.error)
         }

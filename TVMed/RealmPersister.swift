@@ -139,7 +139,6 @@ class RealmPersister: Object {
                 completion(false, nil)
             }
         }
-
     }
     
     func wipeAllPerstience(completion: @escaping (_ success: Bool) -> Void) {

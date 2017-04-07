@@ -20,7 +20,9 @@ class CartViewController: UITableViewController, CartDelegate {
     
     func loadContent() {
         startLoading()
-        viewModel.loadCart()
+        DispatchQueue.main.async {
+            self.viewModel.loadCart()
+        }
     }
     
     func contentDidFinishedLoading(success: Bool) {
@@ -32,8 +34,12 @@ class CartViewController: UITableViewController, CartDelegate {
         }
     }
     
+    func finishedLoadingShipping() {
+        self.tableView.reloadSections(IndexSet(integer: 2), with: .automatic)
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,10 +50,23 @@ class CartViewController: UITableViewController, CartDelegate {
         switch indexPath.section {
         case 0:
             return 200.0
-        case 1:
-            return 400.0
+        case 2:
+            return 350.0
         default:
             return 100.0
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "Mídias"
+        case 1:
+            return "Limpar Carrinho"
+        case 2:
+            return "Resumo"
+        default:
+            return ""
         }
     }
     
@@ -56,9 +75,11 @@ class CartViewController: UITableViewController, CartDelegate {
         case 0:
             return tableView.dequeueReusableCell(withIdentifier: String(describing: CartCell.self)) as? CartCell ?? UITableViewCell()
         case 1:
-            return UITableViewCell()
+            return tableView.dequeueReusableCell(withIdentifier: "CleanCart")!
+        case 2:
+            return tableView.dequeueReusableCell(withIdentifier: String(describing: ResumeCell.self)) as? ResumeCell ?? UITableViewCell()
         default:
-            return UITableViewCell()
+            return tableView.dequeueReusableCell(withIdentifier: "BuyCell")!
         }
     }
     
@@ -67,6 +88,10 @@ class CartViewController: UITableViewController, CartDelegate {
         case 0:
             if let cell = cell as? CartCell {
                 cell.fill(cartItem: viewModel.cartCellForRow(row: indexPath.row))
+            }
+        case 2:
+            if let cell = cell as? ResumeCell {
+                cell.fill(dto: viewModel.getResume())
             }
         default:
             break

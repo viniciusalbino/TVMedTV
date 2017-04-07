@@ -13,9 +13,9 @@ import ObjectMapper
 class Cart: Object {
     
     var itemsCarrinho = List<CartItem>()
-    dynamic var carrinhoPrecoTotal = 0
-    dynamic var valorFrete = 0
-    dynamic var descontoTotal = 0
+    dynamic var carrinhoPrecoTotal: Float = 0.0
+    dynamic var valorFrete:Float = 0.0
+    dynamic var descontoTotal:Float = 0.0
     dynamic var partnerId = ""
     dynamic var percentualDesconto = 0
     dynamic var especDesconto = ""
@@ -30,7 +30,7 @@ class Cart: Object {
         var parameters: JSONDictionary = [
             "carrinhoPrecoTotal" : carrinhoPrecoTotal,
             "valorFrete" : valorFrete,
-            "valorTotalPedito" : orderTotalPrice(),
+            "valorTotalPedito" : Int(orderTotalPrice()),
             "descontoTotal" : descontoTotal,
             "partnerId" : partnerId,
             "percentualDesconto" : percentualDesconto,
@@ -50,8 +50,21 @@ class Cart: Object {
         return parameters as [String : AnyObject]
     }
     
-    func orderTotalPrice() -> Int {
-        let total = itemsCarrinho.map{$0.preco}.reduce(0, +)
+    func orderTotalPrice() -> Float {
+        let total = Float(itemsCarrinho.map{$0.preco}.reduce(0, +))
         return valorFrete + total
+    }
+    
+    func totalProducts() -> Float {
+        let total = Float(itemsCarrinho.map{$0.preco}.reduce(0, +))
+        return total
+    }
+    
+    func discount() -> String {
+        if descontoTotal > 0 {
+            return descontoTotal.currencyValue
+        } else {
+            return ""
+        }
     }
 }

@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CartCell" rowHeight="200" id="faa-PI-u75" customClass="CartCell" customModule="TVMed" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CartCell" rowHeight="200" id="faa-PI-u75" customClass="CartCell" customModule="TVMed" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="80" width="1920" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="faa-PI-u75" id="v8S-Ou-buA">
@@ -81,6 +81,112 @@
                                     <outlet property="congressImage" destination="Wae-7k-BsK" id="7hJ-NB-nff"/>
                                     <outlet property="priceLabel" destination="eTH-li-dCd" id="6wt-W1-tRU"/>
                                     <outlet property="titleLabel" destination="QgQ-0H-oph" id="F4n-IG-spp"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BuyCell" id="rxI-St-f6v">
+                                <rect key="frame" x="0.0" y="294" width="1920" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rxI-St-f6v" id="uLa-hT-Tga">
+                                    <rect key="frame" x="0.0" y="0.0" width="1904" height="66"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mJ-5D-9Pa">
+                                            <rect key="frame" x="20" y="20" width="1880" height="26"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="FINALIZAR COMPRA"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="8mJ-5D-9Pa" firstAttribute="top" secondItem="uLa-hT-Tga" secondAttribute="top" constant="20" id="CSP-we-oL2"/>
+                                        <constraint firstAttribute="trailing" secondItem="8mJ-5D-9Pa" secondAttribute="trailing" constant="20" id="GvA-as-3nW"/>
+                                        <constraint firstAttribute="bottom" secondItem="8mJ-5D-9Pa" secondAttribute="bottom" constant="20" id="lW4-Gd-CmA"/>
+                                        <constraint firstItem="8mJ-5D-9Pa" firstAttribute="leading" secondItem="uLa-hT-Tga" secondAttribute="leading" constant="20" id="wYm-rU-GUK"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CleanCart" id="a54-Zs-r66">
+                                <rect key="frame" x="0.0" y="374" width="1920" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a54-Zs-r66" id="VBC-Ff-WGc">
+                                    <rect key="frame" x="0.0" y="0.0" width="1904" height="66"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FeR-0e-esg">
+                                            <rect key="frame" x="20" y="20" width="1880" height="26"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="LIMPAR CARRINHO"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="FeR-0e-esg" firstAttribute="top" secondItem="VBC-Ff-WGc" secondAttribute="top" constant="20" id="IZT-Eg-WAf"/>
+                                        <constraint firstAttribute="bottom" secondItem="FeR-0e-esg" secondAttribute="bottom" constant="20" id="WXI-LB-QRD"/>
+                                        <constraint firstAttribute="trailing" secondItem="FeR-0e-esg" secondAttribute="trailing" constant="20" id="WhH-7f-Jqn"/>
+                                        <constraint firstItem="FeR-0e-esg" firstAttribute="leading" secondItem="VBC-Ff-WGc" secondAttribute="leading" constant="20" id="ejP-eF-Lit"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResumeCell" rowHeight="350" id="bT9-J1-04y" customClass="ResumeCell" customModule="TVMed" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="454" width="1920" height="350"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bT9-J1-04y" id="Pnu-Ro-oVr">
+                                    <rect key="frame" x="0.0" y="0.0" width="1904" height="350"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL PRODUTOS : R$599,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhc-TB-75j">
+                                            <rect key="frame" x="20" y="30" width="1880" height="46"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL FRETE :  R$ 20,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5U-cW-ijd">
+                                            <rect key="frame" x="20" y="106" width="1880" height="46"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL PEDIDO : R$619,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cC-vM-CpY">
+                                            <rect key="frame" x="20" y="182" width="1880" height="46"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DESCONTO : R$0,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUR-gb-u1P">
+                                            <rect key="frame" x="20" y="258" width="1880" height="46"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="SK6-Gf-tJT">
+                                            <rect key="frame" x="930" y="145" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="mdv-N3-34c"/>
+                                                <constraint firstAttribute="width" constant="60" id="rc6-VS-rNK"/>
+                                            </constraints>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="SK6-Gf-tJT" firstAttribute="centerX" secondItem="Pnu-Ro-oVr" secondAttribute="centerX" id="7yA-MM-wLE"/>
+                                        <constraint firstItem="LUR-gb-u1P" firstAttribute="leading" secondItem="Pnu-Ro-oVr" secondAttribute="leading" constant="20" id="EUp-eu-PUw"/>
+                                        <constraint firstItem="LUR-gb-u1P" firstAttribute="top" secondItem="2cC-vM-CpY" secondAttribute="bottom" constant="30" id="JhD-Cq-2Zr"/>
+                                        <constraint firstAttribute="trailing" secondItem="Fhc-TB-75j" secondAttribute="trailing" constant="20" id="KZa-j3-SNl"/>
+                                        <constraint firstItem="N5U-cW-ijd" firstAttribute="top" secondItem="Fhc-TB-75j" secondAttribute="bottom" constant="30" id="SHN-G4-U7n"/>
+                                        <constraint firstItem="2cC-vM-CpY" firstAttribute="top" secondItem="N5U-cW-ijd" secondAttribute="bottom" constant="30" id="cbt-9y-eZ5"/>
+                                        <constraint firstAttribute="trailing" secondItem="2cC-vM-CpY" secondAttribute="trailing" constant="20" id="hjS-Vd-piQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="N5U-cW-ijd" secondAttribute="trailing" constant="20" id="iNE-JB-t0z"/>
+                                        <constraint firstAttribute="trailing" secondItem="LUR-gb-u1P" secondAttribute="trailing" constant="20" id="kg8-e5-Lo3"/>
+                                        <constraint firstItem="Fhc-TB-75j" firstAttribute="top" secondItem="Pnu-Ro-oVr" secondAttribute="top" constant="30" id="oH5-3E-iZk"/>
+                                        <constraint firstItem="SK6-Gf-tJT" firstAttribute="centerY" secondItem="Pnu-Ro-oVr" secondAttribute="centerY" id="pod-8L-2vc"/>
+                                        <constraint firstItem="Fhc-TB-75j" firstAttribute="leading" secondItem="Pnu-Ro-oVr" secondAttribute="leading" constant="20" id="sxI-uX-OTo"/>
+                                        <constraint firstItem="2cC-vM-CpY" firstAttribute="leading" secondItem="Pnu-Ro-oVr" secondAttribute="leading" constant="20" id="yXM-D8-oup"/>
+                                        <constraint firstItem="N5U-cW-ijd" firstAttribute="leading" secondItem="Pnu-Ro-oVr" secondAttribute="leading" constant="20" id="z1h-tK-fuP"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="loadingView" destination="SK6-Gf-tJT" id="PX5-Gg-hdB"/>
+                                    <outlet property="totalDiscount" destination="LUR-gb-u1P" id="KRo-ha-NDX"/>
+                                    <outlet property="totalFreteLabel" destination="N5U-cW-ijd" id="NOT-AH-Gly"/>
+                                    <outlet property="totalLabel" destination="2cC-vM-CpY" id="cZ1-At-lXi"/>
+                                    <outlet property="totalProductsLabel" destination="Fhc-TB-75j" id="SJU-TB-Avl"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

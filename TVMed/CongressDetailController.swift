@@ -113,7 +113,6 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UITabl
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let cell = cell as? CongressDetailCell {
-            print(viewModel.midiaForRow(row: indexPath.row).congresso)
             cell.fill(title: viewModel.midiaForRow(row: indexPath.row).nomeCongresso, subTitle: viewModel.midiaForRow(row: indexPath.row).formattedSubtitle())
         }
     }
