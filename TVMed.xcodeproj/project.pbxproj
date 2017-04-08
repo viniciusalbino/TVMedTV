@@ -15,6 +15,25 @@
 		2B67230B1E95D48800F5EABF /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B67230A1E95D48800F5EABF /* CartViewModel.swift */; };
 		2B67230E1E95D5CB00F5EABF /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B67230C1E95D5CB00F5EABF /* Cart.storyboard */; };
 		2B6723101E95E10D00F5EABF /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B67230F1E95E10D00F5EABF /* CartCell.swift */; };
+		2B6AF6081E985773003F6AC3 /* CreditCardPersister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF6071E985773003F6AC3 /* CreditCardPersister.swift */; };
+		2B6AF60B1E9859F7003F6AC3 /* NewCard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6AF6091E9859F7003F6AC3 /* NewCard.storyboard */; };
+		2B6AF6211E9923BD003F6AC3 /* AnnotatedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF60D1E9923BD003F6AC3 /* AnnotatedTextField.swift */; };
+		2B6AF6221E9923BD003F6AC3 /* MaskCreditCardCVCTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF60F1E9923BD003F6AC3 /* MaskCreditCardCVCTextField.swift */; };
+		2B6AF6231E9923BD003F6AC3 /* MaskCreditCardDateValidationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF6101E9923BD003F6AC3 /* MaskCreditCardDateValidationTextField.swift */; };
+		2B6AF6241E9923BD003F6AC3 /* MaskCreditCardTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF6111E9923BD003F6AC3 /* MaskCreditCardTextField.swift */; };
+		2B6AF6251E9923BD003F6AC3 /* MaskNameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF6121E9923BD003F6AC3 /* MaskNameTextField.swift */; };
+		2B6AF6261E9923BD003F6AC3 /* CreditCardValidationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF6141E9923BD003F6AC3 /* CreditCardValidationType.swift */; };
+		2B6AF6271E9923BD003F6AC3 /* CreditCardValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF6151E9923BD003F6AC3 /* CreditCardValidator.swift */; };
+		2B6AF6281E9923BD003F6AC3 /* Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF6161E9923BD003F6AC3 /* Mask.swift */; };
+		2B6AF62D1E9923BD003F6AC3 /* MaskCEPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF61B1E9923BD003F6AC3 /* MaskCEPTextField.swift */; };
+		2B6AF6301E9923BD003F6AC3 /* MaskNumberPhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF61E1E9923BD003F6AC3 /* MaskNumberPhoneTextField.swift */; };
+		2B6AF6311E9923BD003F6AC3 /* TextFieldMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF61F1E9923BD003F6AC3 /* TextFieldMask.swift */; };
+		2B6AF6321E9923BD003F6AC3 /* ValidationObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF6201E9923BD003F6AC3 /* ValidationObjects.swift */; };
+		2B6AF6351E99277D003F6AC3 /* NewCreditCardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF6341E99277D003F6AC3 /* NewCreditCardTableViewController.swift */; };
+		2B6AF6371E992CB2003F6AC3 /* CreditCardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF6361E992CB2003F6AC3 /* CreditCardsTableViewController.swift */; };
+		2B6AF63A1E992D09003F6AC3 /* CreditCards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6AF6381E992D09003F6AC3 /* CreditCards.storyboard */; };
+		2B6AF63C1E992E4E003F6AC3 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF63B1E992E4E003F6AC3 /* CardCell.swift */; };
+		2B6AF63E1E992FDA003F6AC3 /* CreditCardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF63D1E992FDA003F6AC3 /* CreditCardsViewModel.swift */; };
 		2C0027D31E401F020020ABA0 /* ThirdPartyToolsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0027D21E401F020020ABA0 /* ThirdPartyToolsLoader.swift */; };
 		2C0027D51E401F1C0020ABA0 /* FabricTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0027D41E401F1C0020ABA0 /* FabricTool.swift */; };
 		2C01A1351E8A113000C8A342 /* Orders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C01A1331E8A113000C8A342 /* Orders.storyboard */; };
@@ -115,6 +134,25 @@
 		2B67230A1E95D48800F5EABF /* CartViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 		2B67230D1E95D5CB00F5EABF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Cart.storyboard; sourceTree = "<group>"; };
 		2B67230F1E95E10D00F5EABF /* CartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
+		2B6AF6071E985773003F6AC3 /* CreditCardPersister.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardPersister.swift; sourceTree = "<group>"; };
+		2B6AF60A1E9859F7003F6AC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NewCard.storyboard; sourceTree = "<group>"; };
+		2B6AF60D1E9923BD003F6AC3 /* AnnotatedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotatedTextField.swift; sourceTree = "<group>"; };
+		2B6AF60F1E9923BD003F6AC3 /* MaskCreditCardCVCTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskCreditCardCVCTextField.swift; sourceTree = "<group>"; };
+		2B6AF6101E9923BD003F6AC3 /* MaskCreditCardDateValidationTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskCreditCardDateValidationTextField.swift; sourceTree = "<group>"; };
+		2B6AF6111E9923BD003F6AC3 /* MaskCreditCardTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskCreditCardTextField.swift; sourceTree = "<group>"; };
+		2B6AF6121E9923BD003F6AC3 /* MaskNameTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskNameTextField.swift; sourceTree = "<group>"; };
+		2B6AF6141E9923BD003F6AC3 /* CreditCardValidationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardValidationType.swift; sourceTree = "<group>"; };
+		2B6AF6151E9923BD003F6AC3 /* CreditCardValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardValidator.swift; sourceTree = "<group>"; };
+		2B6AF6161E9923BD003F6AC3 /* Mask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mask.swift; sourceTree = "<group>"; };
+		2B6AF61B1E9923BD003F6AC3 /* MaskCEPTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskCEPTextField.swift; sourceTree = "<group>"; };
+		2B6AF61E1E9923BD003F6AC3 /* MaskNumberPhoneTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskNumberPhoneTextField.swift; sourceTree = "<group>"; };
+		2B6AF61F1E9923BD003F6AC3 /* TextFieldMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldMask.swift; sourceTree = "<group>"; };
+		2B6AF6201E9923BD003F6AC3 /* ValidationObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationObjects.swift; sourceTree = "<group>"; };
+		2B6AF6341E99277D003F6AC3 /* NewCreditCardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCreditCardTableViewController.swift; sourceTree = "<group>"; };
+		2B6AF6361E992CB2003F6AC3 /* CreditCardsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardsTableViewController.swift; sourceTree = "<group>"; };
+		2B6AF6391E992D09003F6AC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CreditCards.storyboard; sourceTree = "<group>"; };
+		2B6AF63B1E992E4E003F6AC3 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		2B6AF63D1E992FDA003F6AC3 /* CreditCardsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardsViewModel.swift; sourceTree = "<group>"; };
 		2C0027D21E401F020020ABA0 /* ThirdPartyToolsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdPartyToolsLoader.swift; sourceTree = "<group>"; };
 		2C0027D41E401F1C0020ABA0 /* FabricTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FabricTool.swift; sourceTree = "<group>"; };
 		2C01A1341E8A113000C8A342 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Orders.storyboard; sourceTree = "<group>"; };
@@ -240,6 +278,52 @@
 			name = Carrinho;
 			sourceTree = "<group>";
 		};
+		2B6AF60C1E9923BD003F6AC3 /* Masks */ = {
+			isa = PBXGroup;
+			children = (
+				2B6AF60D1E9923BD003F6AC3 /* AnnotatedTextField.swift */,
+				2B6AF60E1E9923BD003F6AC3 /* CreditCard */,
+				2B6AF6131E9923BD003F6AC3 /* CreditCardValidator */,
+				2B6AF6161E9923BD003F6AC3 /* Mask.swift */,
+				2B6AF61B1E9923BD003F6AC3 /* MaskCEPTextField.swift */,
+				2B6AF61E1E9923BD003F6AC3 /* MaskNumberPhoneTextField.swift */,
+				2B6AF61F1E9923BD003F6AC3 /* TextFieldMask.swift */,
+				2B6AF6201E9923BD003F6AC3 /* ValidationObjects.swift */,
+			);
+			path = Masks;
+			sourceTree = "<group>";
+		};
+		2B6AF60E1E9923BD003F6AC3 /* CreditCard */ = {
+			isa = PBXGroup;
+			children = (
+				2B6AF60F1E9923BD003F6AC3 /* MaskCreditCardCVCTextField.swift */,
+				2B6AF6101E9923BD003F6AC3 /* MaskCreditCardDateValidationTextField.swift */,
+				2B6AF6111E9923BD003F6AC3 /* MaskCreditCardTextField.swift */,
+				2B6AF6121E9923BD003F6AC3 /* MaskNameTextField.swift */,
+			);
+			path = CreditCard;
+			sourceTree = "<group>";
+		};
+		2B6AF6131E9923BD003F6AC3 /* CreditCardValidator */ = {
+			isa = PBXGroup;
+			children = (
+				2B6AF6141E9923BD003F6AC3 /* CreditCardValidationType.swift */,
+				2B6AF6151E9923BD003F6AC3 /* CreditCardValidator.swift */,
+			);
+			path = CreditCardValidator;
+			sourceTree = "<group>";
+		};
+		2B6AF6331E992769003F6AC3 /* CreditCard */ = {
+			isa = PBXGroup;
+			children = (
+				2B6AF6341E99277D003F6AC3 /* NewCreditCardTableViewController.swift */,
+				2B6AF6361E992CB2003F6AC3 /* CreditCardsTableViewController.swift */,
+				2B6AF63D1E992FDA003F6AC3 /* CreditCardsViewModel.swift */,
+				2B6AF63B1E992E4E003F6AC3 /* CardCell.swift */,
+			);
+			name = CreditCard;
+			sourceTree = "<group>";
+		};
 		2C0027D11E401EB70020ABA0 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,6 +423,7 @@
 		2C4F5FDD1E4021EF00754DBB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2B6AF6331E992769003F6AC3 /* CreditCard */,
 				2B6723071E95CF2E00F5EABF /* Carrinho */,
 				2CDC58A91E9170E2003C28EC /* TabBar */,
 				2C1B4A731E836F3300DED396 /* Login */,
@@ -430,6 +515,8 @@
 				2C1B4A4F1E7B7DD600DED396 /* CongressoDetail.storyboard */,
 				2C1B4A711E836E0E00DED396 /* Login.storyboard */,
 				2C01A1381E8C902700C8A342 /* OrderCell.xib */,
+				2B6AF6091E9859F7003F6AC3 /* NewCard.storyboard */,
+				2B6AF6381E992D09003F6AC3 /* CreditCards.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -522,6 +609,7 @@
 				2CDC58B31E933650003C28EC /* CreditCard.swift */,
 				2CDC58B51E933BC6003C28EC /* CartPersister.swift */,
 				2CDC58B91E933E86003C28EC /* CheckoutResponse.swift */,
+				2B6AF6071E985773003F6AC3 /* CreditCardPersister.swift */,
 			);
 			name = Cart;
 			sourceTree = "<group>";
@@ -594,6 +682,7 @@
 		2CF186E41E5F7212008029B3 /* GeneralViews */ = {
 			isa = PBXGroup;
 			children = (
+				2B6AF60C1E9923BD003F6AC3 /* Masks */,
 				2CF186E51E5F7246008029B3 /* LoadingOverlay.swift */,
 				2C1B4A5C1E7F742D00DED396 /* FocusedTextView.swift */,
 			);
@@ -729,6 +818,8 @@
 				2C4ABF221E3043F000FA73A2 /* Main.storyboard in Resources */,
 				2C01A1351E8A113000C8A342 /* Orders.storyboard in Resources */,
 				2C9D0A4D1E6FA6370095A1FB /* EspecialitiesController.storyboard in Resources */,
+				2B6AF63A1E992D09003F6AC3 /* CreditCards.storyboard in Resources */,
+				2B6AF60B1E9859F7003F6AC3 /* NewCard.storyboard in Resources */,
 				2C7C53371E5F8AF70026380C /* HomeCatalogCollectionViewCell.xib in Resources */,
 				2C9D0A481E6E5A810095A1FB /* HomeSpecCell.xib in Resources */,
 				2C1B4A501E7B7DD600DED396 /* CongressoDetail.storyboard in Resources */,
@@ -859,6 +950,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B6AF6211E9923BD003F6AC3 /* AnnotatedTextField.swift in Sources */,
 				2CDC58B41E933650003C28EC /* CreditCard.swift in Sources */,
 				2C9D0A581E6FA9140095A1FB /* EspecialitiesController.swift in Sources */,
 				2C1B4A701E83674900DED396 /* TokenPersister.swift in Sources */,
@@ -887,22 +979,29 @@
 				2C9D0A5A1E70F87C0095A1FB /* EspecialitiesViewModel.swift in Sources */,
 				2CF186E11E5D3802008029B3 /* RequestParser.swift in Sources */,
 				2C9D0A441E6E5A530095A1FB /* EspecCollectionViewContainerCell.swift in Sources */,
+				2B6AF6321E9923BD003F6AC3 /* ValidationObjects.swift in Sources */,
 				2C9D0A411E6E585A0095A1FB /* EspecialityRequest.swift in Sources */,
 				2CF186E21E5D3802008029B3 /* RequestResponseParse.swift in Sources */,
 				2CDC58A51E8E029F003C28EC /* User.swift in Sources */,
 				2CDC58B61E933BC6003C28EC /* CartPersister.swift in Sources */,
 				2C9D0A461E6E5A6C0095A1FB /* HomeSpecCell.swift in Sources */,
 				2C0027D51E401F1C0020ABA0 /* FabricTool.swift in Sources */,
+				2B6AF6371E992CB2003F6AC3 /* CreditCardsTableViewController.swift in Sources */,
 				2C1B4A531E7B830200DED396 /* CongressDetailController.swift in Sources */,
 				2CA913A11E5F9E3700E1411F /* UICollectionViewCell+Extensions.swift in Sources */,
 				2CBDC06C1E870D5700D49955 /* ValidatesEmail.swift in Sources */,
+				2B6AF6281E9923BD003F6AC3 /* Mask.swift in Sources */,
+				2B6AF62D1E9923BD003F6AC3 /* MaskCEPTextField.swift in Sources */,
 				2C1B4A6E1E83666E00DED396 /* RealmPersister.swift in Sources */,
 				2CDC58B01E9334C3003C28EC /* Cart.swift in Sources */,
 				2B6723091E95D47200F5EABF /* CartViewController.swift in Sources */,
+				2B6AF6081E985773003F6AC3 /* CreditCardPersister.swift in Sources */,
+				2B6AF6301E9923BD003F6AC3 /* MaskNumberPhoneTextField.swift in Sources */,
 				2CF186CC1E5D26D3008029B3 /* NewReleasesRequest.swift in Sources */,
 				2CDC58AB1E91711D003C28EC /* TabBarController.swift in Sources */,
 				2CBDC06A1E870D4200D49955 /* ValidatesPassword.swift in Sources */,
 				2CF186E61E5F7246008029B3 /* LoadingOverlay.swift in Sources */,
+				2B6AF63C1E992E4E003F6AC3 /* CardCell.swift in Sources */,
 				2CF186DA1E5D3802008029B3 /* BaseRequest.swift in Sources */,
 				2C1B4A641E8360A000DED396 /* UserToken.swift in Sources */,
 				2C1B4A591E7F66DB00DED396 /* Float+Extension.swift in Sources */,
@@ -911,21 +1010,30 @@
 				2C9D0A4B1E6FA0C40095A1FB /* MidiaPromotion.swift in Sources */,
 				2C1B4A601E835FF600DED396 /* LoginDTO.swift in Sources */,
 				2C1B4A5B1E7F71EE00DED396 /* UIViewController+Extensions.swift in Sources */,
+				2B6AF6251E9923BD003F6AC3 /* MaskNameTextField.swift in Sources */,
 				2CDC58B81E933CBC003C28EC /* CheckoutRequest.swift in Sources */,
+				2B6AF6351E99277D003F6AC3 /* NewCreditCardTableViewController.swift in Sources */,
 				2CBDC0681E870C0D00D49955 /* LoginViewModel.swift in Sources */,
 				2C5A994C1E690A7500F6E4E9 /* CollectionViewContainerCell.swift in Sources */,
+				2B6AF6261E9923BD003F6AC3 /* CreditCardValidationType.swift in Sources */,
 				2CDC58BA1E933E86003C28EC /* CheckoutResponse.swift in Sources */,
 				2CF186C21E5D228F008029B3 /* String+Extensions.swift in Sources */,
 				2B6723061E94936700F5EABF /* UIalertController+Extensions.swift in Sources */,
 				2C1B4A621E83606F00DED396 /* LoginRequest.swift in Sources */,
+				2B6AF6271E9923BD003F6AC3 /* CreditCardValidator.swift in Sources */,
+				2B6AF6311E9923BD003F6AC3 /* TextFieldMask.swift in Sources */,
 				2C01A13B1E8C904000C8A342 /* OrderCell.swift in Sources */,
 				2CA913A31E5FA07A00E1411F /* Array+Extensions.swift in Sources */,
+				2B6AF6221E9923BD003F6AC3 /* MaskCreditCardCVCTextField.swift in Sources */,
 				2CF186DC1E5D3802008029B3 /* ErrorTypeApp.swift in Sources */,
+				2B6AF6231E9923BD003F6AC3 /* MaskCreditCardDateValidationTextField.swift in Sources */,
 				2C5A994E1E6910AF00F6E4E9 /* CategorieContainerCell.swift in Sources */,
 				2CDC58A31E8E0275003C28EC /* UserRequests.swift in Sources */,
 				2CF186C61E5D25F1008029B3 /* HomeViewController.swift in Sources */,
+				2B6AF6241E9923BD003F6AC3 /* MaskCreditCardTextField.swift in Sources */,
 				2C1F9FCC1E88B380000B0466 /* MeusProdutosViewController.swift in Sources */,
 				2C76515D1E8A0B60003D5D34 /* OrdersRequest.swift in Sources */,
+				2B6AF63E1E992FDA003F6AC3 /* CreditCardsViewModel.swift in Sources */,
 				2C0027D31E401F020020ABA0 /* ThirdPartyToolsLoader.swift in Sources */,
 				2B07BECA1E97207B00DB3DF7 /* ResumeCell.swift in Sources */,
 				2C5BE2591E5FA3350038AE0E /* UITableViewCell+Extensions.swift in Sources */,
@@ -959,6 +1067,22 @@
 				2B67230D1E95D5CB00F5EABF /* Base */,
 			);
 			name = Cart.storyboard;
+			sourceTree = "<group>";
+		};
+		2B6AF6091E9859F7003F6AC3 /* NewCard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B6AF60A1E9859F7003F6AC3 /* Base */,
+			);
+			name = NewCard.storyboard;
+			sourceTree = "<group>";
+		};
+		2B6AF6381E992D09003F6AC3 /* CreditCards.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B6AF6391E992D09003F6AC3 /* Base */,
+			);
+			name = CreditCards.storyboard;
 			sourceTree = "<group>";
 		};
 		2C01A1331E8A113000C8A342 /* Orders.storyboard */ = {

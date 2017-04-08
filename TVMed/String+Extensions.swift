@@ -42,4 +42,21 @@ extension String {
     func length() -> Int {
         return Array(self.characters).count
     }
+    
+    func substringToIndex(index: Int) -> String {
+        let index1 = self.index(self.startIndex, offsetBy: index)
+        return self.substring(to: index1)
+    }
+    
+    func hasOnlyCharacters(characters: String) -> Bool {
+        return hasOnlyCharactersInSet(charSet: CharacterSet(charactersIn: characters))
+    }
+    
+    func hasOnlyCharactersInSet(charSet: CharacterSet) -> Bool {
+        return self.rangeOfCharacter(from: charSet.inverted) == nil
+    }
+    
+    func trimWhiteSpaces() -> String {
+        return self.replacingOccurrences(of: " ", with: "")
+    }
 }

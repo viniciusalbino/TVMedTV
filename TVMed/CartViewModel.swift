@@ -12,6 +12,7 @@ protocol CartDelegate: class {
     func contentDidFinishedLoading(success: Bool)
     func finishedLoadingShipping()
     func finishedPurchasingProducts(success: Bool)
+    func presentCardsSegue()
 }
 
 class CartViewModel {
@@ -24,6 +25,7 @@ class CartViewModel {
     private var userRequest = UserRequests()
     private var checkoutRequest = CheckoutRequest()
     private var currentUser:User?
+    private var creditCardPersister = CreditCardPersister()
     
     init(delegate: CartDelegate) {
         self.delegate = delegate
@@ -109,16 +111,13 @@ class CartViewModel {
             return
         }
         
-        if let creditCard = cart.creditCard {
-            
-        } else {
-            //present credit card flow
-        }
+        //show creditcards tableview
+        self.delegate?.presentCardsSegue()
     }
     
-    func makePurchase(cart: Cart) {
-        
-        checkoutRequest.makePayment(cart: cart) { checkoutResponse, error in
+    func makePurchase(cart: Cart, creditCard: CreditCard) {
+        let params = cart.parameters(card: creditCard)
+        checkoutRequest.makePayment(cartParameters: params) { checkoutResponse, error in
             guard error == nil, let response = checkoutResponse else {
                 self.delegate?.finishedPurchasingProducts(success: false)
                 return

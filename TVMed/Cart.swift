@@ -19,14 +19,13 @@ class Cart: Object {
     dynamic var partnerId = ""
     dynamic var percentualDesconto = 0
     dynamic var especDesconto = ""
-    dynamic var creditCard: CreditCard?
     dynamic var formasPagamentoResposta = ""
     dynamic var formasPagamentoDisplay = ""
     dynamic var observacoes = ""
     dynamic var formaPagamento = ""
     dynamic var tipoPagto = ""
     
-    func parameters() -> [String: AnyObject] {
+    func parameters(card: CreditCard) -> [String: AnyObject] {
         var parameters: JSONDictionary = [
             "carrinhoPrecoTotal" : carrinhoPrecoTotal,
             "valorFrete" : valorFrete,
@@ -41,9 +40,7 @@ class Cart: Object {
             "formaPagamento" : formaPagamento,
             "tipoPagto" : tipoPagto
         ]
-        if let card = creditCard {
-            _ = parameters.addDictionary(dictionaryToAppend: card.parameters())
-        }
+        _ = parameters.addDictionary(dictionaryToAppend: card.parameters())
         let params = itemsCarrinho.forEach{$0.parameter()}
         _ = parameters.addDictionary(dictionaryToAppend: ["itensCarrinho" : params])
         

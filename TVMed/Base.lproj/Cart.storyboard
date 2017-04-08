@@ -105,7 +105,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CleanCart" id="a54-Zs-r66">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CleanCart" id="a54-Zs-r66">
                                 <rect key="frame" x="0.0" y="374" width="1920" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="a54-Zs-r66" id="VBC-Ff-WGc">
@@ -126,7 +126,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResumeCell" rowHeight="350" id="bT9-J1-04y" customClass="ResumeCell" customModule="TVMed" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResumeCell" rowHeight="350" id="bT9-J1-04y" customClass="ResumeCell" customModule="TVMed" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="454" width="1920" height="350"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bT9-J1-04y" id="Pnu-Ro-oVr">
@@ -197,10 +197,21 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="njQ-5X-paE"/>
+                    <connections>
+                        <segue destination="BDa-W4-Wmr" kind="presentation" identifier="presentCards" id="V8h-0p-0a6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzK-xt-1ic" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3530" y="614"/>
+        </scene>
+        <!--NavigationController-->
+        <scene sceneID="ig1-VP-2yg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreditCards" referencedIdentifier="NavigationController" id="BDa-W4-Wmr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rnI-vW-pI7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5297" y="979"/>
         </scene>
     </scenes>
 </document>

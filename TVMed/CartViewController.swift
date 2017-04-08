@@ -113,12 +113,16 @@ class CartViewController: UITableViewController, CartDelegate {
             self.showDefaultSystemAlert(systemAlertDTO: alertDTO, completeBlock: { action in
                 if action.title == "Continuar" {
                     self.startLoading()
-                    self.viewModel.makePurchase()
+                    self.viewModel.continueCheckout()
                 }
             })
         default:
             self.tableView.deselectRow(at: indexPath, animated: true)
             break
         }
+    }
+    
+    func presentCardsSegue() {
+        self.performSegue(withIdentifier: "presentCards", sender: self)
     }
 }

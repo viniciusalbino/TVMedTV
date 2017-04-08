@@ -25,10 +25,10 @@ class CheckoutRequest {
         }
     }
     
-    func makePayment(cart: Cart, callback: @escaping (CheckoutResponse?, ErrorTypeApp?) -> ()) {
-        print(cart.parameters())
-        
-        HeaderBuilder().GET(url: "pedido/fecharpedido", params: cart.parameters()) { result, error, response in
+    func makePayment(cartParameters: JSONDictionary, callback: @escaping (CheckoutResponse?, ErrorTypeApp?) -> ()) {
+        print(cartParameters)
+        let params = cartParameters as [String: AnyObject]
+        HeaderBuilder().GET(url: "pedido/fecharpedido", params: params) { result, error, response in
             guard error == nil else {
                 callback(nil, error)
                 return

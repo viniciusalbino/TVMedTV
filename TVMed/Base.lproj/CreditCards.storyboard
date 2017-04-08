@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="wg5-wP-SOw">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xix-vC-nX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="L9g-Pt-v9c" customClass="CreditCardsTableViewController" customModule="TVMed" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="66" sectionHeaderHeight="7" sectionFooterHeight="7" id="6fL-2R-0MW">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CardCell" rowHeight="200" id="9qK-Fz-5rI" customClass="CardCell" customModule="TVMed" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="80" width="1920" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9qK-Fz-5rI" id="Pk2-TA-fLY">
+                                    <rect key="frame" x="0.0" y="0.0" width="1904" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bcr-1a-PTv">
+                                            <rect key="frame" x="20" y="20" width="80" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="GMR-Kv-ntf"/>
+                                                <constraint firstAttribute="width" constant="80" id="K2j-zk-e5W"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vip-gj-3Sc">
+                                            <rect key="frame" x="120" y="20" width="1780" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="M0A-uK-oy3"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ub2-oB-C2y">
+                                            <rect key="frame" x="120" y="80" width="1780" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="Qgi-IR-c0a"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaE-Nm-ug3">
+                                            <rect key="frame" x="120" y="140" width="1780" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="fm1-Cn-huq"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Vip-gj-3Sc" firstAttribute="leading" secondItem="bcr-1a-PTv" secondAttribute="trailing" constant="20" id="1DU-g2-HYB"/>
+                                        <constraint firstItem="GaE-Nm-ug3" firstAttribute="top" secondItem="ub2-oB-C2y" secondAttribute="bottom" constant="20" id="GWS-k9-5rR"/>
+                                        <constraint firstItem="bcr-1a-PTv" firstAttribute="top" secondItem="Pk2-TA-fLY" secondAttribute="top" constant="20" id="MuD-nc-pcn"/>
+                                        <constraint firstAttribute="trailing" secondItem="ub2-oB-C2y" secondAttribute="trailing" constant="20" id="NOJ-UX-nIg"/>
+                                        <constraint firstItem="Vip-gj-3Sc" firstAttribute="top" secondItem="Pk2-TA-fLY" secondAttribute="top" constant="20" id="NvO-55-K53"/>
+                                        <constraint firstItem="GaE-Nm-ug3" firstAttribute="leading" secondItem="ub2-oB-C2y" secondAttribute="leading" id="OEd-nx-ajZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="GaE-Nm-ug3" secondAttribute="trailing" constant="20" id="Qs4-o4-EDx"/>
+                                        <constraint firstItem="ub2-oB-C2y" firstAttribute="leading" secondItem="bcr-1a-PTv" secondAttribute="trailing" constant="20" id="eBh-Bn-6Ii"/>
+                                        <constraint firstItem="ub2-oB-C2y" firstAttribute="top" secondItem="Vip-gj-3Sc" secondAttribute="bottom" constant="20" id="nZy-0A-4Nr"/>
+                                        <constraint firstAttribute="trailing" secondItem="Vip-gj-3Sc" secondAttribute="trailing" constant="20" id="o1S-hD-QQF"/>
+                                        <constraint firstItem="bcr-1a-PTv" firstAttribute="leading" secondItem="Pk2-TA-fLY" secondAttribute="leading" constant="20" id="tQl-gD-EG7"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="brandImage" destination="bcr-1a-PTv" id="AaA-8w-Iab"/>
+                                    <outlet property="cardName" destination="Vip-gj-3Sc" id="Psy-se-xc2"/>
+                                    <outlet property="cardNumber" destination="ub2-oB-C2y" id="aor-m9-waR"/>
+                                    <outlet property="cardValidation" destination="GaE-Nm-ug3" id="qKm-FP-tpE"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewCardCell" id="sUG-G3-ePP">
+                                <rect key="frame" x="0.0" y="294" width="1920" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sUG-G3-ePP" id="C7Q-K9-K9W">
+                                    <rect key="frame" x="0.0" y="0.0" width="1904" height="66"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rq-zd-6mY">
+                                            <rect key="frame" x="20" y="20" width="1880" height="26"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="Cadastrar novo cartão"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="2rq-zd-6mY" secondAttribute="bottom" constant="20" id="0UO-wZ-u6B"/>
+                                        <constraint firstAttribute="trailing" secondItem="2rq-zd-6mY" secondAttribute="trailing" constant="20" id="1j7-7j-CYe"/>
+                                        <constraint firstItem="2rq-zd-6mY" firstAttribute="leading" secondItem="C7Q-K9-K9W" secondAttribute="leading" constant="20" id="2qb-cY-d1H"/>
+                                        <constraint firstItem="2rq-zd-6mY" firstAttribute="top" secondItem="C7Q-K9-K9W" secondAttribute="top" constant="20" id="p00-ok-a5P"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="L9g-Pt-v9c" id="MPm-5y-XTn"/>
+                            <outlet property="delegate" destination="L9g-Pt-v9c" id="Pnj-SG-qxO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="yWI-oK-U04"/>
+                    <connections>
+                        <segue destination="MNK-Es-nR6" kind="show" identifier="newCardSegue" id="Siy-7P-thO"/>
+                    </connections>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="-57" y="-13"/>
+        </scene>
+        <!--NewCreditCardTableViewController-->
+        <scene sceneID="jhw-Cf-A3D">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NewCard" referencedIdentifier="NewCreditCardTableViewController" id="MNK-Es-nR6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mM8-5E-dqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1482" y="-10"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NFn-AB-6G8">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationController" id="B23-5N-ANK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="U7p-eO-uCW">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="L9g-Pt-v9c" kind="relationship" relationship="rootViewController" id="k4j-Qi-zfz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sC4-JU-iMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2197" y="-13"/>
+        </scene>
+    </scenes>
+</document>

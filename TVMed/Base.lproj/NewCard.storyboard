@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Credit Card Table View Controller-->
+        <scene sceneID="rW7-aA-n7b">
+            <objects>
+                <tableViewController storyboardIdentifier="NewCreditCardTableViewController" id="9ps-sG-Z3F" customClass="NewCreditCardTableViewController" customModule="TVMed" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="100" sectionHeaderHeight="7" sectionFooterHeight="7" id="EjS-Ok-cI2">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="Oqa-KG-1Al">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hPW-6h-zsd">
+                                        <rect key="frame" x="0.0" y="35" width="1920" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hPW-6h-zsd" id="cbD-CU-6mr">
+                                            <rect key="frame" x="0.0" y="0.0" width="1904" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Número do cartão de crédito" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="43L-Qn-Xa8" customClass="MaskCreditCardTextField" customModule="TVMed" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="20" width="1880" height="60"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="43L-Qn-Xa8" firstAttribute="leading" secondItem="cbD-CU-6mr" secondAttribute="leading" constant="20" id="8pQ-Qd-3XE"/>
+                                                <constraint firstAttribute="trailing" secondItem="43L-Qn-Xa8" secondAttribute="trailing" constant="20" id="doY-dU-XFK"/>
+                                                <constraint firstAttribute="bottom" secondItem="43L-Qn-Xa8" secondAttribute="bottom" constant="20" id="olo-68-5U9"/>
+                                                <constraint firstItem="43L-Qn-Xa8" firstAttribute="top" secondItem="cbD-CU-6mr" secondAttribute="top" constant="20" id="pRP-cy-St4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="2h4-OO-4K0">
+                                        <rect key="frame" x="0.0" y="149" width="1920" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2h4-OO-4K0" id="JFe-Px-lfK">
+                                            <rect key="frame" x="0.0" y="0.0" width="1904" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome do titular (como escrito no cartão)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XCv-jh-liX" customClass="MaskNameTextField" customModule="TVMed" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="20" width="1880" height="60"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="XCv-jh-liX" firstAttribute="leading" secondItem="JFe-Px-lfK" secondAttribute="leading" constant="20" id="085-jv-CCW"/>
+                                                <constraint firstAttribute="trailing" secondItem="XCv-jh-liX" secondAttribute="trailing" constant="20" id="3xb-AO-RR2"/>
+                                                <constraint firstAttribute="bottom" secondItem="XCv-jh-liX" secondAttribute="bottom" constant="20" id="5w6-8x-RL6"/>
+                                                <constraint firstItem="XCv-jh-liX" firstAttribute="top" secondItem="JFe-Px-lfK" secondAttribute="top" constant="20" id="Imc-7e-abE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nN7-z4-1Yd">
+                                        <rect key="frame" x="0.0" y="263" width="1920" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nN7-z4-1Yd" id="6jG-em-NoE">
+                                            <rect key="frame" x="0.0" y="0.0" width="1904" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="MM / AA (Validade)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fs7-h3-alc" customClass="MaskCreditCardDateValidationTextField" customModule="TVMed" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="20" width="919" height="60"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                </textField>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Código de segurança" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9VI-B7-wxa" customClass="MaskCreditCardCVCTextField" customModule="TVMed" customModuleProvider="target">
+                                                    <rect key="frame" x="981" y="20" width="919" height="60"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                </textField>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a4b-nS-uwE">
+                                                    <rect key="frame" x="959" y="0.0" width="2" height="100"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="2" id="n1u-Be-icI"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="9VI-B7-wxa" secondAttribute="trailing" constant="20" id="2ed-0e-7eY"/>
+                                                <constraint firstItem="Fs7-h3-alc" firstAttribute="leading" secondItem="6jG-em-NoE" secondAttribute="leading" constant="20" id="4If-ag-E3h"/>
+                                                <constraint firstAttribute="bottom" secondItem="Fs7-h3-alc" secondAttribute="bottom" constant="20" id="5qP-nn-TSf"/>
+                                                <constraint firstAttribute="bottom" secondItem="9VI-B7-wxa" secondAttribute="bottom" constant="20" id="Aky-Nz-Tpu"/>
+                                                <constraint firstItem="a4b-nS-uwE" firstAttribute="leading" secondItem="Fs7-h3-alc" secondAttribute="trailing" constant="20" id="EzY-M3-dny"/>
+                                                <constraint firstItem="9VI-B7-wxa" firstAttribute="top" secondItem="6jG-em-NoE" secondAttribute="top" constant="20" id="fcq-SY-xg1"/>
+                                                <constraint firstItem="a4b-nS-uwE" firstAttribute="top" secondItem="6jG-em-NoE" secondAttribute="top" id="gah-8q-YP4"/>
+                                                <constraint firstItem="a4b-nS-uwE" firstAttribute="centerX" secondItem="6jG-em-NoE" secondAttribute="centerX" id="kt4-bD-K3x"/>
+                                                <constraint firstItem="Fs7-h3-alc" firstAttribute="top" secondItem="6jG-em-NoE" secondAttribute="top" constant="20" id="sJf-JZ-Wf8"/>
+                                                <constraint firstItem="9VI-B7-wxa" firstAttribute="leading" secondItem="a4b-nS-uwE" secondAttribute="trailing" constant="20" id="uO5-lD-McY"/>
+                                                <constraint firstAttribute="bottom" secondItem="a4b-nS-uwE" secondAttribute="bottom" id="wsI-xw-W18"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" id="fKB-J7-5U0">
+                                        <rect key="frame" x="0.0" y="377" width="1920" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fKB-J7-5U0" id="lg0-Ca-Osj">
+                                            <rect key="frame" x="0.0" y="0.0" width="1904" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gb2-5k-4qK">
+                                                    <rect key="frame" x="10" y="10" width="1900" height="80"/>
+                                                    <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                    <state key="normal" title="Salvar cartão"/>
+                                                    <connections>
+                                                        <action selector="saveCreditCard" destination="9ps-sG-Z3F" eventType="primaryActionTriggered" id="2wr-jJ-3ti"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="gb2-5k-4qK" secondAttribute="bottom" constant="10" id="Fx6-wI-Vp5"/>
+                                                <constraint firstItem="gb2-5k-4qK" firstAttribute="leading" secondItem="lg0-Ca-Osj" secondAttribute="leading" constant="10" id="QwN-qu-bKG"/>
+                                                <constraint firstItem="gb2-5k-4qK" firstAttribute="top" secondItem="lg0-Ca-Osj" secondAttribute="top" constant="10" id="pEr-zR-Y1b"/>
+                                                <constraint firstAttribute="trailing" secondItem="gb2-5k-4qK" secondAttribute="trailing" constant="10" id="rrC-l0-Xk0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="9ps-sG-Z3F" id="nBR-CO-GCX"/>
+                            <outlet property="delegate" destination="9ps-sG-Z3F" id="3to-fL-vuI"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="creditCardCVVField" destination="9VI-B7-wxa" id="Qcf-f7-CcD"/>
+                        <outlet property="creditCardDateField" destination="Fs7-h3-alc" id="dcX-id-hg8"/>
+                        <outlet property="creditCardNameField" destination="XCv-jh-liX" id="6o1-PZ-lpi"/>
+                        <outlet property="creditCardNumberField" destination="43L-Qn-Xa8" id="pWd-M2-dcp"/>
+                        <outlet property="saveButton" destination="gb2-5k-4qK" id="Wpq-4p-hcK"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zpx-8R-CIP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="319" y="171"/>
+        </scene>
+    </scenes>
+</document>

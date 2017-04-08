@@ -105,7 +105,6 @@ class CongressDetailViewModel {
                 updatedCart.partnerId = cart.partnerId
                 updatedCart.percentualDesconto = cart.percentualDesconto
                 updatedCart.especDesconto = cart.especDesconto
-                updatedCart.creditCard = cart.creditCard
                 updatedCart.formaPagamento = cart.formaPagamento
                 updatedCart.formasPagamentoResposta = cart.formasPagamentoResposta
                 updatedCart.formasPagamentoDisplay = cart.formasPagamentoDisplay
