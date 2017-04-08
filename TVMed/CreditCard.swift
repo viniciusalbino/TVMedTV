@@ -56,7 +56,7 @@ class CreditCard: Object {
     dynamic var brandImage = ""
     
     func maskedCard() -> String {
-        return ""
+        return cardNumber.maskCardNumber()
     }
     
     func validationMasked() -> String {

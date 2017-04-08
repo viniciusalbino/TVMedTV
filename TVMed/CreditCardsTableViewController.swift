@@ -18,12 +18,18 @@ class CreditCardsTableViewController: UITableViewController, CreditCardDelegate 
     private lazy var viewModel: CreditCardsViewModel = CreditCardsViewModel(delegate: self)
     weak var delegate:SelectedCardDelegate?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "Cartões de crédito"
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.loadContent()
     }
     
     func contentDidFinishedLoading() {
+        stopLoading()
         self.tableView.reloadData()
     }
     

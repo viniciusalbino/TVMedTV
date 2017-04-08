@@ -131,7 +131,7 @@ class CartViewController: UITableViewController, CartDelegate, SelectedCardDeleg
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier ==  "presentCards" {
-            if let controller = segue.destination as? CreditCardsTableViewController {
+            if let navController = segue.destination as? UINavigationController, let controller = navController.childViewControllers.first as? CreditCardsTableViewController {
                 controller.delegate = self
             }
         }

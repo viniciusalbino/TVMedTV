@@ -85,7 +85,7 @@ class AnnotatedTextField: UITextField {
         label.minimumScaleFactor = 0.3
         label.adjustsFontSizeToFitWidth = true
         label.numberOfLines = 1
-        label.font = UIFont.systemFont(ofSize: 10)
+        label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = validColor
         label.alpha = 0
         label.accessibilityIdentifier = "annotated_text_field.uilabel.label"

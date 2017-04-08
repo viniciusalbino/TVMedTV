@@ -138,10 +138,10 @@
             </objects>
             <point key="canvasLocation" x="-57" y="-13"/>
         </scene>
-        <!--NewCreditCardTableViewController-->
+        <!--NewCreditCardViewController-->
         <scene sceneID="jhw-Cf-A3D">
             <objects>
-                <viewControllerPlaceholder storyboardName="NewCard" referencedIdentifier="NewCreditCardTableViewController" id="MNK-Es-nR6" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="NewCard" referencedIdentifier="NewCreditCardViewController" id="MNK-Es-nR6" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mM8-5E-dqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1482" y="-10"/>

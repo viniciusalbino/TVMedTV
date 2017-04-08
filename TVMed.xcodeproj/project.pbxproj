@@ -29,7 +29,7 @@
 		2B6AF6301E9923BD003F6AC3 /* MaskNumberPhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF61E1E9923BD003F6AC3 /* MaskNumberPhoneTextField.swift */; };
 		2B6AF6311E9923BD003F6AC3 /* TextFieldMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF61F1E9923BD003F6AC3 /* TextFieldMask.swift */; };
 		2B6AF6321E9923BD003F6AC3 /* ValidationObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF6201E9923BD003F6AC3 /* ValidationObjects.swift */; };
-		2B6AF6351E99277D003F6AC3 /* NewCreditCardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF6341E99277D003F6AC3 /* NewCreditCardTableViewController.swift */; };
+		2B6AF6351E99277D003F6AC3 /* NewCreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF6341E99277D003F6AC3 /* NewCreditCardViewController.swift */; };
 		2B6AF6371E992CB2003F6AC3 /* CreditCardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF6361E992CB2003F6AC3 /* CreditCardsTableViewController.swift */; };
 		2B6AF63A1E992D09003F6AC3 /* CreditCards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6AF6381E992D09003F6AC3 /* CreditCards.storyboard */; };
 		2B6AF63C1E992E4E003F6AC3 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF63B1E992E4E003F6AC3 /* CardCell.swift */; };
@@ -148,7 +148,7 @@
 		2B6AF61E1E9923BD003F6AC3 /* MaskNumberPhoneTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskNumberPhoneTextField.swift; sourceTree = "<group>"; };
 		2B6AF61F1E9923BD003F6AC3 /* TextFieldMask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldMask.swift; sourceTree = "<group>"; };
 		2B6AF6201E9923BD003F6AC3 /* ValidationObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationObjects.swift; sourceTree = "<group>"; };
-		2B6AF6341E99277D003F6AC3 /* NewCreditCardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCreditCardTableViewController.swift; sourceTree = "<group>"; };
+		2B6AF6341E99277D003F6AC3 /* NewCreditCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCreditCardViewController.swift; sourceTree = "<group>"; };
 		2B6AF6361E992CB2003F6AC3 /* CreditCardsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardsTableViewController.swift; sourceTree = "<group>"; };
 		2B6AF6391E992D09003F6AC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CreditCards.storyboard; sourceTree = "<group>"; };
 		2B6AF63B1E992E4E003F6AC3 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
@@ -316,7 +316,7 @@
 		2B6AF6331E992769003F6AC3 /* CreditCard */ = {
 			isa = PBXGroup;
 			children = (
-				2B6AF6341E99277D003F6AC3 /* NewCreditCardTableViewController.swift */,
+				2B6AF6341E99277D003F6AC3 /* NewCreditCardViewController.swift */,
 				2B6AF6361E992CB2003F6AC3 /* CreditCardsTableViewController.swift */,
 				2B6AF63D1E992FDA003F6AC3 /* CreditCardsViewModel.swift */,
 				2B6AF63B1E992E4E003F6AC3 /* CardCell.swift */,
@@ -1012,7 +1012,7 @@
 				2C1B4A5B1E7F71EE00DED396 /* UIViewController+Extensions.swift in Sources */,
 				2B6AF6251E9923BD003F6AC3 /* MaskNameTextField.swift in Sources */,
 				2CDC58B81E933CBC003C28EC /* CheckoutRequest.swift in Sources */,
-				2B6AF6351E99277D003F6AC3 /* NewCreditCardTableViewController.swift in Sources */,
+				2B6AF6351E99277D003F6AC3 /* NewCreditCardViewController.swift in Sources */,
 				2CBDC0681E870C0D00D49955 /* LoginViewModel.swift in Sources */,
 				2C5A994C1E690A7500F6E4E9 /* CollectionViewContainerCell.swift in Sources */,
 				2B6AF6261E9923BD003F6AC3 /* CreditCardValidationType.swift in Sources */,

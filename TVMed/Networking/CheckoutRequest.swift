@@ -28,13 +28,19 @@ class CheckoutRequest {
     func makePayment(cartParameters: JSONDictionary, callback: @escaping (CheckoutResponse?, ErrorTypeApp?) -> ()) {
         print(cartParameters)
         let params = cartParameters as [String: AnyObject]
-        HeaderBuilder().GET(url: "pedido/fecharpedido", params: params) { result, error, response in
-            guard error == nil else {
-                callback(nil, error)
-                return
-            }
-            let result = result <*> (CheckoutResponse.self, error)
-            callback(result.object, result.error)
+        HeaderBuilder().buildHeader { defaultHeaders in
+            BaseRequest().POST(url: "pedido/fecharpedido", params: params, headers: defaultHeaders, callback: { result, error, response in
+                print("error \(error)")
+                guard error == nil else {
+                    callback(nil, error)
+                    return
+                }
+                print("result \(result)")
+                print("response \(response)")
+                
+                let result = result <*> (CheckoutResponse.self, error)
+                callback(result.object, result.error)
+            })
         }
     }
 }

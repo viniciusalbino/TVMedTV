@@ -23,11 +23,16 @@ class CreditCardsViewModel {
     }
     
     func loadContent() {
-        creditCardPersister.query { cards in
-            if let savedCards = cards {
-                self.creditCards = savedCards
+        DispatchQueue.main.async {
+            do {
+                let realm = try RealmEncrypted.realm()
+                let objects = Array(realm.objects(CreditCard.self))
+                self.creditCards = objects
+                self.delegate?.contentDidFinishedLoading()
+            } catch {
+                self.delegate?.contentDidFinishedLoading()
+                print("Realm did not query objects!")
             }
-            self.delegate?.contentDidFinishedLoading()
         }
     }
     

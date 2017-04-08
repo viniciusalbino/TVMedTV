@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class NewCreditCardTableViewController: UITableViewController, UITextFieldDelegate {
+class NewCreditCardViewController: UIViewController, UITextFieldDelegate {
     
     private var creditCardPersister = CreditCardPersister()
     @IBOutlet weak var creditCardNumberField: MaskCreditCardTextField!
@@ -24,6 +24,7 @@ class NewCreditCardTableViewController: UITableViewController, UITextFieldDelega
         super.viewDidLoad()
         addDelegates()
         setNeedValidateFields()
+        self.title = "Cadastrar cartão"
     }
     
     private func addDelegates() {
@@ -130,15 +131,29 @@ class NewCreditCardTableViewController: UITableViewController, UITextFieldDelega
             newCard.brand = brandEnum.intValue
             newCard.brandImage = creditCardNumberField.type!
             
-            self.creditCardPersister.save(card: newCard, callback: { success in
-                if success {
-                    self.showDefaultSystemAlertWithDefaultLayout(message: "Cartão salvo com sucesso!", completeBlock: { _ in
-                        _ = self.navigationController?.popViewController(animated: true)
-                    })
-                } else {
+            DispatchQueue.main.async {
+                do {
+                    let realm = try RealmEncrypted.realm()
+                    try realm.write {
+                        realm.add(newCard)
+                        self.showDefaultSystemAlertWithDefaultLayout(message: "Cartão salvo com sucesso!", completeBlock: { _ in
+                            _ = self.navigationController?.popViewController(animated: true)
+                        })
+                    }
+                } catch {
                     self.showDefaultSystemAlertWithDefaultLayout(message: "Ocorreu um erro ao salvar seu cartão, por favor tente novamente", completeBlock: { _ in })
+                    print("Realm did not query objects!")
                 }
-            })
+            }
+//            self.creditCardPersister.save(card: newCard, callback: { success in
+//                if success {
+//                    self.showDefaultSystemAlertWithDefaultLayout(message: "Cartão salvo com sucesso!", completeBlock: { _ in
+//                        _ = self.navigationController?.popViewController(animated: true)
+//                    })
+//                } else {
+//                    self.showDefaultSystemAlertWithDefaultLayout(message: "Ocorreu um erro ao salvar seu cartão, por favor tente novamente", completeBlock: { _ in })
+//                }
+//            })
         } else {
             self.showDefaultSystemAlertWithDefaultLayout(message: "Preencha corretamente os campos indicados.", completeBlock: { _ in })
         }

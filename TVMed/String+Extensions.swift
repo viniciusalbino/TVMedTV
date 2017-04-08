@@ -59,4 +59,31 @@ extension String {
     func trimWhiteSpaces() -> String {
         return self.replacingOccurrences(of: " ", with: "")
     }
+    
+    func maskCardNumber() -> String {
+        let masked = self.substring(from: self.length() - 4)
+        return "xxxx xxxx xxxx \(masked)"
+    }
+    
+    func substring(from: Int) -> String {
+        let fromIndex = index(from: from)
+        return substring(from: fromIndex)
+    }
+    
+    // swiftlint:disable:next variable_name
+    func substring(to: Int) -> String {
+        let toIndex = index(from: to)
+        return substring(to: toIndex)
+    }
+    // swiftlint:enable:next variable_name
+    
+    func substring(with range: Range<Int>) -> String {
+        let startIndex = index(from: range.lowerBound)
+        let endIndex = index(from: range.upperBound)
+        return substring(with: startIndex..<endIndex)
+    }
+    
+    func index(from: Int) -> Index {
+        return self.index(startIndex, offsetBy: from)
+    }
 }
