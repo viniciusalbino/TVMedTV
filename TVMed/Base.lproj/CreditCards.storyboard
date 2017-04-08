@@ -103,6 +103,27 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CancelCell" id="6zm-xn-9Re">
+                                <rect key="frame" x="0.0" y="374" width="1920" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6zm-xn-9Re" id="j4X-zH-U3U">
+                                    <rect key="frame" x="0.0" y="0.0" width="1904" height="66"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBN-Rz-yzc">
+                                            <rect key="frame" x="20" y="20" width="1880" height="26"/>
+                                            <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                            <state key="normal" title="Cancelar"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="GBN-Rz-yzc" firstAttribute="top" secondItem="j4X-zH-U3U" secondAttribute="top" constant="20" id="4o0-sL-eHe"/>
+                                        <constraint firstItem="GBN-Rz-yzc" firstAttribute="leading" secondItem="j4X-zH-U3U" secondAttribute="leading" constant="20" id="7hk-zL-hnA"/>
+                                        <constraint firstAttribute="bottom" secondItem="GBN-Rz-yzc" secondAttribute="bottom" constant="20" id="B7Q-Ib-mm4"/>
+                                        <constraint firstAttribute="trailing" secondItem="GBN-Rz-yzc" secondAttribute="trailing" constant="20" id="sm9-FD-KzV"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="L9g-Pt-v9c" id="MPm-5y-XTn"/>

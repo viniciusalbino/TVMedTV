@@ -9,9 +9,14 @@
 import Foundation
 import UIKit
 
+protocol SelectedCardDelegate: class {
+    func selectedCard(card: CreditCard)
+}
+
 class CreditCardsTableViewController: UITableViewController, CreditCardDelegate {
     
     private lazy var viewModel: CreditCardsViewModel = CreditCardsViewModel(delegate: self)
+    weak var delegate:SelectedCardDelegate?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -39,10 +44,14 @@ class CreditCardsTableViewController: UITableViewController, CreditCardDelegate 
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
+        
+        switch indexPath.section {
+        case 0:
             return tableView.dequeueReusableCell(withIdentifier: String(describing: CardCell.self)) as? CardCell ?? UITableViewCell()
-        } else {
+        case 1:
             return tableView.dequeueReusableCell(withIdentifier: "NewCardCell")!
+        default:
+            return tableView.dequeueReusableCell(withIdentifier: "CancelCell")!
         }
     }
     
@@ -53,11 +62,19 @@ class CreditCardsTableViewController: UITableViewController, CreditCardDelegate 
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 0 {
-            
-        } else {
-            //newcard
+        switch indexPath.section {
+        case 0:
+            let card = viewModel.cardForRow(row: indexPath.row)
+            self.showYesNoAlert(message: "Deseja concluir a compra com o cartão selecionado?", yesButton: "Sim", completeBlock: { action in
+                if action.title == "Sim" {
+                    self.dismiss(animated: true, completion: nil)
+                    self.delegate?.selectedCard(card: card)
+                }
+            })
+        case 1 :
             self.performSegue(withIdentifier: "newCardSegue", sender: nil)
+        default:
+            self.dismiss(animated: true, completion: nil)
         }
     }
 }

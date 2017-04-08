@@ -32,7 +32,7 @@ class CreditCardsViewModel {
     }
     
     func numberOfSections() -> Int {
-        return 2
+        return 3
     }
     
     func numberOfItensInSection(section: Int) -> Int {

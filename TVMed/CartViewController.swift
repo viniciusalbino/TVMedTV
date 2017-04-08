@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CartViewController: UITableViewController, CartDelegate {
+class CartViewController: UITableViewController, CartDelegate, SelectedCardDelegate {
     
     lazy var viewModel: CartViewModel = CartViewModel(delegate: self)
     
@@ -32,6 +32,13 @@ class CartViewController: UITableViewController, CartDelegate {
     
     func finishedPurchasingProducts(success: Bool) {
         stopLoading()
+        if success {
+            let dto = SystemAlertDTO(title: "Sucesso", message: "Compra concluída com sucesso!", buttonActions: [(title: "Ok", style: .default)])
+            self.showDefaultSystemAlert(systemAlertDTO: dto, completeBlock: { _ in })
+        } else {
+            self.showDefaultSystemAlertWithDefaultLayout(message: "Ocorreu um erro ao finalizar sua compra. Por favor tente novamente", completeBlock: nil)
+        }
+        print("completed purchase")
     }
     
     func finishedLoadingShipping() {
@@ -122,7 +129,20 @@ class CartViewController: UITableViewController, CartDelegate {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier ==  "presentCards" {
+            if let controller = segue.destination as? CreditCardsTableViewController {
+                controller.delegate = self
+            }
+        }
+    }
+    
     func presentCardsSegue() {
         self.performSegue(withIdentifier: "presentCards", sender: self)
+    }
+    
+    func selectedCard(card: CreditCard) {
+        self.startLoading()
+        viewModel.makePurchase(creditCard: card)
     }
 }

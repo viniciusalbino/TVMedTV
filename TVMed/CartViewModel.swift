@@ -106,7 +106,7 @@ class CartViewModel {
     }
     
     func continueCheckout() {
-        guard let user = currentUser, let cart = currentCart else {
+        guard let _ = currentUser, let _ = currentCart else {
             self.delegate?.finishedPurchasingProducts(success: false)
             return
         }
@@ -115,14 +115,15 @@ class CartViewModel {
         self.delegate?.presentCardsSegue()
     }
     
-    func makePurchase(cart: Cart, creditCard: CreditCard) {
-        let params = cart.parameters(card: creditCard)
+    func makePurchase(creditCard: CreditCard) {
+        let params = currentCart!.parameters(card: creditCard)
         checkoutRequest.makePayment(cartParameters: params) { checkoutResponse, error in
             guard error == nil, let response = checkoutResponse else {
                 self.delegate?.finishedPurchasingProducts(success: false)
                 return
             }
             
+            self.delegate?.finishedPurchasingProducts(success: true)
         }
     }
 }
