@@ -68,6 +68,7 @@ class CreditCard: Object {
                 "cartaoCodigoSeguranca" : cvv,
                 "cartaoTitular" : name,
                 "mesVencimentoResposta" : month,
-                "anoVencimentoResposta" :year]
+                "anoVencimentoResposta" :year,
+                "cartaoNumero" : cardNumber.trimWhiteSpaces()]
     }
 }

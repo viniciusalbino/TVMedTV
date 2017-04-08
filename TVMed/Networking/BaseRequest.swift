@@ -50,7 +50,7 @@ func defaultDomain() -> String {
 
 class BaseRequest: NSObject {
     
-    func GET(url: String, params: [String: AnyObject]?, headers: [String: String], callback: @escaping DefaultCallBackClosure) {
+    func GET(url: String, params: JSONDictionary?, headers: [String: String], callback: @escaping DefaultCallBackClosure) {
         let finalURL = "\(domain)\(url)"
         Alamofire.request(finalURL, method: .get, parameters: params, encoding: URLEncoding.httpBody, headers: headers).responseJSON { response in
             guard let _ = response.result.value else {
@@ -64,7 +64,7 @@ class BaseRequest: NSObject {
         }
     }
     
-    func POST(url: String, params: [String: Any]?, headers: [String: String], callback: @escaping DefaultCallBackClosure) {
+    func POST(url: String, params: JSONDictionary?, headers: [String: String], callback: @escaping DefaultCallBackClosure) {
         let finalURL = "\(domain)\(url)"
         Alamofire.request(finalURL, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
             guard let _ = response.result.value else {

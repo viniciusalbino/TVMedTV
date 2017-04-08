@@ -25,26 +25,28 @@ class Cart: Object {
     dynamic var formaPagamento = ""
     dynamic var tipoPagto = ""
     
-    func parameters(card: CreditCard) -> [String: AnyObject] {
+    func parameters(card: CreditCard, valorFrete: Float, totalValue: Float) -> JSONDictionary {
         var parameters: JSONDictionary = [
-            "carrinhoPrecoTotal" : carrinhoPrecoTotal,
-            "valorFrete" : valorFrete,
-            "valorTotalPedito" : Int(orderTotalPrice()),
+            "carrinhoPrecoTotal" : totalProducts(),
+            "valorFrete" : Int(valorFrete),
+            "valorTotalPedito" : Int(totalValue),
             "descontoTotal" : descontoTotal,
-            "partnerId" : partnerId,
+            "partnerId" : partnerId.length() > 0 ? partnerId : "null",
             "percentualDesconto" : percentualDesconto,
-            "especDesconto" : especDesconto,
-            "formasPagamentoResposta" : formasPagamentoResposta,
-            "formasPagamentoDisplay" : formasPagamentoDisplay,
-            "observacoes": observacoes,
-            "formaPagamento" : formaPagamento,
-            "tipoPagto" : tipoPagto
+            "especDesconto" : especDesconto.length() > 0 ? especDesconto : "",
+            "formasPagamentoResposta" : formasPagamentoResposta.length() > 0 ? formasPagamentoResposta : "",
+            "formasPagamentoDisplay" : formasPagamentoDisplay.length() > 0 ?  formasPagamentoDisplay : "",
+            "observacoes": observacoes.length() > 0 ? observacoes : "",
+            "formaPagamento" : formaPagamento.length() > 0 ? formaPagamento : "",
+            "tipoPagto" : tipoPagto.length() > 0 ? tipoPagto : ""
         ]
         _ = parameters.addDictionary(dictionaryToAppend: card.parameters())
-        let params = itemsCarrinho.forEach{$0.parameter()}
-        _ = parameters.addDictionary(dictionaryToAppend: ["itensCarrinho" : params])
-        
-        return parameters as [String : AnyObject]
+        var shippingParameters = [JSONDictionary]()
+        for item in itemsCarrinho {
+            shippingParameters.append(item.parameter())
+        }
+        _ = parameters.addDictionary(dictionaryToAppend: ["itensCarrinho": shippingParameters])
+        return parameters
     }
     
     func orderTotalPrice() -> Float {
