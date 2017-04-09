@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
     <dependencies>
         <deployment identifier="tvOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -57,7 +57,7 @@
                                         <rect key="frame" x="0.0" y="80" width="662" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KI5-uq-mMl" id="hff-cd-uhy">
-                                            <rect key="frame" x="0.0" y="0.0" width="646" height="129"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="646" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITULO" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ii6-IG-Is0">
@@ -69,7 +69,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIV-9D-JMP">
-                                                    <rect key="frame" x="15" y="90" width="632" height="24"/>
+                                                    <rect key="frame" x="15" y="90" width="632" height="25"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -110,33 +110,33 @@
                                     <action selector="makePurchase" destination="7uF-Rc-Om3" eventType="primaryActionTriggered" id="Cbj-lo-WAc"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K82-2X-DgS" customClass="FocusedTextView" customModule="TVMed" customModuleProvider="target">
-                                <rect key="frame" x="582" y="408" width="576" height="622"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xva-Or-wjN">
+                                <rect key="frame" x="50" y="456" width="420" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Sinipse detalhada"/>
+                                <connections>
+                                    <action selector="showDescription" destination="7uF-Rc-Om3" eventType="primaryActionTriggered" id="zme-B1-ony"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.054901960780000002" green="0.3411764706" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="80X-mE-6dB" firstAttribute="leading" secondItem="K82-2X-DgS" secondAttribute="trailing" constant="50" id="17w-eP-egk"/>
                             <constraint firstItem="ELJ-Ji-dWl" firstAttribute="top" secondItem="80X-mE-6dB" secondAttribute="bottom" constant="50" id="3sh-lT-Slx"/>
                             <constraint firstItem="y8w-Pp-PCD" firstAttribute="top" secondItem="Lj2-bi-R8F" secondAttribute="bottom" constant="50" id="6LP-yD-0sv"/>
-                            <constraint firstItem="K82-2X-DgS" firstAttribute="width" secondItem="HXr-WK-68W" secondAttribute="width" id="AEJ-ja-nZr"/>
                             <constraint firstItem="Lj2-bi-R8F" firstAttribute="centerY" secondItem="N73-0U-ZMd" secondAttribute="centerY" id="AqE-Kg-oi2"/>
                             <constraint firstAttribute="trailing" secondItem="80X-mE-6dB" secondAttribute="trailing" constant="50" id="BVs-pk-GdN"/>
                             <constraint firstItem="Fd5-QQ-eAu" firstAttribute="leading" secondItem="ehQ-aC-Cyc" secondAttribute="leading" constant="50" id="ClC-Mg-I9o"/>
                             <constraint firstItem="N73-0U-ZMd" firstAttribute="leading" secondItem="ehQ-aC-Cyc" secondAttribute="leading" constant="50" id="EUH-AK-64M"/>
-                            <constraint firstItem="K82-2X-DgS" firstAttribute="top" secondItem="HXr-WK-68W" secondAttribute="bottom" constant="50" id="MI2-qr-qDs"/>
                             <constraint firstItem="Lj2-bi-R8F" firstAttribute="leading" secondItem="N73-0U-ZMd" secondAttribute="trailing" constant="20" id="Nq5-iI-fEf"/>
                             <constraint firstItem="Lj2-bi-R8F" firstAttribute="height" secondItem="N73-0U-ZMd" secondAttribute="height" id="WbP-d8-0Ui"/>
+                            <constraint firstItem="Xva-Or-wjN" firstAttribute="top" secondItem="y8w-Pp-PCD" secondAttribute="bottom" constant="30" id="XuS-zY-wfx"/>
                             <constraint firstItem="Lj2-bi-R8F" firstAttribute="width" secondItem="N73-0U-ZMd" secondAttribute="width" id="ZJs-b7-zQd"/>
                             <constraint firstItem="y8w-Pp-PCD" firstAttribute="leading" secondItem="ehQ-aC-Cyc" secondAttribute="leading" constant="50" id="ZtG-TF-tre"/>
-                            <constraint firstItem="ELJ-Ji-dWl" firstAttribute="top" secondItem="K82-2X-DgS" secondAttribute="bottom" constant="50" id="is6-nA-O0e"/>
+                            <constraint firstItem="Xva-Or-wjN" firstAttribute="leading" secondItem="y8w-Pp-PCD" secondAttribute="leading" id="mxq-Wh-Xiu"/>
                             <constraint firstItem="HXr-WK-68W" firstAttribute="leading" secondItem="Fd5-QQ-eAu" secondAttribute="trailing" constant="30" id="nbV-xG-Arg"/>
                             <constraint firstItem="HXr-WK-68W" firstAttribute="top" secondItem="zL6-td-5yC" secondAttribute="bottom" constant="50" id="qfp-Po-eyU"/>
                             <constraint firstItem="80X-mE-6dB" firstAttribute="top" secondItem="zL6-td-5yC" secondAttribute="bottom" constant="50" id="r4F-wg-NA0"/>
+                            <constraint firstItem="Xva-Or-wjN" firstAttribute="width" secondItem="y8w-Pp-PCD" secondAttribute="width" constant="170" id="rCq-ja-HOQ"/>
                             <constraint firstItem="80X-mE-6dB" firstAttribute="leading" secondItem="HXr-WK-68W" secondAttribute="trailing" constant="50" id="tGF-bi-00R"/>
                             <constraint firstItem="Lj2-bi-R8F" firstAttribute="top" secondItem="Fd5-QQ-eAu" secondAttribute="bottom" constant="20" id="tqO-ZA-7Iu"/>
                             <constraint firstItem="Fd5-QQ-eAu" firstAttribute="top" secondItem="zL6-td-5yC" secondAttribute="bottom" constant="50" id="vIi-4u-Ls8"/>
@@ -145,17 +145,52 @@
                     <connections>
                         <outlet property="buyButton" destination="y8w-Pp-PCD" id="O7h-2h-fh4"/>
                         <outlet property="congressImage" destination="HXr-WK-68W" id="pbc-LA-685"/>
-                        <outlet property="decriptionTextView" destination="K82-2X-DgS" id="tbG-es-EMf"/>
                         <outlet property="discountPrice" destination="N73-0U-ZMd" id="3iZ-en-t6f"/>
                         <outlet property="finalPrice" destination="Lj2-bi-R8F" id="Idx-TK-kf6"/>
                         <outlet property="tableView" destination="80X-mE-6dB" id="c1p-ug-XmA"/>
                         <outlet property="titleLabel" destination="Fd5-QQ-eAu" id="yn8-KY-FmX"/>
                         <segue destination="O5A-kr-jzj" kind="presentation" identifier="presentLogin" id="sUW-Kj-JCR"/>
+                        <segue destination="L97-4i-jHX" kind="show" identifier="sinopsePush" id="STC-VC-q4a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gl-Y8-RsW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1660" y="-197"/>
+        </scene>
+        <!--Sinopse View Controller-->
+        <scene sceneID="9nR-r0-Fny">
+            <objects>
+                <viewController id="L97-4i-jHX" customClass="SinopseViewController" customModule="TVMed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pFD-zU-HXl"/>
+                        <viewControllerLayoutGuide type="bottom" id="vuR-hq-tJS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rjx-QX-ulK">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8b-rQ-4CI" customClass="FocusedTextView" customModule="TVMed" customModuleProvider="target">
+                                <rect key="frame" x="20" y="20" width="1880" height="1040"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="W8b-rQ-4CI" secondAttribute="trailing" constant="20" id="7uM-cZ-bVW"/>
+                            <constraint firstItem="vuR-hq-tJS" firstAttribute="top" secondItem="W8b-rQ-4CI" secondAttribute="bottom" constant="20" id="Bfk-78-su0"/>
+                            <constraint firstItem="W8b-rQ-4CI" firstAttribute="top" secondItem="pFD-zU-HXl" secondAttribute="bottom" constant="20" id="qu1-jX-F7l"/>
+                            <constraint firstItem="W8b-rQ-4CI" firstAttribute="leading" secondItem="rjx-QX-ulK" secondAttribute="leading" constant="20" id="v6C-HB-NAL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="W8b-rQ-4CI" id="h24-u2-wMH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UbX-P6-bjq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="-197"/>
         </scene>
         <!--LoginViewController-->
         <scene sceneID="yWA-8U-hIo">

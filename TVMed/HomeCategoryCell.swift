@@ -20,13 +20,17 @@ class HomeCategoryCell: UICollectionViewCell {
         if context.nextFocusedView == self {
             coordinator.addCoordinatedAnimations({
                 UIView.animate(withDuration: 0.5, animations: {
-                    self.transform = CGAffineTransform(scaleX: 1.15, y: 1.15)
+                    self.layer.cornerRadius = 2
+                    self.layer.borderColor = UIColor.white.cgColor
+                    self.layer.borderWidth = 2
                 })
             }, completion: nil)
         } else if context.previouslyFocusedView == self {
             coordinator.addCoordinatedAnimations({
                 UIView.animate(withDuration: 0.5, animations: {
-                    self.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                    self.layer.borderColor = UIColor.clear.cgColor
+                    self.layer.borderWidth = 0
+                    self.layer.cornerRadius = 0
                 })
             }, completion: nil)
         }

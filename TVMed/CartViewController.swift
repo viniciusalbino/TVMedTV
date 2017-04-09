@@ -13,6 +13,11 @@ class CartViewController: UITableViewController, CartDelegate, SelectedCardDeleg
     
     lazy var viewModel: CartViewModel = CartViewModel(delegate: self)
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+//        self.view.backgroundColor = UIColor(h)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadContent()

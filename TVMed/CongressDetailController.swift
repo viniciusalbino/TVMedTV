@@ -24,7 +24,7 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UITabl
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var discountPrice: UILabel!
     @IBOutlet weak var finalPrice: UILabel!
-    @IBOutlet weak var decriptionTextView: FocusedTextView!
+    @IBOutlet weak var descriptionButton: UIButton!
     @IBOutlet weak var congressImage: UIImageView!
     private var contentType: LoadContentType?
     private var userRequest = UserRequests()
@@ -87,16 +87,21 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UITabl
         if let url = URL(string: midia.imagemHtml) {
             self.congressImage.kf.setImage(with: url, placeholder: UIImage(named:"defaultImage"), options: nil, progressBlock: nil, completionHandler: nil)
         }
-        self.decriptionTextView.text = midia.formattedDescription()
         self.titleLabel.text = midia.nomeCongresso
         
         self.buyButton.setTitle(midia.clienteComprouParaAssistirOnLine ? "Assistir" : "Comprar", for: .normal)
         
+        if midia.clienteComprouParaAssistirOnLine {
+            self.finalPrice.isHidden = true
+            self.discountPrice.isHidden = true
+        } else {
+            self.finalPrice.isHidden = false
+            self.discountPrice.isHidden = false
+        }
+        
         self.finalPrice.text = midia.getMidiaPrice()
         self.discountPrice.isHidden = !midia.hasDiscount()
         self.discountPrice.text = midia.hasDiscount() ? midia.discountPercentage() : ""
-        
-        print(midia.discountPercentage())
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -174,5 +179,17 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UITabl
     
     func presentLogin() {
         self.performSegue(withIdentifier: "presentLogin", sender: nil)
+    }
+    
+    @IBAction func showDescription() {
+        self.performSegue(withIdentifier: "sinopsePush", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier ==  "sinopsePush" {
+            if let controller = segue.destination as? SinopseViewController {
+                controller.currentText = viewModel.getCurrentMidia().formattedDescription()
+            }
+        }
     }
 }

@@ -13,8 +13,11 @@ class FocusedTextView: UITextView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-         panGestureRecognizer.allowedTouchTypes = [NSNumber(value: UITouchType.indirect.rawValue)]
+        panGestureRecognizer.allowedTouchTypes = [NSNumber(value: UITouchType.indirect.rawValue)]
         isUserInteractionEnabled = true
+        isScrollEnabled = true
+        bounces = true
+        showsVerticalScrollIndicator = true
     }
     
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {

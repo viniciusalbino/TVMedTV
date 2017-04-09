@@ -34,6 +34,7 @@
 		2B6AF63A1E992D09003F6AC3 /* CreditCards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6AF6381E992D09003F6AC3 /* CreditCards.storyboard */; };
 		2B6AF63C1E992E4E003F6AC3 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF63B1E992E4E003F6AC3 /* CardCell.swift */; };
 		2B6AF63E1E992FDA003F6AC3 /* CreditCardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF63D1E992FDA003F6AC3 /* CreditCardsViewModel.swift */; };
+		2B6AF6401E9AA100003F6AC3 /* SinopseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF63F1E9AA100003F6AC3 /* SinopseViewController.swift */; };
 		2C0027D31E401F020020ABA0 /* ThirdPartyToolsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0027D21E401F020020ABA0 /* ThirdPartyToolsLoader.swift */; };
 		2C0027D51E401F1C0020ABA0 /* FabricTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0027D41E401F1C0020ABA0 /* FabricTool.swift */; };
 		2C01A1351E8A113000C8A342 /* Orders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C01A1331E8A113000C8A342 /* Orders.storyboard */; };
@@ -153,6 +154,7 @@
 		2B6AF6391E992D09003F6AC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CreditCards.storyboard; sourceTree = "<group>"; };
 		2B6AF63B1E992E4E003F6AC3 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		2B6AF63D1E992FDA003F6AC3 /* CreditCardsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardsViewModel.swift; sourceTree = "<group>"; };
+		2B6AF63F1E9AA100003F6AC3 /* SinopseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinopseViewController.swift; sourceTree = "<group>"; };
 		2C0027D21E401F020020ABA0 /* ThirdPartyToolsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdPartyToolsLoader.swift; sourceTree = "<group>"; };
 		2C0027D41E401F1C0020ABA0 /* FabricTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FabricTool.swift; sourceTree = "<group>"; };
 		2C01A1341E8A113000C8A342 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Orders.storyboard; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 				2C1B4A521E7B830200DED396 /* CongressDetailController.swift */,
 				2C1B4A541E7B83F900DED396 /* CongressDetailViewModel.swift */,
 				2C1B4A561E7F5AD900DED396 /* CongressDetailCell.swift */,
+				2B6AF63F1E9AA100003F6AC3 /* SinopseViewController.swift */,
 			);
 			name = CongressDetail;
 			sourceTree = "<group>";
@@ -970,6 +973,7 @@
 				2CF186D01E5D2822008029B3 /* Releases.swift in Sources */,
 				2B67230B1E95D48800F5EABF /* CartViewModel.swift in Sources */,
 				2C7C53311E5F7FEE0026380C /* HomeSections.swift in Sources */,
+				2B6AF6401E9AA100003F6AC3 /* SinopseViewController.swift in Sources */,
 				2C4F5FE21E40222800754DBB /* SearchViewController.swift in Sources */,
 				2C1B4A751E836F4200DED396 /* LoginViewController.swift in Sources */,
 				2CDC58AD1E917A7E003C28EC /* SearchViewModel.swift in Sources */,
