@@ -19,7 +19,10 @@ typealias LoadContentType = (type: CongressType, id: String)
 class CongressDetailController: UIViewController, CongressDetailDelegate, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var buyButton: UIButton!
+    @IBOutlet weak var midiaFisicaButton: UIButton!
+    @IBOutlet weak var midiaOnlineButton: UIButton!
+    @IBOutlet weak var midiaFisicaOnlineButton: UIButton!
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var discountPrice: UILabel!
@@ -37,6 +40,10 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UITabl
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        self.midiaFisicaButton.tag = 0
+        self.midiaOnlineButton.tag = 1
+        self.midiaFisicaOnlineButton.tag = 2
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -89,14 +96,18 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UITabl
         }
         self.titleLabel.text = midia.nomeCongresso
         
-        self.buyButton.setTitle(midia.clienteComprouParaAssistirOnLine ? "Assistir" : "Comprar", for: .normal)
-        
         if midia.clienteComprouParaAssistirOnLine {
             self.finalPrice.isHidden = true
             self.discountPrice.isHidden = true
+            self.midiaFisicaButton.setTitle("Assistir", for: .normal)
+            self.midiaOnlineButton.isHidden = true
+            self.midiaFisicaOnlineButton.isHidden = true
         } else {
             self.finalPrice.isHidden = false
             self.discountPrice.isHidden = false
+            self.midiaFisicaButton.setTitle("Comprar Mídia fisica", for: .normal)
+            self.midiaOnlineButton.isHidden = false
+            self.midiaFisicaOnlineButton.isHidden = false
         }
         
         self.finalPrice.text = midia.getMidiaPrice()
@@ -131,18 +142,22 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UITabl
         }
     }
     
-    @IBAction func makePurchase() {
-        let tokenPersister = TokenPersister()
-        tokenPersister.query { token in
-            if let _ = token {
-                self.validateUserData()
-            } else {
-                self.presentLogin()
+    @IBAction func makePurchase(sender: UIButton) {
+        if viewModel.getCurrentMidia().clienteComprouParaAssistirOnLine {
+            
+        } else {
+            let tokenPersister = TokenPersister()
+            tokenPersister.query { token in
+                if let _ = token {
+                    self.validateUserData(tag: sender.tag)
+                } else {
+                    self.presentLogin()
+                }
             }
         }
     }
     
-    func validateUserData() {
+    func validateUserData(tag: Int) {
         self.userRequest.requestUserData { user, error in
             guard error == nil, let userData = user else {
                 self.presentAlertWithTitle(title: "Erro", message: "Ocorreu um erro ao efetuar sua compra.")
@@ -157,8 +172,9 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UITabl
                 let alertDTO = SystemAlertDTO(title: "Aviso", message: "Deseja comprar : \(self.viewModel.getCurrentMidia().nomeCongresso)", buttonActions: [(title: "Comprar", style: .default), (title: "Cancelar", style: .cancel)])
                 self.showDefaultSystemAlert(systemAlertDTO: alertDTO, completeBlock: { action in
                     if action.title == "Comprar" {
+                        let selectedPrice = self.viewModel.getCurrentMidia().midiaPrice(index: tag)
                         self.startLoading()
-                        self.viewModel.addToCart()
+                        self.viewModel.addToCart(selectedPrice: selectedPrice)
                     }
                 })
             } else {

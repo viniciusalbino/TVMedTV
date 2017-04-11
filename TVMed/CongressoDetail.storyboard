@@ -99,23 +99,42 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8w-Pp-PCD">
-                                <rect key="frame" x="50" y="340" width="250" height="86"/>
+                                <rect key="frame" x="50" y="340" width="500" height="86"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="8LN-cF-ef8"/>
+                                    <constraint firstAttribute="width" constant="500" id="8LN-cF-ef8"/>
                                     <constraint firstAttribute="height" constant="86" id="vf4-2I-ScI"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Comprar"/>
+                                <state key="normal" title="Comprar Mídia Física"/>
                                 <connections>
-                                    <action selector="makePurchase" destination="7uF-Rc-Om3" eventType="primaryActionTriggered" id="Cbj-lo-WAc"/>
+                                    <action selector="makePurchaseWithSender:" destination="7uF-Rc-Om3" eventType="primaryActionTriggered" id="ljw-U7-kIh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xva-Or-wjN">
-                                <rect key="frame" x="50" y="456" width="420" height="86"/>
+                                <rect key="frame" x="50" y="646" width="384" height="86"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Sinipse detalhada"/>
                                 <connections>
                                     <action selector="showDescription" destination="7uF-Rc-Om3" eventType="primaryActionTriggered" id="zme-B1-ony"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYZ-t1-aqB">
+                                <rect key="frame" x="50" y="446" width="500" height="75"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Comprar Mídia Online"/>
+                                <connections>
+                                    <action selector="makePurchaseWithSender:" destination="7uF-Rc-Om3" eventType="primaryActionTriggered" id="0US-PE-VzD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuR-cJ-653">
+                                <rect key="frame" x="50" y="541" width="500" height="75"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Comprar Mídia - Física e Online"/>
+                                <connections>
+                                    <action selector="makePurchaseWithSender:" destination="7uF-Rc-Om3" eventType="primaryActionTriggered" id="kOC-jM-1cJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -125,28 +144,35 @@
                             <constraint firstItem="y8w-Pp-PCD" firstAttribute="top" secondItem="Lj2-bi-R8F" secondAttribute="bottom" constant="50" id="6LP-yD-0sv"/>
                             <constraint firstItem="Lj2-bi-R8F" firstAttribute="centerY" secondItem="N73-0U-ZMd" secondAttribute="centerY" id="AqE-Kg-oi2"/>
                             <constraint firstAttribute="trailing" secondItem="80X-mE-6dB" secondAttribute="trailing" constant="50" id="BVs-pk-GdN"/>
+                            <constraint firstItem="Xva-Or-wjN" firstAttribute="top" secondItem="MuR-cJ-653" secondAttribute="bottom" constant="30" id="BeW-pg-KEe"/>
                             <constraint firstItem="Fd5-QQ-eAu" firstAttribute="leading" secondItem="ehQ-aC-Cyc" secondAttribute="leading" constant="50" id="ClC-Mg-I9o"/>
                             <constraint firstItem="N73-0U-ZMd" firstAttribute="leading" secondItem="ehQ-aC-Cyc" secondAttribute="leading" constant="50" id="EUH-AK-64M"/>
                             <constraint firstItem="Lj2-bi-R8F" firstAttribute="leading" secondItem="N73-0U-ZMd" secondAttribute="trailing" constant="20" id="Nq5-iI-fEf"/>
                             <constraint firstItem="Lj2-bi-R8F" firstAttribute="height" secondItem="N73-0U-ZMd" secondAttribute="height" id="WbP-d8-0Ui"/>
-                            <constraint firstItem="Xva-Or-wjN" firstAttribute="top" secondItem="y8w-Pp-PCD" secondAttribute="bottom" constant="30" id="XuS-zY-wfx"/>
+                            <constraint firstItem="OYZ-t1-aqB" firstAttribute="top" secondItem="y8w-Pp-PCD" secondAttribute="bottom" constant="20" id="YgM-4n-9xn"/>
                             <constraint firstItem="Lj2-bi-R8F" firstAttribute="width" secondItem="N73-0U-ZMd" secondAttribute="width" id="ZJs-b7-zQd"/>
                             <constraint firstItem="y8w-Pp-PCD" firstAttribute="leading" secondItem="ehQ-aC-Cyc" secondAttribute="leading" constant="50" id="ZtG-TF-tre"/>
+                            <constraint firstItem="MuR-cJ-653" firstAttribute="top" secondItem="OYZ-t1-aqB" secondAttribute="bottom" constant="20" id="b6b-0n-6Jn"/>
+                            <constraint firstItem="MuR-cJ-653" firstAttribute="width" secondItem="OYZ-t1-aqB" secondAttribute="width" id="ey6-hL-NbK"/>
+                            <constraint firstItem="OYZ-t1-aqB" firstAttribute="leading" secondItem="y8w-Pp-PCD" secondAttribute="leading" id="ivP-Dh-9cc"/>
+                            <constraint firstItem="MuR-cJ-653" firstAttribute="leading" secondItem="OYZ-t1-aqB" secondAttribute="leading" id="mq7-ae-5qi"/>
                             <constraint firstItem="Xva-Or-wjN" firstAttribute="leading" secondItem="y8w-Pp-PCD" secondAttribute="leading" id="mxq-Wh-Xiu"/>
                             <constraint firstItem="HXr-WK-68W" firstAttribute="leading" secondItem="Fd5-QQ-eAu" secondAttribute="trailing" constant="30" id="nbV-xG-Arg"/>
                             <constraint firstItem="HXr-WK-68W" firstAttribute="top" secondItem="zL6-td-5yC" secondAttribute="bottom" constant="50" id="qfp-Po-eyU"/>
                             <constraint firstItem="80X-mE-6dB" firstAttribute="top" secondItem="zL6-td-5yC" secondAttribute="bottom" constant="50" id="r4F-wg-NA0"/>
-                            <constraint firstItem="Xva-Or-wjN" firstAttribute="width" secondItem="y8w-Pp-PCD" secondAttribute="width" constant="170" id="rCq-ja-HOQ"/>
                             <constraint firstItem="80X-mE-6dB" firstAttribute="leading" secondItem="HXr-WK-68W" secondAttribute="trailing" constant="50" id="tGF-bi-00R"/>
                             <constraint firstItem="Lj2-bi-R8F" firstAttribute="top" secondItem="Fd5-QQ-eAu" secondAttribute="bottom" constant="20" id="tqO-ZA-7Iu"/>
                             <constraint firstItem="Fd5-QQ-eAu" firstAttribute="top" secondItem="zL6-td-5yC" secondAttribute="bottom" constant="50" id="vIi-4u-Ls8"/>
+                            <constraint firstItem="OYZ-t1-aqB" firstAttribute="width" secondItem="y8w-Pp-PCD" secondAttribute="width" id="wVa-nx-Sd3"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="buyButton" destination="y8w-Pp-PCD" id="O7h-2h-fh4"/>
                         <outlet property="congressImage" destination="HXr-WK-68W" id="pbc-LA-685"/>
                         <outlet property="discountPrice" destination="N73-0U-ZMd" id="3iZ-en-t6f"/>
                         <outlet property="finalPrice" destination="Lj2-bi-R8F" id="Idx-TK-kf6"/>
+                        <outlet property="midiaFisicaButton" destination="y8w-Pp-PCD" id="eiK-0m-Gw9"/>
+                        <outlet property="midiaFisicaOnlineButton" destination="MuR-cJ-653" id="Ham-PF-vgw"/>
+                        <outlet property="midiaOnlineButton" destination="OYZ-t1-aqB" id="szi-U4-AzM"/>
                         <outlet property="tableView" destination="80X-mE-6dB" id="c1p-ug-XmA"/>
                         <outlet property="titleLabel" destination="Fd5-QQ-eAu" id="yn8-KY-FmX"/>
                         <segue destination="O5A-kr-jzj" kind="presentation" identifier="presentLogin" id="sUW-Kj-JCR"/>

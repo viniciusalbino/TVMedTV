@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
     <dependencies>
         <deployment identifier="tvOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,14 +18,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="548" height="381"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="evz-kb-CcZ">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="evz-kb-CcZ">
                         <rect key="frame" x="0.0" y="0.0" width="548" height="220"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="220" id="Fgu-Ev-28n"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqb-33-deb">
-                        <rect key="frame" x="15" y="228" width="518" height="50"/>
+                        <rect key="frame" x="15" y="240" width="518" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="F9s-H4-ktH"/>
                         </constraints>
@@ -34,7 +34,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfQ-Y8-Loi">
-                        <rect key="frame" x="15" y="286" width="518" height="23"/>
+                        <rect key="frame" x="15" y="298" width="518" height="23"/>
                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -61,7 +61,7 @@
                 <constraint firstItem="3qd-gL-FnB" firstAttribute="leading" secondItem="dHJ-eP-t5Q" secondAttribute="leading" id="m5S-7M-PPK"/>
                 <constraint firstAttribute="trailing" secondItem="evz-kb-CcZ" secondAttribute="trailing" id="mg6-ib-1Lj"/>
                 <constraint firstItem="evz-kb-CcZ" firstAttribute="leading" secondItem="dHJ-eP-t5Q" secondAttribute="leading" id="nwv-sv-7lL"/>
-                <constraint firstItem="Dqb-33-deb" firstAttribute="top" secondItem="evz-kb-CcZ" secondAttribute="bottom" constant="8" id="pNE-UP-zZp"/>
+                <constraint firstItem="Dqb-33-deb" firstAttribute="top" secondItem="evz-kb-CcZ" secondAttribute="bottom" constant="20" id="pNE-UP-zZp"/>
                 <constraint firstAttribute="trailing" secondItem="Dqb-33-deb" secondAttribute="trailing" constant="15" id="sPa-7A-a4Q"/>
                 <constraint firstItem="evz-kb-CcZ" firstAttribute="top" secondItem="dHJ-eP-t5Q" secondAttribute="top" id="vNT-Zs-lkY"/>
             </constraints>

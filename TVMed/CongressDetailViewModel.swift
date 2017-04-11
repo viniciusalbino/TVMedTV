@@ -84,17 +84,17 @@ class CongressDetailViewModel {
         return true
     }
     
-    func addToCart() {
+    func addToCart(selectedPrice: Float) {
         cartPersister.query { cart in
             if let currentCart = cart {
-                self.updateCart(cart: currentCart)
+                self.updateCart(cart: currentCart, selectedPrice: selectedPrice)
             } else {
-                self.mountNewCart()
+                self.mountNewCart(selectedPrice: selectedPrice)
             }
         }
     }
     
-    func updateCart(cart: Cart) {
+    func updateCart(cart: Cart, selectedPrice: Float) {
         var updatedCart = cart
         do {
             let realm = try RealmEncrypted.realm()
@@ -111,7 +111,7 @@ class CongressDetailViewModel {
                 updatedCart.observacoes = cart.observacoes
                 updatedCart.tipoPagto = cart.tipoPagto
                 updatedCart.itemsCarrinho = cart.itemsCarrinho
-                updatedCart.itemsCarrinho.append(self.mountCartItem())
+                updatedCart.itemsCarrinho.append(self.mountCartItem(selectedPrice: selectedPrice))
                 realm.add(updatedCart)
                 self.delegate?.addedToCart(success: true)
             }
@@ -120,15 +120,15 @@ class CongressDetailViewModel {
         }
     }
     
-    func mountNewCart() {
+    func mountNewCart(selectedPrice: Float) {
         let cart = Cart()
-        cart.itemsCarrinho.append(mountCartItem())
+        cart.itemsCarrinho.append(mountCartItem(selectedPrice: selectedPrice))
         cartPersister.saveCart(cart: cart) { success in
             self.delegate?.addedToCart(success: success)
         }
     }
     
-    func mountCartItem() -> CartItem {
+    func mountCartItem(selectedPrice: Float) -> CartItem {
         let cartItem = CartItem()
         if let midia = currentMidia {
             cartItem.congresso = midia.congresso

@@ -86,9 +86,9 @@ class HomeViewModel: NSObject {
         case .categories:
             return CGSize(width: 1920, height: 100)
         case .especiality:
-            return CGSize(width: 1920, height: 381)
+            return CGSize(width: 1920, height: 390)
         case .releases:
-            return CGSize(width: 1920, height: 381)
+            return CGSize(width: 1920, height: 390)
         }
     }
     

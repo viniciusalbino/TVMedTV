@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
     <dependencies>
         <deployment identifier="tvOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,14 +18,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="548" height="381"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BiU-P6-1SA">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BiU-P6-1SA">
                         <rect key="frame" x="0.0" y="0.0" width="548" height="220"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="220" id="wC7-pC-Vdo"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXe-Cl-Tan">
-                        <rect key="frame" x="15" y="235" width="518" height="60"/>
+                        <rect key="frame" x="15" y="240" width="518" height="60"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="60" id="tjy-MZ-AME"/>
                         </constraints>
@@ -34,7 +34,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0E-V1-PPi">
-                        <rect key="frame" x="15" y="310" width="518" height="56"/>
+                        <rect key="frame" x="15" y="315" width="518" height="51"/>
                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -58,7 +58,7 @@
                 <constraint firstItem="e8E-HO-Do7" firstAttribute="leading" secondItem="9YG-Z8-z9z" secondAttribute="leading" id="HdO-WR-UuX"/>
                 <constraint firstItem="BiU-P6-1SA" firstAttribute="leading" secondItem="9YG-Z8-z9z" secondAttribute="leading" id="Mxh-ub-kbK"/>
                 <constraint firstAttribute="trailing" secondItem="RXe-Cl-Tan" secondAttribute="trailing" constant="15" id="Nem-Kp-oqf"/>
-                <constraint firstItem="RXe-Cl-Tan" firstAttribute="top" secondItem="BiU-P6-1SA" secondAttribute="bottom" constant="15" id="e05-Uf-1Pf"/>
+                <constraint firstItem="RXe-Cl-Tan" firstAttribute="top" secondItem="BiU-P6-1SA" secondAttribute="bottom" constant="20" id="e05-Uf-1Pf"/>
                 <constraint firstItem="BiU-P6-1SA" firstAttribute="top" secondItem="9YG-Z8-z9z" secondAttribute="top" id="hEE-3K-ABj"/>
                 <constraint firstAttribute="trailing" secondItem="W0E-V1-PPi" secondAttribute="trailing" constant="15" id="hWN-bJ-n9E"/>
                 <constraint firstItem="RXe-Cl-Tan" firstAttribute="leading" secondItem="9YG-Z8-z9z" secondAttribute="leading" constant="15" id="mj7-PL-KRc"/>

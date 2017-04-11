@@ -31,6 +31,8 @@ class OrderCell: UICollectionViewCell {
         layer.shadowColor = UIColor.lightGray.cgColor
         layer.shadowOpacity = 1
         layer.shadowOffset = CGSize(width: 0, height: -2)
+        
+        image.adjustsImageWhenAncestorFocused = true
     }
     
     func fill(item: MidiaPromotion) {
@@ -46,13 +48,17 @@ class OrderCell: UICollectionViewCell {
         if context.nextFocusedView == self {
             coordinator.addCoordinatedAnimations({
                 UIView.animate(withDuration: 0.5, animations: {
-                    self.transform = CGAffineTransform(scaleX: 1.15, y: 1.15)
+                    self.titleLabel.textColor = .black
+                    self.descrLabel.textColor = .black
+//                    self.transform = CGAffineTransform(scaleX: 1.15, y: 1.15)
                 })
             }, completion: nil)
         } else if context.previouslyFocusedView == self {
             coordinator.addCoordinatedAnimations({
                 UIView.animate(withDuration: 0.5, animations: {
-                    self.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                    self.titleLabel.textColor = .white
+                    self.descrLabel.textColor = .white
+//                    self.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                 })
             }, completion: nil)
         }
