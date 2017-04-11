@@ -112,7 +112,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xva-Or-wjN">
-                                <rect key="frame" x="50" y="646" width="384" height="86"/>
+                                <rect key="frame" x="50" y="646" width="500" height="75"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Sinipse detalhada"/>
                                 <connections>
@@ -154,6 +155,7 @@
                             <constraint firstItem="y8w-Pp-PCD" firstAttribute="leading" secondItem="ehQ-aC-Cyc" secondAttribute="leading" constant="50" id="ZtG-TF-tre"/>
                             <constraint firstItem="MuR-cJ-653" firstAttribute="top" secondItem="OYZ-t1-aqB" secondAttribute="bottom" constant="20" id="b6b-0n-6Jn"/>
                             <constraint firstItem="MuR-cJ-653" firstAttribute="width" secondItem="OYZ-t1-aqB" secondAttribute="width" id="ey6-hL-NbK"/>
+                            <constraint firstItem="Xva-Or-wjN" firstAttribute="width" secondItem="MuR-cJ-653" secondAttribute="width" id="ijI-gC-qXR"/>
                             <constraint firstItem="OYZ-t1-aqB" firstAttribute="leading" secondItem="y8w-Pp-PCD" secondAttribute="leading" id="ivP-Dh-9cc"/>
                             <constraint firstItem="MuR-cJ-653" firstAttribute="leading" secondItem="OYZ-t1-aqB" secondAttribute="leading" id="mq7-ae-5qi"/>
                             <constraint firstItem="Xva-Or-wjN" firstAttribute="leading" secondItem="y8w-Pp-PCD" secondAttribute="leading" id="mxq-Wh-Xiu"/>

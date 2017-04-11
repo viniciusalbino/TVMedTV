@@ -65,7 +65,7 @@ class MeusProdutosViewController: UICollectionViewController, MeusProdutosDelega
         case "CongressoDetail":
             if let controller = segue.destination as? CongressDetailController {
                 if let midia =  sender as? MidiaPromotion {
-                    controller.setMidia(midia: midia)
+                    controller.loadContent(contentType: (type: .congress, id: "\(midia.congresso)"))
                 }
             }
         default:
