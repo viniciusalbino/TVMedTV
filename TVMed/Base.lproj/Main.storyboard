@@ -40,10 +40,10 @@
             </objects>
             <point key="canvasLocation" x="-1569" y="-79"/>
         </scene>
-        <!--LoginViewController-->
+        <!--MeusDadosNavigation-->
         <scene sceneID="AVF-24-7z0">
             <objects>
-                <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="LoginViewController" id="LZa-Oj-qXB" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="MeusDados" referencedIdentifier="MeusDadosNavigation" id="LZa-Oj-qXB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="b8l-nr-TgM"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="htg-Ew-ciD" userLabel="First Responder" sceneMemberID="firstResponder"/>

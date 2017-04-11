@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Mzc-Xq-ovo">
+            <objects>
+                <navigationController storyboardIdentifier="MeusDadosNavigation" id="Dun-xa-Ddb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fkm-1E-WQo">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fxH-p5-MYR" kind="relationship" relationship="rootViewController" id="bOa-ql-AP2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ki0-Ad-slW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2490" y="-33"/>
+        </scene>
+        <!--Meus Dados Controller-->
+        <scene sceneID="071-MV-mJb">
+            <objects>
+                <viewController id="fxH-p5-MYR" customClass="MeusDadosController" customModule="TVMed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fxy-Sp-gJq"/>
+                        <viewControllerLayoutGuide type="bottom" id="dKg-l1-cwh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kuk-iz-hY1">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="66" sectionFooterHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="FtY-ly-L1c">
+                                <rect key="frame" x="470" y="175" width="1420" height="875"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserDataCell" rowHeight="60" id="00T-ys-gxB" customClass="UserDataCell" customModule="TVMed" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="66" width="1420" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="00T-ys-gxB" id="hEY-Mk-yAC">
+                                            <rect key="frame" x="0.0" y="0.0" width="1404" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvm-Gl-Fej">
+                                                    <rect key="frame" x="10" y="0.0" width="733" height="60"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vinicius de Moura Albino" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hte-AR-CNc">
+                                                    <rect key="frame" x="910" y="0.0" width="500" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="500" id="6Te-JR-enq"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Hte-AR-CNc" firstAttribute="leading" secondItem="pvm-Gl-Fej" secondAttribute="trailing" constant="167" id="CAf-t9-NPd"/>
+                                                <constraint firstItem="pvm-Gl-Fej" firstAttribute="leading" secondItem="hEY-Mk-yAC" secondAttribute="leading" constant="10" id="CX6-Ju-M6c"/>
+                                                <constraint firstAttribute="trailing" secondItem="Hte-AR-CNc" secondAttribute="trailing" constant="10" id="KDB-Oj-Lxr"/>
+                                                <constraint firstItem="Hte-AR-CNc" firstAttribute="top" secondItem="hEY-Mk-yAC" secondAttribute="top" id="OGp-MP-Ezb"/>
+                                                <constraint firstItem="pvm-Gl-Fej" firstAttribute="top" secondItem="hEY-Mk-yAC" secondAttribute="top" id="YVv-Sd-CFj"/>
+                                                <constraint firstAttribute="bottom" secondItem="pvm-Gl-Fej" secondAttribute="bottom" id="dcu-gS-Tx5"/>
+                                                <constraint firstAttribute="bottom" secondItem="Hte-AR-CNc" secondAttribute="bottom" id="ywT-s2-PgW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailLabel" destination="Hte-AR-CNc" id="qHb-Df-B4D"/>
+                                            <outlet property="titleLabel" destination="pvm-Gl-Fej" id="qAq-AX-8YT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfe-dC-Dzc">
+                                <rect key="frame" x="20" y="241" width="300" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="5L0-Q0-3h9"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Português"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bem vindo, Visitante" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esM-ZO-dXj">
+                                <rect key="frame" x="20" y="165" width="350" height="46"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KqB-jK-nKg">
+                                <rect key="frame" x="20" y="347" width="300" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Inglês"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPp-3l-Nmw">
+                                <rect key="frame" x="20" y="453" width="300" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Espanhol"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6d-8e-xpP">
+                                <rect key="frame" x="20" y="974" width="200" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Logout"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23529411759999999" green="0.41568627450000001" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Sfe-dC-Dzc" firstAttribute="top" secondItem="esM-ZO-dXj" secondAttribute="bottom" constant="30" id="1jJ-iH-hIk"/>
+                            <constraint firstItem="KqB-jK-nKg" firstAttribute="leading" secondItem="Kuk-iz-hY1" secondAttribute="leading" constant="20" id="2h7-qa-kIw"/>
+                            <constraint firstItem="dKg-l1-cwh" firstAttribute="top" secondItem="d6d-8e-xpP" secondAttribute="bottom" constant="20" id="5rG-8Y-jVx"/>
+                            <constraint firstItem="Sfe-dC-Dzc" firstAttribute="leading" secondItem="Kuk-iz-hY1" secondAttribute="leading" constant="20" id="5tg-Ws-AQ8"/>
+                            <constraint firstItem="KqB-jK-nKg" firstAttribute="top" secondItem="Sfe-dC-Dzc" secondAttribute="bottom" constant="20" id="6aA-WS-M1E"/>
+                            <constraint firstItem="esM-ZO-dXj" firstAttribute="top" secondItem="fxy-Sp-gJq" secondAttribute="bottom" constant="20" id="E0C-AM-wLi"/>
+                            <constraint firstItem="d6d-8e-xpP" firstAttribute="leading" secondItem="Kuk-iz-hY1" secondAttribute="leading" constant="20" id="Kgs-rP-NhV"/>
+                            <constraint firstItem="lPp-3l-Nmw" firstAttribute="top" secondItem="KqB-jK-nKg" secondAttribute="bottom" constant="20" id="KkI-pc-OdL"/>
+                            <constraint firstItem="lPp-3l-Nmw" firstAttribute="leading" secondItem="Kuk-iz-hY1" secondAttribute="leading" constant="20" id="N1J-ff-gTB"/>
+                            <constraint firstItem="FtY-ly-L1c" firstAttribute="leading" secondItem="esM-ZO-dXj" secondAttribute="trailing" constant="100" id="QnA-zq-2Ap"/>
+                            <constraint firstItem="esM-ZO-dXj" firstAttribute="leading" secondItem="Kuk-iz-hY1" secondAttribute="leading" constant="20" id="TRA-Xi-bHA"/>
+                            <constraint firstAttribute="trailing" secondItem="FtY-ly-L1c" secondAttribute="trailing" constant="30" id="VNM-rK-8ga"/>
+                            <constraint firstItem="dKg-l1-cwh" firstAttribute="top" secondItem="FtY-ly-L1c" secondAttribute="bottom" constant="30" id="hdW-Vn-S37"/>
+                            <constraint firstItem="FtY-ly-L1c" firstAttribute="top" secondItem="fxy-Sp-gJq" secondAttribute="bottom" constant="30" id="kFX-wC-i9i"/>
+                            <constraint firstItem="KqB-jK-nKg" firstAttribute="width" secondItem="Sfe-dC-Dzc" secondAttribute="width" id="nfs-Ba-QDN"/>
+                            <constraint firstItem="lPp-3l-Nmw" firstAttribute="width" secondItem="KqB-jK-nKg" secondAttribute="width" id="ub8-ck-Uv0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nvu-KH-JSk"/>
+                    <connections>
+                        <outlet property="englishButton" destination="KqB-jK-nKg" id="uCA-Jv-uEk"/>
+                        <outlet property="logoutButton" destination="d6d-8e-xpP" id="fw0-c2-aKp"/>
+                        <outlet property="portugueseButton" destination="Sfe-dC-Dzc" id="8I5-Yj-hBL"/>
+                        <outlet property="spanishButton" destination="lPp-3l-Nmw" id="FZ0-hB-yeF"/>
+                        <outlet property="tableView" destination="FtY-ly-L1c" id="Pik-Fh-FZo"/>
+                        <outlet property="userLabel" destination="esM-ZO-dXj" id="MeU-LT-t3B"/>
+                        <segue destination="ksq-Em-E7z" kind="presentation" identifier="presentLogin" id="2KM-eF-EvR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ftl-db-wEd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-189" y="71"/>
+        </scene>
+        <!--LoginViewController-->
+        <scene sceneID="xQZ-67-udl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="LoginViewController" id="ksq-Em-E7z" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mqx-36-MJc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1354" y="5"/>
+        </scene>
+    </scenes>
+</document>

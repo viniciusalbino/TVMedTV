@@ -88,4 +88,8 @@ struct User: Mappable {
         }
         return true
     }
+    
+    func getDocumentNumber() -> String {
+        return cpf.length() > 0 ? cpf : cnpj
+    }
 }

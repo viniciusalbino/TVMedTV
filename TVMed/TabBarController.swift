@@ -55,7 +55,7 @@ class TabBarController: UITabBarController, UINavigationControllerDelegate {
             tabBarItem2.title = "Meus Produtos"
             tabBarItem3.title = "Busca"
             tabBarItem4.title = "Carrinho"
-            tabBarItem5.title = "Login"
+            tabBarItem5.title = "Meus Dados"
         }
     }
 }
