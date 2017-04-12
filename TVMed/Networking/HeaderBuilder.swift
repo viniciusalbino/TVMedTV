@@ -23,6 +23,7 @@ class HeaderBuilder {
         if let userToken = token {
             header["Authorization"] = userToken.tokenApiFormat()
         }
+        _ = header.addDictionary(dictionaryToAppend: LanguageHeader().getHeader())
         
         return header
     }

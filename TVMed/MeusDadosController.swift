@@ -23,6 +23,10 @@ class MeusDadosController: UIViewController, UITableViewDataSource, UITableViewD
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        self.portugueseButton.tag = 0
+        self.spanishButton.tag = 1
+        self.englishButton.tag = 2
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -87,5 +91,23 @@ class MeusDadosController: UIViewController, UITableViewDataSource, UITableViewD
         } else {
             self.performSegue(withIdentifier: "presentLogin", sender: nil)
         }
+    }
+    
+    @IBAction func changeLanguage(sender: UIButton) {
+        let dto = SystemAlertDTO(title: "Aviso", message: "Deseja Modificar a linguagem do app?", buttonActions: [(title: "Mudar", style: .default), (title: "Cancelar", style: .cancel)])
+        self.showDefaultSystemAlert(systemAlertDTO: dto , completeBlock: { action in
+            if action.title == "Mudar" {
+                self.startLoading()
+                self.viewModel.logout()
+                switch sender.tag {
+                case 0:
+                    LanguageHeader().changeHeaderLanguage(header: .portuguese)
+                case 1:
+                    LanguageHeader().changeHeaderLanguage(header: .spanish)
+                default:
+                    LanguageHeader().changeHeaderLanguage(header: .english)
+                }
+            }
+        })
     }
 }

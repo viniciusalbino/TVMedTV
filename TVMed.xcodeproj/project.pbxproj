@@ -39,6 +39,7 @@
 		2B6AF6401E9AA100003F6AC3 /* SinopseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF63F1E9AA100003F6AC3 /* SinopseViewController.swift */; };
 		2B6CDE281E9C764700439ABE /* MeusDadosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6CDE271E9C764700439ABE /* MeusDadosViewModel.swift */; };
 		2B6CDE2A1E9C7BF000439ABE /* UserDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6CDE291E9C7BF000439ABE /* UserDataCell.swift */; };
+		2BE70AB21E9DB5CC00AF3718 /* LanguageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE70AB11E9DB5CC00AF3718 /* LanguageHeader.swift */; };
 		2C0027D31E401F020020ABA0 /* ThirdPartyToolsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0027D21E401F020020ABA0 /* ThirdPartyToolsLoader.swift */; };
 		2C0027D51E401F1C0020ABA0 /* FabricTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0027D41E401F1C0020ABA0 /* FabricTool.swift */; };
 		2C01A1351E8A113000C8A342 /* Orders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C01A1331E8A113000C8A342 /* Orders.storyboard */; };
@@ -163,6 +164,7 @@
 		2B6AF63F1E9AA100003F6AC3 /* SinopseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinopseViewController.swift; sourceTree = "<group>"; };
 		2B6CDE271E9C764700439ABE /* MeusDadosViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeusDadosViewModel.swift; sourceTree = "<group>"; };
 		2B6CDE291E9C7BF000439ABE /* UserDataCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataCell.swift; sourceTree = "<group>"; };
+		2BE70AB11E9DB5CC00AF3718 /* LanguageHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageHeader.swift; sourceTree = "<group>"; };
 		2C0027D21E401F020020ABA0 /* ThirdPartyToolsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdPartyToolsLoader.swift; sourceTree = "<group>"; };
 		2C0027D41E401F1C0020ABA0 /* FabricTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FabricTool.swift; sourceTree = "<group>"; };
 		2C01A1341E8A113000C8A342 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Orders.storyboard; sourceTree = "<group>"; };
@@ -690,6 +692,7 @@
 				2CF186D81E5D3802008029B3 /* RequestParser.swift */,
 				2CF186D91E5D3802008029B3 /* RequestResponseParse.swift */,
 				2C047DBD1E88321400CA39A5 /* HeaderBuilder.swift */,
+				2BE70AB11E9DB5CC00AF3718 /* LanguageHeader.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -1034,6 +1037,7 @@
 				2CDC58B81E933CBC003C28EC /* CheckoutRequest.swift in Sources */,
 				2B6AF6351E99277D003F6AC3 /* NewCreditCardViewController.swift in Sources */,
 				2CBDC0681E870C0D00D49955 /* LoginViewModel.swift in Sources */,
+				2BE70AB21E9DB5CC00AF3718 /* LanguageHeader.swift in Sources */,
 				2C5A994C1E690A7500F6E4E9 /* CollectionViewContainerCell.swift in Sources */,
 				2B6AF6261E9923BD003F6AC3 /* CreditCardValidationType.swift in Sources */,
 				2CDC58BA1E933E86003C28EC /* CheckoutResponse.swift in Sources */,

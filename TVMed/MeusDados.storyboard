@@ -88,6 +88,9 @@
                                 </constraints>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Português"/>
+                                <connections>
+                                    <action selector="changeLanguageWithSender:" destination="fxH-p5-MYR" eventType="primaryActionTriggered" id="mJY-K3-cpj"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bem vindo, Visitante" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esM-ZO-dXj">
                                 <rect key="frame" x="20" y="165" width="350" height="46"/>
@@ -99,11 +102,17 @@
                                 <rect key="frame" x="20" y="347" width="300" height="86"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Inglês"/>
+                                <connections>
+                                    <action selector="changeLanguageWithSender:" destination="fxH-p5-MYR" eventType="primaryActionTriggered" id="i8d-Yj-B6n"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPp-3l-Nmw">
                                 <rect key="frame" x="20" y="453" width="300" height="86"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Espanhol"/>
+                                <connections>
+                                    <action selector="changeLanguageWithSender:" destination="fxH-p5-MYR" eventType="primaryActionTriggered" id="6S6-nW-KF3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6d-8e-xpP">
                                 <rect key="frame" x="20" y="974" width="200" height="86"/>
