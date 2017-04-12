@@ -112,11 +112,20 @@
                     <navigationItem key="navigationItem" id="6Xm-aa-it1"/>
                     <connections>
                         <segue destination="eiB-uo-FSG" kind="show" identifier="CongressoDetail" id="UXI-ka-AJA"/>
+                        <segue destination="HWt-OR-CLN" kind="presentation" identifier="presentLogin" id="vNG-w6-yQB"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAD-a2-6Zo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3687" y="2277"/>
+        </scene>
+        <!--LoginViewController-->
+        <scene sceneID="5r0-E6-sYZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="LoginViewController" id="HWt-OR-CLN" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jyP-PT-Meo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4341" y="3342"/>
         </scene>
         <!--CongressoDetail-->
         <scene sceneID="RSe-xS-W1M">

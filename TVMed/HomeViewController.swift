@@ -28,7 +28,7 @@ class HomeViewController: UICollectionViewController, HomeDelegate, UICollection
             self.viewModel.loadCategories()
             self.viewModel.loadEspecialities()
         }
-        validatesToken()
+//        validatesToken()
     }
     
     func validatesToken() {
@@ -171,28 +171,5 @@ class HomeViewController: UICollectionViewController, HomeDelegate, UICollection
             break
         }
     }
-    
-//    override func collectionView(_ collectionView: UICollectionView, didUpdateFocusIn context: UICollectionViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
-//        
-//        if let indexPath = context.previouslyFocusedIndexPath,
-//            let cell = collectionView.cellForItem(at: indexPath),
-//            let titleLabel = cell.viewWithTag(10) {
-//            let descrLabel = cell.viewWithTag(11)
-//            coordinator.addCoordinatedAnimations({
-//                titleLabel.alpha = 0.4
-//                descrLabel?.alpha = 0.4
-//            }, completion: nil)
-//        }
-//        
-//        if let indexPath = context.nextFocusedIndexPath,
-//            let cell = collectionView.cellForItem(at: indexPath),
-//            let titleLabel = cell.viewWithTag(10) {
-//            let descrLabel = cell.viewWithTag(11)
-//            coordinator.addCoordinatedAnimations({
-//                titleLabel.alpha = 1.0
-//                descrLabel?.alpha = 1.0
-//            }, completion: nil)
-//        }
-//    }
 }
 

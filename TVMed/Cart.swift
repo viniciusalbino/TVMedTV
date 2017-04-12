@@ -31,7 +31,7 @@ class Cart: Object {
             "valorFrete" : Int(valorFrete),
             "valorTotalPedito" : Int(totalValue),
             "descontoTotal" : descontoTotal,
-            "partnerId" : partnerId.length() > 0 ? partnerId : "null",
+            "partnerId" : partnerId.length() > 0 ? partnerId : "0",
             "percentualDesconto" : percentualDesconto,
             "especDesconto" : especDesconto.length() > 0 ? especDesconto : "",
             "formasPagamentoResposta" : formasPagamentoResposta.length() > 0 ? formasPagamentoResposta : "",

@@ -11,7 +11,7 @@ import Foundation
 enum headerEnum:String {
     case portuguese = "pt-BR"
     case spanish = "es-ES"
-    case english = "es-US"
+    case english = "en-US"
     
     init(rawValue: String) {
         switch rawValue {
@@ -30,9 +30,9 @@ class LanguageHeader {
     
     func getHeader() -> [String: String] {
         guard let header = self.retrieveDefaultBaseUrl() else {
-            return ["" : self.defaultBaseUrl()]
+            return ["Accept-Language" : self.defaultBaseUrl()]
         }
-        return ["" : header]
+        return ["Accept-Language" : header]
     }
     
     func changeHeaderLanguage(header: headerEnum) {
