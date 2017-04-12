@@ -17,6 +17,9 @@ class MeusDadosViewModel {
     private weak var delegate: MeusDadosDelegate?
     private var userRequest = UserRequests()
     private var currentUser: User?
+    private var creditCardPersister = CreditCardPersister()
+    private var tokenPersister = TokenPersister()
+    private var cartPersister = CartPersister()
     
     init(delegate: MeusDadosDelegate) {
         self.delegate = delegate
@@ -33,11 +36,26 @@ class MeusDadosViewModel {
         }
     }
     
+    func isUserLoggedIn() -> Bool {
+        if let user = currentUser, user.nome.length() > 0 {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func logout() {
+        self.currentUser = nil
+        cartPersister.delete { _ in }
+        tokenPersister.delete { _ in }
+        self.delegate?.contentDidFinishedLoading(success: false)
+    }
+    
     func getUserLabelData() -> String {
-        if let user = currentUser {
+        if let user = currentUser, user.nome.length() > 0 {
             return "Olá , \(user.nome)"
         } else {
-            return "Olá visitante"
+            return "Olá, visitante"
         }
     }
     

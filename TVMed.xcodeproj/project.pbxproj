@@ -452,7 +452,6 @@
 				2C1B4A511E7B82F200DED396 /* CongressDetail */,
 				2C9D0A561E6FA8FB0095A1FB /* EspecialitiesController */,
 				2C4F5FE51E4022FF00754DBB /* MeusProdutos */,
-				2C4F5FE01E40220200754DBB /* Minha Conta */,
 				2C4F5FDF1E4021FC00754DBB /* Search */,
 				2C4F5FDE1E4021F800754DBB /* Home */,
 			);
@@ -477,13 +476,6 @@
 				2CDC58AC1E917A7E003C28EC /* SearchViewModel.swift */,
 			);
 			name = Search;
-			sourceTree = "<group>";
-		};
-		2C4F5FE01E40220200754DBB /* Minha Conta */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Minha Conta";
 			sourceTree = "<group>";
 		};
 		2C4F5FE51E4022FF00754DBB /* MeusProdutos */ = {

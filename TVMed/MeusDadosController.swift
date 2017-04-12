@@ -33,19 +33,13 @@ class MeusDadosController: UIViewController, UITableViewDataSource, UITableViewD
     
     func contentDidFinishedLoading(success: Bool) {
         stopLoading()
-        guard success else {
-            let dto = SystemAlertDTO(title: "Aviso", message: "Deseja logar?", buttonActions: [(title: "Logar", style: .default), (title: "Cancelar", style: .cancel)])
-            self.showDefaultSystemAlert(systemAlertDTO: dto , completeBlock: { action in
-                if action.title == "Logar" {
-                    self.performSegue(withIdentifier: "presentLogin", sender: nil)
-                }
-            })
-            self.logoutButton.setTitle("Login", for: .normal)
-            return
-        }
-        self.logoutButton.setTitle("Logout", for: .normal)
         self.tableView.reloadData()
         self.userLabel.text = viewModel.getUserLabelData()
+        guard success else {
+            self.logoutButton.setTitle("Logout", for: .normal)
+            return
+        }
+        self.logoutButton.setTitle("Login", for: .normal)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -78,6 +72,20 @@ class MeusDadosController: UIViewController, UITableViewDataSource, UITableViewD
         if let cell =  cell as? UserDataCell {
             let texts = viewModel.textForRowAt(section: indexPath.section, index: indexPath.row)
             cell.fill(titleText: texts.title, subtitle: texts.subtitle)
+        }
+    }
+    
+    @IBAction func login() {
+        if viewModel.isUserLoggedIn() {
+            let dto = SystemAlertDTO(title: "Aviso", message: "Deseja deslogar?", buttonActions: [(title: "Logoff", style: .default), (title: "Cancelar", style: .cancel)])
+            self.showDefaultSystemAlert(systemAlertDTO: dto , completeBlock: { action in
+                if action.title == "Logoff" {
+                    self.startLoading()
+                    self.viewModel.logout()
+                }
+            })
+        } else {
+            self.performSegue(withIdentifier: "presentLogin", sender: nil)
         }
     }
 }

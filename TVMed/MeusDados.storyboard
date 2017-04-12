@@ -38,24 +38,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="66" sectionFooterHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="FtY-ly-L1c">
-                                <rect key="frame" x="470" y="175" width="1420" height="875"/>
+                                <rect key="frame" x="440" y="175" width="1450" height="875"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserDataCell" rowHeight="60" id="00T-ys-gxB" customClass="UserDataCell" customModule="TVMed" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="66" width="1420" height="60"/>
+                                        <rect key="frame" x="0.0" y="66" width="1450" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="00T-ys-gxB" id="hEY-Mk-yAC">
-                                            <rect key="frame" x="0.0" y="0.0" width="1404" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1434" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvm-Gl-Fej">
-                                                    <rect key="frame" x="10" y="0.0" width="733" height="60"/>
+                                                    <rect key="frame" x="10" y="0.0" width="763" height="60"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vinicius de Moura Albino" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hte-AR-CNc">
-                                                    <rect key="frame" x="910" y="0.0" width="500" height="60"/>
+                                                    <rect key="frame" x="940" y="0.0" width="500" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="500" id="6Te-JR-enq"/>
                                                     </constraints>
@@ -109,6 +109,9 @@
                                 <rect key="frame" x="20" y="974" width="200" height="86"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="login" destination="fxH-p5-MYR" eventType="primaryActionTriggered" id="9Gc-81-Buy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.23529411759999999" green="0.41568627450000001" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -122,7 +125,7 @@
                             <constraint firstItem="d6d-8e-xpP" firstAttribute="leading" secondItem="Kuk-iz-hY1" secondAttribute="leading" constant="20" id="Kgs-rP-NhV"/>
                             <constraint firstItem="lPp-3l-Nmw" firstAttribute="top" secondItem="KqB-jK-nKg" secondAttribute="bottom" constant="20" id="KkI-pc-OdL"/>
                             <constraint firstItem="lPp-3l-Nmw" firstAttribute="leading" secondItem="Kuk-iz-hY1" secondAttribute="leading" constant="20" id="N1J-ff-gTB"/>
-                            <constraint firstItem="FtY-ly-L1c" firstAttribute="leading" secondItem="esM-ZO-dXj" secondAttribute="trailing" constant="100" id="QnA-zq-2Ap"/>
+                            <constraint firstItem="FtY-ly-L1c" firstAttribute="leading" secondItem="Sfe-dC-Dzc" secondAttribute="trailing" constant="120" id="R6I-Vz-IRb"/>
                             <constraint firstItem="esM-ZO-dXj" firstAttribute="leading" secondItem="Kuk-iz-hY1" secondAttribute="leading" constant="20" id="TRA-Xi-bHA"/>
                             <constraint firstAttribute="trailing" secondItem="FtY-ly-L1c" secondAttribute="trailing" constant="30" id="VNM-rK-8ga"/>
                             <constraint firstItem="dKg-l1-cwh" firstAttribute="top" secondItem="FtY-ly-L1c" secondAttribute="bottom" constant="30" id="hdW-Vn-S37"/>
