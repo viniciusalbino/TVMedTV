@@ -10,6 +10,7 @@
 		044CED7B88A0F9C6D2CFEF67 /* Pods_TVMedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FD404313DF79EB14965569 /* Pods_TVMedTests.framework */; };
 		16D107A7F19F9FAAD0C31635 /* Pods_TVMed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 684FE61E82A70E197AA0F9EB /* Pods_TVMed.framework */; };
 		2B07BECA1E97207B00DB3DF7 /* ResumeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07BEC91E97207B00DB3DF7 /* ResumeCell.swift */; };
+		2B4E10291E9F1B3F00B4171A /* ModalTextView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4E10281E9F1B3F00B4171A /* ModalTextView.storyboard */; };
 		2B5D18FC1E9C725E00774836 /* MeusDados.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5D18FB1E9C725E00774836 /* MeusDados.storyboard */; };
 		2B5D18FF1E9C729700774836 /* MeusDadosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D18FE1E9C729700774836 /* MeusDadosController.swift */; };
 		2B6723061E94936700F5EABF /* UIalertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6723051E94936700F5EABF /* UIalertController+Extensions.swift */; };
@@ -40,6 +41,9 @@
 		2B6CDE281E9C764700439ABE /* MeusDadosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6CDE271E9C764700439ABE /* MeusDadosViewModel.swift */; };
 		2B6CDE2A1E9C7BF000439ABE /* UserDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6CDE291E9C7BF000439ABE /* UserDataCell.swift */; };
 		2BE70AB21E9DB5CC00AF3718 /* LanguageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE70AB11E9DB5CC00AF3718 /* LanguageHeader.swift */; };
+		2BE70AB41E9F0BA200AF3718 /* CongressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE70AB31E9F0BA200AF3718 /* CongressCell.xib */; };
+		2BE70AB61E9F0C8400AF3718 /* CongressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE70AB51E9F0C8400AF3718 /* CongressCell.swift */; };
+		2BE70AB81E9F186B00AF3718 /* FocusTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE70AB71E9F186B00AF3718 /* FocusTextView.swift */; };
 		2C0027D31E401F020020ABA0 /* ThirdPartyToolsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0027D21E401F020020ABA0 /* ThirdPartyToolsLoader.swift */; };
 		2C0027D51E401F1C0020ABA0 /* FabricTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0027D41E401F1C0020ABA0 /* FabricTool.swift */; };
 		2C01A1351E8A113000C8A342 /* Orders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C01A1331E8A113000C8A342 /* Orders.storyboard */; };
@@ -135,6 +139,7 @@
 /* Begin PBXFileReference section */
 		0968D6E8E29EED2CB47A1D76 /* Pods-TVMedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVMedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVMedTests/Pods-TVMedTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2B07BEC91E97207B00DB3DF7 /* ResumeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumeCell.swift; sourceTree = "<group>"; };
+		2B4E10281E9F1B3F00B4171A /* ModalTextView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ModalTextView.storyboard; sourceTree = "<group>"; };
 		2B5D18FB1E9C725E00774836 /* MeusDados.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MeusDados.storyboard; sourceTree = "<group>"; };
 		2B5D18FE1E9C729700774836 /* MeusDadosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeusDadosController.swift; sourceTree = "<group>"; };
 		2B6723051E94936700F5EABF /* UIalertController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIalertController+Extensions.swift"; sourceTree = "<group>"; };
@@ -165,6 +170,9 @@
 		2B6CDE271E9C764700439ABE /* MeusDadosViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeusDadosViewModel.swift; sourceTree = "<group>"; };
 		2B6CDE291E9C7BF000439ABE /* UserDataCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataCell.swift; sourceTree = "<group>"; };
 		2BE70AB11E9DB5CC00AF3718 /* LanguageHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageHeader.swift; sourceTree = "<group>"; };
+		2BE70AB31E9F0BA200AF3718 /* CongressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CongressCell.xib; sourceTree = "<group>"; };
+		2BE70AB51E9F0C8400AF3718 /* CongressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongressCell.swift; sourceTree = "<group>"; };
+		2BE70AB71E9F186B00AF3718 /* FocusTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusTextView.swift; sourceTree = "<group>"; };
 		2C0027D21E401F020020ABA0 /* ThirdPartyToolsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdPartyToolsLoader.swift; sourceTree = "<group>"; };
 		2C0027D41E401F1C0020ABA0 /* FabricTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FabricTool.swift; sourceTree = "<group>"; };
 		2C01A1341E8A113000C8A342 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Orders.storyboard; sourceTree = "<group>"; };
@@ -362,6 +370,7 @@
 				2C1B4A541E7B83F900DED396 /* CongressDetailViewModel.swift */,
 				2C1B4A561E7F5AD900DED396 /* CongressDetailCell.swift */,
 				2B6AF63F1E9AA100003F6AC3 /* SinopseViewController.swift */,
+				2BE70AB51E9F0C8400AF3718 /* CongressCell.swift */,
 			);
 			name = CongressDetail;
 			sourceTree = "<group>";
@@ -534,6 +543,8 @@
 				2B6AF6091E9859F7003F6AC3 /* NewCard.storyboard */,
 				2B6AF6381E992D09003F6AC3 /* CreditCards.storyboard */,
 				2B5D18FB1E9C725E00774836 /* MeusDados.storyboard */,
+				2BE70AB31E9F0BA200AF3718 /* CongressCell.xib */,
+				2B4E10281E9F1B3F00B4171A /* ModalTextView.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -703,6 +714,7 @@
 				2B6AF60C1E9923BD003F6AC3 /* Masks */,
 				2CF186E51E5F7246008029B3 /* LoadingOverlay.swift */,
 				2C1B4A5C1E7F742D00DED396 /* FocusedTextView.swift */,
+				2BE70AB71E9F186B00AF3718 /* FocusTextView.swift */,
 			);
 			name = GeneralViews;
 			sourceTree = "<group>";
@@ -845,6 +857,8 @@
 				2C1B4A721E836E0E00DED396 /* Login.storyboard in Resources */,
 				2CDC58A81E916BCE003C28EC /* Search.storyboard in Resources */,
 				2C01A1391E8C902700C8A342 /* OrderCell.xib in Resources */,
+				2B4E10291E9F1B3F00B4171A /* ModalTextView.storyboard in Resources */,
+				2BE70AB41E9F0BA200AF3718 /* CongressCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -983,6 +997,7 @@
 				2C1B4A551E7B83F900DED396 /* CongressDetailViewModel.swift in Sources */,
 				2C1B4A671E8363A800DED396 /* RealmEncrypted.swift in Sources */,
 				2CF186C81E5D25F9008029B3 /* HomeViewModel.swift in Sources */,
+				2BE70AB81E9F186B00AF3718 /* FocusTextView.swift in Sources */,
 				2C7C532C1E5F7F090026380C /* CategoriesRequest.swift in Sources */,
 				2C047DBE1E88321400CA39A5 /* HeaderBuilder.swift in Sources */,
 				2C7C532F1E5F7F5D0026380C /* Categorie.swift in Sources */,
@@ -1026,6 +1041,7 @@
 				2B6AF63C1E992E4E003F6AC3 /* CardCell.swift in Sources */,
 				2CF186DA1E5D3802008029B3 /* BaseRequest.swift in Sources */,
 				2C1B4A641E8360A000DED396 /* UserToken.swift in Sources */,
+				2BE70AB61E9F0C8400AF3718 /* CongressCell.swift in Sources */,
 				2C1B4A591E7F66DB00DED396 /* Float+Extension.swift in Sources */,
 				2B5D18FF1E9C729700774836 /* MeusDadosController.swift in Sources */,
 				2C1B4A6C1E83659C00DED396 /* KeychainAccess.swift in Sources */,

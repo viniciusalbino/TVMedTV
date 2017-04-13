@@ -16,19 +16,9 @@ enum CongressType {
 
 typealias LoadContentType = (type: CongressType, id: String)
 
-class CongressDetailController: UIViewController, CongressDetailDelegate, UITableViewDelegate, UITableViewDataSource {
+class CongressDetailController: UIViewController, CongressDetailDelegate, UITextViewDelegate {
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var midiaFisicaButton: UIButton!
-    @IBOutlet weak var midiaOnlineButton: UIButton!
-    @IBOutlet weak var midiaFisicaOnlineButton: UIButton!
-    
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var subtitleLabel: UILabel!
-    @IBOutlet weak var discountPrice: UILabel!
-    @IBOutlet weak var finalPrice: UILabel!
-    @IBOutlet weak var descriptionButton: UIButton!
-    @IBOutlet weak var congressImage: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
     private var contentType: LoadContentType?
     private var userRequest = UserRequests()
     
@@ -38,12 +28,6 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        
-        self.midiaFisicaButton.tag = 0
-        self.midiaOnlineButton.tag = 1
-        self.midiaFisicaOnlineButton.tag = 2
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,7 +66,6 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UITabl
     func contentDidFinishedLoading(succes: Bool) {
         self.stopLoading()
         if succes {
-            self.tableView.reloadData()
             self.fillScreen()
         } else {
             
@@ -90,56 +73,17 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UITabl
     }
     
     func fillScreen() {
-        let midia = viewModel.getCurrentMidia()
-        if let url = URL(string: midia.imagemHtml) {
-            self.congressImage.kf.setImage(with: url, placeholder: UIImage(named:"defaultImage"), options: nil, progressBlock: nil, completionHandler: nil)
-        }
-        self.titleLabel.text = midia.nomeCongresso
-        
-        if midia.clienteComprouParaAssistirOnLine {
-            self.finalPrice.isHidden = true
-            self.discountPrice.isHidden = true
-            self.midiaFisicaButton.setTitle("Assistir", for: .normal)
-            self.midiaOnlineButton.isHidden = true
-            self.midiaFisicaOnlineButton.isHidden = true
-        } else {
-            self.finalPrice.isHidden = false
-            self.discountPrice.isHidden = false
-            self.midiaFisicaButton.setTitle("Comprar Mídia fisica", for: .normal)
-            self.midiaOnlineButton.isHidden = false
-            self.midiaFisicaOnlineButton.isHidden = false
-        }
-        
-        self.finalPrice.text = midia.getMidiaPrice()
-        self.discountPrice.isHidden = !midia.hasDiscount()
-        self.discountPrice.text = midia.hasDiscount() ? midia.discountPercentage() : ""
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numberOfItensInSection()
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: CongressDetailCell.reuseIdentifier, for: indexPath)
-    }
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if let cell = cell as? CongressDetailCell {
-            cell.fill(title: viewModel.midiaForRow(row: indexPath.row).nomeCongresso, subTitle: viewModel.midiaForRow(row: indexPath.row).formattedSubtitle())
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, didUpdateFocusIn context: UITableViewFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
-        if let selected = context.nextFocusedIndexPath {
-            DispatchQueue.main.async {
-                self.viewModel.setSelectedMidiaIndex(index: selected.row)
-                self.fillScreen()
+        let height = self.viewModel.numberOfItensInSection() * 600
+        self.scrollView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width - 40, height: self.view.frame.size.height)
+        for index in 0..<viewModel.numberOfItensInSection() {
+            if let congressCell = UINib(nibName: "CongressCell", bundle: nil).instantiate(withOwner: nil, options: nil).first as? CongressCell {
+                self.scrollView.addSubview(congressCell)
+                congressCell.frame = CGRect(x: 20, y: (index * 500 + 20), width: Int(self.scrollView.frame.size.width - 40), height: 450)
+                congressCell.fill(midia: viewModel.midiaForRow(row: index), delegate: self)
+                congressCell.layer.cornerRadius = 5
             }
         }
+        self.scrollView.contentSize = CGSize(width: Int(self.view.frame.size.width), height: height)
     }
     
     @IBAction func makePurchase(sender: UIButton) {

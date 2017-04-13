@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CongressCell" customModule="TVMed" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uX6-9Q-ZxZ">
+                    <rect key="frame" x="1350" y="20" width="550" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="550" id="nQ9-t1-QcZ"/>
+                        <constraint firstAttribute="height" constant="100" id="qjp-Gr-aaD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXl-BD-p3o">
+                    <rect key="frame" x="1350" y="140" width="550" height="100"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cju-V4-iWD">
+                    <rect key="frame" x="1350" y="260" width="550" height="100"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFX-im-vNy">
+                    <rect key="frame" x="50" y="20" width="1250" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="FDK-jM-efL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L2o-qd-DPx" customClass="FocusTextView" customModule="TVMed" customModuleProvider="target">
+                    <rect key="frame" x="50" y="140" width="1250" height="220"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="L2o-qd-DPx" firstAttribute="leading" secondItem="jFX-im-vNy" secondAttribute="leading" id="2ai-E8-Cml"/>
+                <constraint firstItem="jFX-im-vNy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="7Aw-54-qat"/>
+                <constraint firstItem="uX6-9Q-ZxZ" firstAttribute="leading" secondItem="jFX-im-vNy" secondAttribute="trailing" constant="50" id="7HE-8T-Iea"/>
+                <constraint firstItem="L2o-qd-DPx" firstAttribute="trailing" secondItem="jFX-im-vNy" secondAttribute="trailing" id="A7C-PK-E5N"/>
+                <constraint firstItem="GXl-BD-p3o" firstAttribute="leading" secondItem="uX6-9Q-ZxZ" secondAttribute="leading" id="Fr9-ul-yue"/>
+                <constraint firstItem="uX6-9Q-ZxZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="Sq2-cs-KK3"/>
+                <constraint firstItem="GXl-BD-p3o" firstAttribute="trailing" secondItem="uX6-9Q-ZxZ" secondAttribute="trailing" id="Z6u-qr-8B6"/>
+                <constraint firstAttribute="trailing" secondItem="uX6-9Q-ZxZ" secondAttribute="trailing" constant="20" id="Zxr-Ze-PCq"/>
+                <constraint firstItem="Cju-V4-iWD" firstAttribute="top" secondItem="GXl-BD-p3o" secondAttribute="bottom" constant="20" id="auk-8c-7rF"/>
+                <constraint firstItem="GXl-BD-p3o" firstAttribute="top" secondItem="uX6-9Q-ZxZ" secondAttribute="bottom" constant="20" id="deF-A5-VBc"/>
+                <constraint firstItem="Cju-V4-iWD" firstAttribute="leading" secondItem="GXl-BD-p3o" secondAttribute="leading" id="nqe-aH-oJa"/>
+                <constraint firstItem="Cju-V4-iWD" firstAttribute="trailing" secondItem="GXl-BD-p3o" secondAttribute="trailing" id="r4u-iK-PoE"/>
+                <constraint firstItem="jFX-im-vNy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="rBa-WO-3Zz"/>
+                <constraint firstItem="L2o-qd-DPx" firstAttribute="top" secondItem="jFX-im-vNy" secondAttribute="bottom" constant="20" id="s89-U1-Zxo"/>
+                <constraint firstItem="Cju-V4-iWD" firstAttribute="height" secondItem="GXl-BD-p3o" secondAttribute="height" id="sZG-Ot-alP"/>
+                <constraint firstItem="GXl-BD-p3o" firstAttribute="height" secondItem="uX6-9Q-ZxZ" secondAttribute="height" id="wFM-Ic-O5u"/>
+                <constraint firstItem="L2o-qd-DPx" firstAttribute="bottom" secondItem="Cju-V4-iWD" secondAttribute="bottom" id="yJa-uD-wnf"/>
+            </constraints>
+            <connections>
+                <outlet property="detailsTextView" destination="L2o-qd-DPx" id="uAp-ex-1LS"/>
+                <outlet property="midiaFisicaButton" destination="uX6-9Q-ZxZ" id="Pvy-7N-KIN"/>
+                <outlet property="midiaFisicaOnlineButton" destination="Cju-V4-iWD" id="VtO-p2-kbS"/>
+                <outlet property="midiaOnlineButton" destination="GXl-BD-p3o" id="stk-a1-MIc"/>
+                <outlet property="titleLabel" destination="jFX-im-vNy" id="cnc-dg-fhL"/>
+            </connections>
+            <point key="canvasLocation" x="56" y="52"/>
+        </view>
+    </objects>
+</document>

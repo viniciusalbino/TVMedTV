@@ -20,13 +20,13 @@ class FocusedTextView: UITextView {
         showsVerticalScrollIndicator = true
     }
     
-    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
-         if context.nextFocusedView == self {
-            self.backgroundColor = .white
-         } else {
-            self.backgroundColor = .clear
-        }
-    }
+//    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+//         if context.nextFocusedView == self {
+//            self.backgroundColor = .white
+//         } else {
+//            self.backgroundColor = .clear
+//        }
+//    }
     
     override var canBecomeFocused: Bool {
         return true
