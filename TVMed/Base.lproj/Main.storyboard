@@ -9,16 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MeusProdutos-->
-        <scene sceneID="6uf-xy-eJ4">
-            <objects>
-                <viewControllerPlaceholder storyboardName="MeusProdutos" id="hQF-5u-GzJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Meus Produtos" id="7mD-3q-bWf"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EJf-uk-pEB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-512" y="5046"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -33,22 +23,12 @@
                         <segue destination="764-GX-2n2" kind="relationship" relationship="viewControllers" id="WVl-3C-dYj"/>
                         <segue destination="nLL-qi-ySX" kind="relationship" relationship="viewControllers" id="evb-35-96c"/>
                         <segue destination="cqR-c6-tiv" kind="relationship" relationship="viewControllers" id="hQ0-mp-1xy"/>
-                        <segue destination="LZa-Oj-qXB" kind="relationship" relationship="viewControllers" id="m4J-eg-odm"/>
+                        <segue destination="mnZ-BW-qEn" kind="relationship" relationship="viewControllers" id="ltw-qS-3C9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1569" y="-79"/>
-        </scene>
-        <!--MeusDadosNavigation-->
-        <scene sceneID="AVF-24-7z0">
-            <objects>
-                <viewControllerPlaceholder storyboardName="MeusDados" referencedIdentifier="MeusDadosNavigation" id="LZa-Oj-qXB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="b8l-nr-TgM"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="htg-Ew-ciD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2041" y="2277"/>
         </scene>
         <!--Home-->
         <scene sceneID="Pr9-vx-WZ3">
@@ -64,7 +44,7 @@
         <scene sceneID="ghd-Fw-dXE">
             <objects>
                 <viewControllerPlaceholder storyboardName="Orders" referencedIdentifier="UINavigationController-fyJ-Z7-Ah4" id="nLL-qi-ySX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="YLW-p9-gzB"/>
+                    <tabBarItem key="tabBarItem" title="Meus Dados" id="YLW-p9-gzB"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OXE-WS-y5t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -79,6 +59,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZsD-MH-QF0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1342" y="672"/>
+        </scene>
+        <!--MeusDadosNavigation-->
+        <scene sceneID="QMr-cf-mp0">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="MeusDadosNavigation" storyboardName="MeusDados" referencedIdentifier="MeusDadosNavigation" id="mnZ-BW-qEn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Meus Dados" id="ZrJ-nP-Q3d"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E1T-0j-VOD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-815" y="3628"/>
         </scene>
     </scenes>
 </document>

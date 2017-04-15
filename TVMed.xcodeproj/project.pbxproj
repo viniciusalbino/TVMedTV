@@ -28,7 +28,7 @@
 		2B4E104D1EA2D4D600B4171A /* VideoToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E104C1EA2D4D600B4171A /* VideoToken.swift */; };
 		2B4E104F1EA2DA9F00B4171A /* Video.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4E104E1EA2DA9F00B4171A /* Video.storyboard */; };
 		2B4E10521EA2DB0300B4171A /* VideoPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E10511EA2DB0300B4171A /* VideoPlayerController.swift */; };
-		2B5D18FC1E9C725E00774836 /* MeusDados.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5D18FB1E9C725E00774836 /* MeusDados.storyboard */; };
+		2B4E10541EA2E09A00B4171A /* MeusDados.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4E10531EA2E09A00B4171A /* MeusDados.storyboard */; };
 		2B5D18FF1E9C729700774836 /* MeusDadosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D18FE1E9C729700774836 /* MeusDadosController.swift */; };
 		2B6723061E94936700F5EABF /* UIalertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6723051E94936700F5EABF /* UIalertController+Extensions.swift */; };
 		2B6723091E95D47200F5EABF /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6723081E95D47200F5EABF /* CartViewController.swift */; };
@@ -174,7 +174,7 @@
 		2B4E104C1EA2D4D600B4171A /* VideoToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoToken.swift; sourceTree = "<group>"; };
 		2B4E104E1EA2DA9F00B4171A /* Video.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Video.storyboard; sourceTree = "<group>"; };
 		2B4E10511EA2DB0300B4171A /* VideoPlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerController.swift; sourceTree = "<group>"; };
-		2B5D18FB1E9C725E00774836 /* MeusDados.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MeusDados.storyboard; sourceTree = "<group>"; };
+		2B4E10531EA2E09A00B4171A /* MeusDados.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MeusDados.storyboard; sourceTree = "<group>"; };
 		2B5D18FE1E9C729700774836 /* MeusDadosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeusDadosController.swift; sourceTree = "<group>"; };
 		2B6723051E94936700F5EABF /* UIalertController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIalertController+Extensions.swift"; sourceTree = "<group>"; };
 		2B6723081E95D47200F5EABF /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
@@ -618,6 +618,7 @@
 				2B4E103A1EA2C4FC00B4171A /* Topics */,
 				2C7C53321E5F89680026380C /* HomeComponents */,
 				2C4ABF201E3043F000FA73A2 /* Main.storyboard */,
+				2B4E10531EA2E09A00B4171A /* MeusDados.storyboard */,
 				2B67230C1E95D5CB00F5EABF /* Cart.storyboard */,
 				2CDC58A61E916BCE003C28EC /* Search.storyboard */,
 				2C01A1331E8A113000C8A342 /* Orders.storyboard */,
@@ -628,7 +629,6 @@
 				2C01A1381E8C902700C8A342 /* OrderCell.xib */,
 				2B6AF6091E9859F7003F6AC3 /* NewCard.storyboard */,
 				2B6AF6381E992D09003F6AC3 /* CreditCards.storyboard */,
-				2B5D18FB1E9C725E00774836 /* MeusDados.storyboard */,
 				2BE70AB31E9F0BA200AF3718 /* CongressCell.xib */,
 				2B4E10281E9F1B3F00B4171A /* ModalTextView.storyboard */,
 				2B4E104E1EA2DA9F00B4171A /* Video.storyboard */,
@@ -932,13 +932,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B5D18FC1E9C725E00774836 /* MeusDados.storyboard in Resources */,
 				2C9D0A551E6FA8170095A1FB /* Home.storyboard in Resources */,
 				2C5A99481E67904C00F6E4E9 /* HomeCategoryCell.xib in Resources */,
 				2B67230E1E95D5CB00F5EABF /* Cart.storyboard in Resources */,
 				2C4ABF241E3043F000FA73A2 /* Assets.xcassets in Resources */,
 				2C4ABF221E3043F000FA73A2 /* Main.storyboard in Resources */,
 				2B4E104F1EA2DA9F00B4171A /* Video.storyboard in Resources */,
+				2B4E10541EA2E09A00B4171A /* MeusDados.storyboard in Resources */,
 				2C01A1351E8A113000C8A342 /* Orders.storyboard in Resources */,
 				2C9D0A4D1E6FA6370095A1FB /* EspecialitiesController.storyboard in Resources */,
 				2B4E10401EA2C9F100B4171A /* TableViewHeaderCell.xib in Resources */,
