@@ -26,6 +26,8 @@
 		2B4E10481EA2D19800B4171A /* VideoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E10471EA2D19800B4171A /* VideoRequest.swift */; };
 		2B4E104B1EA2D29000B4171A /* UDID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E104A1EA2D29000B4171A /* UDID.swift */; };
 		2B4E104D1EA2D4D600B4171A /* VideoToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E104C1EA2D4D600B4171A /* VideoToken.swift */; };
+		2B4E104F1EA2DA9F00B4171A /* Video.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4E104E1EA2DA9F00B4171A /* Video.storyboard */; };
+		2B4E10521EA2DB0300B4171A /* VideoPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E10511EA2DB0300B4171A /* VideoPlayerController.swift */; };
 		2B5D18FC1E9C725E00774836 /* MeusDados.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5D18FB1E9C725E00774836 /* MeusDados.storyboard */; };
 		2B5D18FF1E9C729700774836 /* MeusDadosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D18FE1E9C729700774836 /* MeusDadosController.swift */; };
 		2B6723061E94936700F5EABF /* UIalertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6723051E94936700F5EABF /* UIalertController+Extensions.swift */; };
@@ -170,6 +172,8 @@
 		2B4E10471EA2D19800B4171A /* VideoRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoRequest.swift; sourceTree = "<group>"; };
 		2B4E104A1EA2D29000B4171A /* UDID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UDID.swift; sourceTree = "<group>"; };
 		2B4E104C1EA2D4D600B4171A /* VideoToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoToken.swift; sourceTree = "<group>"; };
+		2B4E104E1EA2DA9F00B4171A /* Video.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Video.storyboard; sourceTree = "<group>"; };
+		2B4E10511EA2DB0300B4171A /* VideoPlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerController.swift; sourceTree = "<group>"; };
 		2B5D18FB1E9C725E00774836 /* MeusDados.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MeusDados.storyboard; sourceTree = "<group>"; };
 		2B5D18FE1E9C729700774836 /* MeusDadosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeusDadosController.swift; sourceTree = "<group>"; };
 		2B6723051E94936700F5EABF /* UIalertController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIalertController+Extensions.swift"; sourceTree = "<group>"; };
@@ -357,6 +361,14 @@
 			name = VideoToken;
 			sourceTree = "<group>";
 		};
+		2B4E10501EA2DAB200B4171A /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				2B4E10511EA2DB0300B4171A /* VideoPlayerController.swift */,
+			);
+			name = VideoPlayer;
+			sourceTree = "<group>";
+		};
 		2B5D18FD1E9C728400774836 /* MeusDados */ = {
 			isa = PBXGroup;
 			children = (
@@ -526,6 +538,7 @@
 		2C4F5FDD1E4021EF00754DBB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2B4E10501EA2DAB200B4171A /* VideoPlayer */,
 				2B4E10331EA2BDEC00B4171A /* Topics */,
 				2B5D18FD1E9C728400774836 /* MeusDados */,
 				2B6AF6331E992769003F6AC3 /* CreditCard */,
@@ -618,6 +631,7 @@
 				2B5D18FB1E9C725E00774836 /* MeusDados.storyboard */,
 				2BE70AB31E9F0BA200AF3718 /* CongressCell.xib */,
 				2B4E10281E9F1B3F00B4171A /* ModalTextView.storyboard */,
+				2B4E104E1EA2DA9F00B4171A /* Video.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -924,6 +938,7 @@
 				2B67230E1E95D5CB00F5EABF /* Cart.storyboard in Resources */,
 				2C4ABF241E3043F000FA73A2 /* Assets.xcassets in Resources */,
 				2C4ABF221E3043F000FA73A2 /* Main.storyboard in Resources */,
+				2B4E104F1EA2DA9F00B4171A /* Video.storyboard in Resources */,
 				2C01A1351E8A113000C8A342 /* Orders.storyboard in Resources */,
 				2C9D0A4D1E6FA6370095A1FB /* EspecialitiesController.storyboard in Resources */,
 				2B4E10401EA2C9F100B4171A /* TableViewHeaderCell.xib in Resources */,
@@ -1094,6 +1109,7 @@
 				2C5A994A1E6790B700F6E4E9 /* HomeCategoryCell.swift in Sources */,
 				2CF186C41E5D2502008029B3 /* Dictionary+Extensions.swift in Sources */,
 				2C9D0A3F1E6E56E40095A1FB /* Especiality.swift in Sources */,
+				2B4E10521EA2DB0300B4171A /* VideoPlayerController.swift in Sources */,
 				2C9D0A5A1E70F87C0095A1FB /* EspecialitiesViewModel.swift in Sources */,
 				2CF186E11E5D3802008029B3 /* RequestParser.swift in Sources */,
 				2B4E10391EA2BF5D00B4171A /* TopicsViewModel.swift in Sources */,

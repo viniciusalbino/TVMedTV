@@ -80,6 +80,18 @@ class TopicsTableViewController: UITableViewController, TopicsDelegate {
     
     func playVideo(url: String) {
         stopLoading()
-        print("video url \(url)")
+//        print("video url \(url)")
+        self.performSegue(withIdentifier: "videoSegue", sender: url)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier! {
+        case "videoSegue":
+            if let controller = segue.destination as? VideoPlayerController, let url = sender as? String {
+                controller.loadVideo(url: url)
+            }
+        default:
+            break
+        }
     }
 }

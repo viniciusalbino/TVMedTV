@@ -61,10 +61,21 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="xto-L8-T4g"/>
+                    <connections>
+                        <segue destination="Txt-s5-ytu" kind="presentation" identifier="videoSegue" id="nNE-CW-cu0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kk1-Oi-ZMp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1051" y="98"/>
+        </scene>
+        <!--VideoPlayerController-->
+        <scene sceneID="lz6-wy-k5T">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Video" referencedIdentifier="VideoPlayerController" id="Txt-s5-ytu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eqa-zx-25C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2386" y="269"/>
         </scene>
     </scenes>
 </document>
