@@ -31,4 +31,18 @@ class NewReleasesRequest  {
             callback(result.object, result.error)
         }
     }
+    
+    func getTopic(midia: MidiaPromotion, callback: @escaping (MidiaDetail?, ErrorTypeApp?) -> ()) {
+        let url = "/congresso/\(midia.congresso)/midia/\(midia.midia)/topicos"
+        HeaderBuilder().buildHeader { defaultHeaders in
+            BaseRequest().GET(url: url, params: [:], headers: defaultHeaders, callback: { result, error, response in
+                guard error == nil else {
+                    callback(nil, error)
+                    return
+                }
+                let result = result <*> (MidiaDetail.self, error)
+                callback(result.object, result.error)
+            })
+        }
+    }
 }

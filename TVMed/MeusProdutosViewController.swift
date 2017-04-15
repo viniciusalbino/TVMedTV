@@ -57,15 +57,15 @@ class MeusProdutosViewController: UICollectionViewController, MeusProdutosDelega
     
     func didSelectedOrder(index: Int) {
         let congress = self.viewModel.getMidias().object(index: index)
-        self.performSegue(withIdentifier: "CongressoDetail", sender: congress)
+        self.performSegue(withIdentifier: "topicsSegue", sender: congress)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier! {
-        case "CongressoDetail":
-            if let controller = segue.destination as? CongressDetailController {
+        case "topicsSegue":
+            if let controller = segue.destination as? TopicsTableViewController {
                 if let midia =  sender as? MidiaPromotion {
-                    controller.loadContent(contentType: (type: .congress, id: "\(midia.congresso)"))
+                    controller.loadContent(midia: midia)
                 }
             }
         default:
