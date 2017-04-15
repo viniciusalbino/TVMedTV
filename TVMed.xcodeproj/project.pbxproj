@@ -23,6 +23,9 @@
 		2B4E10421EA2CB2B00B4171A /* TopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B4E10411EA2CB2B00B4171A /* TopicCell.xib */; };
 		2B4E10441EA2CB7000B4171A /* TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E10431EA2CB7000B4171A /* TopicCell.swift */; };
 		2B4E10461EA2CC6F00B4171A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E10451EA2CC6F00B4171A /* UIColor+Extensions.swift */; };
+		2B4E10481EA2D19800B4171A /* VideoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E10471EA2D19800B4171A /* VideoRequest.swift */; };
+		2B4E104B1EA2D29000B4171A /* UDID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E104A1EA2D29000B4171A /* UDID.swift */; };
+		2B4E104D1EA2D4D600B4171A /* VideoToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E104C1EA2D4D600B4171A /* VideoToken.swift */; };
 		2B5D18FC1E9C725E00774836 /* MeusDados.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5D18FB1E9C725E00774836 /* MeusDados.storyboard */; };
 		2B5D18FF1E9C729700774836 /* MeusDadosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D18FE1E9C729700774836 /* MeusDadosController.swift */; };
 		2B6723061E94936700F5EABF /* UIalertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6723051E94936700F5EABF /* UIalertController+Extensions.swift */; };
@@ -164,6 +167,9 @@
 		2B4E10411EA2CB2B00B4171A /* TopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopicCell.xib; sourceTree = "<group>"; };
 		2B4E10431EA2CB7000B4171A /* TopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicCell.swift; sourceTree = "<group>"; };
 		2B4E10451EA2CC6F00B4171A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		2B4E10471EA2D19800B4171A /* VideoRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoRequest.swift; sourceTree = "<group>"; };
+		2B4E104A1EA2D29000B4171A /* UDID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UDID.swift; sourceTree = "<group>"; };
+		2B4E104C1EA2D4D600B4171A /* VideoToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoToken.swift; sourceTree = "<group>"; };
 		2B5D18FB1E9C725E00774836 /* MeusDados.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MeusDados.storyboard; sourceTree = "<group>"; };
 		2B5D18FE1E9C729700774836 /* MeusDadosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeusDadosController.swift; sourceTree = "<group>"; };
 		2B6723051E94936700F5EABF /* UIalertController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIalertController+Extensions.swift"; sourceTree = "<group>"; };
@@ -340,6 +346,15 @@
 				2B4E10411EA2CB2B00B4171A /* TopicCell.xib */,
 			);
 			name = Topics;
+			sourceTree = "<group>";
+		};
+		2B4E10491EA2D28600B4171A /* VideoToken */ = {
+			isa = PBXGroup;
+			children = (
+				2B4E104A1EA2D29000B4171A /* UDID.swift */,
+				2B4E104C1EA2D4D600B4171A /* VideoToken.swift */,
+			);
+			name = VideoToken;
 			sourceTree = "<group>";
 		};
 		2B5D18FD1E9C728400774836 /* MeusDados */ = {
@@ -729,6 +744,7 @@
 				2C76515C1E8A0B60003D5D34 /* OrdersRequest.swift */,
 				2CDC58A21E8E0275003C28EC /* UserRequests.swift */,
 				2CDC58B71E933CBC003C28EC /* CheckoutRequest.swift */,
+				2B4E10471EA2D19800B4171A /* VideoRequest.swift */,
 			);
 			name = Requests;
 			sourceTree = "<group>";
@@ -736,6 +752,7 @@
 		2CF186CD1E5D27E8008029B3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2B4E10491EA2D28600B4171A /* VideoToken */,
 				2B4E102C1EA2BBD200B4171A /* Topics */,
 				2CDC58AE1E9334B3003C28EC /* Cart */,
 				2C1B4A5E1E835FE700DED396 /* User */,
@@ -1097,6 +1114,7 @@
 				2CBDC06C1E870D5700D49955 /* ValidatesEmail.swift in Sources */,
 				2B6AF6281E9923BD003F6AC3 /* Mask.swift in Sources */,
 				2B6AF62D1E9923BD003F6AC3 /* MaskCEPTextField.swift in Sources */,
+				2B4E104B1EA2D29000B4171A /* UDID.swift in Sources */,
 				2C1B4A6E1E83666E00DED396 /* RealmPersister.swift in Sources */,
 				2CDC58B01E9334C3003C28EC /* Cart.swift in Sources */,
 				2B6723091E95D47200F5EABF /* CartViewController.swift in Sources */,
@@ -1119,6 +1137,7 @@
 				2C9D0A4B1E6FA0C40095A1FB /* MidiaPromotion.swift in Sources */,
 				2C1B4A601E835FF600DED396 /* LoginDTO.swift in Sources */,
 				2C1B4A5B1E7F71EE00DED396 /* UIViewController+Extensions.swift in Sources */,
+				2B4E10481EA2D19800B4171A /* VideoRequest.swift in Sources */,
 				2B6AF6251E9923BD003F6AC3 /* MaskNameTextField.swift in Sources */,
 				2CDC58B81E933CBC003C28EC /* CheckoutRequest.swift in Sources */,
 				2B6AF6351E99277D003F6AC3 /* NewCreditCardViewController.swift in Sources */,
@@ -1131,6 +1150,7 @@
 				2B6723061E94936700F5EABF /* UIalertController+Extensions.swift in Sources */,
 				2C1B4A621E83606F00DED396 /* LoginRequest.swift in Sources */,
 				2B6AF6271E9923BD003F6AC3 /* CreditCardValidator.swift in Sources */,
+				2B4E104D1EA2D4D600B4171A /* VideoToken.swift in Sources */,
 				2B6AF6311E9923BD003F6AC3 /* TextFieldMask.swift in Sources */,
 				2C01A13B1E8C904000C8A342 /* OrderCell.swift in Sources */,
 				2CA913A31E5FA07A00E1411F /* Array+Extensions.swift in Sources */,

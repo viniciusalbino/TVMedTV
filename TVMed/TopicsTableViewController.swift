@@ -66,5 +66,20 @@ class TopicsTableViewController: UITableViewController, TopicsDelegate {
         }
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        startLoading()
+        let subTopic = viewModel.itemForSection(section: indexPath.section, row: indexPath.row)
+        viewModel.validatesUserToken(subTopicID: subTopic.subtopicoId)
+    }
     
+    func errorOnPlayingVideo() {
+        stopLoading()
+        self.showDefaultSystemAlertWithDefaultLayout(message: "Ocorreu um erro ao reproduzir o video. Por favor tente novamente.", completeBlock: nil)
+    }
+    
+    func playVideo(url: String) {
+        stopLoading()
+        print("video url \(url)")
+    }
 }
