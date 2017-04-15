@@ -11,7 +11,7 @@ import ObjectMapper
 
 struct CheckoutResponse: Mappable {
     
-    var email = ""
+    var codigoPedido = ""
     
     init?(map: Map) {
         mapping(map: map)
@@ -22,6 +22,6 @@ struct CheckoutResponse: Mappable {
     }
     
     mutating func mapping(map: Map) {
-        email <- map["email"]
+        codigoPedido <- map["codigoPedido"]
     }
 }

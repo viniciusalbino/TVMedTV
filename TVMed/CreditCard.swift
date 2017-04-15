@@ -65,10 +65,10 @@ class CreditCard: Object {
     
     func parameters() -> JSONDictionary {
         return ["cartaoBandeira" : brand,
-                "cartaoCodigoSeguranca" : cvv,
+                "cvv" : cvv,
                 "cartaoTitular" : name,
-                "mesVencimentoResposta" : month,
-                "anoVencimentoResposta" :year,
-                "cartaoNumero" : cardNumber.trimWhiteSpaces()]
+                "mesVencimento" : month,
+                "anoVencimento" :year,
+                "numero" : cardNumber.trimWhiteSpaces()]
     }
 }

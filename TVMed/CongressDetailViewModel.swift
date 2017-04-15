@@ -84,17 +84,17 @@ class CongressDetailViewModel {
         return true
     }
     
-    func addToCart(selectedPrice: Float) {
+    func addToCart(selectedPrice: Float, midia: MidiaPromotion) {
         cartPersister.query { cart in
             if let currentCart = cart {
-                self.updateCart(cart: currentCart, selectedPrice: selectedPrice)
+                self.updateCart(cart: currentCart, selectedPrice: selectedPrice, midia: midia)
             } else {
-                self.mountNewCart(selectedPrice: selectedPrice)
+                self.mountNewCart(selectedPrice: selectedPrice, midia: midia)
             }
         }
     }
     
-    func updateCart(cart: Cart, selectedPrice: Float) {
+    func updateCart(cart: Cart, selectedPrice: Float, midia: MidiaPromotion) {
         var updatedCart = cart
         do {
             let realm = try RealmEncrypted.realm()
@@ -111,7 +111,7 @@ class CongressDetailViewModel {
                 updatedCart.observacoes = cart.observacoes
                 updatedCart.tipoPagto = cart.tipoPagto
                 updatedCart.itemsCarrinho = cart.itemsCarrinho
-                updatedCart.itemsCarrinho.append(self.mountCartItem(selectedPrice: selectedPrice))
+                updatedCart.itemsCarrinho.append(self.mountCartItem(selectedPrice: selectedPrice, midia: midia))
                 realm.add(updatedCart)
                 self.delegate?.addedToCart(success: true)
             }
@@ -120,24 +120,22 @@ class CongressDetailViewModel {
         }
     }
     
-    func mountNewCart(selectedPrice: Float) {
+    func mountNewCart(selectedPrice: Float, midia: MidiaPromotion) {
         let cart = Cart()
-        cart.itemsCarrinho.append(mountCartItem(selectedPrice: selectedPrice))
+        cart.itemsCarrinho.append(mountCartItem(selectedPrice: selectedPrice, midia: midia))
         cartPersister.saveCart(cart: cart) { success in
             self.delegate?.addedToCart(success: success)
         }
     }
     
-    func mountCartItem(selectedPrice: Float) -> CartItem {
+    func mountCartItem(selectedPrice: Float, midia: MidiaPromotion) -> CartItem {
         let cartItem = CartItem()
-        if let midia = currentMidia {
-            cartItem.congresso = midia.congresso
-            cartItem.espec = midia.espec
-            cartItem.linhaTitulo = midia.nomeCongresso
-            cartItem.midia = midia.midia
-            cartItem.preco = midia.getMidiaIntegerPrice()
-            cartItem.urlImagem = midia.imagemHtml
-        }
+        cartItem.congresso = midia.congresso
+        cartItem.espec = midia.espec
+        cartItem.linhaTitulo = midia.congressoFormattedName()
+        cartItem.midia = midia.midia
+        cartItem.preco = midia.getMidiaIntegerPrice()
+        cartItem.urlImagem = midia.imagemHtml
         
         return cartItem
     }

@@ -16,7 +16,7 @@ enum CongressType {
 
 typealias LoadContentType = (type: CongressType, id: String)
 
-class CongressDetailController: UIViewController, CongressDetailDelegate, UITextViewDelegate {
+class CongressDetailController: UIViewController, CongressDetailDelegate, UITextViewDelegate, SelectedMidiaDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     private var contentType: LoadContentType?
@@ -78,47 +78,44 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UIText
         for index in 0..<viewModel.numberOfItensInSection() {
             if let congressCell = UINib(nibName: "CongressCell", bundle: nil).instantiate(withOwner: nil, options: nil).first as? CongressCell {
                 self.scrollView.addSubview(congressCell)
-                congressCell.frame = CGRect(x: 20, y: (index * 500 + 20), width: Int(self.scrollView.frame.size.width - 40), height: 450)
-                congressCell.fill(midia: viewModel.midiaForRow(row: index), delegate: self)
+                congressCell.frame = CGRect(x: 20, y: (index * 500), width: Int(self.scrollView.frame.size.width - 40), height: 450)
+                congressCell.fill(midia: viewModel.midiaForRow(row: index), delegate: self, midiaDelegate: self, row: index)
                 congressCell.layer.cornerRadius = 5
             }
         }
         self.scrollView.contentSize = CGSize(width: Int(self.view.frame.size.width), height: height)
     }
     
-    @IBAction func makePurchase(sender: UIButton) {
-        if viewModel.getCurrentMidia().clienteComprouParaAssistirOnLine {
-            
-        } else {
-            let tokenPersister = TokenPersister()
-            tokenPersister.query { token in
-                if let _ = token {
-                    self.validateUserData(tag: sender.tag)
-                } else {
-                    self.presentLogin()
-                }
+    func didSelectedMidia(row: Int, midiaIndex: Int) {
+        let tokenPersister = TokenPersister()
+        tokenPersister.query { token in
+            if let _ = token {
+                let midia = self.viewModel.midiaForRow(row: row)
+                let price = midia.midiaPrice(index: midiaIndex)
+                self.validateUserData(midia: midia, price: price)
+                
+            } else {
+                self.presentLogin()
             }
         }
     }
     
-    func validateUserData(tag: Int) {
+    func validateUserData(midia: MidiaPromotion, price: Float) {
         self.userRequest.requestUserData { user, error in
             guard error == nil, let userData = user else {
                 self.presentAlertWithTitle(title: "Erro", message: "Ocorreu um erro ao efetuar sua compra.")
                 return
             }
             if userData.isEligibleToBuy() {
-                //buy
                 guard self.viewModel.selectedMidia() else {
                     self.showDefaultSystemAlertWithDefaultLayout(message: "Escolha a Midia a ser comprada", completeBlock: nil)
                     return
                 }
-                let alertDTO = SystemAlertDTO(title: "Aviso", message: "Deseja comprar : \(self.viewModel.getCurrentMidia().nomeCongresso)", buttonActions: [(title: "Comprar", style: .default), (title: "Cancelar", style: .cancel)])
+                let alertDTO = SystemAlertDTO(title: "Aviso", message: "Deseja comprar : \(midia.congressoFormattedName())", buttonActions: [(title: "Comprar", style: .default), (title: "Cancelar", style: .cancel)])
                 self.showDefaultSystemAlert(systemAlertDTO: alertDTO, completeBlock: { action in
                     if action.title == "Comprar" {
-                        let selectedPrice = self.viewModel.getCurrentMidia().midiaPrice(index: tag)
                         self.startLoading()
-                        self.viewModel.addToCart(selectedPrice: selectedPrice)
+                        self.viewModel.addToCart(selectedPrice: price, midia: midia)
                     }
                 })
             } else {

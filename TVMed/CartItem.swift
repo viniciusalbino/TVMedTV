@@ -19,12 +19,14 @@ class CartItem: Object {
     dynamic var espec = ""
     dynamic var preco = 0
     
-    func parameter() -> JSONDictionary {
+    func parameter(price: Float) -> JSONDictionary {
         return ["congresso" : congresso,
                 "midia" :  midia,
                 "linhaTitulo" : linhaTitulo,
                 "urlImage" : urlImagem,
                 "espec" : espec,
-                "preco" :  preco]
+                "preco" :  Int(price),
+                "desconto" : 0,
+                "precoSemDesconto" : preco]
     }
 }

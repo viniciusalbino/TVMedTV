@@ -137,4 +137,8 @@ struct MidiaPromotion: Mappable {
         }
         return Int(prices.first ?? 0)
     }
+    
+    func congressoFormattedName() -> String {
+        return "Midia \(midia) - \(prefixo) \(nomeCongresso)"
+    }
 }

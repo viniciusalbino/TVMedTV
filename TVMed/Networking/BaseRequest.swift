@@ -76,4 +76,17 @@ class BaseRequest: NSObject {
             }
         }
     }
+    
+    func PUT(url: String, params: JSONDictionary?, headers: [String: String], callback: @escaping DefaultCallBackClosure) {
+        let finalURL = "\(domain)\(url)"
+        Alamofire.request(finalURL, method: .put, parameters: params, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
+            guard let _ = response.result.value else {
+                callback(nil, .apiError, response.response)
+                return
+            }
+            if let result = response.result.value {
+                callback(result as AnyObject?, nil, response.response)
+            }
+        }
+    }
 }

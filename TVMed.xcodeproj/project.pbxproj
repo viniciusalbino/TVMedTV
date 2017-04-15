@@ -11,6 +11,7 @@
 		16D107A7F19F9FAAD0C31635 /* Pods_TVMed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 684FE61E82A70E197AA0F9EB /* Pods_TVMed.framework */; };
 		2B07BECA1E97207B00DB3DF7 /* ResumeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07BEC91E97207B00DB3DF7 /* ResumeCell.swift */; };
 		2B4E10291E9F1B3F00B4171A /* ModalTextView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4E10281E9F1B3F00B4171A /* ModalTextView.storyboard */; };
+		2B4E102B1EA118E300B4171A /* RemoteCreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E102A1EA118E300B4171A /* RemoteCreditCard.swift */; };
 		2B5D18FC1E9C725E00774836 /* MeusDados.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5D18FB1E9C725E00774836 /* MeusDados.storyboard */; };
 		2B5D18FF1E9C729700774836 /* MeusDadosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D18FE1E9C729700774836 /* MeusDadosController.swift */; };
 		2B6723061E94936700F5EABF /* UIalertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6723051E94936700F5EABF /* UIalertController+Extensions.swift */; };
@@ -140,6 +141,7 @@
 		0968D6E8E29EED2CB47A1D76 /* Pods-TVMedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVMedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVMedTests/Pods-TVMedTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2B07BEC91E97207B00DB3DF7 /* ResumeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumeCell.swift; sourceTree = "<group>"; };
 		2B4E10281E9F1B3F00B4171A /* ModalTextView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ModalTextView.storyboard; sourceTree = "<group>"; };
+		2B4E102A1EA118E300B4171A /* RemoteCreditCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteCreditCard.swift; sourceTree = "<group>"; };
 		2B5D18FB1E9C725E00774836 /* MeusDados.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MeusDados.storyboard; sourceTree = "<group>"; };
 		2B5D18FE1E9C729700774836 /* MeusDadosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeusDadosController.swift; sourceTree = "<group>"; };
 		2B6723051E94936700F5EABF /* UIalertController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIalertController+Extensions.swift"; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 				2C1B4A631E8360A000DED396 /* UserToken.swift */,
 				2C1B4A6F1E83674900DED396 /* TokenPersister.swift */,
 				2CDC58A41E8E029F003C28EC /* User.swift */,
+				2B4E102A1EA118E300B4171A /* RemoteCreditCard.swift */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -1075,6 +1078,7 @@
 				2C76515D1E8A0B60003D5D34 /* OrdersRequest.swift in Sources */,
 				2B6AF63E1E992FDA003F6AC3 /* CreditCardsViewModel.swift in Sources */,
 				2C0027D31E401F020020ABA0 /* ThirdPartyToolsLoader.swift in Sources */,
+				2B4E102B1EA118E300B4171A /* RemoteCreditCard.swift in Sources */,
 				2B07BECA1E97207B00DB3DF7 /* ResumeCell.swift in Sources */,
 				2C5BE2591E5FA3350038AE0E /* UITableViewCell+Extensions.swift in Sources */,
 				2C9D0A611E78DF660095A1FB /* HeaderCell.swift in Sources */,

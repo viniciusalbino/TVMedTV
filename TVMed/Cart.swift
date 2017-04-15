@@ -29,21 +29,19 @@ class Cart: Object {
         var parameters: JSONDictionary = [
             "carrinhoPrecoTotal" : totalProducts(),
             "valorFrete" : Int(valorFrete),
-            "valorTotalPedito" : Int(totalValue),
+            "valorTotalPedido" : Int(totalValue),
             "descontoTotal" : descontoTotal,
-            "partnerId" : partnerId.length() > 0 ? partnerId : "0",
-            "percentualDesconto" : percentualDesconto,
-            "especDesconto" : especDesconto.length() > 0 ? especDesconto : "",
-            "formasPagamentoResposta" : formasPagamentoResposta.length() > 0 ? formasPagamentoResposta : "",
+            "percentualDesconto" : 0,
+            "formasPagamentoResposta" : 1,
             "formasPagamentoDisplay" : formasPagamentoDisplay.length() > 0 ?  formasPagamentoDisplay : "",
-            "observacoes": observacoes.length() > 0 ? observacoes : "",
-            "formaPagamento" : formaPagamento.length() > 0 ? formaPagamento : "",
-            "tipoPagto" : tipoPagto.length() > 0 ? tipoPagto : ""
+            "observacoes": "",
+            "formaPagamento" : 1,
+            "tipoPagto" : 1,
         ]
         _ = parameters.addDictionary(dictionaryToAppend: card.parameters())
         var shippingParameters = [JSONDictionary]()
         for item in itemsCarrinho {
-            shippingParameters.append(item.parameter())
+            shippingParameters.append(item.parameter(price: self.orderTotalPrice()))
         }
         _ = parameters.addDictionary(dictionaryToAppend: ["itensCarrinho": shippingParameters])
         return parameters

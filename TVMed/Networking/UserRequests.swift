@@ -20,4 +20,45 @@ class UserRequests  {
             callback(result.object, result.error)
         }
     }
+    
+    func getCreditCards(callback: @escaping ([RemoteCreditCard]?, ErrorTypeApp?) -> ()) {
+        HeaderBuilder().buildHeader { defaultHeaders in
+            BaseRequest().GET(url: "medico/cartoes", params: [:], headers: defaultHeaders, callback: { result, error, response in
+                guard error == nil else {
+                    callback(nil, error)
+                    return
+                }
+                let result = result as? [JSONDictionary] <*> (RemoteCreditCard.self, error)
+                callback(result.object, result.error)
+            })
+        }
+    }
+    
+    func createNewCreditCard(cardDTO: CreditCard,callback: @escaping ([RemoteCreditCard]?, ErrorTypeApp?) -> ()) {
+        HeaderBuilder().buildHeader { defaultHeaders in
+            BaseRequest().POST(url: "medico/cartoes", params: cardDTO.parameters(), headers: defaultHeaders, callback: { result, error, response in
+                guard error == nil else {
+                    callback(nil, error)
+                    return
+                }
+                let result = result as? [JSONDictionary] <*> (RemoteCreditCard.self, error)
+                callback(result.object, result.error)
+            })
+        }
+    }
+    
+    func changeCreditCard(cardId: RemoteCreditCard, callback: @escaping (JSONDictionary?, ErrorTypeApp?) -> ()) {
+        let url = "/api/medico/cartoes/\(cardId.identifier)/principal"
+        HeaderBuilder().buildHeader { defaultHeaders in
+            BaseRequest().PUT(url: url, params: [:], headers: defaultHeaders, callback: { result, error, response in
+                guard error == nil else {
+                    callback(nil, error)
+                    return
+                }
+                
+                callback(result?.object as? JSONDictionary, result?.error as? ErrorTypeApp)
+//                callback(result.object, result.error)
+            })
+        }
+    }
 }

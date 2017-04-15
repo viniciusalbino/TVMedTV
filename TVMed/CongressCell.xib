@@ -17,6 +17,7 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uX6-9Q-ZxZ">
                     <rect key="frame" x="1350" y="20" width="550" height="100"/>
+                    <color key="backgroundColor" red="0.61568627450980395" green="0.4392156862745098" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="550" id="nQ9-t1-QcZ"/>
                         <constraint firstAttribute="height" constant="100" id="qjp-Gr-aaD"/>
@@ -24,20 +25,31 @@
                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                     <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                     <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="buyMidiaWithSender:" destination="iN0-l3-epB" eventType="primaryActionTriggered" id="Wuu-nX-g8i"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXl-BD-p3o">
                     <rect key="frame" x="1350" y="140" width="550" height="100"/>
+                    <color key="backgroundColor" red="0.19215686274509802" green="0.59215686274509804" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                     <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                     <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="buyMidiaWithSender:" destination="iN0-l3-epB" eventType="primaryActionTriggered" id="IMv-Ga-iey"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cju-V4-iWD">
                     <rect key="frame" x="1350" y="260" width="550" height="100"/>
+                    <color key="backgroundColor" red="0.12941176470588234" green="0.36862745098039218" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                     <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                     <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="buyMidiaWithSender:" destination="iN0-l3-epB" eventType="primaryActionTriggered" id="ggf-uC-Fiy"/>
+                    </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFX-im-vNy">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFX-im-vNy">
                     <rect key="frame" x="50" y="20" width="1250" height="100"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="100" id="FDK-jM-efL"/>
