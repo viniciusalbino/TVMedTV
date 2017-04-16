@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmM-0e-iN1">
-                                <rect key="frame" x="20" y="-100" width="1880" height="1160"/>
+                                <rect key="frame" x="20" y="0.0" width="1880" height="1060"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.23529411759999999" green="0.41568627450000001" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -30,7 +30,7 @@
                             <constraint firstItem="kmM-0e-iN1" firstAttribute="leading" secondItem="Ukq-9c-MGX" secondAttribute="leading" constant="20" id="Jtr-Ck-3ok"/>
                             <constraint firstItem="e1p-oE-hQk" firstAttribute="top" secondItem="kmM-0e-iN1" secondAttribute="bottom" constant="20" id="dn0-Aq-RS6"/>
                             <constraint firstAttribute="trailing" secondItem="kmM-0e-iN1" secondAttribute="trailing" constant="20" id="gkE-Ed-1PG"/>
-                            <constraint firstItem="kmM-0e-iN1" firstAttribute="top" secondItem="nDS-11-F55" secondAttribute="bottom" constant="-100" id="vck-vz-uGQ"/>
+                            <constraint firstItem="kmM-0e-iN1" firstAttribute="top" secondItem="nDS-11-F55" secondAttribute="bottom" id="vck-vz-uGQ"/>
                         </constraints>
                     </view>
                     <connections>

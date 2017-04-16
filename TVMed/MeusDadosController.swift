@@ -9,24 +9,36 @@
 import Foundation
 import UIKit
 
-class MeusDadosController: UIViewController, UITableViewDataSource, UITableViewDelegate, MeusDadosDelegate {
+class MeusDadosController: UIViewController, MeusDadosDelegate {
     
-    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var portugueseButton: UIButton!
     @IBOutlet weak var spanishButton: UIButton!
     @IBOutlet weak var englishButton: UIButton!
-    @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var emailLabel:UILabel!
+    @IBOutlet weak var nameLabel:UILabel!
+    @IBOutlet weak var especLabel:UILabel!
+    @IBOutlet weak var cpfLabel:UILabel!
+    @IBOutlet weak var telLabel:UILabel!
+    @IBOutlet weak var cepLabel:UILabel!
+    @IBOutlet weak var numLabel:UILabel!
+    @IBOutlet weak var compLabel:UILabel!
+    @IBOutlet weak var cardLine1Label:UILabel!
+    @IBOutlet weak var cardLine2Label:UILabel!
+    @IBOutlet weak var bacgkgroundView: UIView!
     lazy var viewModel: MeusDadosViewModel = MeusDadosViewModel(delegate: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        
+        addLogo()
         self.portugueseButton.tag = 0
         self.spanishButton.tag = 1
         self.englishButton.tag = 2
+        
+        self.bacgkgroundView.layer.cornerRadius = 10
+        self.portugueseButton.layer.cornerRadius = 5
+        self.spanishButton.layer.cornerRadius = 5
+        self.englishButton.layer.cornerRadius = 5
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,46 +49,34 @@ class MeusDadosController: UIViewController, UITableViewDataSource, UITableViewD
     
     func contentDidFinishedLoading(success: Bool) {
         stopLoading()
-        self.tableView.reloadData()
-        self.userLabel.text = viewModel.getUserLabelData()
         guard success else {
-            self.logoutButton.setTitle("Logout", for: .normal)
+            self.logoutButton.setTitle("Login", for: .normal)
+            emptyTexts()
             return
         }
-        self.logoutButton.setTitle("Login", for: .normal)
+        self.logoutButton.setTitle("Logout", for: .normal)
+        
+        self.emailLabel.text = viewModel.textForRowAt(index: 0).subtitle
+        self.nameLabel.text = viewModel.textForRowAt(index: 1).subtitle
+        self.especLabel.text = viewModel.textForRowAt(index: 2).subtitle
+        self.cpfLabel.text = viewModel.textForRowAt(index: 3).subtitle
+        self.telLabel.text = viewModel.textForRowAt(index: 4).subtitle
+        self.cepLabel.text = viewModel.textForRowAt(index: 5).subtitle
+        self.numLabel.text = viewModel.textForRowAt(index: 6).subtitle
+        self.compLabel.text = viewModel.textForRowAt(index: 7).subtitle
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return 5
-        default:
-            return 6
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0:
-            return "Dados usuário"
-        default:
-            return "Dados endereço"
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "UserDataCell")!
-    }
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if let cell =  cell as? UserDataCell {
-            let texts = viewModel.textForRowAt(section: indexPath.section, index: indexPath.row)
-            cell.fill(titleText: texts.title, subtitle: texts.subtitle)
-        }
+    func emptyTexts() {
+        self.emailLabel.text = ""
+        self.nameLabel.text = ""
+        self.especLabel.text = ""
+        self.cpfLabel.text = ""
+        self.telLabel.text = ""
+        self.cepLabel.text = ""
+        self.numLabel.text = ""
+        self.compLabel.text = ""
+        self.cardLine1Label.text = ""
+        self.cardLine2Label.text = ""
     }
     
     @IBAction func login() {

@@ -26,4 +26,12 @@ extension UIViewController {
     func stopLoading() {
         SVProgressHUD.dismiss()
     }
+    
+    func addLogo() {
+        
+        let image = UIImage(named: "logo")
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFit
+        self.navigationItem.titleView = imageView
+    }
 }

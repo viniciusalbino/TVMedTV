@@ -22,9 +22,9 @@ class MeusProdutosViewController: UICollectionViewController, MeusProdutosDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addLogo()
         // Make sure their is sufficient padding above and below the content.
         guard let collectionView = collectionView, let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
-        
         collectionView.contentInset.top = MeusProdutosViewController.minimumEdgePadding - layout.sectionInset.top
         collectionView.contentInset.bottom = MeusProdutosViewController.minimumEdgePadding - layout.sectionInset.bottom
     }

@@ -28,6 +28,7 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UIText
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addLogo()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,7 +79,7 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UIText
         for index in 0..<viewModel.numberOfItensInSection() {
             if let congressCell = UINib(nibName: "CongressCell", bundle: nil).instantiate(withOwner: nil, options: nil).first as? CongressCell {
                 self.scrollView.addSubview(congressCell)
-                congressCell.frame = CGRect(x: 20, y: (index * 500), width: Int(self.scrollView.frame.size.width - 40), height: 450)
+                congressCell.frame = CGRect(x: 20, y: (index * 500), width: Int(self.scrollView.frame.size.width - 40), height: 550)
                 congressCell.fill(midia: viewModel.midiaForRow(row: index), delegate: self, midiaDelegate: self, row: index)
                 congressCell.layer.cornerRadius = 5
             }

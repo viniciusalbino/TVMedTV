@@ -16,7 +16,6 @@ class HomeViewController: UICollectionViewController, HomeDelegate, UICollection
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Make sure their is sufficient padding above and below the content.
         guard let collectionView = collectionView, let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
         

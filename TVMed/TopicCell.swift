@@ -31,7 +31,7 @@ class TopicCell: UITableViewCell {
                 UIView.animate(withDuration: 0.3, animations: {
                     self.titleLabel.textColor = .white
                     self.playButton.isHidden = false
-                    self.contentView.backgroundColor = UIColor(hexString: "##105133")
+//                    self.contentView.backgroundColor = UIColor(hexString: "##105133")
                 })
             }, completion: nil)
         } else if context.previouslyFocusedView == self {
@@ -39,7 +39,7 @@ class TopicCell: UITableViewCell {
                 UIView.animate(withDuration: 0.3, animations: {
                     self.titleLabel.textColor = UIColor(hexString: "#9D7040")
                     self.playButton.isHidden = true
-                    self.contentView.backgroundColor = .white
+//                    self.contentView.backgroundColor = .white
                 })
             }, completion: nil)
         }

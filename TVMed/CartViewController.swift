@@ -15,7 +15,8 @@ class CartViewController: UITableViewController, CartDelegate, SelectedCardDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.view.backgroundColor = UIColor(h)
+        self.addLogo()
+        self.tableView.mask = nil;
     }
     
     override func viewWillAppear(_ animated: Bool) {

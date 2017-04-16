@@ -59,43 +59,29 @@ class MeusDadosViewModel {
         }
     }
     
-    func textForRowAt(section: Int, index: Int) -> (title: String, subtitle: String) {
+    func textForRowAt(index: Int) -> (title: String, subtitle: String) {
         guard let user = currentUser else {
             return (title: "", subtitle: "")
         }
-        switch section {
+        switch index {
         case 0:
-            switch index {
-            case 0:
-                return (title: "Nome", subtitle: "\(user.nome)")
-            case 1:
-                return (title: "Email", subtitle: "\(user.email)")
-            case 2:
-                return (title: "Especialidade", subtitle: "\(user.especialidade)")
-            case 3:
-                return (title: "Telefone", subtitle: "\(user.foneDdd)-\(user.foneNumero)")
-            case 4:
-                return (title: "CPF / CNPJ", subtitle: "\(user.getDocumentNumber())")
-            default:
-                return (title: "", subtitle: "")
-            }
+            return (title: "Email", subtitle: "\(user.email)")
+        case 1:
+            return (title: "Nome", subtitle: "\(user.nome)")
+        case 2:
+            return (title: "Especialidade", subtitle: "\(user.especialidade)")
+        case 3:
+            return (title: "CPF / CNPJ", subtitle: "\(user.getDocumentNumber())")
+        case 4:
+            return (title: "Telefone", subtitle: "\(user.foneDdd)-\(user.foneNumero)")
+        case 5:
+            return (title: "Cep", subtitle: "\(user.cep)")
+        case 6:
+            return (title: "Endereço", subtitle: "\(user.enderecoNumero)")
+        case 7:
+            return (title: "Complemento", subtitle: "\(user.enderecoComplemento)")
         default:
-            switch index {
-            case 0:
-                return (title: "Endereço", subtitle: "\(user.endereco), \(user.enderecoNumero)")
-            case 1:
-                return (title: "Complemento", subtitle: "\(user.enderecoComplemento)")
-            case 2:
-                return (title: "Cep", subtitle: "\(user.cep)")
-            case 3:
-                return (title: "Bairro - Cidade", subtitle: "\(user.bairro) - \(user.cidade)")
-            case 4:
-                return (title: "Estado", subtitle: "\(user.estado)")
-            case 5:
-                return (title: "País", subtitle: "\(user.pais)")
-            default:
-                return (title: "", subtitle: "")
-            }
+            return (title: "", subtitle: "")
         }
     }
 }
