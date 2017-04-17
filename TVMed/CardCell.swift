@@ -15,10 +15,12 @@ class CardCell: UITableViewCell {
     @IBOutlet weak var cardName:UILabel!
     @IBOutlet weak var cardValidation:UILabel!
     
-    func fill(card: CreditCard) {
-        self.cardName.text = card.name
-        self.cardNumber.text = card.maskedCard()
-        self.cardValidation.text = card.validationMasked()
-        self.brandImage.image = UIImage(named: card.brandImage)
+    func fill(card: RemoteCreditCard) {
+//        self.cardName.text = card.name
+        self.cardNumber.text = card.numero
+//        self.cardValidation.text = card.validationMasked()
+        let brandEnum = BrandEnum(rawValue: card.bandeira)
+        
+        self.brandImage.image = UIImage(named: brandEnum.stringValue)
     }
 }

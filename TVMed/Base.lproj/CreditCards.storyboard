@@ -19,11 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.23529411759999999" green="0.41568627450000001" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CardCell" rowHeight="200" id="9qK-Fz-5rI" customClass="CardCell" customModule="TVMed" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="80" width="1920" height="200"/>
+                            <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CardCell" rowHeight="120" id="9qK-Fz-5rI" customClass="CardCell" customModule="TVMed" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="80" width="1920" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9qK-Fz-5rI" id="Pk2-TA-fLY">
-                                    <rect key="frame" x="0.0" y="0.0" width="1904" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1904" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bcr-1a-PTv">
@@ -33,57 +33,29 @@
                                                 <constraint firstAttribute="width" constant="80" id="K2j-zk-e5W"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vip-gj-3Sc">
-                                            <rect key="frame" x="120" y="20" width="1780" height="40"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="M0A-uK-oy3"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ub2-oB-C2y">
-                                            <rect key="frame" x="120" y="80" width="1780" height="40"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="Qgi-IR-c0a"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaE-Nm-ug3">
-                                            <rect key="frame" x="120" y="140" width="1780" height="40"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="fm1-Cn-huq"/>
-                                            </constraints>
+                                            <rect key="frame" x="120" y="20" width="1780" height="80"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Vip-gj-3Sc" firstAttribute="leading" secondItem="bcr-1a-PTv" secondAttribute="trailing" constant="20" id="1DU-g2-HYB"/>
-                                        <constraint firstItem="GaE-Nm-ug3" firstAttribute="top" secondItem="ub2-oB-C2y" secondAttribute="bottom" constant="20" id="GWS-k9-5rR"/>
+                                        <constraint firstAttribute="bottom" secondItem="ub2-oB-C2y" secondAttribute="bottom" constant="20" id="K5B-FQ-qJM"/>
                                         <constraint firstItem="bcr-1a-PTv" firstAttribute="top" secondItem="Pk2-TA-fLY" secondAttribute="top" constant="20" id="MuD-nc-pcn"/>
                                         <constraint firstAttribute="trailing" secondItem="ub2-oB-C2y" secondAttribute="trailing" constant="20" id="NOJ-UX-nIg"/>
-                                        <constraint firstItem="Vip-gj-3Sc" firstAttribute="top" secondItem="Pk2-TA-fLY" secondAttribute="top" constant="20" id="NvO-55-K53"/>
-                                        <constraint firstItem="GaE-Nm-ug3" firstAttribute="leading" secondItem="ub2-oB-C2y" secondAttribute="leading" id="OEd-nx-ajZ"/>
-                                        <constraint firstAttribute="trailing" secondItem="GaE-Nm-ug3" secondAttribute="trailing" constant="20" id="Qs4-o4-EDx"/>
                                         <constraint firstItem="ub2-oB-C2y" firstAttribute="leading" secondItem="bcr-1a-PTv" secondAttribute="trailing" constant="20" id="eBh-Bn-6Ii"/>
-                                        <constraint firstItem="ub2-oB-C2y" firstAttribute="top" secondItem="Vip-gj-3Sc" secondAttribute="bottom" constant="20" id="nZy-0A-4Nr"/>
-                                        <constraint firstAttribute="trailing" secondItem="Vip-gj-3Sc" secondAttribute="trailing" constant="20" id="o1S-hD-QQF"/>
+                                        <constraint firstItem="ub2-oB-C2y" firstAttribute="top" secondItem="Pk2-TA-fLY" secondAttribute="top" constant="20" id="kln-Xr-Drz"/>
                                         <constraint firstItem="bcr-1a-PTv" firstAttribute="leading" secondItem="Pk2-TA-fLY" secondAttribute="leading" constant="20" id="tQl-gD-EG7"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="brandImage" destination="bcr-1a-PTv" id="AaA-8w-Iab"/>
-                                    <outlet property="cardName" destination="Vip-gj-3Sc" id="Psy-se-xc2"/>
                                     <outlet property="cardNumber" destination="ub2-oB-C2y" id="aor-m9-waR"/>
-                                    <outlet property="cardValidation" destination="GaE-Nm-ug3" id="qKm-FP-tpE"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewCardCell" id="sUG-G3-ePP">
-                                <rect key="frame" x="0.0" y="294" width="1920" height="66"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewCardCell" id="sUG-G3-ePP">
+                                <rect key="frame" x="0.0" y="214" width="1920" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sUG-G3-ePP" id="C7Q-K9-K9W">
                                     <rect key="frame" x="0.0" y="0.0" width="1904" height="66"/>
@@ -103,8 +75,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CancelCell" id="6zm-xn-9Re">
-                                <rect key="frame" x="0.0" y="374" width="1920" height="66"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CancelCell" id="6zm-xn-9Re">
+                                <rect key="frame" x="0.0" y="294" width="1920" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6zm-xn-9Re" id="j4X-zH-U3U">
                                     <rect key="frame" x="0.0" y="0.0" width="1904" height="66"/>

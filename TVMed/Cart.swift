@@ -25,15 +25,15 @@ class Cart: Object {
     dynamic var formaPagamento = ""
     dynamic var tipoPagto = ""
     
-    func parameters(card: CreditCard, valorFrete: Float, totalValue: Float) -> JSONDictionary {
+    func parameters(card: RemoteCreditCard, valorFrete: Float, totalValue: Float, formaPagamento: String) -> JSONDictionary {
         var parameters: JSONDictionary = [
             "carrinhoPrecoTotal" : totalProducts(),
             "valorFrete" : Int(valorFrete),
-            "valorTotalPedido" : Int(totalValue),
-            "descontoTotal" : descontoTotal,
+            "valorTotalPedito" : Int(totalValue),
+            "descontoTotal" : 0,
             "percentualDesconto" : 0,
             "formasPagamentoResposta" : 1,
-            "formasPagamentoDisplay" : formasPagamentoDisplay.length() > 0 ?  formasPagamentoDisplay : "",
+            "formasPagamentoDisplay" : formaPagamento,
             "observacoes": "",
             "formaPagamento" : 1,
             "tipoPagto" : 1,

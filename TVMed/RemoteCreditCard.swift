@@ -32,4 +32,9 @@ struct RemoteCreditCard: Mappable {
         principal  <- map["principal"]
         vencido  <- map["vencido"]
     }
+    
+    func parameters() -> JSONDictionary {
+        return ["cartaoBandeira" : bandeira,
+                "usarUltimoCartaoValido" : true]
+    }
 }

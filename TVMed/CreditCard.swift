@@ -10,37 +10,37 @@ import Foundation
 import RealmSwift
 import ObjectMapper
 
-enum BrandEnum: String {
+enum BrandEnum: Int {
     case Visa
     case Mastercard
     case AmericanExpress
     case Dinners
     
-    init(rawValue: String) {
+    init(rawValue: Int) {
         switch rawValue {
-        case "Visa":
+        case 1:
             self = .Visa
-        case "MasterCard":
+        case 2:
             self = .Mastercard
-        case "American Express":
+        case 3:
             self = .AmericanExpress
-        case "Dinners Club":
+        case 4:
             self = .Dinners
         default :
             self = .Mastercard
         }
     }
     
-    var intValue: Int {
+    var stringValue: String {
         switch self {
         case .Visa:
-            return 1
+            return "Visa"
         case .Mastercard:
-            return 2
+            return "MasterCard"
         case .AmericanExpress:
-            return 3
+            return "American Express"
         case .Dinners:
-            return 4
+            return "Dinners Club"
         }
     }
 }
@@ -64,9 +64,9 @@ class CreditCard: Object {
     }
     
     func parameters() -> JSONDictionary {
-        return ["cartaoBandeira" : brand,
+        return ["bandeira" : brand,
                 "cvv" : cvv,
-                "cartaoTitular" : name,
+                "nomeTitular" : name,
                 "mesVencimento" : month,
                 "anoVencimento" :year,
                 "numero" : cardNumber.trimWhiteSpaces()]

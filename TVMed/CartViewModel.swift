@@ -21,7 +21,7 @@ class CartViewModel {
     private var cartPersister = CartPersister()
     private var currentCart: Cart?
     private var currentShippingValue:Float = 0.0
-    private var cartItems = [CartItem]()
+    var cartItems = [CartItem]()
     private var userRequest = UserRequests()
     private var checkoutRequest = CheckoutRequest()
     private var currentUser:User?
@@ -115,13 +115,13 @@ class CartViewModel {
         self.delegate?.presentCardsSegue()
     }
     
-    func makePurchase(creditCard: CreditCard) {
+    func makePurchase(creditCard: RemoteCreditCard) {
         guard let cart = currentCart else {
             self.delegate?.finishedPurchasingProducts(success: false)
             return
         }
         let total = cart.orderTotalPrice() + self.currentShippingValue
-        let params = cart.parameters(card: creditCard, valorFrete:self.currentShippingValue, totalValue: total)
+        let params = cart.parameters(card: creditCard, valorFrete:self.currentShippingValue, totalValue: total, formaPagamento: "")
         print(params)
         
         checkoutRequest.makePayment(cartParameters: params) { checkoutResponse, error in

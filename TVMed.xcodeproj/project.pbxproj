@@ -31,7 +31,7 @@
 		2B4E10541EA2E09A00B4171A /* MeusDados.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4E10531EA2E09A00B4171A /* MeusDados.storyboard */; };
 		2B5D18FF1E9C729700774836 /* MeusDadosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5D18FE1E9C729700774836 /* MeusDadosController.swift */; };
 		2B6723061E94936700F5EABF /* UIalertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6723051E94936700F5EABF /* UIalertController+Extensions.swift */; };
-		2B6723091E95D47200F5EABF /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6723081E95D47200F5EABF /* CartViewController.swift */; };
+		2B6723091E95D47200F5EABF /* CartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6723081E95D47200F5EABF /* CartTableViewController.swift */; };
 		2B67230B1E95D48800F5EABF /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B67230A1E95D48800F5EABF /* CartViewModel.swift */; };
 		2B67230E1E95D5CB00F5EABF /* Cart.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B67230C1E95D5CB00F5EABF /* Cart.storyboard */; };
 		2B6723101E95E10D00F5EABF /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B67230F1E95E10D00F5EABF /* CartCell.swift */; };
@@ -57,6 +57,7 @@
 		2B6AF6401E9AA100003F6AC3 /* SinopseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF63F1E9AA100003F6AC3 /* SinopseViewController.swift */; };
 		2B6CDE281E9C764700439ABE /* MeusDadosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6CDE271E9C764700439ABE /* MeusDadosViewModel.swift */; };
 		2B6CDE2A1E9C7BF000439ABE /* UserDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6CDE291E9C7BF000439ABE /* UserDataCell.swift */; };
+		2BD401431EA4168500416F90 /* CartContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD401421EA4168500416F90 /* CartContainer.swift */; };
 		2BE70AB21E9DB5CC00AF3718 /* LanguageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE70AB11E9DB5CC00AF3718 /* LanguageHeader.swift */; };
 		2BE70AB41E9F0BA200AF3718 /* CongressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE70AB31E9F0BA200AF3718 /* CongressCell.xib */; };
 		2BE70AB61E9F0C8400AF3718 /* CongressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE70AB51E9F0C8400AF3718 /* CongressCell.swift */; };
@@ -177,7 +178,7 @@
 		2B4E10531EA2E09A00B4171A /* MeusDados.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MeusDados.storyboard; sourceTree = "<group>"; };
 		2B5D18FE1E9C729700774836 /* MeusDadosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeusDadosController.swift; sourceTree = "<group>"; };
 		2B6723051E94936700F5EABF /* UIalertController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIalertController+Extensions.swift"; sourceTree = "<group>"; };
-		2B6723081E95D47200F5EABF /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		2B6723081E95D47200F5EABF /* CartTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewController.swift; sourceTree = "<group>"; };
 		2B67230A1E95D48800F5EABF /* CartViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 		2B67230D1E95D5CB00F5EABF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Cart.storyboard; sourceTree = "<group>"; };
 		2B67230F1E95E10D00F5EABF /* CartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
@@ -203,6 +204,7 @@
 		2B6AF63F1E9AA100003F6AC3 /* SinopseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinopseViewController.swift; sourceTree = "<group>"; };
 		2B6CDE271E9C764700439ABE /* MeusDadosViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeusDadosViewModel.swift; sourceTree = "<group>"; };
 		2B6CDE291E9C7BF000439ABE /* UserDataCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataCell.swift; sourceTree = "<group>"; };
+		2BD401421EA4168500416F90 /* CartContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartContainer.swift; sourceTree = "<group>"; };
 		2BE70AB11E9DB5CC00AF3718 /* LanguageHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageHeader.swift; sourceTree = "<group>"; };
 		2BE70AB31E9F0BA200AF3718 /* CongressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CongressCell.xib; sourceTree = "<group>"; };
 		2BE70AB51E9F0C8400AF3718 /* CongressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CongressCell.swift; sourceTree = "<group>"; };
@@ -382,10 +384,11 @@
 		2B6723071E95CF2E00F5EABF /* Carrinho */ = {
 			isa = PBXGroup;
 			children = (
-				2B6723081E95D47200F5EABF /* CartViewController.swift */,
+				2B6723081E95D47200F5EABF /* CartTableViewController.swift */,
 				2B67230A1E95D48800F5EABF /* CartViewModel.swift */,
 				2B67230F1E95E10D00F5EABF /* CartCell.swift */,
 				2B07BEC91E97207B00DB3DF7 /* ResumeCell.swift */,
+				2BD401421EA4168500416F90 /* CartContainer.swift */,
 			);
 			name = Carrinho;
 			sourceTree = "<group>";
@@ -1131,9 +1134,10 @@
 				2B6AF6281E9923BD003F6AC3 /* Mask.swift in Sources */,
 				2B6AF62D1E9923BD003F6AC3 /* MaskCEPTextField.swift in Sources */,
 				2B4E104B1EA2D29000B4171A /* UDID.swift in Sources */,
+				2BD401431EA4168500416F90 /* CartContainer.swift in Sources */,
 				2C1B4A6E1E83666E00DED396 /* RealmPersister.swift in Sources */,
 				2CDC58B01E9334C3003C28EC /* Cart.swift in Sources */,
-				2B6723091E95D47200F5EABF /* CartViewController.swift in Sources */,
+				2B6723091E95D47200F5EABF /* CartTableViewController.swift in Sources */,
 				2B6AF6081E985773003F6AC3 /* CreditCardPersister.swift in Sources */,
 				2B6AF6301E9923BD003F6AC3 /* MaskNumberPhoneTextField.swift in Sources */,
 				2CF186CC1E5D26D3008029B3 /* NewReleasesRequest.swift in Sources */,

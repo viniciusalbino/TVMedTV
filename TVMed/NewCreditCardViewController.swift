@@ -17,6 +17,7 @@ class NewCreditCardViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var creditCardDateField: MaskCreditCardDateValidationTextField!
     @IBOutlet weak var creditCardCVVField: MaskCreditCardCVCTextField!
     @IBOutlet weak var saveButton:UIButton!
+    private var userRequest = UserRequests()
     
     var currentTextField: UITextField?
     
@@ -114,46 +115,47 @@ class NewCreditCardViewController: UIViewController, UITextFieldDelegate {
         return (dateArray.last ?? "", dateArray.first ?? "")
     }
     
+    func getIntValue(value: String) -> Int {
+        switch value {
+        case "Visa":
+            return 1
+        case "MasterCard":
+            return 2
+        case "American Express":
+            return 3
+        case "Dinners Club":
+            return 4
+        default :
+            return 1
+        }
+    }
+    
     @IBAction func saveCreditCard() {
         if validate() {
             guard let cardNumber = creditCardNumberField.text, let cardName = creditCardNameField.text, let date = creditCardDateField.text, let cvv = creditCardCVVField.text else {
                 self.showDefaultSystemAlertWithDefaultLayout(message: "Preencha corretamente os campos indicados.", completeBlock: { _ in })
                 return
             }
+            
             let dates = dateComponents(dateText: date)
             let newCard = CreditCard()
-            let brandEnum = BrandEnum(rawValue: creditCardNumberField.type!)
             newCard.cardNumber = cardNumber
             newCard.name = cardName
             newCard.month = dates.month
-            newCard.year = dates.year
+            newCard.year = "20\(dates.year)"
             newCard.cvv = cvv
-            newCard.brand = brandEnum.intValue
+            newCard.brand = getIntValue(value: creditCardNumberField.type!)
             newCard.brandImage = creditCardNumberField.type!
             
-            DispatchQueue.main.async {
-                do {
-                    let realm = try RealmEncrypted.realm()
-                    try realm.write {
-                        realm.add(newCard)
-                        self.showDefaultSystemAlertWithDefaultLayout(message: "Cartão salvo com sucesso!", completeBlock: { _ in
-                            _ = self.navigationController?.popViewController(animated: true)
-                        })
-                    }
-                } catch {
+            self.userRequest.createNewCreditCard(cardDTO: newCard, callback: { cards, error in
+                guard error == nil, let creditCards = cards else {
                     self.showDefaultSystemAlertWithDefaultLayout(message: "Ocorreu um erro ao salvar seu cartão, por favor tente novamente", completeBlock: { _ in })
-                    print("Realm did not query objects!")
+                    return
                 }
-            }
-//            self.creditCardPersister.save(card: newCard, callback: { success in
-//                if success {
-//                    self.showDefaultSystemAlertWithDefaultLayout(message: "Cartão salvo com sucesso!", completeBlock: { _ in
-//                        _ = self.navigationController?.popViewController(animated: true)
-//                    })
-//                } else {
-//                    self.showDefaultSystemAlertWithDefaultLayout(message: "Ocorreu um erro ao salvar seu cartão, por favor tente novamente", completeBlock: { _ in })
-//                }
-//            })
+                self.showDefaultSystemAlertWithDefaultLayout(message: "Cartão salvo com sucesso!", completeBlock: { _ in
+                    _ = self.navigationController?.popViewController(animated: true)
+                })
+            })
         } else {
             self.showDefaultSystemAlertWithDefaultLayout(message: "Preencha corretamente os campos indicados.", completeBlock: { _ in })
         }

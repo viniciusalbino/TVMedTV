@@ -27,6 +27,7 @@ class CartItem: Object {
                 "espec" : espec,
                 "preco" :  Int(price),
                 "desconto" : 0,
-                "precoSemDesconto" : preco]
+                "precoSemDesconto" : preco,
+                "tipoMidia": midia]
     }
 }

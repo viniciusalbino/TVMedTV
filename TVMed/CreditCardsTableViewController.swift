@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol SelectedCardDelegate: class {
-    func selectedCard(card: CreditCard)
+    func selectedCard(card: RemoteCreditCard)
 }
 
 class CreditCardsTableViewController: UITableViewController, CreditCardDelegate {
@@ -20,6 +20,7 @@ class CreditCardsTableViewController: UITableViewController, CreditCardDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.mask = nil
         self.title = "Cartões de crédito"
     }
     
@@ -43,7 +44,7 @@ class CreditCardsTableViewController: UITableViewController, CreditCardDelegate 
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 200
+            return 120
         } else {
             return 150
         }
@@ -73,8 +74,8 @@ class CreditCardsTableViewController: UITableViewController, CreditCardDelegate 
             let card = viewModel.cardForRow(row: indexPath.row)
             self.showYesNoAlert(message: "Deseja concluir a compra com o cartão selecionado?", yesButton: "Sim", completeBlock: { action in
                 if action.title == "Sim" {
-                    self.dismiss(animated: true, completion: nil)
-                    self.delegate?.selectedCard(card: card)
+                    self.startLoading()
+                    self.viewModel.setPrimaryCard(card: card)
                 }
             })
         case 1 :
@@ -82,5 +83,14 @@ class CreditCardsTableViewController: UITableViewController, CreditCardDelegate 
         default:
             self.dismiss(animated: true, completion: nil)
         }
+    }
+    
+    func changedCard(success: Bool, card: RemoteCreditCard?) {
+        guard success, let creditCard = card else {
+            self.showDefaultSystemAlertWithDefaultLayout(message: "Ocorreu um erro ao selecionar esse cartão. Por favor tente novamente.", completeBlock: nil)
+            return
+        }
+        self.dismiss(animated: true, completion: nil)
+        self.delegate?.selectedCard(card: creditCard)
     }
 }

@@ -10,29 +10,28 @@ import Foundation
 
 protocol CreditCardDelegate: class {
     func contentDidFinishedLoading()
+    func changedCard(success: Bool, card: RemoteCreditCard?)
 }
 
 class CreditCardsViewModel {
     
     var delegate: CreditCardDelegate?
     private var creditCardPersister = CreditCardPersister()
-    private var creditCards = [CreditCard]()
+    private var creditCards = [RemoteCreditCard]()
+    private var userRequest = UserRequests()
     
     init(delegate: CreditCardDelegate) {
         self.delegate = delegate
     }
     
     func loadContent() {
-        DispatchQueue.main.async {
-            do {
-                let realm = try RealmEncrypted.realm()
-                let objects = Array(realm.objects(CreditCard.self))
-                self.creditCards = objects
+        userRequest.getCreditCards { cards, error in
+            guard error == nil, let creditCards = cards else {
                 self.delegate?.contentDidFinishedLoading()
-            } catch {
-                self.delegate?.contentDidFinishedLoading()
-                print("Realm did not query objects!")
+                return
             }
+            self.creditCards = creditCards
+            self.delegate?.contentDidFinishedLoading()
         }
     }
     
@@ -48,7 +47,18 @@ class CreditCardsViewModel {
         }
     }
     
-    func cardForRow(row: Int) -> CreditCard {
-        return self.creditCards.object(index: row) ?? CreditCard()
+    func cardForRow(row: Int) -> RemoteCreditCard {
+        return self.creditCards.object(index: row) ?? RemoteCreditCard()
+    }
+    
+    func setPrimaryCard(card: RemoteCreditCard) {
+        self.userRequest.changeCreditCard(cardId: card) { cards, error in
+            guard error == nil, let creditCards = cards else {
+                self.delegate?.changedCard(success: false, card: nil)
+                return
+            }
+            self.creditCards = creditCards
+            self.delegate?.changedCard(success: true, card: card)
+        }
     }
 }

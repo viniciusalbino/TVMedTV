@@ -47,7 +47,7 @@ class UserRequests  {
         }
     }
     
-    func changeCreditCard(cardId: RemoteCreditCard, callback: @escaping (JSONDictionary?, ErrorTypeApp?) -> ()) {
+    func changeCreditCard(cardId: RemoteCreditCard, callback: @escaping ([RemoteCreditCard]?, ErrorTypeApp?) -> ()) {
         let url = "/api/medico/cartoes/\(cardId.identifier)/principal"
         HeaderBuilder().buildHeader { defaultHeaders in
             BaseRequest().PUT(url: url, params: [:], headers: defaultHeaders, callback: { result, error, response in
@@ -56,8 +56,8 @@ class UserRequests  {
                     return
                 }
                 
-                callback(result?.object as? JSONDictionary, result?.error as? ErrorTypeApp)
-//                callback(result.object, result.error)
+                let result = result as? [JSONDictionary] <*> (RemoteCreditCard.self, error)
+                callback(result.object, result.error)
             })
         }
     }
