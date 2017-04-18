@@ -17,6 +17,7 @@ class NewCreditCardViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var creditCardDateField: MaskCreditCardDateValidationTextField!
     @IBOutlet weak var creditCardCVVField: MaskCreditCardCVCTextField!
     @IBOutlet weak var saveButton:UIButton!
+    @IBOutlet weak var backgroundWhiteView: UIView!
     private var userRequest = UserRequests()
     
     var currentTextField: UITextField?
@@ -25,6 +26,8 @@ class NewCreditCardViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         addDelegates()
         setNeedValidateFields()
+        addLogo()
+        self.backgroundWhiteView.layer.cornerRadius = 10
         self.title = "Cadastrar cartão"
     }
     

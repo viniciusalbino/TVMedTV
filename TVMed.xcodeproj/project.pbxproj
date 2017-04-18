@@ -57,6 +57,7 @@
 		2B6AF6401E9AA100003F6AC3 /* SinopseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AF63F1E9AA100003F6AC3 /* SinopseViewController.swift */; };
 		2B6CDE281E9C764700439ABE /* MeusDadosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6CDE271E9C764700439ABE /* MeusDadosViewModel.swift */; };
 		2B6CDE2A1E9C7BF000439ABE /* UserDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6CDE291E9C7BF000439ABE /* UserDataCell.swift */; };
+		2BB2A2D81EA5A5C700906CE5 /* CreditCardContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB2A2D71EA5A5C700906CE5 /* CreditCardContainer.swift */; };
 		2BD401431EA4168500416F90 /* CartContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD401421EA4168500416F90 /* CartContainer.swift */; };
 		2BE70AB21E9DB5CC00AF3718 /* LanguageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE70AB11E9DB5CC00AF3718 /* LanguageHeader.swift */; };
 		2BE70AB41E9F0BA200AF3718 /* CongressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE70AB31E9F0BA200AF3718 /* CongressCell.xib */; };
@@ -204,6 +205,7 @@
 		2B6AF63F1E9AA100003F6AC3 /* SinopseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinopseViewController.swift; sourceTree = "<group>"; };
 		2B6CDE271E9C764700439ABE /* MeusDadosViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeusDadosViewModel.swift; sourceTree = "<group>"; };
 		2B6CDE291E9C7BF000439ABE /* UserDataCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataCell.swift; sourceTree = "<group>"; };
+		2BB2A2D71EA5A5C700906CE5 /* CreditCardContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardContainer.swift; sourceTree = "<group>"; };
 		2BD401421EA4168500416F90 /* CartContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartContainer.swift; sourceTree = "<group>"; };
 		2BE70AB11E9DB5CC00AF3718 /* LanguageHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageHeader.swift; sourceTree = "<group>"; };
 		2BE70AB31E9F0BA200AF3718 /* CongressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CongressCell.xib; sourceTree = "<group>"; };
@@ -435,6 +437,7 @@
 				2B6AF6361E992CB2003F6AC3 /* CreditCardsTableViewController.swift */,
 				2B6AF63D1E992FDA003F6AC3 /* CreditCardsViewModel.swift */,
 				2B6AF63B1E992E4E003F6AC3 /* CardCell.swift */,
+				2BB2A2D71EA5A5C700906CE5 /* CreditCardContainer.swift */,
 			);
 			name = CreditCard;
 			sourceTree = "<group>";
@@ -1107,6 +1110,7 @@
 				2B6CDE281E9C764700439ABE /* MeusDadosViewModel.swift in Sources */,
 				2B6AF6401E9AA100003F6AC3 /* SinopseViewController.swift in Sources */,
 				2C4F5FE21E40222800754DBB /* SearchViewController.swift in Sources */,
+				2BB2A2D81EA5A5C700906CE5 /* CreditCardContainer.swift in Sources */,
 				2C1B4A751E836F4200DED396 /* LoginViewController.swift in Sources */,
 				2CDC58AD1E917A7E003C28EC /* SearchViewModel.swift in Sources */,
 				2C5A994A1E6790B700F6E4E9 /* HomeCategoryCell.swift in Sources */,

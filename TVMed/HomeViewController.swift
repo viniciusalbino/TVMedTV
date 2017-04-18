@@ -17,8 +17,8 @@ class HomeViewController: UICollectionViewController, HomeDelegate, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         // Make sure their is sufficient padding above and below the content.
+        addLogo()
         guard let collectionView = collectionView, let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
-        
         collectionView.contentInset.top = HomeViewController.minimumEdgePadding - layout.sectionInset.top
         collectionView.contentInset.bottom = HomeViewController.minimumEdgePadding - layout.sectionInset.bottom
         
@@ -27,7 +27,7 @@ class HomeViewController: UICollectionViewController, HomeDelegate, UICollection
             self.viewModel.loadCategories()
             self.viewModel.loadEspecialities()
         }
-//        validatesToken()
+        validatesToken()
     }
     
     func validatesToken() {

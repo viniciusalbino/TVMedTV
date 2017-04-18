@@ -16,6 +16,7 @@ class EspecialitiesController: UICollectionViewController, SelectedEspecialityPr
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addLogo()
         // Make sure their is sufficient padding above and below the content.
         guard let collectionView = collectionView, let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
         
@@ -71,7 +72,7 @@ class EspecialitiesController: UICollectionViewController, SelectedEspecialityPr
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.numberOfItensInSection()
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

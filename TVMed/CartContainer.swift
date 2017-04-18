@@ -20,7 +20,7 @@ class CartContainer: UIViewController, CartDelegate, SelectedCardDelegate  {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier ==  "presentCards" {
-            if let navController = segue.destination as? UINavigationController, let controller = navController.childViewControllers.first as? CreditCardsTableViewController {
+            if let navController = segue.destination as? UINavigationController, let controller = navController.childViewControllers.first as? CreditCardContainer {
                 controller.delegate = self
             }
         } else if segue.identifier == "CartTableViewControllerEmbed" {
@@ -34,9 +34,9 @@ class CartContainer: UIViewController, CartDelegate, SelectedCardDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         addLogo()
-        self.topView.layer.cornerRadius = 4
-        self.bottomView.layer.cornerRadius = 4
-        self.purchaseButton.layer.cornerRadius = 4 
+        self.topView.layer.cornerRadius = 10
+        self.bottomView.layer.cornerRadius = 10
+        self.purchaseButton.layer.cornerRadius = 5
     }
     
     override func viewWillAppear(_ animated: Bool) {

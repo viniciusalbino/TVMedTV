@@ -21,44 +21,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Número do cartão de crédito" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MtA-uS-Yij" customClass="MaskCreditCardTextField" customModule="TVMed" customModuleProvider="target">
-                                <rect key="frame" x="20" y="60" width="1880" height="80"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SX1-sh-vw0">
+                                <rect key="frame" x="20" y="60" width="1880" height="550"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Olx-AY-Rgv">
+                                        <rect key="frame" x="30" y="204" width="1820" height="2"/>
+                                        <color key="backgroundColor" red="0.61568627450000002" green="0.43921568630000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="BIc-Fr-3R0"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cta-59-FXJ">
+                                        <rect key="frame" x="30" y="305" width="1820" height="2"/>
+                                        <color key="backgroundColor" red="0.61568627450000002" green="0.43921568630000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="DoG-gM-g7x"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Cta-59-FXJ" secondAttribute="trailing" constant="30" id="AAa-Qc-4yj"/>
+                                    <constraint firstAttribute="trailing" secondItem="Olx-AY-Rgv" secondAttribute="trailing" constant="30" id="H5X-Nn-3Nz"/>
+                                    <constraint firstItem="Cta-59-FXJ" firstAttribute="leading" secondItem="SX1-sh-vw0" secondAttribute="leading" constant="30" id="HKW-e1-dR7"/>
+                                    <constraint firstItem="Olx-AY-Rgv" firstAttribute="leading" secondItem="SX1-sh-vw0" secondAttribute="leading" constant="30" id="aZ9-7g-a42"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Número do cartão de crédito" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MtA-uS-Yij" customClass="MaskCreditCardTextField" customModule="TVMed" customModuleProvider="target">
+                                <rect key="frame" x="30" y="80" width="1860" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="A4T-kc-eHv"/>
                                 </constraints>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.61568627450000002" green="0.43921568630000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do titular (como escrito no cartão)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZlT-ef-V9n" customClass="MaskNameTextField" customModule="TVMed" customModuleProvider="target">
-                                <rect key="frame" x="20" y="160" width="1880" height="80"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome do titular (como escrito no cartão)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZlT-ef-V9n" customClass="MaskNameTextField" customModule="TVMed" customModuleProvider="target">
+                                <rect key="frame" x="30" y="180" width="1860" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="sxI-1c-QEc"/>
                                 </constraints>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.61568627450000002" green="0.43921568630000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM / AA (Validade)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aXt-Jo-csy" customClass="MaskCreditCardDateValidationTextField" customModule="TVMed" customModuleProvider="target">
-                                <rect key="frame" x="20" y="260" width="1880" height="80"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="MM / AA (Validade)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aXt-Jo-csy" customClass="MaskCreditCardDateValidationTextField" customModule="TVMed" customModuleProvider="target">
+                                <rect key="frame" x="30" y="280" width="1860" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="aIq-Vs-fFf"/>
                                 </constraints>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.61568627450000002" green="0.43921568630000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Código de segurança" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EC4-RU-Urb" customClass="MaskCreditCardCVCTextField" customModule="TVMed" customModuleProvider="target">
-                                <rect key="frame" x="20" y="360" width="1880" height="80"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Código de segurança" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EC4-RU-Urb" customClass="MaskCreditCardCVCTextField" customModule="TVMed" customModuleProvider="target">
+                                <rect key="frame" x="30" y="380" width="1860" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="h4z-MB-OcG"/>
                                 </constraints>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.61568627450000002" green="0.43921568630000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IsP-xU-yKs">
-                                <rect key="frame" x="20" y="460" width="1880" height="80"/>
+                                <rect key="frame" x="30" y="480" width="1860" height="80"/>
+                                <color key="backgroundColor" red="0.61568627450000002" green="0.43921568630000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="UHp-YW-A2n"/>
                                 </constraints>
@@ -68,27 +95,54 @@
                                     <action selector="saveCreditCard" destination="pXo-PZ-z9h" eventType="primaryActionTriggered" id="JbZ-rW-lmL"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cwh-Tm-O2R">
+                                <rect key="frame" x="30" y="165" width="1860" height="2"/>
+                                <color key="backgroundColor" red="0.61568627450000002" green="0.43921568630000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="vbh-Kf-ogt"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C0h-5D-MaD">
+                                <rect key="frame" x="30" y="465" width="1860" height="2"/>
+                                <color key="backgroundColor" red="0.61568627450000002" green="0.43921568630000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="Xic-u4-KT1"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.23529411759999999" green="0.41568627450000001" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="aXt-Jo-csy" secondAttribute="trailing" constant="20" id="1mj-4m-KlV"/>
+                            <constraint firstItem="C0h-5D-MaD" firstAttribute="top" secondItem="EC4-RU-Urb" secondAttribute="bottom" constant="5" id="0Pa-bw-UW9"/>
+                            <constraint firstAttribute="trailing" secondItem="C0h-5D-MaD" secondAttribute="trailing" constant="30" id="1dv-LI-FwS"/>
+                            <constraint firstAttribute="trailing" secondItem="aXt-Jo-csy" secondAttribute="trailing" constant="30" id="1mj-4m-KlV"/>
+                            <constraint firstItem="SX1-sh-vw0" firstAttribute="trailing" secondItem="MtA-uS-Yij" secondAttribute="trailing" constant="10" id="3bi-tc-yiC"/>
                             <constraint firstItem="IsP-xU-yKs" firstAttribute="top" secondItem="EC4-RU-Urb" secondAttribute="bottom" constant="20" id="79X-ea-267"/>
-                            <constraint firstAttribute="trailing" secondItem="IsP-xU-yKs" secondAttribute="trailing" constant="20" id="HU9-tw-ivk"/>
-                            <constraint firstAttribute="trailing" secondItem="ZlT-ef-V9n" secondAttribute="trailing" constant="20" id="Iyb-vA-flX"/>
-                            <constraint firstItem="aXt-Jo-csy" firstAttribute="leading" secondItem="fgz-kf-hNp" secondAttribute="leading" constant="20" id="Nco-Uq-kUa"/>
+                            <constraint firstItem="Olx-AY-Rgv" firstAttribute="top" secondItem="ZlT-ef-V9n" secondAttribute="bottom" constant="4" id="EGg-3b-o6h"/>
+                            <constraint firstItem="Cwh-Tm-O2R" firstAttribute="top" secondItem="MtA-uS-Yij" secondAttribute="bottom" constant="5" id="GtP-z8-jGh"/>
+                            <constraint firstAttribute="trailing" secondItem="IsP-xU-yKs" secondAttribute="trailing" constant="30" id="HU9-tw-ivk"/>
+                            <constraint firstItem="Cta-59-FXJ" firstAttribute="top" secondItem="aXt-Jo-csy" secondAttribute="bottom" constant="5" id="IcN-4w-pdl"/>
+                            <constraint firstAttribute="trailing" secondItem="ZlT-ef-V9n" secondAttribute="trailing" constant="30" id="Iyb-vA-flX"/>
+                            <constraint firstItem="aXt-Jo-csy" firstAttribute="leading" secondItem="fgz-kf-hNp" secondAttribute="leading" constant="30" id="Nco-Uq-kUa"/>
                             <constraint firstItem="ZlT-ef-V9n" firstAttribute="top" secondItem="MtA-uS-Yij" secondAttribute="bottom" constant="20" id="Ocd-Pi-Ce5"/>
-                            <constraint firstItem="MtA-uS-Yij" firstAttribute="leading" secondItem="fgz-kf-hNp" secondAttribute="leading" constant="20" id="SOj-Hh-8Pm"/>
-                            <constraint firstItem="ZlT-ef-V9n" firstAttribute="leading" secondItem="fgz-kf-hNp" secondAttribute="leading" constant="20" id="TjQ-G6-4Ip"/>
-                            <constraint firstItem="EC4-RU-Urb" firstAttribute="leading" secondItem="fgz-kf-hNp" secondAttribute="leading" constant="20" id="TwM-1v-3yA"/>
+                            <constraint firstItem="MtA-uS-Yij" firstAttribute="leading" secondItem="fgz-kf-hNp" secondAttribute="leading" constant="30" id="SOj-Hh-8Pm"/>
+                            <constraint firstItem="ZlT-ef-V9n" firstAttribute="leading" secondItem="fgz-kf-hNp" secondAttribute="leading" constant="30" id="TjQ-G6-4Ip"/>
+                            <constraint firstItem="EC4-RU-Urb" firstAttribute="leading" secondItem="fgz-kf-hNp" secondAttribute="leading" constant="30" id="TwM-1v-3yA"/>
                             <constraint firstItem="EC4-RU-Urb" firstAttribute="top" secondItem="aXt-Jo-csy" secondAttribute="bottom" constant="20" id="Xl5-S4-pAC"/>
-                            <constraint firstItem="MtA-uS-Yij" firstAttribute="top" secondItem="cNb-GY-IXA" secondAttribute="bottom" constant="60" id="dtf-dH-shw"/>
+                            <constraint firstItem="Cwh-Tm-O2R" firstAttribute="leading" secondItem="fgz-kf-hNp" secondAttribute="leading" constant="30" id="cU4-9B-qP5"/>
+                            <constraint firstItem="MtA-uS-Yij" firstAttribute="top" secondItem="cNb-GY-IXA" secondAttribute="bottom" constant="80" id="dtf-dH-shw"/>
+                            <constraint firstItem="SX1-sh-vw0" firstAttribute="top" secondItem="MtA-uS-Yij" secondAttribute="top" constant="-20" id="fx1-LO-0kw"/>
+                            <constraint firstItem="C0h-5D-MaD" firstAttribute="leading" secondItem="fgz-kf-hNp" secondAttribute="leading" constant="30" id="hsf-Bf-jS5"/>
                             <constraint firstItem="aXt-Jo-csy" firstAttribute="top" secondItem="ZlT-ef-V9n" secondAttribute="bottom" constant="20" id="lHF-9H-sZ8"/>
-                            <constraint firstAttribute="trailing" secondItem="EC4-RU-Urb" secondAttribute="trailing" constant="20" id="m4z-JG-dgY"/>
-                            <constraint firstAttribute="trailing" secondItem="MtA-uS-Yij" secondAttribute="trailing" constant="20" id="v9G-3H-Lmc"/>
-                            <constraint firstItem="IsP-xU-yKs" firstAttribute="leading" secondItem="fgz-kf-hNp" secondAttribute="leading" constant="20" id="wUu-0m-evX"/>
+                            <constraint firstAttribute="trailing" secondItem="EC4-RU-Urb" secondAttribute="trailing" constant="30" id="m4z-JG-dgY"/>
+                            <constraint firstItem="SX1-sh-vw0" firstAttribute="leading" secondItem="aXt-Jo-csy" secondAttribute="leading" constant="-10" id="sOS-fu-Skc"/>
+                            <constraint firstAttribute="trailing" secondItem="Cwh-Tm-O2R" secondAttribute="trailing" constant="30" id="u3J-tf-o9M"/>
+                            <constraint firstAttribute="trailing" secondItem="MtA-uS-Yij" secondAttribute="trailing" constant="30" id="v9G-3H-Lmc"/>
+                            <constraint firstItem="IsP-xU-yKs" firstAttribute="leading" secondItem="fgz-kf-hNp" secondAttribute="leading" constant="30" id="wUu-0m-evX"/>
+                            <constraint firstItem="SX1-sh-vw0" firstAttribute="bottom" secondItem="IsP-xU-yKs" secondAttribute="bottom" constant="50" id="wqO-Jm-8Hs"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundWhiteView" destination="SX1-sh-vw0" id="e1M-l1-2Xi"/>
                         <outlet property="creditCardCVVField" destination="EC4-RU-Urb" id="9qo-Rr-GYt"/>
                         <outlet property="creditCardDateField" destination="aXt-Jo-csy" id="aDC-c6-i37"/>
                         <outlet property="creditCardNameField" destination="ZlT-ef-V9n" id="sDZ-UK-aDJ"/>

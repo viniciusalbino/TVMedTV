@@ -36,15 +36,11 @@ class CreditCardsViewModel {
     }
     
     func numberOfSections() -> Int {
-        return 3
+        return 1
     }
     
-    func numberOfItensInSection(section: Int) -> Int {
-        if section == 0 {
+    func numberOfItensInSection() -> Int {
             return self.creditCards.count
-        } else {
-            return 1
-        }
     }
     
     func cardForRow(row: Int) -> RemoteCreditCard {

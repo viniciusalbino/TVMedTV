@@ -37,17 +37,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.054901960784313725" green="0.3411764705882353" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="48" minimumInteritemSpacing="48" id="mGj-RY-63N">
-                            <size key="itemSize" width="1820" height="400"/>
+                            <size key="itemSize" width="1770" height="400"/>
                             <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="50" minY="15" maxX="50" maxY="15"/>
+                            <inset key="sectionInset" minX="50" minY="15" maxX="100" maxY="15"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EspecCollectionViewContainerCell" id="CR7-9Y-ApL" customClass="EspecCollectionViewContainerCell" customModule="TVMed" customModuleProvider="target">
-                                <rect key="frame" x="50" y="65" width="1820" height="400"/>
+                                <rect key="frame" x="50" y="65" width="1770" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="1820" height="400"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1770" height="400"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ir3-Pp-wVH">
@@ -83,10 +83,10 @@
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategorieContainerCell" id="7M8-9x-psy" customClass="CategorieContainerCell" customModule="TVMed" customModuleProvider="target">
-                                <rect key="frame" x="50" y="513" width="1820" height="400"/>
+                                <rect key="frame" x="50" y="513" width="1770" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="1820" height="400"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1770" height="400"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mQ2-pz-5hz">
@@ -117,16 +117,16 @@
                                     <constraint firstAttribute="trailing" secondItem="mQ2-pz-5hz" secondAttribute="trailing" id="lpl-zb-EXp"/>
                                     <constraint firstItem="mQ2-pz-5hz" firstAttribute="leading" secondItem="7M8-9x-psy" secondAttribute="leading" id="rLR-XR-bk9"/>
                                 </constraints>
-                                <size key="customSize" width="1820" height="400"/>
+                                <size key="customSize" width="1770" height="400"/>
                                 <connections>
                                     <outlet property="collectionView" destination="mQ2-pz-5hz" id="4u3-lE-6Sz"/>
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewContainerCell" id="div-ck-sRA" customClass="CollectionViewContainerCell" customModule="TVMed" customModuleProvider="target">
-                                <rect key="frame" x="50" y="961" width="1820" height="400"/>
+                                <rect key="frame" x="50" y="961" width="1770" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="1820" height="400"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1770" height="400"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WL6-Do-3Tn">
@@ -168,7 +168,7 @@
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZo-HM-C8A">
-                                    <rect key="frame" x="23" y="16" width="1874" height="34"/>
+                                    <rect key="frame" x="38" y="16" width="1859" height="34"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -177,7 +177,7 @@
                             <constraints>
                                 <constraint firstItem="gZo-HM-C8A" firstAttribute="top" secondItem="xxY-kw-tDQ" secondAttribute="topMargin" constant="8" id="NL5-P5-hi8"/>
                                 <constraint firstItem="gZo-HM-C8A" firstAttribute="bottom" secondItem="xxY-kw-tDQ" secondAttribute="bottomMargin" constant="8" id="OC9-bl-tnR"/>
-                                <constraint firstItem="gZo-HM-C8A" firstAttribute="leading" secondItem="xxY-kw-tDQ" secondAttribute="leadingMargin" constant="15" id="XKX-DX-y4X"/>
+                                <constraint firstItem="gZo-HM-C8A" firstAttribute="leading" secondItem="xxY-kw-tDQ" secondAttribute="leadingMargin" constant="30" id="XKX-DX-y4X"/>
                                 <constraint firstAttribute="trailingMargin" secondItem="gZo-HM-C8A" secondAttribute="trailing" constant="15" id="p9A-C6-htC"/>
                             </constraints>
                             <connections>
