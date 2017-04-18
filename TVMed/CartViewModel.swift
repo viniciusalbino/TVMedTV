@@ -138,7 +138,7 @@ class CartViewModel {
                 self.delegate?.finishedPurchasingProducts(success: false)
                 return
             }
-            
+            self.cleanCart()
             self.delegate?.finishedPurchasingProducts(success: true)
         }
     }

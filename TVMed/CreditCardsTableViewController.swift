@@ -67,6 +67,7 @@ class CreditCardsTableViewController: UITableViewController, CreditCardDelegate 
     }
     
     func changedCard(success: Bool, card: RemoteCreditCard?) {
+        stopLoading()
         guard success, let creditCard = card else {
             self.showDefaultSystemAlertWithDefaultLayout(message: "Ocorreu um erro ao selecionar esse cartão. Por favor tente novamente.", completeBlock: nil)
             return

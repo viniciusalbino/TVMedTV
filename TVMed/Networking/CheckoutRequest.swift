@@ -30,14 +30,10 @@ class CheckoutRequest {
         let params = cartParameters as [String: AnyObject]
         HeaderBuilder().buildHeader { defaultHeaders in
             BaseRequest().POST(url: "pedido/fecharpedido", params: params, headers: defaultHeaders, callback: { result, error, response in
-                print("error \(error)")
                 guard error == nil else {
                     callback(nil, error)
                     return
                 }
-                print("result \(result)")
-                print("response \(response)")
-                
                 let result = result <*> (CheckoutResponse.self, error)
                 callback(result.object, result.error)
             })
