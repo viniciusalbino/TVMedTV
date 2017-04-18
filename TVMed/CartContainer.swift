@@ -38,6 +38,7 @@ class CartContainer: UIViewController, CartDelegate, SelectedCardDelegate  {
         self.topView.layer.cornerRadius = 10
         self.bottomView.layer.cornerRadius = 10
         self.purchaseButton.layer.cornerRadius = 5
+        self.totalButton.layer.cornerRadius = 5
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,12 +66,20 @@ class CartContainer: UIViewController, CartDelegate, SelectedCardDelegate  {
     func finishedLoadingShipping() {
         self.totalPrice.text = viewModel.getResume().total
         
-        let total = "A vista \(viewModel.getResume().total)"
+        let total = "A vista = \(viewModel.getResume().total)"
         self.totalButton.setTitle(total, for: .normal)
     }
     
     @IBAction func showPaymentOptions() {
-        
+        let alertController = UIAlertController(title: "Opção de pagamento", message: "", preferredStyle: .alert)
+        for language in viewModel.totalValue() {
+            alertController.addAction(UIAlertAction(title: language, style: .default, handler: {action in
+                self.totalButton.setTitle(action.title, for: .normal)
+            }))
+        }
+        let cancel = UIAlertAction(title: "Cancelar", style: .destructive, handler:nil)
+        alertController.addAction(cancel)
+        present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func finishPurchasing() {
@@ -89,7 +98,7 @@ class CartContainer: UIViewController, CartDelegate, SelectedCardDelegate  {
     
     func selectedCard(card: RemoteCreditCard) {
         self.startLoading()
-        viewModel.makePurchase(creditCard: card)
+        viewModel.makePurchase(creditCard: card, formaPagamento: self.totalButton.titleLabel?.text ?? "A vista \(viewModel.getResume().total)")
     }
     
     func finishedPurchasingProducts(success: Bool) {

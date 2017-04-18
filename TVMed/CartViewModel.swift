@@ -93,6 +93,15 @@ class CartViewModel {
         return ResumeDTO(totalProducts: "\(cart.totalProducts().currencyValue)", totalFrete: "\(self.currentShippingValue.currencyValue)", total: "\(total.currencyValue)", discount: "\(cart.discount())")
     }
     
+    func totalValue() -> [String] {
+        guard let cart = currentCart else {
+            return [""]
+        }
+        let total = cart.orderTotalPrice() + self.currentShippingValue
+        
+        return ["A vista = \(total.currencyValue)"]
+    }
+    
     func cleanCart() {
         cartPersister.delete { success in
             if success {
@@ -115,13 +124,13 @@ class CartViewModel {
         self.delegate?.presentCardsSegue()
     }
     
-    func makePurchase(creditCard: RemoteCreditCard) {
+    func makePurchase(creditCard: RemoteCreditCard, formaPagamento: String) {
         guard let cart = currentCart else {
             self.delegate?.finishedPurchasingProducts(success: false)
             return
         }
         let total = cart.orderTotalPrice() + self.currentShippingValue
-        let params = cart.parameters(card: creditCard, valorFrete:self.currentShippingValue, totalValue: total, formaPagamento: "")
+        let params = cart.parameters(card: creditCard, valorFrete:self.currentShippingValue, totalValue: total, formaPagamento: formaPagamento)
         print(params)
         
         checkoutRequest.makePayment(cartParameters: params) { checkoutResponse, error in
