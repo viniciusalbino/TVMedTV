@@ -17,6 +17,7 @@ class CartContainer: UIViewController, CartDelegate, SelectedCardDelegate  {
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var totalPrice: UILabel!
     @IBOutlet weak var purchaseButton: UIButton!
+    @IBOutlet weak var totalButton: UIButton!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier ==  "presentCards" {
@@ -42,6 +43,7 @@ class CartContainer: UIViewController, CartDelegate, SelectedCardDelegate  {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadContent()
+        self.totalButton.setTitle("Loading...", for: .normal)
     }
     
     func loadContent() {
@@ -62,6 +64,13 @@ class CartContainer: UIViewController, CartDelegate, SelectedCardDelegate  {
     
     func finishedLoadingShipping() {
         self.totalPrice.text = viewModel.getResume().total
+        
+        let total = "A vista \(viewModel.getResume().total)"
+        self.totalButton.setTitle(total, for: .normal)
+    }
+    
+    @IBAction func showPaymentOptions() {
+        
     }
     
     @IBAction func finishPurchasing() {

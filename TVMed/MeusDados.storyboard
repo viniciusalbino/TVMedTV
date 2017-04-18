@@ -443,6 +443,7 @@
                         <outlet property="nameLabel" destination="nUx-MJ-5WL" id="DNd-h3-yvV"/>
                         <outlet property="numLabel" destination="bsj-cS-Jiy" id="k1z-44-dFf"/>
                         <outlet property="portugueseButton" destination="HEw-ZZ-dZM" id="cGL-Yl-bYF"/>
+                        <outlet property="preferredFocusedView" destination="chd-fS-GRe" id="Gfb-ea-pmM"/>
                         <outlet property="spanishButton" destination="2v7-vg-UGE" id="xWY-9a-CMC"/>
                         <outlet property="telLabel" destination="IFN-EA-Nqr" id="co4-1d-cVY"/>
                         <segue destination="4gX-bW-UPQ" kind="presentation" identifier="presentLogin" id="IzD-5n-ho9"/>

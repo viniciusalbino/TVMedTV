@@ -48,8 +48,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qRR-kl-ZiS">
                                 <rect key="frame" x="40" y="874" width="1840" height="186"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ru-R7-ZkN">
-                                        <rect key="frame" x="1395" y="63" width="435" height="97"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ru-R7-ZkN">
+                                        <rect key="frame" x="1395" y="60" width="435" height="86"/>
                                         <color key="backgroundColor" red="0.61568627450000002" green="0.43921568630000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                         <state key="normal" title="FINALIZAR COMPRA"/>
@@ -64,8 +64,8 @@
                                             <constraint firstAttribute="height" constant="2" id="UFR-Lf-nqE"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="R$ 600,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dS-ur-dnT">
-                                        <rect key="frame" x="1638" y="12" width="182" height="46"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 600,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dS-ur-dnT">
+                                        <rect key="frame" x="1638" y="27" width="182" height="28"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -79,11 +79,20 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AED-Sl-0TV">
+                                        <rect key="frame" x="20" y="60" width="600" height="86"/>
+                                        <color key="backgroundColor" red="0.61568627450000002" green="0.43921568630000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="600" id="PbX-2a-Zv2"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="1dS-ur-dnT" secondAttribute="trailing" constant="20" id="4Ad-oV-WkM"/>
                                     <constraint firstItem="1ru-R7-ZkN" firstAttribute="top" secondItem="1dS-ur-dnT" secondAttribute="bottom" constant="5" id="8Bp-Rr-lzE"/>
+                                    <constraint firstItem="AED-Sl-0TV" firstAttribute="centerY" secondItem="1ru-R7-ZkN" secondAttribute="centerY" id="8gd-PI-PQA"/>
                                     <constraint firstItem="KpH-qr-vLZ" firstAttribute="leading" secondItem="qRR-kl-ZiS" secondAttribute="leading" constant="10" id="G5i-9I-KaF"/>
                                     <constraint firstItem="FiH-sc-Hcq" firstAttribute="top" secondItem="KpH-qr-vLZ" secondAttribute="bottom" constant="10" id="HOW-GB-9rs"/>
                                     <constraint firstAttribute="trailing" secondItem="1ru-R7-ZkN" secondAttribute="trailing" constant="10" id="LIs-3Q-cVL"/>
@@ -92,6 +101,8 @@
                                     <constraint firstItem="1dS-ur-dnT" firstAttribute="top" secondItem="KpH-qr-vLZ" secondAttribute="bottom" constant="15" id="Y8Q-rg-Y9K"/>
                                     <constraint firstItem="FiH-sc-Hcq" firstAttribute="centerX" secondItem="qRR-kl-ZiS" secondAttribute="centerX" id="YHf-KD-Blq"/>
                                     <constraint firstAttribute="bottom" secondItem="1ru-R7-ZkN" secondAttribute="bottom" constant="40" id="riv-sv-8MC"/>
+                                    <constraint firstItem="AED-Sl-0TV" firstAttribute="height" secondItem="1ru-R7-ZkN" secondAttribute="height" id="zeo-x9-aHy"/>
+                                    <constraint firstItem="AED-Sl-0TV" firstAttribute="leading" secondItem="qRR-kl-ZiS" secondAttribute="leading" constant="20" id="zlH-vu-wI9"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Tk-4k-ai7">
@@ -150,6 +161,7 @@
                         <outlet property="bottomView" destination="qRR-kl-ZiS" id="4G5-ED-CUx"/>
                         <outlet property="purchaseButton" destination="1ru-R7-ZkN" id="WUq-xJ-JGs"/>
                         <outlet property="topView" destination="4Tk-4k-ai7" id="FWf-gc-7j8"/>
+                        <outlet property="totalButton" destination="AED-Sl-0TV" id="zBD-Eq-Ar7"/>
                         <outlet property="totalPrice" destination="1dS-ur-dnT" id="PJz-nX-AaC"/>
                         <segue destination="BDa-W4-Wmr" kind="presentation" identifier="presentCards" id="ZQW-zQ-PuF"/>
                     </connections>

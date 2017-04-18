@@ -21,18 +21,18 @@
                             <size key="itemSize" width="1920" height="400"/>
                             <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="50" minY="15" maxX="50" maxY="15"/>
+                            <inset key="sectionInset" minX="100" minY="15" maxX="100" maxY="15"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EspecCollectionViewContainerCell" id="hCs-NC-7Kd" customClass="EspecCollectionViewContainerCell" customModule="TVMed" customModuleProvider="target">
-                                <rect key="frame" x="50" y="65" width="1820" height="400"/>
+                                <rect key="frame" x="100" y="65" width="1720" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="1820" height="400"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1720" height="400"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lAF-io-hNd">
-                                            <rect key="frame" x="0.0" y="0.0" width="1820" height="400"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1770" height="400"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="50" minimumInteritemSpacing="0.0" id="sDJ-oH-TcT">
                                                 <size key="itemSize" width="540" height="360"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -59,7 +59,7 @@
                                     <constraint firstItem="lAF-io-hNd" firstAttribute="leading" secondItem="hCs-NC-7Kd" secondAttribute="leading" id="n3W-Nd-gF0"/>
                                     <constraint firstAttribute="trailing" secondItem="lAF-io-hNd" secondAttribute="trailing" id="zBM-Xo-lvj"/>
                                 </constraints>
-                                <size key="customSize" width="1820" height="400"/>
+                                <size key="customSize" width="1720" height="400"/>
                                 <connections>
                                     <outlet property="collectionView" destination="lAF-io-hNd" id="ebr-Ut-7J9"/>
                                 </connections>
