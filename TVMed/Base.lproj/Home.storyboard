@@ -168,7 +168,7 @@
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZo-HM-C8A">
-                                    <rect key="frame" x="38" y="16" width="1859" height="34"/>
+                                    <rect key="frame" x="58" y="16" width="1839" height="34"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -177,7 +177,7 @@
                             <constraints>
                                 <constraint firstItem="gZo-HM-C8A" firstAttribute="top" secondItem="xxY-kw-tDQ" secondAttribute="topMargin" constant="8" id="NL5-P5-hi8"/>
                                 <constraint firstItem="gZo-HM-C8A" firstAttribute="bottom" secondItem="xxY-kw-tDQ" secondAttribute="bottomMargin" constant="8" id="OC9-bl-tnR"/>
-                                <constraint firstItem="gZo-HM-C8A" firstAttribute="leading" secondItem="xxY-kw-tDQ" secondAttribute="leadingMargin" constant="30" id="XKX-DX-y4X"/>
+                                <constraint firstItem="gZo-HM-C8A" firstAttribute="leading" secondItem="xxY-kw-tDQ" secondAttribute="leadingMargin" constant="50" id="XKX-DX-y4X"/>
                                 <constraint firstAttribute="trailingMargin" secondItem="gZo-HM-C8A" secondAttribute="trailing" constant="15" id="p9A-C6-htC"/>
                             </constraints>
                             <connections>

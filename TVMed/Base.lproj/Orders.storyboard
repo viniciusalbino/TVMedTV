@@ -38,14 +38,14 @@
                             <size key="itemSize" width="1920" height="400"/>
                             <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="50" minY="15" maxX="50" maxY="15"/>
+                            <inset key="sectionInset" minX="100" minY="15" maxX="0.0" maxY="15"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OrdersContainerCell" id="zqL-0Y-yrh" customClass="OrdersContainerCell" customModule="TVMed" customModuleProvider="target">
-                                <rect key="frame" x="50" y="65" width="1820" height="400"/>
+                                <rect key="frame" x="125" y="65" width="1770" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="1820" height="400"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1770" height="400"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iS6-HM-FYd">
@@ -77,7 +77,7 @@
                                     <constraint firstAttribute="bottom" secondItem="iS6-HM-FYd" secondAttribute="bottom" id="rty-nQ-Ljb"/>
                                     <constraint firstAttribute="trailing" secondItem="iS6-HM-FYd" secondAttribute="trailing" id="zxW-5L-b2X"/>
                                 </constraints>
-                                <size key="customSize" width="1820" height="400"/>
+                                <size key="customSize" width="1770" height="400"/>
                                 <connections>
                                     <outlet property="collectionView" destination="iS6-HM-FYd" id="AlI-na-LbO"/>
                                 </connections>
@@ -88,7 +88,7 @@
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0B-y7-bhc">
-                                    <rect key="frame" x="15" y="8" width="1890" height="34"/>
+                                    <rect key="frame" x="50" y="8" width="1855" height="34"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -98,7 +98,7 @@
                                 <constraint firstAttribute="bottom" secondItem="t0B-y7-bhc" secondAttribute="bottom" constant="8" id="9l3-bJ-SpN"/>
                                 <constraint firstItem="t0B-y7-bhc" firstAttribute="top" secondItem="vWx-wT-A5A" secondAttribute="top" constant="8" id="JmT-au-hZ7"/>
                                 <constraint firstAttribute="trailing" secondItem="t0B-y7-bhc" secondAttribute="trailing" constant="15" id="hqw-hg-tBC"/>
-                                <constraint firstItem="t0B-y7-bhc" firstAttribute="leading" secondItem="vWx-wT-A5A" secondAttribute="leading" constant="15" id="wJT-IE-idb"/>
+                                <constraint firstItem="t0B-y7-bhc" firstAttribute="leading" secondItem="vWx-wT-A5A" secondAttribute="leading" constant="50" id="wJT-IE-idb"/>
                             </constraints>
                             <connections>
                                 <outlet property="titleLabel" destination="t0B-y7-bhc" id="Vra-an-6LZ"/>
