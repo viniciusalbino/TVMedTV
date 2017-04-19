@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CartContainer: UIViewController, CartDelegate, SelectedCardDelegate  {
+class CartContainer: UIViewController, CartDelegate, SelectedCardDelegate, CartTableViewDelegate  {
     
     lazy var viewModel: CartViewModel = CartViewModel(delegate: self)
     var tableViewController: CartTableViewController?
@@ -29,6 +29,7 @@ class CartContainer: UIViewController, CartDelegate, SelectedCardDelegate  {
                 return
             }
             tableViewController = viewController
+            tableViewController?.delegate = self
         }
     }
     
@@ -122,5 +123,19 @@ class CartContainer: UIViewController, CartDelegate, SelectedCardDelegate  {
         } else {
             self.showDefaultSystemAlertWithDefaultLayout(message: "Ocorreu um erro ao finalizar sua compra. Por favor tente novamente", completeBlock: nil)
         }
+    }
+    
+    func updatedCart() {
+        stopLoading()
+        guard let viewController = tableViewController else {
+            return
+        }
+        viewController.cartItems = viewModel.cartItems
+        viewController.tableView.reloadData()
+    }
+    
+    func deleteFromCart(cartItem: CartItem) {
+        self.startLoading()
+        viewModel.deleteItemFromCart(cartItem: cartItem)
     }
 }

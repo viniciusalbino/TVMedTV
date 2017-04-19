@@ -9,9 +9,14 @@
 import Foundation
 import UIKit
 
+protocol CartTableViewDelegate: class {
+    func deleteFromCart(cartItem: CartItem)
+}
+
 class CartTableViewController: UITableViewController {
     
     var cartItems = [CartItem]()
+    var delegate:CartTableViewDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +50,16 @@ class CartTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let cell = cell as? CartCell {
             cell.fill(cartItem: cartItems.object(index: indexPath.row) ?? CartItem())
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cartItem = cartItems.object(index: indexPath.row) ?? CartItem()
+        let dto = SystemAlertDTO(title: "Excluir", message: "Deseja excluir \(cartItem.linhaTitulo) do seu carrinho?", buttonActions: [(title: "Cancelar", style: .default),(title: "Deletar", style: .destructive)])
+        self.showDefaultSystemAlert(systemAlertDTO: dto) { action in
+            if action.title == "Deletar" {
+                self.delegate?.deleteFromCart(cartItem: cartItem)
+            }
         }
     }
 }

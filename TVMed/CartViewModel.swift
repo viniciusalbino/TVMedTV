@@ -13,6 +13,7 @@ protocol CartDelegate: class {
     func finishedLoadingShipping()
     func finishedPurchasingProducts(success: Bool)
     func presentCardsSegue()
+    func updatedCart()
 }
 
 class CartViewModel {
@@ -147,12 +148,53 @@ class CartViewModel {
         print(params)
         
         checkoutRequest.makePayment(cartParameters: params) { checkoutResponse, error in
-            guard error == nil, let response = checkoutResponse else {
+            guard error == nil, let _ = checkoutResponse else {
                 self.delegate?.finishedPurchasingProducts(success: false)
                 return
             }
             self.cleanCart()
             self.delegate?.finishedPurchasingProducts(success: true)
+        }
+    }
+    
+    func deleteItemFromCart(cartItem: CartItem) {
+        guard let cart = currentCart else {
+            return
+        }
+//        cartPersister.delete { _ in }
+        var updatedCart = cart
+        do {
+            let realm = try RealmEncrypted.realm()
+            try realm.write {
+                
+                for (index, item) in cart.itemsCarrinho.enumerated() {
+                    if item.congresso == cartItem.congresso {
+                        cart.itemsCarrinho.remove(objectAtIndex: index)
+                    }
+                }
+                
+                self.cartItems = [CartItem]()
+                for item in cart.itemsCarrinho {
+                    self.cartItems.append(item)
+                }
+                
+                updatedCart.carrinhoPrecoTotal = cart.carrinhoPrecoTotal
+                updatedCart.valorFrete = cart.valorFrete
+                updatedCart.descontoTotal = cart.descontoTotal
+                updatedCart.partnerId = cart.partnerId
+                updatedCart.percentualDesconto = cart.percentualDesconto
+                updatedCart.especDesconto = cart.especDesconto
+                updatedCart.formaPagamento = cart.formaPagamento
+                updatedCart.formasPagamentoResposta = cart.formasPagamentoResposta
+                updatedCart.formasPagamentoDisplay = cart.formasPagamentoDisplay
+                updatedCart.observacoes = cart.observacoes
+                updatedCart.tipoPagto = cart.tipoPagto
+                updatedCart.itemsCarrinho = cart.itemsCarrinho
+                realm.add(updatedCart)
+                self.loadCart()
+            }
+        } catch {
+            self.delegate?.contentDidFinishedLoading(success: false)
         }
     }
 }
