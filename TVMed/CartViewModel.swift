@@ -98,8 +98,21 @@ class CartViewModel {
             return [""]
         }
         let total = cart.orderTotalPrice() + self.currentShippingValue
-        
-        return ["A vista = \(total.currencyValue)"]
+        var texts = [String]()
+        var i = 1
+        while i < 100 {
+            let dividend = total / Float(i)
+            texts.append("\(i)x = \(dividend.currencyValue)")
+            if dividend >= 100.0 {
+                i += 1
+            } else {
+                break
+            }
+        }
+        texts.removeFirst()
+        texts.removeLast()
+        texts.insert("A vista = \(total.currencyValue)", at: 0)
+        return texts
     }
     
     func cleanCart() {

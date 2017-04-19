@@ -5,29 +5,29 @@
     </device>
     <dependencies>
         <deployment identifier="tvOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12118"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
         <scene sceneID="yUf-ni-6HD">
             <objects>
-                <tableViewController storyboardIdentifier="TopicsTableViewController" id="Dze-RU-r4p" customClass="TopicsTableViewController" customModule="TVMed" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="100" sectionHeaderHeight="7" sectionFooterHeight="7" id="Sl4-WV-pP4">
-                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                <tableViewController id="Dze-RU-r4p" customClass="TopicsTableViewController" customModule="TVMed" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="66" sectionFooterHeight="66" id="Sl4-WV-pP4">
+                        <rect key="frame" x="0.0" y="0.0" width="1720" height="1030"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.12941176469999999" green="0.36862745099999999" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TopicHeader" rowHeight="110" id="ORd-eE-ibv" customClass="TopicHeader" customModule="TVMed" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="80" width="1920" height="110"/>
+                                <rect key="frame" x="0.0" y="66" width="1720" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ORd-eE-ibv" id="S5r-HW-6yI">
-                                    <rect key="frame" x="0.0" y="0.0" width="1904" height="109"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1704" height="110"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pb4-TW-Xpj">
-                                            <rect key="frame" x="0.0" y="0.0" width="1900" height="109"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1700" height="110"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -60,13 +60,49 @@
             </objects>
             <point key="canvasLocation" x="1051" y="98"/>
         </scene>
+        <!--Topics Container-->
+        <scene sceneID="U11-tr-WqQ">
+            <objects>
+                <viewController storyboardIdentifier="TopicsContainer" id="ccv-Bb-rGS" customClass="TopicsContainer" customModule="TVMed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BFx-aQ-eLB"/>
+                        <viewControllerLayoutGuide type="bottom" id="sgo-rD-eCU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fl3-6q-bWZ">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Qgf-5d-wcz">
+                                <rect key="frame" x="100" y="0.0" width="1720" height="1030"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="Dze-RU-r4p" kind="embed" identifier="topicsEmbed" id="wkd-tP-fy4"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12941176469999999" green="0.36862745099999999" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qgf-5d-wcz" firstAttribute="leading" secondItem="Fl3-6q-bWZ" secondAttribute="leading" constant="100" id="O7V-OK-18O"/>
+                            <constraint firstItem="Qgf-5d-wcz" firstAttribute="top" secondItem="BFx-aQ-eLB" secondAttribute="bottom" id="TpP-da-jbm"/>
+                            <constraint firstItem="sgo-rD-eCU" firstAttribute="top" secondItem="Qgf-5d-wcz" secondAttribute="bottom" constant="50" id="Uw3-b1-RQx"/>
+                            <constraint firstAttribute="trailing" secondItem="Qgf-5d-wcz" secondAttribute="trailing" constant="100" id="iid-N2-GGg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="Qgf-5d-wcz" id="g4I-DN-ZsW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0QJ-8v-gmQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1139" y="98"/>
+        </scene>
         <!--VideoPlayerController-->
         <scene sceneID="lz6-wy-k5T">
             <objects>
                 <viewControllerPlaceholder storyboardName="Video" referencedIdentifier="VideoPlayerController" id="Txt-s5-ytu" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eqa-zx-25C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2386" y="269"/>
+            <point key="canvasLocation" x="3380" y="676"/>
         </scene>
     </scenes>
 </document>

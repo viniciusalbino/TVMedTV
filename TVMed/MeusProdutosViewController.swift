@@ -63,7 +63,7 @@ class MeusProdutosViewController: UICollectionViewController, MeusProdutosDelega
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier! {
         case "topicsSegue":
-            if let controller = segue.destination as? TopicsTableViewController {
+            if let controller = segue.destination as? TopicsContainer {
                 if let midia =  sender as? MidiaPromotion {
                     controller.loadContent(midia: midia)
                 }

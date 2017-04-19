@@ -119,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="3687" y="2277"/>
         </scene>
-        <!--TopicsTableViewController-->
+        <!--TopicsContainer-->
         <scene sceneID="Vbh-Ck-KJ9">
             <objects>
-                <viewControllerPlaceholder storyboardName="Topics" referencedIdentifier="TopicsTableViewController" id="oo6-0S-iiy" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Topics" referencedIdentifier="TopicsContainer" id="oo6-0S-iiy" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7b-5Q-y8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5402" y="2374"/>

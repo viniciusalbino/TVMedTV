@@ -49,12 +49,8 @@ class UserRequests  {
     
     func changeCreditCard(cardId: RemoteCreditCard, callback: @escaping ([RemoteCreditCard]?, ErrorTypeApp?) -> ()) {
         let url = "medico/cartoes/\(cardId.identifier)/principal"
-        print(url)
         HeaderBuilder().buildHeader { defaultHeaders in
             BaseRequest().PUT(url: url, params: [:], headers: defaultHeaders, callback: { result, error, response in
-                print(result)
-                print(response)
-                
                 guard error == nil else {
                     callback(nil, error)
                     return

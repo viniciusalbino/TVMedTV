@@ -29,7 +29,7 @@ class TopicCell: UITableViewCell {
         if context.nextFocusedView == self {
             coordinator.addCoordinatedAnimations({
                 UIView.animate(withDuration: 0.3, animations: {
-                    self.titleLabel.textColor = .white
+                    self.titleLabel.textColor = UIColor(hexString: "##105133")
                     self.playButton.isHidden = false
 //                    self.contentView.backgroundColor = UIColor(hexString: "##105133")
                 })

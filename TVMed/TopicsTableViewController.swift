@@ -16,8 +16,6 @@ class TopicsTableViewController: UITableViewController, TopicsDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.addLogo()
-        self.tableView.mask = nil;
         tableView.registerHeaderFooterView(identifier: String(describing: TableViewHeaderCell.self))
         tableView.registerCell(identifier: String(describing: TopicCell.self))
     }
@@ -82,7 +80,6 @@ class TopicsTableViewController: UITableViewController, TopicsDelegate {
     
     func playVideo(url: String) {
         stopLoading()
-//        print("video url \(url)")
         self.performSegue(withIdentifier: "videoSegue", sender: url)
     }
     

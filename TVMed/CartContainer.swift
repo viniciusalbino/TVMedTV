@@ -61,6 +61,8 @@ class CartContainer: UIViewController, CartDelegate, SelectedCardDelegate  {
         }
         controller.cartItems = viewModel.cartItems
         controller.tableView.reloadData()
+        self.totalButton.isHidden = !(viewModel.cartItems.count > 0)
+        self.purchaseButton.isHidden = !(viewModel.cartItems.count > 0)
     }
     
     func finishedLoadingShipping() {
@@ -68,6 +70,9 @@ class CartContainer: UIViewController, CartDelegate, SelectedCardDelegate  {
         
         let total = "A vista = \(viewModel.getResume().total)"
         self.totalButton.setTitle(total, for: .normal)
+        
+        self.totalButton.isHidden = !(viewModel.cartItems.count > 0)
+        self.purchaseButton.isHidden = !(viewModel.cartItems.count > 0)
     }
     
     @IBAction func showPaymentOptions() {
@@ -105,10 +110,17 @@ class CartContainer: UIViewController, CartDelegate, SelectedCardDelegate  {
         stopLoading()
         if success {
             let dto = SystemAlertDTO(title: "Sucesso", message: "Compra concluída com sucesso!", buttonActions: [(title: "Ok", style: .default)])
-            self.showDefaultSystemAlert(systemAlertDTO: dto, completeBlock: { _ in })
+            self.showDefaultSystemAlert(systemAlertDTO: dto, completeBlock: { _ in
+                self.totalButton.setTitle("", for: .normal)
+                self.totalPrice.text = "R$ 0,00"
+                self.totalButton.isHidden = !(self.viewModel.cartItems.count > 0)
+                self.purchaseButton.isHidden = !(self.viewModel.cartItems.count > 0)
+                if let viewController = self.tableViewController {
+                    viewController.tableView.reloadData()
+                }
+            })
         } else {
             self.showDefaultSystemAlertWithDefaultLayout(message: "Ocorreu um erro ao finalizar sua compra. Por favor tente novamente", completeBlock: nil)
         }
-        print("completed purchase")
     }
 }
