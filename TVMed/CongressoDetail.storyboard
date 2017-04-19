@@ -25,7 +25,7 @@
                                 <rect key="frame" x="20" y="0.0" width="1880" height="1060"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.23529411759999999" green="0.41568627450000001" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.12941176469999999" green="0.36862745099999999" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="kmM-0e-iN1" firstAttribute="leading" secondItem="Ukq-9c-MGX" secondAttribute="leading" constant="20" id="Jtr-Ck-3ok"/>
                             <constraint firstItem="e1p-oE-hQk" firstAttribute="top" secondItem="kmM-0e-iN1" secondAttribute="bottom" constant="20" id="dn0-Aq-RS6"/>
