@@ -93,7 +93,7 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UIText
             if let _ = token {
                 let midia = self.viewModel.midiaForRow(row: row)
                 let price = midia.midiaPrice(index: midiaIndex)
-                self.validateUserData(midia: midia, price: price)
+                self.validateUserData(midia: midia, price: price, midiaType: midiaIndex)
                 
             } else {
                 self.presentLogin()
@@ -101,7 +101,7 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UIText
         }
     }
     
-    func validateUserData(midia: MidiaPromotion, price: Float) {
+    func validateUserData(midia: MidiaPromotion, price: Float, midiaType: Int) {
         self.userRequest.requestUserData { user, error in
             guard error == nil, let userData = user else {
                 self.presentAlertWithTitle(title: "Erro", message: "Ocorreu um erro ao efetuar sua compra.")
@@ -116,7 +116,7 @@ class CongressDetailController: UIViewController, CongressDetailDelegate, UIText
                 self.showDefaultSystemAlert(systemAlertDTO: alertDTO, completeBlock: { action in
                     if action.title == "Comprar" {
                         self.startLoading()
-                        self.viewModel.addToCart(selectedPrice: price, midia: midia)
+                        self.viewModel.addToCart(selectedPrice: price, midia: midia, midiaType: midiaType)
                     }
                 })
             } else {

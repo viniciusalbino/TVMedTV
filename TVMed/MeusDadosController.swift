@@ -98,7 +98,6 @@ class MeusDadosController: UIViewController, MeusDadosDelegate {
         self.showDefaultSystemAlert(systemAlertDTO: dto , completeBlock: { action in
             if action.title == "Mudar" {
                 self.startLoading()
-                self.viewModel.logout()
                 switch sender.tag {
                 case 0:
                     LanguageHeader().changeHeaderLanguage(header: .portuguese)

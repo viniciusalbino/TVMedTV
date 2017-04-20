@@ -64,8 +64,8 @@
                                             <constraint firstAttribute="height" constant="2" id="UFR-Lf-nqE"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 600,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dS-ur-dnT">
-                                        <rect key="frame" x="1518" y="27" width="182" height="28"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 0,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dS-ur-dnT">
+                                        <rect key="frame" x="1565" y="27" width="135" height="28"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -191,7 +191,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congresso 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgQ-0H-oph">
-                                            <rect key="frame" x="20" y="15" width="1500" height="46"/>
+                                            <rect key="frame" x="20" y="15" width="1380" height="46"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="46" id="Wev-1S-82F"/>
                                             </constraints>
@@ -200,7 +200,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 100,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTH-li-dCd">
-                                            <rect key="frame" x="1570" y="15" width="250" height="35"/>
+                                            <rect key="frame" x="1450" y="15" width="250" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="250" id="ueR-bF-vqo"/>
                                             </constraints>
@@ -209,13 +209,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fr9-6f-DLJ">
-                                            <rect key="frame" x="20" y="71" width="1500" height="35"/>
+                                            <rect key="frame" x="20" y="71" width="1380" height="35"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="textColor" red="0.61568627450000002" green="0.43921568630000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="07a-zY-HYr">
-                                            <rect key="frame" x="10" y="126" width="1820" height="2"/>
+                                            <rect key="frame" x="10" y="126" width="1700" height="2"/>
                                             <color key="backgroundColor" red="0.61568627450000002" green="0.43921568630000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="2" id="zgM-FQ-jsd"/>

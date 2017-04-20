@@ -141,4 +141,19 @@ struct MidiaPromotion: Mappable {
     func congressoFormattedName() -> String {
         return "Midia \(midia) - \(prefixo) \(nomeCongresso)"
     }
+    
+    func tipoMidiaTitle(tipoMidia: Int) -> String {
+        switch tipoMidia {
+        case 0:
+            return "Física"
+        case 1:
+            return "Online"
+        case 2:
+            return "Física + Online"
+        case 3:
+            return "Upgrade"
+        default:
+            return ""
+        }
+    }
 }

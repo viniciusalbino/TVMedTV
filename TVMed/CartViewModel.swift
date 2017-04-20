@@ -44,7 +44,13 @@ class CartViewModel {
                         self.cartItems.append(item)
                     }
                     self.delegate?.contentDidFinishedLoading(success: true)
-                    self.getFreteValue(numberOfItens: self.cartItems.count)
+                    let items = self.cartItems.filter{ $0.tipoMidia != 1 }
+                    if items.count > 0 {
+                        self.getFreteValue(numberOfItens: items.count)
+                    } else {
+                        self.delegate?.finishedLoadingShipping()
+                    }
+                    
                 } else {
                     self.delegate?.contentDidFinishedLoading(success: false)
                 }

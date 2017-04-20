@@ -18,6 +18,7 @@ class CartItem: Object {
     dynamic var urlImagem = ""
     dynamic var espec = ""
     dynamic var preco = 0
+    dynamic var tipoMidia = 0
     
     func parameter(price: Float) -> JSONDictionary {
         return ["congresso" : congresso,
@@ -28,6 +29,6 @@ class CartItem: Object {
                 "preco" :  Int(price),
                 "desconto" : 0,
                 "precoSemDesconto" : preco,
-                "tipoMidia": midia]
+                "tipoMidia": tipoMidia]
     }
 }
