@@ -138,4 +138,9 @@ class CartContainer: UIViewController, CartDelegate, SelectedCardDelegate, CartT
         self.startLoading()
         viewModel.deleteItemFromCart(cartItem: cartItem)
     }
+    
+    func showLogin() {
+        stopLoading()
+        self.performSegue(withIdentifier: "showLogin", sender: nil)
+    }
 }

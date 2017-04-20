@@ -414,9 +414,9 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chd-fS-GRe">
-                                <rect key="frame" x="1600" y="149" width="200" height="86"/>
+                                <rect key="frame" x="1626" y="149" width="174" height="86"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Logout"/>
+                                <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="login" destination="LVI-ex-b01" eventType="primaryActionTriggered" id="ydh-WA-jlb"/>
                                 </connections>

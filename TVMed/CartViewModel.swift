@@ -14,6 +14,7 @@ protocol CartDelegate: class {
     func finishedPurchasingProducts(success: Bool)
     func presentCardsSegue()
     func updatedCart()
+    func showLogin()
 }
 
 class CartViewModel {
@@ -146,7 +147,7 @@ class CartViewModel {
     
     func makePurchase(creditCard: RemoteCreditCard, formaPagamento: String) {
         guard let cart = currentCart else {
-            self.delegate?.finishedPurchasingProducts(success: false)
+            self.delegate?.showLogin()
             return
         }
         let total = cart.orderTotalPrice() + self.currentShippingValue

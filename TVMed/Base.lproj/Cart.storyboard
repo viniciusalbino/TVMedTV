@@ -39,17 +39,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KR0-77-kNv">
-                                <rect key="frame" x="100" y="235" width="1720" height="645"/>
+                                <rect key="frame" x="100" y="235" width="1720" height="565"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <segue destination="3ss-ic-U3Z" kind="embed" identifier="CartTableViewControllerEmbed" id="TBq-Id-TmJ"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qRR-kl-ZiS">
-                                <rect key="frame" x="100" y="874" width="1720" height="186"/>
+                                <rect key="frame" x="100" y="794" width="1720" height="206"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ru-R7-ZkN">
-                                        <rect key="frame" x="1275" y="60" width="435" height="86"/>
+                                        <rect key="frame" x="1275" y="78" width="435" height="88"/>
                                         <color key="backgroundColor" red="0.61568627450000002" green="0.43921568630000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                         <state key="normal" title="FINALIZAR COMPRA"/>
@@ -65,7 +65,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 0,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dS-ur-dnT">
-                                        <rect key="frame" x="1565" y="27" width="135" height="28"/>
+                                        <rect key="frame" x="1565" y="27" width="135" height="46"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -80,7 +80,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AED-Sl-0TV">
-                                        <rect key="frame" x="20" y="60" width="600" height="86"/>
+                                        <rect key="frame" x="20" y="78" width="600" height="88"/>
                                         <color key="backgroundColor" red="0.61568627450000002" green="0.43921568630000002" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="600" id="PbX-2a-Zv2"/>
@@ -149,10 +149,10 @@
                             <constraint firstItem="qRR-kl-ZiS" firstAttribute="top" secondItem="KR0-77-kNv" secondAttribute="bottom" constant="-6" id="3Es-Zj-fnZ"/>
                             <constraint firstAttribute="trailing" secondItem="4Tk-4k-ai7" secondAttribute="trailing" constant="100" id="Hcn-X1-371"/>
                             <constraint firstItem="4Tk-4k-ai7" firstAttribute="leading" secondItem="tHY-iY-Fe0" secondAttribute="leading" constant="100" id="IR1-ix-i1j"/>
-                            <constraint firstItem="hUl-DB-aG8" firstAttribute="top" secondItem="KR0-77-kNv" secondAttribute="bottom" constant="200" id="O5y-0h-YeZ"/>
+                            <constraint firstItem="hUl-DB-aG8" firstAttribute="top" secondItem="KR0-77-kNv" secondAttribute="bottom" constant="280" id="O5y-0h-YeZ"/>
                             <constraint firstItem="qRR-kl-ZiS" firstAttribute="leading" secondItem="tHY-iY-Fe0" secondAttribute="leading" constant="100" id="c4U-EV-ipy"/>
                             <constraint firstAttribute="trailing" secondItem="KR0-77-kNv" secondAttribute="trailing" constant="100" id="g5c-hY-nFH"/>
-                            <constraint firstItem="hUl-DB-aG8" firstAttribute="top" secondItem="qRR-kl-ZiS" secondAttribute="bottom" constant="20" id="g7g-ZH-0Vl"/>
+                            <constraint firstItem="hUl-DB-aG8" firstAttribute="top" secondItem="qRR-kl-ZiS" secondAttribute="bottom" constant="80" id="g7g-ZH-0Vl"/>
                             <constraint firstItem="KR0-77-kNv" firstAttribute="leading" secondItem="tHY-iY-Fe0" secondAttribute="leading" constant="100" id="hvK-IC-cUJ"/>
                             <constraint firstItem="4Tk-4k-ai7" firstAttribute="top" secondItem="twr-44-iOD" secondAttribute="bottom" id="pw7-fD-Vmd"/>
                             <constraint firstItem="KR0-77-kNv" firstAttribute="top" secondItem="4Tk-4k-ai7" secondAttribute="bottom" constant="-10" id="vp1-TL-bsS"/>
@@ -167,6 +167,7 @@
                         <outlet property="totalButton" destination="AED-Sl-0TV" id="zBD-Eq-Ar7"/>
                         <outlet property="totalPrice" destination="1dS-ur-dnT" id="PJz-nX-AaC"/>
                         <segue destination="BDa-W4-Wmr" kind="presentation" identifier="presentCards" id="ZQW-zQ-PuF"/>
+                        <segue destination="a65-Np-1HO" kind="presentation" identifier="showLogin" id="xI7-lt-GKC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C6r-eF-Pc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -178,7 +179,7 @@
             <objects>
                 <tableViewController id="3ss-ic-U3Z" customClass="CartTableViewController" customModule="TVMed" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="66" sectionHeaderHeight="7" sectionFooterHeight="7" id="YWd-2q-DGe">
-                        <rect key="frame" x="0.0" y="0.0" width="1720" height="645"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1720" height="565"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -252,7 +253,15 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzK-xt-1ic" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3418" y="370.5"/>
+            <point key="canvasLocation" x="2977" y="1033"/>
+        </scene>
+        <!--LoginViewController-->
+        <scene sceneID="o3q-7Y-41i">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="LoginViewController" id="a65-Np-1HO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LVS-WR-SFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6449" y="-224"/>
         </scene>
         <!--NavigationController-->
         <scene sceneID="ig1-VP-2yg">

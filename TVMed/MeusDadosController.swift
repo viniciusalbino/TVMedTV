@@ -52,6 +52,12 @@ class MeusDadosController: UIViewController, MeusDadosDelegate {
         guard success else {
             self.logoutButton.setTitle("Login", for: .normal)
             emptyTexts()
+            let dto = SystemAlertDTO(title: "Deslogado", message: "Você esta deslogado, deseja logar agora?", buttonActions: [(title: "Logar", style: .default), (title: "Cancelar", style: .cancel)])
+            self.showDefaultSystemAlert(systemAlertDTO: dto, completeBlock: { action in
+                if action.title == "Logar" {
+                    self.performSegue(withIdentifier: "presentLogin", sender: nil)
+                }
+            })
             return
         }
         self.logoutButton.setTitle("Logout", for: .normal)

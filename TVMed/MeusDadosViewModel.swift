@@ -27,7 +27,7 @@ class MeusDadosViewModel {
     
     func getUserData() {
         self.userRequest.requestUserData { user, error in
-            guard error == nil, let userData = user else {
+            guard error == nil, let userData = user, (user?.nome.length())! > 0 else {
                 self.delegate?.contentDidFinishedLoading(success: false)
                 return
             }
