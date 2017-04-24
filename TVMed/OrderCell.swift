@@ -39,8 +39,16 @@ class OrderCell: UICollectionViewCell {
         self.titleLabel.text = item.nomeCongresso
         self.descrLabel.text = item.formattedSubtitle()
         self.serialNumberLabel.text = "\(item.congresso)"
-        if let url = URL(string: item.imagemHtml) {
-            self.image.kf.setImage(with: url, placeholder: UIImage(named:"defaultImage"), options: nil, progressBlock: nil, completionHandler: nil)
+        
+        if let url = URL(string: "https://tvmed.blob.core.windows.net/public/webplayer.tvmed.com.br/content/images/congresso/" + item.bannerImage) {
+            print(url)
+            self.image.kf.setImage(with: url, placeholder: UIImage(named:"defaultImage"), options: nil, progressBlock: nil, completionHandler: { image, error, cache, url in
+                if let _ = image { } else {
+                    self.image.image = UIImage(named:"defaultImage")
+                }
+            })
+        } else {
+            self.image.image = UIImage(named:"defaultImage")
         }
     }
     

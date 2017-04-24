@@ -46,15 +46,15 @@ class TabBarController: UITabBarController, UINavigationControllerDelegate {
         
         if let tbItems = self.tabBar.items{
             
-            let tabBarItem1: UITabBarItem = tbItems[0]
-            let tabBarItem2: UITabBarItem = tbItems[1]
+//            let tabBarItem1: UITabBarItem = tbItems[0]
+            let tabBarItem2: UITabBarItem = tbItems[0]
 //            let tabBarItem3: UITabBarItem = tbItems[2]
-            let tabBarItem4: UITabBarItem = tbItems[2]
-            let tabBarItem5: UITabBarItem = tbItems[3]
-            tabBarItem1.title = "Home"
+//            let tabBarItem4: UITabBarItem = tbItems[2]
+            let tabBarItem5: UITabBarItem = tbItems[1]
+//            tabBarItem1.title = "Home"
             tabBarItem2.title = "Meus Produtos"
 //            tabBarItem3.title = "Busca"
-            tabBarItem4.title = "Carrinho"
+//            tabBarItem4.title = "Carrinho"
             tabBarItem5.title = "Meus Dados"
         }
     }

@@ -29,8 +29,16 @@ class HomeSpecCell: UICollectionViewCell {
     
     func fill(item: Especiality) {
         if let url = URL(string: "https://tvmed.blob.core.windows.net/public/webplayer.tvmed.com.br/content/images/congresso/" + item.image) {
-            self.image.kf.setImage(with: url, placeholder: UIImage(named:"defaultImage"), options: nil, progressBlock: nil, completionHandler: nil)
+            print(url)
+            self.image.kf.setImage(with: url, placeholder: UIImage(named:"defaultImage"), options: nil, progressBlock: nil, completionHandler: { image, error, cache, url in
+                if let _ = image { } else {
+                    self.image.image = UIImage(named:"defaultImage")
+                }
+            })
+        } else {
+            self.image.image = UIImage(named:"defaultImage")
         }
+        
         self.titleLabel.text = item.descricao
         self.subtitleLabel.text = "\(item.prefixo) \(item.sufixo)"
         self.codeLabel.text = "\(item.codigo)"

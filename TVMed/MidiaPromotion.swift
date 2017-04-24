@@ -60,6 +60,7 @@ struct MidiaPromotion: Mappable {
     var congaovivo = false
     var comSlide = false
     var ultimoEvento = Date()
+    var bannerImage = ""
     
     init?(map: Map) {
         mapping(map: map)
@@ -94,6 +95,7 @@ struct MidiaPromotion: Mappable {
         congaovivo  <- map["congaovivo"]
         comSlide    <- map["comSlide"]
         ultimoEvento <- map["ultimoEvento"]
+        bannerImage <- map["bannerImage"]
     }
     
     func formattedSubtitle() -> String {

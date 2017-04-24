@@ -33,6 +33,7 @@ class MeusProdutosViewController: UICollectionViewController, MeusProdutosDelega
         let tokenPersister = TokenPersister()
         tokenPersister.query { token in
             guard let userToken = token, !userToken.token.isEmpty else {
+                self.performSegue(withIdentifier: "presentLogin", sender: nil)
                 return
             }
             

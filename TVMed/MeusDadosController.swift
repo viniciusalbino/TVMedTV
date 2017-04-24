@@ -28,9 +28,15 @@ class MeusDadosController: UIViewController, MeusDadosDelegate {
     @IBOutlet weak var bacgkgroundView: UIView!
     lazy var viewModel: MeusDadosViewModel = MeusDadosViewModel(delegate: self)
     
+    override var preferredFocusEnvironments : [UIFocusEnvironment] {
+        //Condition
+        return [logoutButton]
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addLogo()
+        
         self.portugueseButton.tag = 0
         self.spanishButton.tag = 1
         self.englishButton.tag = 2
@@ -39,6 +45,14 @@ class MeusDadosController: UIViewController, MeusDadosDelegate {
         self.portugueseButton.layer.cornerRadius = 5
         self.spanishButton.layer.cornerRadius = 5
         self.englishButton.layer.cornerRadius = 5
+        
+        englishButton.imageView?.clipsToBounds = false
+        spanishButton.imageView?.clipsToBounds = false
+        portugueseButton.imageView?.clipsToBounds = false
+
+        englishButton.imageView?.adjustsImageWhenAncestorFocused = true
+        spanishButton.imageView?.adjustsImageWhenAncestorFocused = true
+        portugueseButton.imageView?.adjustsImageWhenAncestorFocused = true
     }
     
     override func viewWillAppear(_ animated: Bool) {

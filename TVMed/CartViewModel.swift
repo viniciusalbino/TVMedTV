@@ -46,12 +46,7 @@ class CartViewModel {
                     }
                     self.delegate?.contentDidFinishedLoading(success: true)
                     let items = self.cartItems.filter{ $0.tipoMidia != 1 }
-                    if items.count > 0 {
-                        self.getFreteValue(numberOfItens: items.count)
-                    } else {
-                        self.delegate?.finishedLoadingShipping()
-                    }
-                    
+                    self.getFreteValue(numberOfItens: items.count)
                 } else {
                     self.delegate?.contentDidFinishedLoading(success: false)
                 }
@@ -63,14 +58,15 @@ class CartViewModel {
     }
     
     func getFreteValue(numberOfItens: Int) {
-        guard numberOfItens > 0 else {
-            return
-        }
         self.userRequest.requestUserData { user,error in
             guard error == nil, let userData = user else {
                 return
             }
             self.currentUser = userData
+            guard numberOfItens > 0 else {
+                self.delegate?.finishedLoadingShipping()
+                return
+            }
             self.checkoutRequest.calculateShipping(state: userData.estado, quantity: numberOfItens, callback: { valor, error in
                 guard error == nil else {
                     return
@@ -137,7 +133,7 @@ class CartViewModel {
     
     func continueCheckout() {
         guard let _ = currentUser else {
-            self.delegate?.finishedPurchasingProducts(success: false)
+            self.delegate?.showLogin()
             return
         }
         
@@ -147,7 +143,7 @@ class CartViewModel {
     
     func makePurchase(creditCard: RemoteCreditCard, formaPagamento: String) {
         guard let cart = currentCart else {
-            self.delegate?.showLogin()
+            self.delegate?.finishedPurchasingProducts(success: false)
             return
         }
         let total = cart.orderTotalPrice() + self.currentShippingValue
