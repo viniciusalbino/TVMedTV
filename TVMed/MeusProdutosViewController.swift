@@ -23,7 +23,7 @@ class MeusProdutosViewController: UICollectionViewController, MeusProdutosDelega
         do {
             let realm = try RealmEncrypted.realm()
             let objects = Array(realm.objects(WorkResult.self))
-            if let workResult = objects.first {
+            if let workResult = objects.last {
                 self.screenTitle = Bool(workResult.status) ? "Meus Produtos" :"Showcase"
             } else {
                 self.screenTitle = "Showcase"
@@ -47,7 +47,9 @@ class MeusProdutosViewController: UICollectionViewController, MeusProdutosDelega
         let tokenPersister = TokenPersister()
         tokenPersister.query { token in
             guard let userToken = token, !userToken.token.isEmpty else {
-                self.performSegue(withIdentifier: "presentLogin", sender: nil)
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "presentLogin", sender: nil)
+                }
                 return
             }
             

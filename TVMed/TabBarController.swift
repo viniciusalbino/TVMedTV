@@ -48,21 +48,25 @@ class TabBarController: UITabBarController, UINavigationControllerDelegate {
 //        self.reloadTabBarControllers(work: false)
         
         functionRequest.getFunctionWorking { work, error in
-            guard let workResult = work, error == nil else {
-                self.checkWork()
-                return
-            }
-            
-            do {
-                let realm = try RealmEncrypted.realm()
-                try realm.write {
-                    realm.add(workResult, update: true)
+            DispatchQueue.main.async {
+                guard let workResult = work, error == nil else {
+                    self.checkWork()
+                    return
                 }
-            } catch {
-                print("Realm did not save work result!")
+                let workOverride = WorkResult()
+                workOverride.status = 1
+                
+                do {
+                    let realm = try RealmEncrypted.realm()
+                    try realm.write {
+                        realm.add(workResult, update: true)
+                    }
+                } catch {
+                    print("Realm did not save work result!")
+                }
+                
+                self.checkWork()
             }
-            
-            self.checkWork()
         }
     }
     
@@ -71,7 +75,7 @@ class TabBarController: UITabBarController, UINavigationControllerDelegate {
             do {
                 let realm = try RealmEncrypted.realm()
                 let objects = Array(realm.objects(WorkResult.self))
-                if let workResult = objects.first {
+                if let workResult = objects.last {
                     self.checkLoggedUser(work: Bool(workResult.status))
                 } else {
                     self.reloadTabBarControllers(work: false)
