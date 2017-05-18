@@ -9,6 +9,12 @@
 import Foundation
 import UIKit
 
+extension Bool {
+    init(_ number: Int) {
+        self.init(number as NSNumber)
+    }
+}
+
 extension UIColor {
     convenience init(hexString: String, alpha: CGFloat = 1.0) {
         let sanitizedString = hexString

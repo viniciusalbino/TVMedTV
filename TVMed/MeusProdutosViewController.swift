@@ -12,11 +12,25 @@ class MeusProdutosViewController: UICollectionViewController, MeusProdutosDelega
     
     private static let minimumEdgePadding = CGFloat(90.0)
     lazy private var viewModel: MeusProdutosViewModel = MeusProdutosViewModel(delegate: self)
+    private var screenTitle = ""
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         DispatchQueue.main.async {
             self.loadContent()
+        }
+        
+        do {
+            let realm = try RealmEncrypted.realm()
+            let objects = Array(realm.objects(WorkResult.self))
+            if let workResult = objects.first {
+                self.screenTitle = Bool(workResult.status) ? "Meus Produtos" :"Showcase"
+            } else {
+                self.screenTitle = "Showcase"
+            }
+        } catch {
+            self.screenTitle = "Showcase"
+            print("Realm did not query workResult objects!")
         }
     }
     
@@ -80,7 +94,7 @@ class MeusProdutosViewController: UICollectionViewController, MeusProdutosDelega
         switch kind {
         case UICollectionElementKindSectionHeader:
             let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HeaderCell", for: indexPath) as! HeaderCell
-            headerView.fill(title: "Meus Produtos")
+            headerView.fill(title: screenTitle)
             return headerView
         default:
             assert(false, "Unexpected element kind")
