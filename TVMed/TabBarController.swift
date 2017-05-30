@@ -54,7 +54,7 @@ class TabBarController: UITabBarController, UINavigationControllerDelegate {
                     return
                 }
                 let workOverride = WorkResult()
-                workOverride.status = 1
+//                workOverride.status = 1
                 
                 do {
                     let realm = try RealmEncrypted.realm()
